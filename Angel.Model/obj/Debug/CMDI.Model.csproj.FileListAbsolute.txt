@@ -1,0 +1,10 @@
+D:\gongsixiangmu\QcSystem\CMDI.Model\bin\Debug\CMDI.Model.dll
+D:\gongsixiangmu\QcSystem\CMDI.Model\bin\Debug\CMDI.Model.pdb
+D:\gongsixiangmu\QcSystem\CMDI.Model\obj\Debug\CMDI.Model.dll
+D:\gongsixiangmu\QcSystem\CMDI.Model\obj\Debug\CMDI.Model.pdb
+D:\gongsixiangmu\QcSystem\CMDI.Model\obj\Debug\CMDI.Model.csprojResolveAssemblyReference.cache
+E:\2016-12-26\QcSystem\CMDI.Model\bin\Debug\CMDI.Model.dll
+E:\2016-12-26\QcSystem\CMDI.Model\bin\Debug\CMDI.Model.pdb
+E:\2016-12-26\QcSystem\CMDI.Model\obj\Debug\CMDI.Model.dll
+E:\2016-12-26\QcSystem\CMDI.Model\obj\Debug\CMDI.Model.pdb
+E:\2016-12-26\QcSystem\CMDI.Model\obj\Debug\CMDI.Model.csprojResolveAssemblyReference.cache

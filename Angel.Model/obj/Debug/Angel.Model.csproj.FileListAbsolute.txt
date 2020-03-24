@@ -1,0 +1,9 @@
+E:\2016-12-26\AngelSystem\AngelWeb\CMDI.Model\bin\Debug\CMDI.Model.dll
+E:\2016-12-26\AngelSystem\AngelWeb\CMDI.Model\bin\Debug\CMDI.Model.pdb
+E:\2016-12-26\AngelSystem\AngelWeb\CMDI.Model\obj\Debug\CMDI.Model.dll
+E:\2016-12-26\AngelSystem\AngelWeb\CMDI.Model\obj\Debug\CMDI.Model.pdb
+E:\2016-12-26\AngelSystem\AngelWeb\Angel.Model\bin\Debug\Angel.Model.dll
+E:\2016-12-26\AngelSystem\AngelWeb\Angel.Model\bin\Debug\Angel.Model.pdb
+E:\2016-12-26\AngelSystem\AngelWeb\Angel.Model\obj\Debug\Angel.Model.csprojResolveAssemblyReference.cache
+E:\2016-12-26\AngelSystem\AngelWeb\Angel.Model\obj\Debug\Angel.Model.dll
+E:\2016-12-26\AngelSystem\AngelWeb\Angel.Model\obj\Debug\Angel.Model.pdb

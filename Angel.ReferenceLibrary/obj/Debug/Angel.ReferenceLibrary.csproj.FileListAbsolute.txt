@@ -1,0 +1,5 @@
+E:\2016-12-26\AngelSystem\AngelWeb\Angel.ReferenceLibrary\bin\Debug\Angel.ReferenceLibrary.dll
+E:\2016-12-26\AngelSystem\AngelWeb\Angel.ReferenceLibrary\bin\Debug\Angel.ReferenceLibrary.pdb
+E:\2016-12-26\AngelSystem\AngelWeb\Angel.ReferenceLibrary\obj\Debug\Angel.ReferenceLibrary.csprojResolveAssemblyReference.cache
+E:\2016-12-26\AngelSystem\AngelWeb\Angel.ReferenceLibrary\obj\Debug\Angel.ReferenceLibrary.dll
+E:\2016-12-26\AngelSystem\AngelWeb\Angel.ReferenceLibrary\obj\Debug\Angel.ReferenceLibrary.pdb

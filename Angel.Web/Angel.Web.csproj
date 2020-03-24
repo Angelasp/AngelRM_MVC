@@ -1,0 +1,1147 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{D1FA098D-DF7A-4E37-974B-7C0A4E725F42}</ProjectGuid>
+    <ProjectTypeGuids>{E3E379DF-F4C6-4180-9B81-6769533ABE47};{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Angel.Web</RootNamespace>
+    <AssemblyName>Angel.Web</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <MvcBuildViews>false</MvcBuildViews>
+    <UseIISExpress>true</UseIISExpress>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Ninject, Version=3.2.0.0, Culture=neutral, PublicKeyToken=c7192dc5380945e7, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Ninject.dll</HintPath>
+    </Reference>
+    <Reference Include="NPOI, Version=2.1.3.0, Culture=neutral, PublicKeyToken=0df73ec7942b34e1, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\NPOI.dll</HintPath>
+    </Reference>
+    <Reference Include="NPOI.OOXML, Version=2.1.3.0, Culture=neutral, PublicKeyToken=0df73ec7942b34e1, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\NPOI.OOXML.dll</HintPath>
+    </Reference>
+    <Reference Include="NPOI.OpenXml4Net, Version=2.1.3.0, Culture=neutral, PublicKeyToken=0df73ec7942b34e1, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\NPOI.OpenXml4Net.dll</HintPath>
+    </Reference>
+    <Reference Include="NPOI.OpenXmlFormats, Version=2.1.3.0, Culture=neutral, PublicKeyToken=0df73ec7942b34e1, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\NPOI.OpenXmlFormats.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Data.Entity" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Web.Abstractions" />
+    <Reference Include="System.Web.Routing" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Transactions" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="Microsoft.Web.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.Web.Infrastructure.1.0.0.0\lib\net40\Microsoft.Web.Infrastructure.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Web.Mvc.FixedDisplayModes, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.Mvc.FixedDisplayModes.1.0.0\lib\net40\Microsoft.Web.Mvc.FixedDisplayModes.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>..\packages\Newtonsoft.Json.4.5.11\lib\net40\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http">
+    </Reference>
+    <Reference Include="System.Net.Http.Formatting, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.Client.4.0.20710.0\lib\net40\System.Net.Http.Formatting.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http.WebRequest">
+    </Reference>
+    <Reference Include="System.Web.Helpers, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.2.0.20710.0\lib\net40\System.Web.Helpers.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Http, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.Core.4.0.20710.0\lib\net40\System.Web.Http.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Http.WebHost, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.WebHost.4.0.20710.0\lib\net40\System.Web.Http.WebHost.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Mvc, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.Mvc.4.0.20710.0\lib\net40\System.Web.Mvc.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Optimization">
+      <HintPath>..\packages\Microsoft.AspNet.Web.Optimization.1.0.0\lib\net40\System.Web.Optimization.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Razor, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.Razor.2.0.20715.0\lib\net40\System.Web.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.2.0.20710.0\lib\net40\System.Web.WebPages.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Deployment, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.2.0.20710.0\lib\net40\System.Web.WebPages.Deployment.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Razor, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.2.0.20710.0\lib\net40\System.Web.WebPages.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Web.WebPages.OAuth, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.OAuth.2.0.20710.0\lib\net40\Microsoft.Web.WebPages.OAuth.dll</HintPath>
+    </Reference>
+    <Reference Include="DotNetOpenAuth.AspNet, Version=4.1.0.0, Culture=neutral, PublicKeyToken=2780ccd10d57b246, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\DotNetOpenAuth.AspNet.4.1.4.12333\lib\net45-full\DotNetOpenAuth.AspNet.dll</HintPath>
+    </Reference>
+    <Reference Include="DotNetOpenAuth.Core, Version=4.1.0.0, Culture=neutral, PublicKeyToken=2780ccd10d57b246, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\DotNetOpenAuth.Core.4.1.4.12333\lib\net45-full\DotNetOpenAuth.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="DotNetOpenAuth.OAuth.Consumer, Version=4.1.0.0, Culture=neutral, PublicKeyToken=2780ccd10d57b246, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\DotNetOpenAuth.OAuth.Consumer.4.1.4.12333\lib\net45-full\DotNetOpenAuth.OAuth.Consumer.dll</HintPath>
+    </Reference>
+    <Reference Include="DotNetOpenAuth.OAuth, Version=4.1.0.0, Culture=neutral, PublicKeyToken=2780ccd10d57b246, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\DotNetOpenAuth.OAuth.Core.4.1.4.12333\lib\net45-full\DotNetOpenAuth.OAuth.dll</HintPath>
+    </Reference>
+    <Reference Include="DotNetOpenAuth.OpenId, Version=4.1.0.0, Culture=neutral, PublicKeyToken=2780ccd10d57b246, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\DotNetOpenAuth.OpenId.Core.4.1.4.12333\lib\net45-full\DotNetOpenAuth.OpenId.dll</HintPath>
+    </Reference>
+    <Reference Include="DotNetOpenAuth.OpenId.RelyingParty, Version=4.1.0.0, Culture=neutral, PublicKeyToken=2780ccd10d57b246, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\DotNetOpenAuth.OpenId.RelyingParty.4.1.4.12333\lib\net45-full\DotNetOpenAuth.OpenId.RelyingParty.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Http.OData, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.OData.4.0.0\lib\net40\System.Web.Http.OData.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Data.Edm, Version=5.2.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.Data.Edm.5.2.0\lib\net40\Microsoft.Data.Edm.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Data.OData, Version=5.2.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.Data.OData.5.2.0\lib\net40\Microsoft.Data.OData.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Spatial, Version=5.2.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\System.Spatial.5.2.0\lib\net40\System.Spatial.dll</HintPath>
+    </Reference>
+    <Reference Include="Antlr3.Runtime">
+      <Private>True</Private>
+      <HintPath>..\packages\WebGrease.1.3.0\lib\Antlr3.Runtime.dll</HintPath>
+    </Reference>
+    <Reference Include="WebGrease">
+      <HintPath>..\Angel.ReferenceLibrary\Packages\WebGrease.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="App_Start\AuthConfig.cs" />
+    <Compile Include="App_Start\BundleConfig.cs" />
+    <Compile Include="App_Start\FilterConfig.cs" />
+    <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="App_Start\WebApiConfig.cs" />
+    <Compile Include="ControllersApi\BaseApiController.cs" />
+    <Compile Include="ControllersApi\DataApiController.cs" />
+    <Compile Include="ControllersApi\DataReportApiController.cs" />
+    <Compile Include="ControllersApi\DepartmentApiController.cs" />
+    <Compile Include="ControllersApi\DownloadListManagerApiController.cs" />
+    <Compile Include="ControllersApi\FileApiController.cs" />
+    <Compile Include="ControllersApi\InPutApiController.cs" />
+    <Compile Include="ControllersApi\LoginApiController.cs" />
+    <Compile Include="ControllersApi\LoginlogApiController.cs" />
+    <Compile Include="ControllersApi\MenuApiController.cs" />
+    <Compile Include="ControllersApi\RoleApiController.cs" />
+    <Compile Include="ControllersApi\RoomApiController.cs" />
+    <Compile Include="ControllersApi\SysManagerApiController.cs" />
+    <Compile Include="ControllersApi\UserApiController.cs" />
+    <Compile Include="Controllers\BarCodeController.cs" />
+    <Compile Include="Controllers\BaseController.cs" />
+    <Compile Include="Controllers\BbriefingController.cs" />
+    <Compile Include="Controllers\CheckCodeController.cs" />
+    <Compile Include="Controllers\DataCollectionController.cs" />
+    <Compile Include="Controllers\DownController.cs" />
+    <Compile Include="Controllers\ElectronicchapterController.cs" />
+    <Compile Include="Controllers\InPutController.cs" />
+    <Compile Include="Controllers\LoginController.cs" />
+    <Compile Include="Controllers\MainController.cs" />
+    <Compile Include="Controllers\PrintController.cs" />
+    <Compile Include="Controllers\ProvinceReportController.cs" />
+    <Compile Include="Controllers\SendMailController.cs" />
+    <Compile Include="Controllers\SysManagerController.cs" />
+    <Compile Include="Controllers\UserTempController.cs" />
+    <Compile Include="Controllers\WelcomeController.cs" />
+    <Compile Include="Controllers\UploadFileController.cs" />
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="bin\Angel.Web.dll" />
+    <Content Include="bin\Angel.Web.pdb" />
+    <Content Include="Content\js\framework-ui.js" />
+    <Content Include="Content\js\jqprint\jquery.jqprint-0.3.js" />
+    <Content Include="Content\js\jqprint\jquery.jqprint.css" />
+    <Content Include="Content\js\qrcode\jquery.qrcode.js" />
+    <Content Include="Content\js\qrcode\qrcode.js" />
+    <Content Include="Content\js\simditor\css\simditor.css" />
+    <Content Include="Content\js\simditor\js\hotkeys.js" />
+    <Content Include="Content\js\simditor\js\hotkeys.min.js" />
+    <Content Include="Content\js\simditor\js\module.js" />
+    <Content Include="Content\js\simditor\js\module.min.js" />
+    <Content Include="Content\js\simditor\js\simditor.js" />
+    <Content Include="Content\js\simditor\js\simditor.min.js" />
+    <Content Include="Content\js\simditor\js\uploader.js" />
+    <Content Include="Content\js\simditor\js\uploader.min.js" />
+    <Content Include="Content\js\validate\jquery.validate.min.js" />
+    <Content Include="Content\themes\base\images\ui-bg_flat_0_aaaaaa_40x100.png" />
+    <Content Include="Content\themes\base\images\ui-bg_flat_75_ffffff_40x100.png" />
+    <Content Include="Content\themes\base\images\ui-bg_glass_55_fbf9ee_1x400.png" />
+    <Content Include="Content\themes\base\images\ui-bg_glass_65_ffffff_1x400.png" />
+    <Content Include="Content\themes\base\images\ui-bg_glass_75_dadada_1x400.png" />
+    <Content Include="Content\themes\base\images\ui-bg_glass_75_e6e6e6_1x400.png" />
+    <Content Include="Content\themes\base\images\ui-bg_glass_95_fef1ec_1x400.png" />
+    <Content Include="Content\themes\base\images\ui-bg_highlight-soft_75_cccccc_1x100.png" />
+    <Content Include="Content\themes\base\images\ui-icons_222222_256x240.png" />
+    <Content Include="Content\themes\base\images\ui-icons_2e83ff_256x240.png" />
+    <Content Include="Content\themes\base\images\ui-icons_454545_256x240.png" />
+    <Content Include="Content\themes\base\images\ui-icons_888888_256x240.png" />
+    <Content Include="Content\themes\base\images\ui-icons_cd0a0a_256x240.png" />
+    <Content Include="Content\themes\base\jquery-ui.css" />
+    <Content Include="Content\themes\base\jquery.ui.accordion.css" />
+    <Content Include="Content\themes\base\jquery.ui.all.css" />
+    <Content Include="Content\themes\base\jquery.ui.autocomplete.css" />
+    <Content Include="Content\themes\base\jquery.ui.base.css" />
+    <Content Include="Content\themes\base\jquery.ui.button.css" />
+    <Content Include="Content\themes\base\jquery.ui.core.css" />
+    <Content Include="Content\themes\base\jquery.ui.datepicker.css" />
+    <Content Include="Content\themes\base\jquery.ui.dialog.css" />
+    <Content Include="Content\themes\base\jquery.ui.progressbar.css" />
+    <Content Include="Content\themes\base\jquery.ui.resizable.css" />
+    <Content Include="Content\themes\base\jquery.ui.selectable.css" />
+    <Content Include="Content\themes\base\jquery.ui.slider.css" />
+    <Content Include="Content\themes\base\jquery.ui.tabs.css" />
+    <Content Include="Content\themes\base\jquery.ui.theme.css" />
+    <Content Include="Content\themes\base\minified\images\ui-bg_flat_0_aaaaaa_40x100.png" />
+    <Content Include="Content\themes\base\minified\images\ui-bg_flat_75_ffffff_40x100.png" />
+    <Content Include="Content\themes\base\minified\images\ui-bg_glass_55_fbf9ee_1x400.png" />
+    <Content Include="Content\themes\base\minified\images\ui-bg_glass_65_ffffff_1x400.png" />
+    <Content Include="Content\themes\base\minified\images\ui-bg_glass_75_dadada_1x400.png" />
+    <Content Include="Content\themes\base\minified\images\ui-bg_glass_75_e6e6e6_1x400.png" />
+    <Content Include="Content\themes\base\minified\images\ui-bg_glass_95_fef1ec_1x400.png" />
+    <Content Include="Content\themes\base\minified\images\ui-bg_highlight-soft_75_cccccc_1x100.png" />
+    <Content Include="Content\themes\base\minified\images\ui-icons_222222_256x240.png" />
+    <Content Include="Content\themes\base\minified\images\ui-icons_2e83ff_256x240.png" />
+    <Content Include="Content\themes\base\minified\images\ui-icons_454545_256x240.png" />
+    <Content Include="Content\themes\base\minified\images\ui-icons_888888_256x240.png" />
+    <Content Include="Content\themes\base\minified\images\ui-icons_cd0a0a_256x240.png" />
+    <Content Include="Content\themes\base\minified\jquery-ui.min.css" />
+    <Content Include="Content\themes\base\minified\jquery.ui.accordion.min.css" />
+    <Content Include="Content\themes\base\minified\jquery.ui.autocomplete.min.css" />
+    <Content Include="Content\themes\base\minified\jquery.ui.button.min.css" />
+    <Content Include="Content\themes\base\minified\jquery.ui.core.min.css" />
+    <Content Include="Content\themes\base\minified\jquery.ui.datepicker.min.css" />
+    <Content Include="Content\themes\base\minified\jquery.ui.dialog.min.css" />
+    <Content Include="Content\themes\base\minified\jquery.ui.progressbar.min.css" />
+    <Content Include="Content\themes\base\minified\jquery.ui.resizable.min.css" />
+    <Content Include="Content\themes\base\minified\jquery.ui.selectable.min.css" />
+    <Content Include="Content\themes\base\minified\jquery.ui.slider.min.css" />
+    <Content Include="Content\themes\base\minified\jquery.ui.tabs.min.css" />
+    <Content Include="Content\themes\base\minified\jquery.ui.theme.min.css" />
+    <Content Include="Content\themes\css\login.css" />
+    <Content Include="favicon.ico" />
+    <Content Include="Global.asax" />
+    <Content Include="Images\logo2.png" />
+    <Content Include="Images\star1.png" />
+    <Content Include="Images\Welcome1.png" />
+    <Content Include="Scripts\dist\bootstrap-3.3.7\css\bootstrap-theme.css" />
+    <Content Include="Scripts\dist\bootstrap-3.3.7\css\bootstrap-theme.min.css" />
+    <Content Include="Scripts\dist\bootstrap-3.3.7\css\bootstrap.css" />
+    <Content Include="Scripts\dist\bootstrap-3.3.7\css\bootstrap.min.css" />
+    <Content Include="Scripts\dist\bootstrap-3.3.7\fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="Scripts\dist\bootstrap-3.3.7\js\bootstrap.js" />
+    <Content Include="Scripts\dist\bootstrap-3.3.7\js\bootstrap.min.js" />
+    <Content Include="Scripts\dist\bootstrap-3.3.7\js\npm.js" />
+    <Content Include="Scripts\dist\bootstrap-multiselect\bootstrap-multiselect.css" />
+    <Content Include="Scripts\dist\bootstrap-multiselect\bootstrap-multiselect.js" />
+    <Content Include="Scripts\dist\bootstrap-select\css\bootstrap-select.css" />
+    <Content Include="Scripts\dist\bootstrap-select\css\bootstrap-select.min.css" />
+    <Content Include="Scripts\dist\bootstrap-select\js\bootstrap-select.js" />
+    <Content Include="Scripts\dist\bootstrap-select\js\bootstrap-select.min.js" />
+    <Content Include="Scripts\dist\bootstrap-select\js\i18n\defaults-zh_CN.min.js" />
+    <Content Include="Scripts\dist\bootstrap-table-1.11.1\bootstrap-table-export.js" />
+    <Content Include="Scripts\dist\bootstrap-table-1.11.1\bootstrap-table.css" />
+    <Content Include="Scripts\dist\bootstrap-table-1.11.1\bootstrap-table.js" />
+    <Content Include="Scripts\dist\bootstrap-table-1.11.1\bootstrap-table.min.css" />
+    <Content Include="Scripts\dist\bootstrap-table-1.11.1\bootstrap-table.min.js" />
+    <Content Include="Scripts\dist\bootstrap-table-1.11.1\locale\bootstrap-table-zh-CN.js" />
+    <Content Include="Scripts\dist\bootstrap-table-1.11.1\locale\bootstrap-table-zh-CN.min.js" />
+    <Content Include="Scripts\dist\bootstrap-table-1.11.1\tableExport.min.js" />
+    <Content Include="Scripts\dist\bootstrap3-editable\css\bootstrap-editable.css" />
+    <Content Include="Scripts\dist\bootstrap3-editable\img\clear.png" />
+    <Content Include="Scripts\dist\bootstrap3-editable\img\loading.gif" />
+    <Content Include="Scripts\dist\bootstrap3-editable\js\bootstrap-editable.js" />
+    <Content Include="Scripts\dist\bootstrap3-editable\js\bootstrap-editable.min.js" />
+    <Content Include="Scripts\dist\bootstrap3-editable\js\bootstrap-table-editable.js" />
+    <Content Include="Scripts\dist\chosen\.gitignore" />
+    <Content Include="Scripts\dist\chosen\public\chosen-sprite%402x.png" />
+    <Content Include="Scripts\dist\chosen\public\chosen-sprite.png" />
+    <Content Include="Scripts\dist\chosen\public\chosen.css" />
+    <Content Include="Scripts\dist\chosen\public\chosen.jquery.js" />
+    <Content Include="Scripts\dist\chosen\public\docsupport\chosen.png" />
+    <Content Include="Scripts\dist\chosen\public\docsupport\oss-credit.png" />
+    <Content Include="Scripts\dist\chosen\public\docsupport\prism.css" />
+    <Content Include="Scripts\dist\chosen\public\docsupport\prism.js" />
+    <Content Include="Scripts\dist\chosen\public\docsupport\style.css" />
+    <Content Include="Scripts\dist\chosen\public\index.html" />
+    <Content Include="Scripts\dist\chosen\public\index.proto.html" />
+    <Content Include="Scripts\dist\chosen\public\options.html" />
+    <Content Include="Scripts\dist\city-picker-master\css\city-picker.css" />
+    <Content Include="Scripts\dist\city-picker-master\images\drop-arrow.png" />
+    <Content Include="Scripts\dist\city-picker-master\js\city-picker.data.js" />
+    <Content Include="Scripts\dist\city-picker-master\js\city-picker.data.min.js" />
+    <Content Include="Scripts\dist\city-picker-master\js\city-picker.js" />
+    <Content Include="Scripts\dist\city-picker-master\js\city-picker.min.js" />
+    <Content Include="Scripts\dist\datetimepicker\css\bootstrap-datetimepicker.css" />
+    <Content Include="Scripts\dist\datetimepicker\css\bootstrap-datetimepicker.min.css" />
+    <Content Include="Scripts\dist\datetimepicker\js\bootstrap-datetimepicker.js" />
+    <Content Include="Scripts\dist\datetimepicker\js\bootstrap-datetimepicker.min.js" />
+    <Content Include="Scripts\dist\datetimepicker\js\locales\bootstrap-datetimepicker.zh-CN.js" />
+    <Content Include="Scripts\dist\flipclock\flipclock.css" />
+    <Content Include="Scripts\dist\flipclock\flipclock.js" />
+    <Content Include="Scripts\dist\flipclock\flipclock.min.js" />
+    <Content Include="Scripts\dist\jquery-confirm\css\jquery-confirm.css" />
+    <Content Include="Scripts\dist\jquery-confirm\dist\jquery-confirm.min.css" />
+    <Content Include="Scripts\dist\jquery-confirm\dist\jquery-confirm.min.js" />
+    <Content Include="Scripts\dist\jquery-confirm\js\jquery-confirm.js" />
+    <Content Include="Scripts\dist\jquery-jqGrid\css\images\ui-bg_flat_0_aaaaaa_40x100.png" />
+    <Content Include="Scripts\dist\jquery-jqGrid\css\images\ui-bg_flat_55_fbec88_40x100.png" />
+    <Content Include="Scripts\dist\jquery-jqGrid\css\images\ui-bg_glass_75_d0e5f5_1x400.png" />
+    <Content Include="Scripts\dist\jquery-jqGrid\css\images\ui-bg_glass_85_dfeffc_1x400.png" />
+    <Content Include="Scripts\dist\jquery-jqGrid\css\images\ui-bg_gloss-wave_55_5c9ccc_500x100.png" />
+    <Content Include="Scripts\dist\jquery-jqGrid\css\images\ui-bg_inset-hard_100_f5f8f9_1x100.png" />
+    <Content Include="Scripts\dist\jquery-jqGrid\css\images\ui-bg_inset-hard_100_fcfdfd_1x100.png" />
+    <Content Include="Scripts\dist\jquery-jqGrid\css\images\ui-icons_217bc0_256x240.png" />
+    <Content Include="Scripts\dist\jquery-jqGrid\css\images\ui-icons_2e83ff_256x240.png" />
+    <Content Include="Scripts\dist\jquery-jqGrid\css\images\ui-icons_469bdd_256x240.png" />
+    <Content Include="Scripts\dist\jquery-jqGrid\css\images\ui-icons_6da8d5_256x240.png" />
+    <Content Include="Scripts\dist\jquery-jqGrid\css\images\ui-icons_d8e7f3_256x240.png" />
+    <Content Include="Scripts\dist\jquery-jqGrid\css\images\ui-icons_f9bd01_256x240.png" />
+    <Content Include="Scripts\dist\jquery-jqGrid\css\jquery-ui-custom.css" />
+    <Content Include="Scripts\dist\jquery-jqGrid\css\ui.jqgrid.css" />
+    <Content Include="Scripts\dist\jquery-jqGrid\css\ui.jqgrid.min.css" />
+    <Content Include="Scripts\dist\jquery-jqGrid\css\ui.multiselect.css" />
+    <Content Include="Scripts\dist\jquery-jqGrid\js\grid.base.js" />
+    <Content Include="Scripts\dist\jquery-jqGrid\js\grid.celledit.js" />
+    <Content Include="Scripts\dist\jquery-jqGrid\js\grid.common.js" />
+    <Content Include="Scripts\dist\jquery-jqGrid\js\grid.filter.js" />
+    <Content Include="Scripts\dist\jquery-jqGrid\js\grid.formedit.js" />
+    <Content Include="Scripts\dist\jquery-jqGrid\js\grid.grouping.js" />
+    <Content Include="Scripts\dist\jquery-jqGrid\js\grid.import.js" />
+    <Content Include="Scripts\dist\jquery-jqGrid\js\grid.inlinedit.js" />
+    <Content Include="Scripts\dist\jquery-jqGrid\js\grid.jqueryui.js" />
+    <Content Include="Scripts\dist\jquery-jqGrid\js\grid.pivot.js" />
+    <Content Include="Scripts\dist\jquery-jqGrid\js\grid.subgrid.js" />
+    <Content Include="Scripts\dist\jquery-jqGrid\js\grid.treegrid.js" />
+    <Content Include="Scripts\dist\jquery-jqGrid\js\grid.utils.js" />
+    <Content Include="Scripts\dist\jquery-jqGrid\js\i18n\grid.locale-cn.js" />
+    <Content Include="Scripts\dist\jquery-jqGrid\js\jqDnR.js" />
+    <Content Include="Scripts\dist\jquery-jqGrid\js\jqModal.js" />
+    <Content Include="Scripts\dist\jquery-jqGrid\js\jquery.fmatter.js" />
+    <Content Include="Scripts\dist\jquery-jqGrid\js\jquery.jqGrid.js" />
+    <Content Include="Scripts\dist\jquery-jqGrid\js\jquery.jqGrid.min.js" />
+    <Content Include="Scripts\dist\jquery.dataTables\css\jquery.dataTables.css" />
+    <Content Include="Scripts\dist\jquery.dataTables\js\jquery.dataTables.js" />
+    <Content Include="Scripts\dist\jquery.dataTables\js\jquery.dataTables.min.js" />
+    <Content Include="Scripts\dist\jquery\jquery-1.10.2.min.js" />
+    <Content Include="Scripts\dist\jquery\jquery.query.js" />
+    <Content Include="Scripts\dist\lodash\array.js" />
+    <Content Include="Scripts\dist\lodash\array\chunk.js" />
+    <Content Include="Scripts\dist\lodash\array\compact.js" />
+    <Content Include="Scripts\dist\lodash\array\difference.js" />
+    <Content Include="Scripts\dist\lodash\array\drop.js" />
+    <Content Include="Scripts\dist\lodash\array\dropRight.js" />
+    <Content Include="Scripts\dist\lodash\array\dropRightWhile.js" />
+    <Content Include="Scripts\dist\lodash\array\dropWhile.js" />
+    <Content Include="Scripts\dist\lodash\array\fill.js" />
+    <Content Include="Scripts\dist\lodash\array\findIndex.js" />
+    <Content Include="Scripts\dist\lodash\array\findLastIndex.js" />
+    <Content Include="Scripts\dist\lodash\array\first.js" />
+    <Content Include="Scripts\dist\lodash\array\flatten.js" />
+    <Content Include="Scripts\dist\lodash\array\flattenDeep.js" />
+    <Content Include="Scripts\dist\lodash\array\head.js" />
+    <Content Include="Scripts\dist\lodash\array\indexOf.js" />
+    <Content Include="Scripts\dist\lodash\array\initial.js" />
+    <Content Include="Scripts\dist\lodash\array\intersection.js" />
+    <Content Include="Scripts\dist\lodash\array\last.js" />
+    <Content Include="Scripts\dist\lodash\array\lastIndexOf.js" />
+    <Content Include="Scripts\dist\lodash\array\object.js" />
+    <Content Include="Scripts\dist\lodash\array\pull.js" />
+    <Content Include="Scripts\dist\lodash\array\pullAt.js" />
+    <Content Include="Scripts\dist\lodash\array\remove.js" />
+    <Content Include="Scripts\dist\lodash\array\rest.js" />
+    <Content Include="Scripts\dist\lodash\array\slice.js" />
+    <Content Include="Scripts\dist\lodash\array\sortedIndex.js" />
+    <Content Include="Scripts\dist\lodash\array\sortedLastIndex.js" />
+    <Content Include="Scripts\dist\lodash\array\tail.js" />
+    <Content Include="Scripts\dist\lodash\array\take.js" />
+    <Content Include="Scripts\dist\lodash\array\takeRight.js" />
+    <Content Include="Scripts\dist\lodash\array\takeRightWhile.js" />
+    <Content Include="Scripts\dist\lodash\array\takeWhile.js" />
+    <Content Include="Scripts\dist\lodash\array\union.js" />
+    <Content Include="Scripts\dist\lodash\array\uniq.js" />
+    <Content Include="Scripts\dist\lodash\array\unique.js" />
+    <Content Include="Scripts\dist\lodash\array\unzip.js" />
+    <Content Include="Scripts\dist\lodash\array\unzipWith.js" />
+    <Content Include="Scripts\dist\lodash\array\without.js" />
+    <Content Include="Scripts\dist\lodash\array\xor.js" />
+    <Content Include="Scripts\dist\lodash\array\zip.js" />
+    <Content Include="Scripts\dist\lodash\array\zipObject.js" />
+    <Content Include="Scripts\dist\lodash\array\zipWith.js" />
+    <Content Include="Scripts\dist\lodash\chain.js" />
+    <Content Include="Scripts\dist\lodash\chain\chain.js" />
+    <Content Include="Scripts\dist\lodash\chain\commit.js" />
+    <Content Include="Scripts\dist\lodash\chain\concat.js" />
+    <Content Include="Scripts\dist\lodash\chain\lodash.js" />
+    <Content Include="Scripts\dist\lodash\chain\plant.js" />
+    <Content Include="Scripts\dist\lodash\chain\reverse.js" />
+    <Content Include="Scripts\dist\lodash\chain\run.js" />
+    <Content Include="Scripts\dist\lodash\chain\tap.js" />
+    <Content Include="Scripts\dist\lodash\chain\thru.js" />
+    <Content Include="Scripts\dist\lodash\chain\toJSON.js" />
+    <Content Include="Scripts\dist\lodash\chain\toString.js" />
+    <Content Include="Scripts\dist\lodash\chain\value.js" />
+    <Content Include="Scripts\dist\lodash\chain\valueOf.js" />
+    <Content Include="Scripts\dist\lodash\chain\wrapperChain.js" />
+    <Content Include="Scripts\dist\lodash\chain\wrapperCommit.js" />
+    <Content Include="Scripts\dist\lodash\chain\wrapperConcat.js" />
+    <Content Include="Scripts\dist\lodash\chain\wrapperPlant.js" />
+    <Content Include="Scripts\dist\lodash\chain\wrapperReverse.js" />
+    <Content Include="Scripts\dist\lodash\chain\wrapperToString.js" />
+    <Content Include="Scripts\dist\lodash\chain\wrapperValue.js" />
+    <Content Include="Scripts\dist\lodash\collection.js" />
+    <Content Include="Scripts\dist\lodash\collection\all.js" />
+    <Content Include="Scripts\dist\lodash\collection\any.js" />
+    <Content Include="Scripts\dist\lodash\collection\at.js" />
+    <Content Include="Scripts\dist\lodash\collection\collect.js" />
+    <Content Include="Scripts\dist\lodash\collection\contains.js" />
+    <Content Include="Scripts\dist\lodash\collection\countBy.js" />
+    <Content Include="Scripts\dist\lodash\collection\detect.js" />
+    <Content Include="Scripts\dist\lodash\collection\each.js" />
+    <Content Include="Scripts\dist\lodash\collection\eachRight.js" />
+    <Content Include="Scripts\dist\lodash\collection\every.js" />
+    <Content Include="Scripts\dist\lodash\collection\filter.js" />
+    <Content Include="Scripts\dist\lodash\collection\find.js" />
+    <Content Include="Scripts\dist\lodash\collection\findLast.js" />
+    <Content Include="Scripts\dist\lodash\collection\findWhere.js" />
+    <Content Include="Scripts\dist\lodash\collection\foldl.js" />
+    <Content Include="Scripts\dist\lodash\collection\foldr.js" />
+    <Content Include="Scripts\dist\lodash\collection\forEach.js" />
+    <Content Include="Scripts\dist\lodash\collection\forEachRight.js" />
+    <Content Include="Scripts\dist\lodash\collection\groupBy.js" />
+    <Content Include="Scripts\dist\lodash\collection\include.js" />
+    <Content Include="Scripts\dist\lodash\collection\includes.js" />
+    <Content Include="Scripts\dist\lodash\collection\indexBy.js" />
+    <Content Include="Scripts\dist\lodash\collection\inject.js" />
+    <Content Include="Scripts\dist\lodash\collection\invoke.js" />
+    <Content Include="Scripts\dist\lodash\collection\map.js" />
+    <Content Include="Scripts\dist\lodash\collection\max.js" />
+    <Content Include="Scripts\dist\lodash\collection\min.js" />
+    <Content Include="Scripts\dist\lodash\collection\partition.js" />
+    <Content Include="Scripts\dist\lodash\collection\pluck.js" />
+    <Content Include="Scripts\dist\lodash\collection\reduce.js" />
+    <Content Include="Scripts\dist\lodash\collection\reduceRight.js" />
+    <Content Include="Scripts\dist\lodash\collection\reject.js" />
+    <Content Include="Scripts\dist\lodash\collection\sample.js" />
+    <Content Include="Scripts\dist\lodash\collection\select.js" />
+    <Content Include="Scripts\dist\lodash\collection\shuffle.js" />
+    <Content Include="Scripts\dist\lodash\collection\size.js" />
+    <Content Include="Scripts\dist\lodash\collection\some.js" />
+    <Content Include="Scripts\dist\lodash\collection\sortBy.js" />
+    <Content Include="Scripts\dist\lodash\collection\sortByAll.js" />
+    <Content Include="Scripts\dist\lodash\collection\sortByOrder.js" />
+    <Content Include="Scripts\dist\lodash\collection\sum.js" />
+    <Content Include="Scripts\dist\lodash\collection\where.js" />
+    <Content Include="Scripts\dist\lodash\date.js" />
+    <Content Include="Scripts\dist\lodash\date\now.js" />
+    <Content Include="Scripts\dist\lodash\function.js" />
+    <Content Include="Scripts\dist\lodash\function\after.js" />
+    <Content Include="Scripts\dist\lodash\function\ary.js" />
+    <Content Include="Scripts\dist\lodash\function\backflow.js" />
+    <Content Include="Scripts\dist\lodash\function\before.js" />
+    <Content Include="Scripts\dist\lodash\function\bind.js" />
+    <Content Include="Scripts\dist\lodash\function\bindAll.js" />
+    <Content Include="Scripts\dist\lodash\function\bindKey.js" />
+    <Content Include="Scripts\dist\lodash\function\compose.js" />
+    <Content Include="Scripts\dist\lodash\function\curry.js" />
+    <Content Include="Scripts\dist\lodash\function\curryRight.js" />
+    <Content Include="Scripts\dist\lodash\function\debounce.js" />
+    <Content Include="Scripts\dist\lodash\function\defer.js" />
+    <Content Include="Scripts\dist\lodash\function\delay.js" />
+    <Content Include="Scripts\dist\lodash\function\flow.js" />
+    <Content Include="Scripts\dist\lodash\function\flowRight.js" />
+    <Content Include="Scripts\dist\lodash\function\memoize.js" />
+    <Content Include="Scripts\dist\lodash\function\modArgs.js" />
+    <Content Include="Scripts\dist\lodash\function\negate.js" />
+    <Content Include="Scripts\dist\lodash\function\once.js" />
+    <Content Include="Scripts\dist\lodash\function\partial.js" />
+    <Content Include="Scripts\dist\lodash\function\partialRight.js" />
+    <Content Include="Scripts\dist\lodash\function\rearg.js" />
+    <Content Include="Scripts\dist\lodash\function\restParam.js" />
+    <Content Include="Scripts\dist\lodash\function\spread.js" />
+    <Content Include="Scripts\dist\lodash\function\throttle.js" />
+    <Content Include="Scripts\dist\lodash\function\wrap.js" />
+    <Content Include="Scripts\dist\lodash\index.js" />
+    <Content Include="Scripts\dist\lodash\internal\arrayConcat.js" />
+    <Content Include="Scripts\dist\lodash\internal\arrayCopy.js" />
+    <Content Include="Scripts\dist\lodash\internal\arrayEach.js" />
+    <Content Include="Scripts\dist\lodash\internal\arrayEachRight.js" />
+    <Content Include="Scripts\dist\lodash\internal\arrayEvery.js" />
+    <Content Include="Scripts\dist\lodash\internal\arrayExtremum.js" />
+    <Content Include="Scripts\dist\lodash\internal\arrayFilter.js" />
+    <Content Include="Scripts\dist\lodash\internal\arrayMap.js" />
+    <Content Include="Scripts\dist\lodash\internal\arrayPush.js" />
+    <Content Include="Scripts\dist\lodash\internal\arrayReduce.js" />
+    <Content Include="Scripts\dist\lodash\internal\arrayReduceRight.js" />
+    <Content Include="Scripts\dist\lodash\internal\arraySome.js" />
+    <Content Include="Scripts\dist\lodash\internal\arraySum.js" />
+    <Content Include="Scripts\dist\lodash\internal\assignDefaults.js" />
+    <Content Include="Scripts\dist\lodash\internal\assignOwnDefaults.js" />
+    <Content Include="Scripts\dist\lodash\internal\assignWith.js" />
+    <Content Include="Scripts\dist\lodash\internal\baseAssign.js" />
+    <Content Include="Scripts\dist\lodash\internal\baseAt.js" />
+    <Content Include="Scripts\dist\lodash\internal\baseCallback.js" />
+    <Content Include="Scripts\dist\lodash\internal\baseClone.js" />
+    <Content Include="Scripts\dist\lodash\internal\baseCompareAscending.js" />
+    <Content Include="Scripts\dist\lodash\internal\baseCopy.js" />
+    <Content Include="Scripts\dist\lodash\internal\baseCreate.js" />
+    <Content Include="Scripts\dist\lodash\internal\baseDelay.js" />
+    <Content Include="Scripts\dist\lodash\internal\baseDifference.js" />
+    <Content Include="Scripts\dist\lodash\internal\baseEach.js" />
+    <Content Include="Scripts\dist\lodash\internal\baseEachRight.js" />
+    <Content Include="Scripts\dist\lodash\internal\baseEvery.js" />
+    <Content Include="Scripts\dist\lodash\internal\baseExtremum.js" />
+    <Content Include="Scripts\dist\lodash\internal\baseFill.js" />
+    <Content Include="Scripts\dist\lodash\internal\baseFilter.js" />
+    <Content Include="Scripts\dist\lodash\internal\baseFind.js" />
+    <Content Include="Scripts\dist\lodash\internal\baseFindIndex.js" />
+    <Content Include="Scripts\dist\lodash\internal\baseFlatten.js" />
+    <Content Include="Scripts\dist\lodash\internal\baseFor.js" />
+    <Content Include="Scripts\dist\lodash\internal\baseForIn.js" />
+    <Content Include="Scripts\dist\lodash\internal\baseForOwn.js" />
+    <Content Include="Scripts\dist\lodash\internal\baseForOwnRight.js" />
+    <Content Include="Scripts\dist\lodash\internal\baseForRight.js" />
+    <Content Include="Scripts\dist\lodash\internal\baseFunctions.js" />
+    <Content Include="Scripts\dist\lodash\internal\baseGet.js" />
+    <Content Include="Scripts\dist\lodash\internal\baseIndexOf.js" />
+    <Content Include="Scripts\dist\lodash\internal\baseIsEqual.js" />
+    <Content Include="Scripts\dist\lodash\internal\baseIsEqualDeep.js" />
+    <Content Include="Scripts\dist\lodash\internal\baseIsFunction.js" />
+    <Content Include="Scripts\dist\lodash\internal\baseIsMatch.js" />
+    <Content Include="Scripts\dist\lodash\internal\baseLodash.js" />
+    <Content Include="Scripts\dist\lodash\internal\baseMap.js" />
+    <Content Include="Scripts\dist\lodash\internal\baseMatches.js" />
+    <Content Include="Scripts\dist\lodash\internal\baseMatchesProperty.js" />
+    <Content Include="Scripts\dist\lodash\internal\baseMerge.js" />
+    <Content Include="Scripts\dist\lodash\internal\baseMergeDeep.js" />
+    <Content Include="Scripts\dist\lodash\internal\baseProperty.js" />
+    <Content Include="Scripts\dist\lodash\internal\basePropertyDeep.js" />
+    <Content Include="Scripts\dist\lodash\internal\basePullAt.js" />
+    <Content Include="Scripts\dist\lodash\internal\baseRandom.js" />
+    <Content Include="Scripts\dist\lodash\internal\baseReduce.js" />
+    <Content Include="Scripts\dist\lodash\internal\baseSetData.js" />
+    <Content Include="Scripts\dist\lodash\internal\baseSlice.js" />
+    <Content Include="Scripts\dist\lodash\internal\baseSome.js" />
+    <Content Include="Scripts\dist\lodash\internal\baseSortBy.js" />
+    <Content Include="Scripts\dist\lodash\internal\baseSortByOrder.js" />
+    <Content Include="Scripts\dist\lodash\internal\baseSum.js" />
+    <Content Include="Scripts\dist\lodash\internal\baseToString.js" />
+    <Content Include="Scripts\dist\lodash\internal\baseUniq.js" />
+    <Content Include="Scripts\dist\lodash\internal\baseValues.js" />
+    <Content Include="Scripts\dist\lodash\internal\baseWhile.js" />
+    <Content Include="Scripts\dist\lodash\internal\baseWrapperValue.js" />
+    <Content Include="Scripts\dist\lodash\internal\binaryIndex.js" />
+    <Content Include="Scripts\dist\lodash\internal\binaryIndexBy.js" />
+    <Content Include="Scripts\dist\lodash\internal\bindCallback.js" />
+    <Content Include="Scripts\dist\lodash\internal\bufferClone.js" />
+    <Content Include="Scripts\dist\lodash\internal\cacheIndexOf.js" />
+    <Content Include="Scripts\dist\lodash\internal\cachePush.js" />
+    <Content Include="Scripts\dist\lodash\internal\charsLeftIndex.js" />
+    <Content Include="Scripts\dist\lodash\internal\charsRightIndex.js" />
+    <Content Include="Scripts\dist\lodash\internal\compareAscending.js" />
+    <Content Include="Scripts\dist\lodash\internal\compareMultiple.js" />
+    <Content Include="Scripts\dist\lodash\internal\composeArgs.js" />
+    <Content Include="Scripts\dist\lodash\internal\composeArgsRight.js" />
+    <Content Include="Scripts\dist\lodash\internal\createAggregator.js" />
+    <Content Include="Scripts\dist\lodash\internal\createAssigner.js" />
+    <Content Include="Scripts\dist\lodash\internal\createBaseEach.js" />
+    <Content Include="Scripts\dist\lodash\internal\createBaseFor.js" />
+    <Content Include="Scripts\dist\lodash\internal\createBindWrapper.js" />
+    <Content Include="Scripts\dist\lodash\internal\createCache.js" />
+    <Content Include="Scripts\dist\lodash\internal\createCompounder.js" />
+    <Content Include="Scripts\dist\lodash\internal\createCtorWrapper.js" />
+    <Content Include="Scripts\dist\lodash\internal\createCurry.js" />
+    <Content Include="Scripts\dist\lodash\internal\createDefaults.js" />
+    <Content Include="Scripts\dist\lodash\internal\createExtremum.js" />
+    <Content Include="Scripts\dist\lodash\internal\createFind.js" />
+    <Content Include="Scripts\dist\lodash\internal\createFindIndex.js" />
+    <Content Include="Scripts\dist\lodash\internal\createFindKey.js" />
+    <Content Include="Scripts\dist\lodash\internal\createFlow.js" />
+    <Content Include="Scripts\dist\lodash\internal\createForEach.js" />
+    <Content Include="Scripts\dist\lodash\internal\createForIn.js" />
+    <Content Include="Scripts\dist\lodash\internal\createForOwn.js" />
+    <Content Include="Scripts\dist\lodash\internal\createHybridWrapper.js" />
+    <Content Include="Scripts\dist\lodash\internal\createObjectMapper.js" />
+    <Content Include="Scripts\dist\lodash\internal\createPadding.js" />
+    <Content Include="Scripts\dist\lodash\internal\createPadDir.js" />
+    <Content Include="Scripts\dist\lodash\internal\createPartial.js" />
+    <Content Include="Scripts\dist\lodash\internal\createPartialWrapper.js" />
+    <Content Include="Scripts\dist\lodash\internal\createReduce.js" />
+    <Content Include="Scripts\dist\lodash\internal\createRound.js" />
+    <Content Include="Scripts\dist\lodash\internal\createSortedIndex.js" />
+    <Content Include="Scripts\dist\lodash\internal\createWrapper.js" />
+    <Content Include="Scripts\dist\lodash\internal\deburrLetter.js" />
+    <Content Include="Scripts\dist\lodash\internal\equalArrays.js" />
+    <Content Include="Scripts\dist\lodash\internal\equalByTag.js" />
+    <Content Include="Scripts\dist\lodash\internal\equalObjects.js" />
+    <Content Include="Scripts\dist\lodash\internal\escapeHtmlChar.js" />
+    <Content Include="Scripts\dist\lodash\internal\escapeRegExpChar.js" />
+    <Content Include="Scripts\dist\lodash\internal\escapeStringChar.js" />
+    <Content Include="Scripts\dist\lodash\internal\getData.js" />
+    <Content Include="Scripts\dist\lodash\internal\getFuncName.js" />
+    <Content Include="Scripts\dist\lodash\internal\getLength.js" />
+    <Content Include="Scripts\dist\lodash\internal\getMatchData.js" />
+    <Content Include="Scripts\dist\lodash\internal\getNative.js" />
+    <Content Include="Scripts\dist\lodash\internal\getView.js" />
+    <Content Include="Scripts\dist\lodash\internal\indexOfNaN.js" />
+    <Content Include="Scripts\dist\lodash\internal\initCloneArray.js" />
+    <Content Include="Scripts\dist\lodash\internal\initCloneByTag.js" />
+    <Content Include="Scripts\dist\lodash\internal\initCloneObject.js" />
+    <Content Include="Scripts\dist\lodash\internal\invokePath.js" />
+    <Content Include="Scripts\dist\lodash\internal\isArrayLike.js" />
+    <Content Include="Scripts\dist\lodash\internal\isIndex.js" />
+    <Content Include="Scripts\dist\lodash\internal\isIterateeCall.js" />
+    <Content Include="Scripts\dist\lodash\internal\isKey.js" />
+    <Content Include="Scripts\dist\lodash\internal\isLaziable.js" />
+    <Content Include="Scripts\dist\lodash\internal\isLength.js" />
+    <Content Include="Scripts\dist\lodash\internal\isObjectLike.js" />
+    <Content Include="Scripts\dist\lodash\internal\isSpace.js" />
+    <Content Include="Scripts\dist\lodash\internal\isStrictComparable.js" />
+    <Content Include="Scripts\dist\lodash\internal\lazyClone.js" />
+    <Content Include="Scripts\dist\lodash\internal\lazyReverse.js" />
+    <Content Include="Scripts\dist\lodash\internal\lazyValue.js" />
+    <Content Include="Scripts\dist\lodash\internal\LazyWrapper.js" />
+    <Content Include="Scripts\dist\lodash\internal\LodashWrapper.js" />
+    <Content Include="Scripts\dist\lodash\internal\MapCache.js" />
+    <Content Include="Scripts\dist\lodash\internal\mapDelete.js" />
+    <Content Include="Scripts\dist\lodash\internal\mapGet.js" />
+    <Content Include="Scripts\dist\lodash\internal\mapHas.js" />
+    <Content Include="Scripts\dist\lodash\internal\mapSet.js" />
+    <Content Include="Scripts\dist\lodash\internal\mergeData.js" />
+    <Content Include="Scripts\dist\lodash\internal\mergeDefaults.js" />
+    <Content Include="Scripts\dist\lodash\internal\metaMap.js" />
+    <Content Include="Scripts\dist\lodash\internal\pickByArray.js" />
+    <Content Include="Scripts\dist\lodash\internal\pickByCallback.js" />
+    <Content Include="Scripts\dist\lodash\internal\realNames.js" />
+    <Content Include="Scripts\dist\lodash\internal\reEscape.js" />
+    <Content Include="Scripts\dist\lodash\internal\reEvaluate.js" />
+    <Content Include="Scripts\dist\lodash\internal\reInterpolate.js" />
+    <Content Include="Scripts\dist\lodash\internal\reorder.js" />
+    <Content Include="Scripts\dist\lodash\internal\replaceHolders.js" />
+    <Content Include="Scripts\dist\lodash\internal\SetCache.js" />
+    <Content Include="Scripts\dist\lodash\internal\setData.js" />
+    <Content Include="Scripts\dist\lodash\internal\shimKeys.js" />
+    <Content Include="Scripts\dist\lodash\internal\sortedUniq.js" />
+    <Content Include="Scripts\dist\lodash\internal\toIterable.js" />
+    <Content Include="Scripts\dist\lodash\internal\toObject.js" />
+    <Content Include="Scripts\dist\lodash\internal\toPath.js" />
+    <Content Include="Scripts\dist\lodash\internal\trimmedLeftIndex.js" />
+    <Content Include="Scripts\dist\lodash\internal\trimmedRightIndex.js" />
+    <Content Include="Scripts\dist\lodash\internal\unescapeHtmlChar.js" />
+    <Content Include="Scripts\dist\lodash\internal\wrapperClone.js" />
+    <Content Include="Scripts\dist\lodash\lang.js" />
+    <Content Include="Scripts\dist\lodash\lang\clone.js" />
+    <Content Include="Scripts\dist\lodash\lang\cloneDeep.js" />
+    <Content Include="Scripts\dist\lodash\lang\eq.js" />
+    <Content Include="Scripts\dist\lodash\lang\gt.js" />
+    <Content Include="Scripts\dist\lodash\lang\gte.js" />
+    <Content Include="Scripts\dist\lodash\lang\isArguments.js" />
+    <Content Include="Scripts\dist\lodash\lang\isArray.js" />
+    <Content Include="Scripts\dist\lodash\lang\isBoolean.js" />
+    <Content Include="Scripts\dist\lodash\lang\isDate.js" />
+    <Content Include="Scripts\dist\lodash\lang\isElement.js" />
+    <Content Include="Scripts\dist\lodash\lang\isEmpty.js" />
+    <Content Include="Scripts\dist\lodash\lang\isEqual.js" />
+    <Content Include="Scripts\dist\lodash\lang\isError.js" />
+    <Content Include="Scripts\dist\lodash\lang\isFinite.js" />
+    <Content Include="Scripts\dist\lodash\lang\isFunction.js" />
+    <Content Include="Scripts\dist\lodash\lang\isMatch.js" />
+    <Content Include="Scripts\dist\lodash\lang\isNaN.js" />
+    <Content Include="Scripts\dist\lodash\lang\isNative.js" />
+    <Content Include="Scripts\dist\lodash\lang\isNull.js" />
+    <Content Include="Scripts\dist\lodash\lang\isNumber.js" />
+    <Content Include="Scripts\dist\lodash\lang\isObject.js" />
+    <Content Include="Scripts\dist\lodash\lang\isPlainObject.js" />
+    <Content Include="Scripts\dist\lodash\lang\isRegExp.js" />
+    <Content Include="Scripts\dist\lodash\lang\isString.js" />
+    <Content Include="Scripts\dist\lodash\lang\isTypedArray.js" />
+    <Content Include="Scripts\dist\lodash\lang\isUndefined.js" />
+    <Content Include="Scripts\dist\lodash\lang\lt.js" />
+    <Content Include="Scripts\dist\lodash\lang\lte.js" />
+    <Content Include="Scripts\dist\lodash\lang\toArray.js" />
+    <Content Include="Scripts\dist\lodash\lang\toPlainObject.js" />
+    <Content Include="Scripts\dist\lodash\math.js" />
+    <Content Include="Scripts\dist\lodash\math\add.js" />
+    <Content Include="Scripts\dist\lodash\math\ceil.js" />
+    <Content Include="Scripts\dist\lodash\math\floor.js" />
+    <Content Include="Scripts\dist\lodash\math\max.js" />
+    <Content Include="Scripts\dist\lodash\math\min.js" />
+    <Content Include="Scripts\dist\lodash\math\round.js" />
+    <Content Include="Scripts\dist\lodash\math\sum.js" />
+    <Content Include="Scripts\dist\lodash\number.js" />
+    <Content Include="Scripts\dist\lodash\number\inRange.js" />
+    <Content Include="Scripts\dist\lodash\number\random.js" />
+    <Content Include="Scripts\dist\lodash\object.js" />
+    <Content Include="Scripts\dist\lodash\object\assign.js" />
+    <Content Include="Scripts\dist\lodash\object\create.js" />
+    <Content Include="Scripts\dist\lodash\object\defaults.js" />
+    <Content Include="Scripts\dist\lodash\object\defaultsDeep.js" />
+    <Content Include="Scripts\dist\lodash\object\extend.js" />
+    <Content Include="Scripts\dist\lodash\object\findKey.js" />
+    <Content Include="Scripts\dist\lodash\object\findLastKey.js" />
+    <Content Include="Scripts\dist\lodash\object\forIn.js" />
+    <Content Include="Scripts\dist\lodash\object\forInRight.js" />
+    <Content Include="Scripts\dist\lodash\object\forOwn.js" />
+    <Content Include="Scripts\dist\lodash\object\forOwnRight.js" />
+    <Content Include="Scripts\dist\lodash\object\functions.js" />
+    <Content Include="Scripts\dist\lodash\object\get.js" />
+    <Content Include="Scripts\dist\lodash\object\has.js" />
+    <Content Include="Scripts\dist\lodash\object\invert.js" />
+    <Content Include="Scripts\dist\lodash\object\keys.js" />
+    <Content Include="Scripts\dist\lodash\object\keysIn.js" />
+    <Content Include="Scripts\dist\lodash\object\mapKeys.js" />
+    <Content Include="Scripts\dist\lodash\object\mapValues.js" />
+    <Content Include="Scripts\dist\lodash\object\merge.js" />
+    <Content Include="Scripts\dist\lodash\object\methods.js" />
+    <Content Include="Scripts\dist\lodash\object\omit.js" />
+    <Content Include="Scripts\dist\lodash\object\pairs.js" />
+    <Content Include="Scripts\dist\lodash\object\pick.js" />
+    <Content Include="Scripts\dist\lodash\object\result.js" />
+    <Content Include="Scripts\dist\lodash\object\set.js" />
+    <Content Include="Scripts\dist\lodash\object\transform.js" />
+    <Content Include="Scripts\dist\lodash\object\values.js" />
+    <Content Include="Scripts\dist\lodash\object\valuesIn.js" />
+    <Content Include="Scripts\dist\lodash\string.js" />
+    <Content Include="Scripts\dist\lodash\string\camelCase.js" />
+    <Content Include="Scripts\dist\lodash\string\capitalize.js" />
+    <Content Include="Scripts\dist\lodash\string\deburr.js" />
+    <Content Include="Scripts\dist\lodash\string\endsWith.js" />
+    <Content Include="Scripts\dist\lodash\string\escape.js" />
+    <Content Include="Scripts\dist\lodash\string\escapeRegExp.js" />
+    <Content Include="Scripts\dist\lodash\string\kebabCase.js" />
+    <Content Include="Scripts\dist\lodash\string\pad.js" />
+    <Content Include="Scripts\dist\lodash\string\padLeft.js" />
+    <Content Include="Scripts\dist\lodash\string\padRight.js" />
+    <Content Include="Scripts\dist\lodash\string\parseInt.js" />
+    <Content Include="Scripts\dist\lodash\string\repeat.js" />
+    <Content Include="Scripts\dist\lodash\string\snakeCase.js" />
+    <Content Include="Scripts\dist\lodash\string\startCase.js" />
+    <Content Include="Scripts\dist\lodash\string\startsWith.js" />
+    <Content Include="Scripts\dist\lodash\string\template.js" />
+    <Content Include="Scripts\dist\lodash\string\templateSettings.js" />
+    <Content Include="Scripts\dist\lodash\string\trim.js" />
+    <Content Include="Scripts\dist\lodash\string\trimLeft.js" />
+    <Content Include="Scripts\dist\lodash\string\trimRight.js" />
+    <Content Include="Scripts\dist\lodash\string\trunc.js" />
+    <Content Include="Scripts\dist\lodash\string\unescape.js" />
+    <Content Include="Scripts\dist\lodash\string\words.js" />
+    <Content Include="Scripts\dist\lodash\support.js" />
+    <Content Include="Scripts\dist\lodash\utility.js" />
+    <Content Include="Scripts\dist\lodash\utility\attempt.js" />
+    <Content Include="Scripts\dist\lodash\utility\callback.js" />
+    <Content Include="Scripts\dist\lodash\utility\constant.js" />
+    <Content Include="Scripts\dist\lodash\utility\identity.js" />
+    <Content Include="Scripts\dist\lodash\utility\iteratee.js" />
+    <Content Include="Scripts\dist\lodash\utility\matches.js" />
+    <Content Include="Scripts\dist\lodash\utility\matchesProperty.js" />
+    <Content Include="Scripts\dist\lodash\utility\method.js" />
+    <Content Include="Scripts\dist\lodash\utility\methodOf.js" />
+    <Content Include="Scripts\dist\lodash\utility\mixin.js" />
+    <Content Include="Scripts\dist\lodash\utility\noop.js" />
+    <Content Include="Scripts\dist\lodash\utility\property.js" />
+    <Content Include="Scripts\dist\lodash\utility\propertyOf.js" />
+    <Content Include="Scripts\dist\lodash\utility\range.js" />
+    <Content Include="Scripts\dist\lodash\utility\times.js" />
+    <Content Include="Scripts\dist\lodash\utility\uniqueId.js" />
+    <Content Include="Scripts\dist\material-design-iconic-font-2.2.0\css\material-design-iconic-font.css" />
+    <Content Include="Scripts\dist\material-design-iconic-font-2.2.0\css\material-design-iconic-font.min.css" />
+    <Content Include="Scripts\dist\material-design-iconic-font-2.2.0\fonts\Material-Design-Iconic-Font.svg" />
+    <Content Include="Scripts\dist\toastr\toastr.css" />
+    <Content Include="Scripts\dist\toastr\toastr.js" />
+    <Content Include="Scripts\dist\toastr\toastr.min.css" />
+    <Content Include="Scripts\dist\toastr\toastr.min.js" />
+    <Content Include="Scripts\dist\treeview\bootstrap-treeview.js" />
+    <Content Include="Scripts\dist\volteScripts\bootstrap-hover-dropdown.min.js" />
+    <Content Include="Scripts\dist\volteScripts\bootstrap-multiselect.js" />
+    <Content Include="Scripts\dist\volteScripts\bootstrap.min.js" />
+    <Content Include="Scripts\dist\volteScripts\chosen.jquery.js" />
+    <Content Include="Scripts\dist\volteScripts\common.debug.js" />
+    <Content Include="Scripts\dist\volteScripts\config.debug.js" />
+    <Content Include="Scripts\dist\volteScripts\echarts-all.js" />
+    <Content Include="Scripts\dist\volteScripts\header.debug.js" />
+    <Content Include="Scripts\dist\volteScripts\icheck.min.js" />
+    <Content Include="Scripts\dist\volteScripts\index.js" />
+    <Content Include="Scripts\dist\volteScripts\jquery.blockUI.js" />
+    <Content Include="Scripts\dist\volteScripts\jquery.dataTables.js" />
+    <Content Include="Scripts\dist\volteScripts\jquery.js" />
+    <Content Include="Scripts\dist\volteScripts\jquery.paginate.js" />
+    <Content Include="Scripts\dist\volteScripts\jquery.slimscroll.min.js" />
+    <Content Include="Scripts\dist\volteScripts\knockout.js" />
+    <Content Include="Scripts\dist\volteScripts\laydate.dev.js" />
+    <Content Include="Scripts\dist\volteScripts\layout.js" />
+    <Content Include="Scripts\dist\volteScripts\leaflet-src.js" />
+    <Content Include="Scripts\dist\volteScripts\linq-min.js" />
+    <Content Include="Scripts\dist\volteScripts\lodash.js" />
+    <Content Include="Scripts\dist\volteScripts\metronic.js" />
+    <Content Include="Scripts\dist\volteScripts\need\laydate.css" />
+    <Content Include="Scripts\dist\volteScripts\prism.js" />
+    <Content Include="Scripts\dist\volteScripts\skins\dahong\icon.png" />
+    <Content Include="Scripts\dist\volteScripts\skins\dahong\laydate.css" />
+    <Content Include="Scripts\dist\volteScripts\skins\danlan\icon.png" />
+    <Content Include="Scripts\dist\volteScripts\skins\danlan\laydate.css" />
+    <Content Include="Scripts\dist\volteScripts\skins\default\icon.png" />
+    <Content Include="Scripts\dist\volteScripts\skins\default\laydate.css" />
+    <Content Include="Scripts\dist\volteScripts\skins\molv\icon.png" />
+    <Content Include="Scripts\dist\volteScripts\skins\molv\laydate.css" />
+    <Content Include="Scripts\dist\volteScripts\skins\qianhuang\icon.png" />
+    <Content Include="Scripts\dist\volteScripts\skins\qianhuang\laydate.css" />
+    <Content Include="Scripts\dist\volteScripts\skins\yahui\icon.png" />
+    <Content Include="Scripts\dist\volteScripts\skins\yahui\laydate.css" />
+    <Content Include="Scripts\dist\volteScripts\skins\yalan\icon.png" />
+    <Content Include="Scripts\dist\volteScripts\skins\yalan\laydate.css" />
+    <Content Include="Scripts\dist\volteScripts\test\demo1.html" />
+    <Content Include="Scripts\dist\volteScripts\test\demo2.html" />
+    <Content Include="Scripts\dist\volteScripts\test\demo2.js" />
+    <Content Include="Scripts\dist\volteScripts\toastr.js" />
+    <Content Include="Scripts\dist\waves\waves-0.7.5\waves.css" />
+    <Content Include="Scripts\dist\waves\waves-0.7.5\waves.js" />
+    <Content Include="Scripts\dist\waves\waves-0.7.5\waves.min.css" />
+    <Content Include="Scripts\dist\waves\waves-0.7.5\waves.s.js" />
+    <Content Include="Scripts\dist\ztree\css\awesomeStyle\awesome.css" />
+    <Content Include="Scripts\dist\ztree\css\awesomeStyle\img\loading.gif" />
+    <Content Include="Scripts\dist\ztree\css\demo.css" />
+    <Content Include="Scripts\dist\ztree\css\metroStyle\img\line_conn.png" />
+    <Content Include="Scripts\dist\ztree\css\metroStyle\img\loading.gif" />
+    <Content Include="Scripts\dist\ztree\css\metroStyle\img\metro.gif" />
+    <Content Include="Scripts\dist\ztree\css\metroStyle\img\metro.png" />
+    <Content Include="Scripts\dist\ztree\css\metroStyle\metroStyle.css" />
+    <Content Include="Scripts\dist\ztree\css\zTreeStyle\img\diy\1_close.png" />
+    <Content Include="Scripts\dist\ztree\css\zTreeStyle\img\diy\1_open.png" />
+    <Content Include="Scripts\dist\ztree\css\zTreeStyle\img\diy\2.png" />
+    <Content Include="Scripts\dist\ztree\css\zTreeStyle\img\diy\3.png" />
+    <Content Include="Scripts\dist\ztree\css\zTreeStyle\img\diy\4.png" />
+    <Content Include="Scripts\dist\ztree\css\zTreeStyle\img\diy\5.png" />
+    <Content Include="Scripts\dist\ztree\css\zTreeStyle\img\diy\6.png" />
+    <Content Include="Scripts\dist\ztree\css\zTreeStyle\img\diy\7.png" />
+    <Content Include="Scripts\dist\ztree\css\zTreeStyle\img\diy\8.png" />
+    <Content Include="Scripts\dist\ztree\css\zTreeStyle\img\diy\9.png" />
+    <Content Include="Scripts\dist\ztree\css\zTreeStyle\img\line_conn.gif" />
+    <Content Include="Scripts\dist\ztree\css\zTreeStyle\img\loading.gif" />
+    <Content Include="Scripts\dist\ztree\css\zTreeStyle\img\zTreeStandard.gif" />
+    <Content Include="Scripts\dist\ztree\css\zTreeStyle\img\zTreeStandard.png" />
+    <Content Include="Scripts\dist\ztree\css\zTreeStyle\zTreeStyle.css" />
+    <Content Include="Scripts\dist\ztree\js\jquery-1.4.4.min.js" />
+    <Content Include="Scripts\dist\ztree\js\jquery.ztree.all.js" />
+    <Content Include="Scripts\dist\ztree\js\jquery.ztree.all.min.js" />
+    <Content Include="Scripts\dist\ztree\js\jquery.ztree.core.js" />
+    <Content Include="Scripts\dist\ztree\js\jquery.ztree.core.min.js" />
+    <Content Include="Scripts\dist\ztree\js\jquery.ztree.excheck.js" />
+    <Content Include="Scripts\dist\ztree\js\jquery.ztree.excheck.min.js" />
+    <Content Include="Scripts\dist\ztree\js\jquery.ztree.exedit.js" />
+    <Content Include="Scripts\dist\ztree\js\jquery.ztree.exedit.min.js" />
+    <Content Include="Scripts\dist\ztree\js\jquery.ztree.exhide.js" />
+    <Content Include="Scripts\dist\ztree\js\jquery.ztree.exhide.min.js" />
+    <Content Include="Scripts\js\com.js" />
+    <Content Include="Scripts\js\common.js" />
+    <Content Include="Scripts\js\easyui.js" />
+    <Content Include="Scripts\js\jquery.ztree.all-3.1.min.js" />
+    <Content Include="Scripts\js\switchable.js" />
+    <Content Include="Scripts\wizard.min.js" />
+    <Content Include="ViewScripts\bootstrap-fileinput-master\bootstrap.min.css" />
+    <Content Include="ViewScripts\bootstrap-fileinput-master\css\bootstrap.min.css" />
+    <Content Include="ViewScripts\bootstrap-fileinput-master\css\fileinput.css" />
+    <Content Include="ViewScripts\bootstrap-fileinput-master\css\fileinput.min.css" />
+    <Content Include="ViewScripts\bootstrap-fileinput-master\js\bootstrap.min.js" />
+    <Content Include="ViewScripts\bootstrap-fileinput-master\js\fileinput.js" />
+    <Content Include="ViewScripts\bootstrap-fileinput-master\js\fileinput.min.js" />
+    <Content Include="ViewScripts\bootstrap-fileinput-master\js\jquery.min.js" />
+    <Content Include="ViewScripts\bootstrap-fileinput-master\js\locales\zh.js" />
+    <Content Include="ViewScripts\bootstrap-fileinput-master\js\plugins\canvas-to-blob.js" />
+    <Content Include="ViewScripts\bootstrap-fileinput-master\js\plugins\canvas-to-blob.min.js" />
+    <Content Include="ViewScripts\bootstrap-fileinput-master\js\plugins\purify.js" />
+    <Content Include="ViewScripts\bootstrap-fileinput-master\js\plugins\purify.min.js" />
+    <Content Include="ViewScripts\bootstrap-fileinput-master\js\plugins\sortable.js" />
+    <Content Include="ViewScripts\bootstrap-fileinput-master\js\plugins\sortable.min.js" />
+    <Content Include="ViewScripts\bootstrap-fileinput-master\themes\explorer\theme.css" />
+    <Content Include="ViewScripts\bootstrap-fileinput-master\themes\explorer\theme.js" />
+    <Content Include="ViewScripts\bootstrap-fileinput-master\themes\fa\theme.js" />
+    <Content Include="ViewScripts\bootstrap-fileinput-master\themes\gly\theme.js" />
+    <Content Include="ViewScripts\datacollection\AuditRules.js" />
+    <Content Include="ViewScripts\datacollection\collectRate.js" />
+    <Content Include="ViewScripts\datacollection\collectTotalReports.js" />
+    <Content Include="ViewScripts\datacollection\ComplaintAnalysis.js" />
+    <Content Include="ViewScripts\datacollection\DataImport.js" />
+    <Content Include="ViewScripts\datacollection\DataReview.js" />
+    <Content Include="ViewScripts\datacollection\DataTemplate.js" />
+    <Content Include="ViewScripts\datacollection\ExportComplaint.js" />
+    <Content Include="ViewScripts\datacollection\FileBak.js" />
+    <Content Include="ViewScripts\datacollection\FillStatus.js" />
+    <Content Include="ViewScripts\datacollection\monitor.js" />
+    <Content Include="ViewScripts\datacollection\ReportAuto.js" />
+    <Content Include="ViewScripts\datacollection\ReportComplaint.js" />
+    <Content Include="ViewScripts\datacollection\specialDataCollect.js" />
+    <Content Include="ViewScripts\datacollection\specialDataExport.js" />
+    <Content Include="ViewScripts\datacollection\UserRepeat.js" />
+    <Content Include="ViewScripts\datacollection\wayDataCollect.js" />
+    <Content Include="ViewScripts\datacollection\wayDataExport.js" />
+    <Content Include="ViewScripts\login\Login.js" />
+    <Content Include="ViewScripts\provinceReport\organization.js" />
+    <Content Include="ViewScripts\provinceReport\reportCollect.js" />
+    <Content Include="ViewScripts\sysmanager\departmentmanager.js" />
+    <Content Include="ViewScripts\sysmanager\menu.js" />
+    <Content Include="ViewScripts\UploadFile\DataImport.js" />
+    <Content Include="ViewScripts\UploadFile\FileBak.js" />
+    <Content Include="xmlsql\SqlQuery.xml" />
+    <Content Include="Scripts\dist\bootstrap-3.3.7\css\bootstrap-theme.css.map" />
+    <Content Include="Scripts\dist\bootstrap-3.3.7\css\bootstrap-theme.min.css.map" />
+    <Content Include="Scripts\dist\bootstrap-3.3.7\css\bootstrap.css.map" />
+    <Content Include="Scripts\dist\bootstrap-3.3.7\css\bootstrap.min.css.map" />
+    <Content Include="Scripts\dist\bootstrap-3.3.7\fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="Scripts\dist\bootstrap-3.3.7\fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="Scripts\dist\bootstrap-3.3.7\fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="Scripts\dist\bootstrap-3.3.7\fonts\glyphicons-halflings-regular.woff2" />
+    <Content Include="Scripts\dist\chosen\.bower.json" />
+    <Content Include="Scripts\dist\chosen\chosen.jquery.json" />
+    <Content Include="Scripts\dist\chosen\coffee\chosen.jquery.coffee" />
+    <Content Include="Scripts\dist\chosen\coffee\chosen.proto.coffee" />
+    <Content Include="Scripts\dist\chosen\coffee\lib\abstract-chosen.coffee" />
+    <Content Include="Scripts\dist\chosen\coffee\lib\select-parser.coffee" />
+    <Content Include="Scripts\dist\chosen\config.rb" />
+    <Content Include="Scripts\dist\chosen\contributing.md" />
+    <Content Include="Scripts\dist\chosen\Gemfile" />
+    <Content Include="Scripts\dist\chosen\Gemfile.lock" />
+    <Content Include="Scripts\dist\chosen\Gruntfile.coffee" />
+    <Content Include="Scripts\dist\chosen\LICENSE.md" />
+    <Content Include="Scripts\dist\chosen\package.json" />
+    <Content Include="Scripts\dist\chosen\README.md" />
+    <Content Include="Scripts\dist\chosen\sass\chosen.scss" />
+    <Content Include="Scripts\dist\jquery-confirm\css\jquery-confirm.less" />
+    <Content Include="Scripts\dist\lodash\LICENSE" />
+    <Content Include="Scripts\dist\lodash\package.json" />
+    <Content Include="Scripts\dist\lodash\README.md" />
+    <Content Include="Scripts\dist\material-design-iconic-font-2.2.0\fonts\Material-Design-Iconic-Font.eot" />
+    <Content Include="Scripts\dist\material-design-iconic-font-2.2.0\fonts\Material-Design-Iconic-Font.ttf" />
+    <Content Include="Scripts\dist\material-design-iconic-font-2.2.0\fonts\Material-Design-Iconic-Font.woff" />
+    <Content Include="Scripts\dist\material-design-iconic-font-2.2.0\fonts\Material-Design-Iconic-Font.woff2" />
+    <Content Include="Scripts\dist\toastr\.bower.json" />
+    <Content Include="Scripts\dist\toastr\bower.json" />
+    <Content Include="Scripts\dist\toastr\README.md" />
+    <Content Include="Scripts\dist\toastr\toastr.less" />
+    <Content Include="Scripts\dist\toastr\toastr.scss" />
+    <Content Include="Scripts\dist\waves\waves-0.7.5\waves.min.js.map" />
+    <Content Include="Scripts\dist\ztree\css\awesomeStyle\awesome.less" />
+    <Content Include="Scripts\dist\ztree\css\awesomeStyle\fa.less" />
+    <Content Include="Scripts\dist\ztree\js\ztree.3.5.26.zip" />
+    <Content Include="xmlsql\SqlQuerysecond.xml">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="Content\js\simditor\css\editor.scss" />
+    <Content Include="Content\js\simditor\css\fonticon.scss" />
+    <Content Include="Content\js\simditor\css\simditor.scss" />
+    <None Include="Scripts\jquery-1.8.2.intellisense.js" />
+    <Content Include="Scripts\jquery-1.8.2.js" />
+    <Content Include="Scripts\jquery-1.8.2.min.js" />
+    <None Include="Scripts\jquery.validate-vsdoc.js" />
+    <Content Include="Scripts\jquery-ui-1.8.24.js" />
+    <Content Include="Scripts\jquery-ui-1.8.24.min.js" />
+    <Content Include="Scripts\jquery.unobtrusive-ajax.js" />
+    <Content Include="Scripts\jquery.unobtrusive-ajax.min.js" />
+    <Content Include="Scripts\jquery.validate.js" />
+    <Content Include="Scripts\jquery.validate.min.js" />
+    <Content Include="Scripts\jquery.validate.unobtrusive.js" />
+    <Content Include="Scripts\jquery.validate.unobtrusive.min.js" />
+    <Content Include="Scripts\knockout-2.2.0.debug.js" />
+    <Content Include="Scripts\knockout-2.2.0.js" />
+    <Content Include="Scripts\modernizr-2.6.2.js" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Content\Site.css" />
+    <Content Include="Scripts\_references.js" />
+    <Content Include="Views\_ViewStart.cshtml" />
+    <Content Include="Views\Shared\Error.cshtml" />
+    <Content Include="Views\Shared\_LoginPartial.cshtml" />
+    <Content Include="Views\Shared\_Layout.cshtml" />
+    <Content Include="Views\Web.config" />
+    <Content Include="Views\Login\Login.cshtml" />
+    <Content Include="Views\Main\Index.cshtml" />
+    <Content Include="Views\SysManager\downloaddatamanager.cshtml" />
+    <Content Include="Views\SysManager\DownloadListManager.cshtml" />
+    <Content Include="Views\SysManager\LoginLogManager.cshtml" />
+    <Content Include="Views\SysManager\MenuManager.cshtml" />
+    <Content Include="Views\SysManager\OperLogManager.cshtml" />
+    <Content Include="Views\SysManager\RoleManager.cshtml" />
+    <Content Include="Views\SysManager\RoomManager.cshtml" />
+    <Content Include="Views\SysManager\UpdateUser.cshtml" />
+    <Content Include="Views\SysManager\UserManager.cshtml" />
+    <Content Include="Views\SysManager\VersionManager.cshtml" />
+    <Content Include="Views\User\Index.cshtml" />
+    <Content Include="Views\Welcome\Welcome.cshtml" />
+    <Content Include="Views\DataCollection\DataImport.cshtml" />
+    <Content Include="Views\DataCollection\DataReview.cshtml" />
+    <Content Include="Views\DataCollection\DataTemplate.cshtml" />
+    <Content Include="Views\DataCollection\ExportComplaint.cshtml" />
+    <Content Include="Views\DataCollection\FileBak.cshtml" />
+    <Content Include="Views\DataCollection\ReportAuto.cshtml" />
+    <Content Include="Views\DataCollection\ReportComplaint.cshtml" />
+    <Content Include="Views\provinceReport\jdCollect.cshtml" />
+    <Content Include="Views\provinceReport\organization.cshtml" />
+    <Content Include="Views\provinceReport\reportCollect.cshtml" />
+    <Content Include="Views\SysManager\DepartmentManager.cshtml" />
+    <Content Include="Views\DataCollection\ComplaintAnalysis.cshtml" />
+    <Content Include="Views\DataCollection\FileBak2.cshtml" />
+    <Content Include="Views\DataCollection\FileBak3.cshtml" />
+    <Content Include="Views\CheckCode\Index.cshtml" />
+    <Content Include="xmldb\DataCollectionApidata.config" />
+    <Content Include="Views\SendMail\Index.cshtml" />
+    <Content Include="Views\BarCode\Index.cshtml" />
+    <Content Include="Views\Print\Index.cshtml" />
+    <Content Include="Views\Electronicchapter\Index.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="ViewScripts\Acquisition\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Angel.BLL\Angel.BLL.csproj">
+      <Project>{f059db2e-856f-4fdc-a052-1eb802ed743c}</Project>
+      <Name>Angel.BLL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Angel.Core\Angel.Core.csproj">
+      <Project>{62b5fe6d-c26f-4252-8ae1-eb13161c90ec}</Project>
+      <Name>Angel.Core</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Angel.DataAccess\Angel.DataAccess.csproj">
+      <Project>{ee51e18a-1a64-4ba9-a767-f9bfe7eca394}</Project>
+      <Name>Angel.DataAccess</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Angel.DBHelper\Angel.DBHelper.csproj">
+      <Project>{0d3e7a36-fd24-4718-96cf-efdc8ab81a10}</Project>
+      <Name>Angel.DBHelper</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Angel.ExcelHelper\Angel.ExcelHelper.csproj">
+      <Project>{2a281724-ec38-4cdd-9383-13b14b44141a}</Project>
+      <Name>Angel.ExcelHelper</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Angel.Model\Angel.Model.csproj">
+      <Project>{a58ecd72-6bcb-4577-a072-743689f48713}</Project>
+      <Name>Angel.Model</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Angel.Service\Angel.Service.csproj">
+      <Project>{f340bfbc-2d6a-489b-8961-01741ef4e88b}</Project>
+      <Name>Angel.Service</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Angel.Utils\Angel.Utils.csproj">
+      <Project>{d88761a2-8f9e-4a8f-bfc2-39596348ce56}</Project>
+      <Name>Angel.Utils</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <Target Name="MvcBuildViews" AfterTargets="AfterBuild" Condition="'$(MvcBuildViews)'=='true'">
+    <AspNetCompiler VirtualPath="temp" PhysicalPath="$(WebProjectOutputDir)" />
+  </Target>
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>0</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:8868/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target> -->
+</Project>

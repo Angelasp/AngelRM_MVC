@@ -1,0 +1,418 @@
+/*@media screen and (max-width:1024px) {.page{width:980px;}}*/
+
+
+
+/*在最小宽度和最大宽度之间*/
+/*@media screen and (max-width:800px) and (min-height:400px){
+
+}
+@media screen and (min-width:800px) and (max-width:1024px){
+
+}
+@media screen and (min-width:1025px) and (max-width:1280px) {
+
+}*/
+
+@media screen and (min-width:800px) and (max-width:1900px) {
+    .div_l1 {
+    height: 155px;
+    
+    }
+    .div_r1 {
+    
+    height: 150px;
+    top: -30px;
+    }
+     .div_r2 {
+    
+    height: 150px; 
+    top: -50px;
+    }
+    #lishow {
+        width: 426.797px;
+        height: 141.888px;
+    
+    }
+    #div_r3_1 {
+         width: 426.797px;
+        height: 141.888px;
+    }
+    .shownext {
+    
+        width: 426.797px; 
+        height: 141.888px;
+    
+    }
+    #div_r3_2 {
+    width: 426.797px; 
+        height: 141.875px;
+    
+    }
+    .Line-he {
+    
+    line-height: 177px;}
+
+
+
+    /*家客*/
+   #nextdiv_l1 {
+    
+       width: 386.547px;
+       height: 224.688px;
+       top: -30px;
+    
+    }
+    #nextdiv_l6 {
+    
+         width: 268.625px;
+          height: 98.859px;
+    
+    }
+    #nextdiv_l62 {
+    
+        width: 268.625px;
+        height: 62.906px;
+    
+    }
+    #nextdiv_l63 {
+        width: 268.625px;
+        height: 62.906px;
+    }
+
+    #nextdiv_l3 {
+        width: 655.188px; 
+        height: 77.844px;
+    }
+     #nextdiv_l4 {
+        width: 655.188px; 
+        height: 77.844px;
+    }
+    .China_Mobile {
+        margin-left: 15px;
+    }
+    #nextdiv_l5 {
+    width: 655.188px;
+    height: 77.844px;
+    
+    }
+     #nextdiv_l2 {
+     width: 655.188px;
+     height: 147.922px;
+    
+    }
+      #nextdiv_r1 {
+    
+         width: 426.797px; 
+         height: 143.797px;
+         top: -30px;
+    
+    }
+      #nextgjdbCarousel {
+        width: 426.797px;
+        height: 161.469px;
+    }
+       #nextgjdbCarousel1 {
+    width: 426.797px;
+    height: 161.469px;
+    
+    }
+    #nextdiv_r2 {
+    
+        width: 426.797px;
+         height: 121.109px; 
+         top: -30px;
+    
+    }
+     .showTop {
+    
+        top: -45px;
+         height: 30px;
+    }
+      .showTopone {
+    
+          top: -30px;
+        
+    }
+    #nextdiv_r3last {
+    
+        width: 426.797px;
+        height: 132.109px;
+        top: -5px;
+    
+    }
+    .first_title {
+     float:left;
+     left:10%;
+    }
+     .first_top {
+    top: -30px;
+    }
+      .div_remark2 {
+    top: 30%;
+    }
+    .China_Telecom {
+      width: 33%;
+    
+    }
+    .China_Unicom {
+    width: 33%;
+    
+    }
+     .text_Unicom {
+        width: 33%;
+        margin-right: 20px;
+    
+    }
+        .textka_Unicom {
+        width: 33%;
+        margin-right: 20px;
+    
+    }
+             .textka2_Unicom {
+        width: 33%;
+        margin-right: 20px;
+    
+    }
+   #div_remark1 {
+    top: 40%;
+
+   }
+   .text_mobile {
+
+    margin-left: 15px;
+
+}
+      .textka_mobile {
+
+    margin-left: 15px;
+
+}
+   .China2_Unicom {
+     width: 33%; 
+    }
+      .China3_Unicom {
+     width: 33%; 
+    }
+
+     .textka2_telecom {
+      width:33%;
+    }
+
+
+}
+
+
+
+/*@media screen and (min-width:1337px) and (max-width:1440px) { 
+}*/
+
+@media screen and (min-width:1901px) and (max-width:10010px) {
+    .China2_Unicom {
+     width: 42%; 
+    }
+      .China3_Unicom {
+     width: 47%; 
+    }
+    .text_mobile {
+
+    margin-left: 35px;
+    top:-30px;
+
+}
+        .textka_mobile {
+
+    margin-left: 35px;
+
+
+}
+    .text_telecom {
+      top:-30px;
+    }
+    .textka_telecom {
+      
+    }
+     .textka2_telecom {
+      width:29%;
+    }
+    #div_remark1 {
+    top: 80%;
+
+}
+    .text_Unicom {
+        width: 40%;
+        margin-right: 0px;
+          top:-30px;
+    
+    }
+      .textka_Unicom {
+        width: 40%;
+        margin-right: 0px;
+          
+    
+    }
+           .textka2_Unicom {
+        width: 47%;
+        margin-right: 0px;
+          
+    
+    }
+      .first_title {
+     float:left;
+     left:6%;
+    }
+    .first_top {
+    top: -20px;
+    }
+    .div_remark2 {
+    top: 80%;
+    }
+
+ .div_l1 {
+    height: 222.7651px;
+    
+    }
+  .div_r1 {
+    
+    height:222.7651px;
+    top: -25.1882px;
+    }
+   .div_r2{
+    
+    height:222.7651px;
+    top: -50.3136px;
+    }
+   #lishow {
+        width: 663.3903px;
+        height: 259.5331px;
+    
+    }
+   #div_r3_1 {
+
+        width: 633.3903px;
+        height: 239.5331px;
+    
+    }
+   .shownext {
+    
+        width: 612.2449px; 
+        height: 199.5331px;
+    
+    }
+    #div_r3_2 {
+       width: 612.2449px; 
+        height: 199.51483px;
+    
+    }
+     .Line-he {
+    
+    line-height: 248.9101px;}
+
+     
+    /*家客*/
+   #nextdiv_l1 {
+    
+       width: 555.5433px;
+       height: 315.9680px;
+       top: -30px;
+    
+    }
+      #nextdiv_l6 {
+    
+         width: 386.0664px;
+         height: 139.0226px;
+    
+    }
+       #nextdiv_l62 {
+    
+       width: 386.0664px;
+        height: 84.4629px;
+    
+    }
+    #nextdiv_l63 {
+        width: 386.0664px;
+        height: 84.4629px;
+    }
+    #nextdiv_l3 {
+        width:991.6327px; 
+        height: 160.4698px;
+    }
+      #nextdiv_l4 {
+        width:991.6327px; 
+        height: 160.4698px;
+    }
+       .China_Mobile {
+        margin-left: 25px;
+    }
+    .China_Telecom {
+      width: 29%;
+    
+    }
+    .China_Unicom {
+    width: 44%;
+    
+    }
+   
+    #nextdiv_l5 {
+   width:991.6327px; 
+   height: 109.4698px;
+    
+    }
+    #nextdiv_l2 {
+    width:941.6327px;
+     height: 208.0186px;
+    
+    }
+    #nextdiv_r1 {
+    
+         width: 642.2249px; 
+         height: 202.2177px;
+         top: -30.1882px;
+    
+    }
+    #nextgjdbCarousel {
+         width: 612.2249px; 
+         height: 227.0693px;
+    }
+     #nextdiv_r2 {
+    
+        width: 612.2249px; 
+         height: 170.3122px; 
+         top: -30.1882px;
+    
+    }
+    .showTop {
+    
+         top: -33.2822px;
+         height: 42.1882px;
+    }
+    #nextgjdbCarousel1 {
+   width: 612.2249px; 
+         height: 227.0693px;
+    
+    }
+    .showTopone {
+    
+          top: -30.1882px;
+        
+    }
+     #nextdiv_r3last {
+    
+        width: 612.2249px; 
+        height: 185.7812px;
+        top: -1.0314px;
+    
+    }
+}
+/*@media screen and (min-width:1921px) and (max-width:2560px) {
+
+
+}
+@media screen and (min-width:2561px) and (max-width:3328px) {
+}
+@media screen and (min-width:3329px) {
+
+}
+@media screen and (min-width:10010px) and (max-width:212121px){}*/
+
+
+

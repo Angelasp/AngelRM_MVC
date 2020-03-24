@@ -1,0 +1,116 @@
+InfoApiTime：2020/2/25 16:33:54,调用：QcSystem.ControllersApi/ControllerAPI/LoginApiController/Get()方法
+InfoApiTime：2020/2/25 16:34:00,调用：QcSystem.ControllersApi/ControllerAPI/LoginApiController/Get()方法
+InfoApiTime：2020/2/25 16:34:00,调用：QcSystem.ControllersApi/ControllerApi/RoleApiController/GetRolemeul()方法
+InfoApiTime：2020/2/25 16:34:35,调用：QcSystem.ControllersApi/ControllerApi/MenuApiController/Get()方法
+InfoApiTime：2020/2/25 16:35:48,调用：QcSystem.ControllersApi/ControllerApi/MenuApiController/Post([FromBody]string value)方法
+InfoApiTime：2020/2/25 16:35:50,调用：QcSystem.ControllersApi/ControllerApi/MenuApiController/Get()方法
+InfoApiTime：2020/2/25 16:35:56,调用：QcSystem.ControllersApi/ControllerApi/RoleApiController/Get()方法
+InfoApiTime：2020/2/25 16:36:00,调用：QcSystem.ControllersApi/ControllerApi/MenuApiController/Getroleid()方法
+InfoApiTime：2020/2/25 16:36:00,调用：QcSystem.ControllersApi/ControllerApi/MenuApiController/Get()方法
+InfoApiTime：2020/2/25 16:36:04,调用：QcSystem.ControllersApi/ControllerApi/RoleApiController/Post([FromBody]string value)方法
+InfoApiTime：2020/2/25 16:36:04,调用：QcSystem.ControllersApi/ControllerApi/RoleApiController/Post([FromBody]string value)方法
+InfoApiTime：2020/2/25 16:36:05,调用：QcSystem.ControllersApi/ControllerApi/RoleApiController/Post([FromBody]string value)方法
+InfoApiTime：2020/2/25 16:36:06,调用：QcSystem.ControllersApi/ControllerApi/RoleApiController/Get()方法
+InfoApiTime：2020/2/25 16:36:08,调用：QcSystem.ControllersApi/ControllerApi/RoleApiController/GetRolemeul()方法
+InfoApiTime：2020/2/25 16:36:15,调用：QcSystem.ControllersApi/ControllerApi/MenuApiController/Get()方法
+InfoApiTime：2020/2/25 16:36:51,调用：QcSystem.ControllersApi/ControllerApi/MenuApiController/Post([FromBody]string value)方法
+InfoApiTime：2020/2/25 16:36:52,调用：QcSystem.ControllersApi/ControllerApi/MenuApiController/Get()方法
+InfoApiTime：2020/2/25 16:37:03,调用：QcSystem.ControllersApi/ControllerApi/MenuApiController/Post([FromBody]string value)方法
+InfoApiTime：2020/2/25 16:37:04,调用：QcSystem.ControllersApi/ControllerApi/MenuApiController/Get()方法
+InfoApiTime：2020/2/25 16:37:19,调用：QcSystem.ControllersApi/ControllerApi/MenuApiController/Post([FromBody]string value)方法
+InfoApiTime：2020/2/25 16:37:20,调用：QcSystem.ControllersApi/ControllerApi/MenuApiController/Get()方法
+InfoApiTime：2020/2/25 16:37:30,调用：QcSystem.ControllersApi/ControllerApi/MenuApiController/Post([FromBody]string value)方法
+InfoApiTime：2020/2/25 16:37:31,调用：QcSystem.ControllersApi/ControllerApi/MenuApiController/Get()方法
+InfoApiTime：2020/2/25 16:37:35,调用：QcSystem.ControllersApi/ControllerApi/RoleApiController/GetRolemeul()方法
+InfoApiTime：2020/2/25 16:37:41,调用：QcSystem.ControllersApi/ControllerApi/MenuApiController/Get()方法
+InfoApiTime：2020/2/25 16:38:14,调用：QcSystem.ControllersApi/ControllerApi/MenuApiController/Get()方法
+InfoApiTime：2020/2/25 16:38:26,调用：QcSystem.ControllersApi/ControllerApi/MenuApiController/Post([FromBody]string value)方法
+InfoApiTime：2020/2/25 16:38:28,调用：QcSystem.ControllersApi/ControllerApi/MenuApiController/Get()方法
+InfoApiTime：2020/2/25 16:38:30,调用：QcSystem.ControllersApi/ControllerApi/RoleApiController/GetRolemeul()方法
+InfoApiTime：2020/2/25 16:38:34,调用：QcSystem.ControllersApi/ControllerApi/MenuApiController/Get()方法
+InfoApiTime：2020/2/25 16:38:47,调用：QcSystem.ControllersApi/ControllerApi/MenuApiController/Post([FromBody]string value)方法
+InfoApiTime：2020/2/25 16:38:48,调用：QcSystem.ControllersApi/ControllerApi/MenuApiController/Get()方法
+InfoApiTime：2020/2/25 16:38:51,调用：QcSystem.ControllersApi/ControllerApi/RoleApiController/GetRolemeul()方法
+InfoApiTime：2020/2/25 16:38:52,调用：QcSystem.ControllersApi/ControllerApi/RoleApiController/GetRolemeul()方法
+InfoApiTime：2020/2/25 16:39:02,调用：QcSystem.ControllersApi/ControllerApi/MenuApiController/Get()方法
+InfoApiTime：2020/2/25 16:39:15,调用：QcSystem.ControllersApi/ControllerApi/MenuApiController/Post([FromBody]string value)方法
+InfoApiTime：2020/2/25 16:39:16,调用：QcSystem.ControllersApi/ControllerApi/MenuApiController/Get()方法
+InfoApiTime：2020/2/25 16:39:18,调用：QcSystem.ControllersApi/ControllerApi/RoleApiController/GetRolemeul()方法
+InfoApiTime：2020/2/25 16:39:22,调用：QcSystem.ControllersApi/ControllerApi/MenuApiController/Get()方法
+InfoApiTime：2020/2/25 16:39:33,调用：QcSystem.ControllersApi/ControllerApi/MenuApiController/Post([FromBody]string value)方法
+InfoApiTime：2020/2/25 16:39:34,调用：QcSystem.ControllersApi/ControllerApi/MenuApiController/Get()方法
+InfoApiTime：2020/2/25 16:39:43,调用：QcSystem.ControllersApi/ControllerApi/RoleApiController/GetRolemeul()方法
+InfoApiTime：2020/2/25 16:39:49,调用：QcSystem.ControllersApi/ControllerApi/MenuApiController/Get()方法
+InfoApiTime：2020/2/25 16:39:56,调用：QcSystem.ControllersApi/ControllerApi/MenuApiController/Post([FromBody]string value)方法
+InfoApiTime：2020/2/25 16:39:57,调用：QcSystem.ControllersApi/ControllerApi/MenuApiController/Get()方法
+InfoApiTime：2020/2/25 16:39:59,调用：QcSystem.ControllersApi/ControllerApi/RoleApiController/GetRolemeul()方法
+InfoApiTime：2020/2/25 16:40:04,调用：QcSystem.ControllersApi/ControllerApi/MenuApiController/Get()方法
+InfoApiTime：2020/2/25 16:44:52,调用：QcSystem.ControllersApi/ControllerApi/MenuApiController/Post([FromBody]string value)方法
+InfoApiTime：2020/2/25 16:44:53,调用：QcSystem.ControllersApi/ControllerApi/MenuApiController/Get()方法
+InfoApiTime：2020/2/25 16:44:55,调用：QcSystem.ControllersApi/ControllerApi/RoleApiController/GetRolemeul()方法
+InfoApiTime：2020/2/25 16:45:59,调用：QcSystem.ControllersApi/ControllerApi/RoleApiController/GetRolemeul()方法
+InfoApiTime：2020/2/25 16:52:21,调用：QcSystem.ControllersApi/ControllerApi/RoleApiController/GetRolemeul()方法
+InfoApiTime：2020/2/25 16:52:25,调用：QcSystem.ControllersApi/ControllerApi/MenuApiController/Get()方法
+InfoApiTime：2020/2/25 16:57:09,调用：QcSystem.ControllersApi/ControllerApi/MenuApiController/Post([FromBody]string value)方法
+InfoApiTime：2020/2/25 16:57:11,调用：QcSystem.ControllersApi/ControllerApi/MenuApiController/Get()方法
+InfoApiTime：2020/2/25 16:57:20,调用：QcSystem.ControllersApi/ControllerApi/RoleApiController/Get()方法
+InfoApiTime：2020/2/25 16:57:20,调用：QcSystem.ControllersApi/ControllerApi/UserApiController/Get()方法
+InfoApiTime：2020/2/25 16:57:23,调用：QcSystem.ControllersApi/ControllerApi/MenuApiController/Get()方法
+InfoApiTime：2020/2/25 16:57:25,调用：QcSystem.ControllersApi/ControllerApi/RoomApiController/Get()方法
+InfoApiTime：2020/2/25 16:57:25,调用：QcSystem.ControllersApi/ControllerApi/RoomApiController/GetD()方法
+InfoApiTime：2020/2/25 16:57:25,调用：QcSystem.ControllersApi/ControllerApi/RoleApiController/Get()方法
+InfoApiTime：2020/2/25 16:57:34,调用：QcSystem.ControllersApi/ControllerApi/RoleApiController/Get()方法
+InfoApiTime：2020/2/25 16:57:34,调用：QcSystem.ControllersApi/ControllerApi/UserApiController/Get()方法
+InfoApiTime：2020/2/25 16:57:37,调用：QcSystem.ControllersApi/ControllerApi/RoleApiController/Get()方法
+InfoApiTime：2020/2/25 16:57:39,调用：QcSystem.ControllersApi/ControllerApi/MenuApiController/Getroleid()方法
+InfoApiTime：2020/2/25 16:57:40,调用：QcSystem.ControllersApi/ControllerApi/MenuApiController/Get()方法
+InfoApiTime：2020/2/25 16:57:44,调用：QcSystem.ControllersApi/ControllerApi/RoleApiController/Post([FromBody]string value)方法
+InfoApiTime：2020/2/25 16:57:44,调用：QcSystem.ControllersApi/ControllerApi/RoleApiController/Post([FromBody]string value)方法
+InfoApiTime：2020/2/25 16:57:44,调用：QcSystem.ControllersApi/ControllerApi/RoleApiController/Post([FromBody]string value)方法
+InfoApiTime：2020/2/25 16:57:48,调用：QcSystem.ControllersApi/ControllerApi/RoleApiController/Get()方法
+InfoApiTime：2020/2/25 16:57:51,调用：QcSystem.ControllersApi/ControllerApi/RoleApiController/GetRolemeul()方法
+InfoApiTime：2020/2/25 16:58:55,调用：QcSystem.ControllersApi/ControllerApi/RoleApiController/GetRolemeul()方法
+InfoApiTime：2020/2/25 16:59:47,调用：QcSystem.ControllersApi/ControllerApi/RoleApiController/GetRolemeul()方法
+InfoApiTime：2020/2/25 17:14:54,调用：QcSystem.ControllersApi/ControllerApi/RoleApiController/GetRolemeul()方法
+InfoApiTime：2020/2/25 17:15:08,调用：QcSystem.ControllersApi/ControllerApi/RoleApiController/GetRolemeul()方法
+InfoApiTime：2020/2/25 18:50:08,调用：QcSystem.ControllersApi/ControllerApi/RoleApiController/GetRolemeul()方法
+InfoApiTime：2020/2/25 20:43:43,调用：QcSystem.ControllersApi/ControllerApi/RoleApiController/GetRolemeul()方法
+InfoApiTime：2020/2/25 20:48:23,调用：QcSystem.ControllersApi/ControllerApi/RoleApiController/GetRolemeul()方法
+InfoApiTime：2020/2/25 20:56:33,调用：QcSystem.ControllersApi/ControllerApi/RoleApiController/GetRolemeul()方法
+InfoApiTime：2020/2/25 20:57:29,调用：QcSystem.ControllersApi/ControllerApi/RoleApiController/GetRolemeul()方法
+InfoApiTime：2020/2/25 20:58:37,调用：QcSystem.ControllersApi/ControllerApi/MenuApiController/Get()方法
+InfoApiTime：2020/2/25 20:58:40,调用：QcSystem.ControllersApi/ControllerApi/DownloadListManagerApiController/Get()方法
+InfoApiTime：2020/2/25 20:58:41,调用：QcSystem.ControllersApi/ControllerApi/MenuApiController/Get()方法
+InfoApiTime：2020/2/25 20:58:43,调用：QcSystem.ControllersApi/ControllerApi/RoleApiController/GetRolemeul()方法
+InfoApiTime：2020/2/25 20:58:48,调用：QcSystem.ControllersApi/ControllerApi/MenuApiController/Get()方法
+InfoApiTime：2020/2/25 20:58:53,调用：QcSystem.ControllersApi/ControllerApi/RoleApiController/GetRolemeul()方法
+InfoApiTime：2020/2/25 20:58:58,调用：QcSystem.ControllersApi/ControllerApi/MenuApiController/Get()方法
+InfoApiTime：2020/2/25 21:04:30,调用：QcSystem.ControllersApi/ControllerApi/MenuApiController/Get()方法
+InfoApiTime：2020/2/25 21:06:00,调用：QcSystem.ControllersApi/ControllerApi/MenuApiController/Post([FromBody]string value)方法
+InfoApiTime：2020/2/25 21:06:01,调用：QcSystem.ControllersApi/ControllerApi/MenuApiController/Get()方法
+InfoApiTime：2020/2/25 21:06:07,调用：QcSystem.ControllersApi/ControllerApi/RoleApiController/Get()方法
+InfoApiTime：2020/2/25 21:06:10,调用：QcSystem.ControllersApi/ControllerApi/MenuApiController/Getroleid()方法
+InfoApiTime：2020/2/25 21:06:10,调用：QcSystem.ControllersApi/ControllerApi/MenuApiController/Get()方法
+InfoApiTime：2020/2/25 21:06:14,调用：QcSystem.ControllersApi/ControllerApi/RoleApiController/Post([FromBody]string value)方法
+InfoApiTime：2020/2/25 21:06:14,调用：QcSystem.ControllersApi/ControllerApi/RoleApiController/Post([FromBody]string value)方法
+InfoApiTime：2020/2/25 21:06:14,调用：QcSystem.ControllersApi/ControllerApi/RoleApiController/Post([FromBody]string value)方法
+InfoApiTime：2020/2/25 21:06:16,调用：QcSystem.ControllersApi/ControllerApi/RoleApiController/Get()方法
+InfoApiTime：2020/2/25 21:06:23,调用：QcSystem.ControllersApi/ControllerApi/RoleApiController/GetRolemeul()方法
+InfoApiTime：2020/2/25 21:07:33,调用：QcSystem.ControllersApi/ControllerApi/RoleApiController/GetRolemeul()方法
+InfoApiTime：2020/2/25 21:17:26,调用：QcSystem.ControllersApi/ControllerApi/RoleApiController/GetRolemeul()方法
+InfoApiTime：2020/2/25 21:20:16,调用：QcSystem.ControllersApi/ControllerApi/RoleApiController/GetRolemeul()方法
+InfoApiTime：2020/2/25 21:21:41,调用：QcSystem.ControllersApi/ControllerApi/RoleApiController/GetRolemeul()方法
+InfoApiTime：2020/2/25 21:32:26,调用：QcSystem.ControllersApi/ControllerApi/RoleApiController/GetRolemeul()方法
+InfoApiTime：2020/2/25 21:45:46,调用：QcSystem.ControllersApi/ControllerApi/RoleApiController/GetRolemeul()方法
+InfoApiTime：2020/2/25 21:52:38,调用：QcSystem.ControllersApi/ControllerApi/RoleApiController/GetRolemeul()方法
+InfoApiTime：2020/2/25 21:53:18,调用：QcSystem.ControllersApi/ControllerApi/MenuApiController/Get()方法
+InfoApiTime：2020/2/25 21:54:02,调用：QcSystem.ControllersApi/ControllerApi/MenuApiController/Post([FromBody]string value)方法
+InfoApiTime：2020/2/25 21:54:03,调用：QcSystem.ControllersApi/ControllerApi/MenuApiController/Get()方法
+InfoApiTime：2020/2/25 21:54:10,调用：QcSystem.ControllersApi/ControllerApi/RoleApiController/Get()方法
+InfoApiTime：2020/2/25 21:54:13,调用：QcSystem.ControllersApi/ControllerApi/MenuApiController/Getroleid()方法
+InfoApiTime：2020/2/25 21:54:13,调用：QcSystem.ControllersApi/ControllerApi/MenuApiController/Get()方法
+InfoApiTime：2020/2/25 21:54:17,调用：QcSystem.ControllersApi/ControllerApi/RoleApiController/Post([FromBody]string value)方法
+InfoApiTime：2020/2/25 21:54:17,调用：QcSystem.ControllersApi/ControllerApi/RoleApiController/Post([FromBody]string value)方法
+InfoApiTime：2020/2/25 21:54:17,调用：QcSystem.ControllersApi/ControllerApi/RoleApiController/Post([FromBody]string value)方法
+InfoApiTime：2020/2/25 21:54:19,调用：QcSystem.ControllersApi/ControllerApi/RoleApiController/Get()方法
+InfoApiTime：2020/2/25 21:54:22,调用：QcSystem.ControllersApi/ControllerApi/RoleApiController/GetRolemeul()方法

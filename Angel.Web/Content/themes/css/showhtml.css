@@ -1,0 +1,356 @@
+  
+    .div_sg0{
+        position: absolute;
+        left: 48.45%;
+        top: 2.28%;
+        width: 120px;
+        height: 60px;
+        background:url(/Images/showhtml/整体情况_1.png) no-repeat 30% 70%;
+        margin-left:-0px;
+        margin-top:-1px;
+        background-size:100%;
+
+    }
+    .div_sg0:hover{
+
+        cursor:pointer;
+        position: absolute;
+        left: 48.45%;
+        top: 2.28%;
+        width: 120px;
+        height: 60px;
+        background:url(/Images/showhtml/整体情况滑过.png) no-repeat 30% 70%;
+        margin-left:-0px;
+        margin-top:-1px;
+        background-size:100%;
+
+
+    }
+
+    .div_sg1{
+        position: absolute;
+        left: 85.63%;
+        top: 12.46%;
+        width: 120px;
+        height: 65px;
+        background:url(/Images/showhtml/家客业务.png) no-repeat 30% 70%;
+        margin-left:-0px;
+        margin-top:-1px;
+        background-size:100%;
+
+    }
+    .div_sg1:hover{
+
+        cursor:pointer;
+        position: absolute;
+        left: 85.63%;
+        top: 12.46%;
+        width: 120px;
+        height: 65px;
+        background:url(/Images/showhtml/家客业务滑过.png) no-repeat 30% 70%;
+        margin-left:-0px;
+        margin-top:-1px;
+        background-size:100%;
+
+    }
+
+    .div_sg2{
+        position: absolute;
+        left: 90.98%;
+        top: 65.25%;
+        width: 95px;
+        height: 47.5px;
+        background:url(/Images/showhtml/新业务.png) no-repeat 30% 70%;
+        margin-left:-0px;
+        margin-top:-1px;
+        background-size:100%;
+    }
+    .div_sg2:hover{
+        cursor:pointer;
+        position: absolute;
+        left: 90.98%;
+        top: 65.25%;
+        width: 95px;
+        height: 47.5px;
+        background:url(/Images/showhtml/新业务-滑过.png) no-repeat 30% 70%;
+        margin-left:-0px;
+        margin-top:-1px;
+        background-size:100%;
+
+    }
+
+    .div_sg3{
+        position: absolute;
+        left: 29.82%;
+        top: 84.94%;
+        width: 120px;
+        height: 60px;
+        background:url(/Images/showhtml/集客业务.png) no-repeat 30% 70%;
+        margin-left:-0px;
+        margin-top:-1px;
+        background-size:100%;
+    }
+    .div_sg3:hover{
+        cursor:pointer;
+        position: absolute;
+        left: 29.82%;
+        top: 84.94%;
+        width: 120px;
+        height: 60px;
+        background:url(/Images/showhtml/集客业务滑过.png) no-repeat 30% 70%;
+        margin-left:-0px;
+        margin-top:-1px;
+        background-size:100%;
+
+    }
+
+    .div_sg4{
+        position: absolute;
+        left: 8.67%;
+        top: 38%;
+        width: 120px;
+        height: 60px;
+        background:url(/Images/showhtml/移动业务.png) no-repeat 30% 70%;
+        margin-left:-0px;
+        margin-top:-1px;
+        background-size:100%;
+    }
+    .div_sg4:hover{
+        cursor:pointer;
+        position: absolute;
+        left: 8.67%;
+        top: 38%;
+        width: 120px;
+        height: 60px;
+        background:url(/Images/showhtml/移动业务-滑过.png) no-repeat 30% 70%;
+        margin-left:-0px;
+        margin-top:-1px;
+        background-size:100%;
+
+    }
+
+    .div_sg5{
+        position: absolute;
+        right: 4.09%;
+        bottom:10.05%;
+        width:8.92%;
+        height:10.82%;
+        background:url(/Images/showhtml/对标1.png) no-repeat 30% 70%;
+        margin-left:-0px;
+        margin-top:-1px;
+        background-size:100%;
+    }
+    .div_sg5:hover{
+        cursor:pointer;
+        position: absolute;
+        right: 4.09%;
+        bottom:10.05%;
+        width:8.92%;
+        height:10.82%;
+        background:url(/Images/showhtml/对标滑过.png) no-repeat 30% 70%;
+        margin-left:-0px;
+        margin-top:-1px;
+        background-size:100%;
+    }
+
+    .div_sg6{
+        position: absolute;
+        right: 4.09%;
+        bottom:2.32%;
+        width:8.92%;
+        height:10.82%;
+        background:url(/Images/showhtml/生产系统1.png) no-repeat 30% 70%;
+        margin-left:-0px;
+        margin-top:-1px;
+        background-size:100%;
+    }
+    .div_sg6:hover{
+        cursor:pointer;
+        position: absolute;
+        right: 4.09%;
+        bottom:2.32%;
+        width:8.92%;
+        height:10.82%;
+        background:url(/Images/showhtml/生产系统滑过.png) no-repeat 30% 70%;
+        margin-left:-0px;
+        margin-top:-1px;
+        background-size:100%;
+    }
+
+
+    .div_sg7{
+        position: absolute;
+        left: 40.88%;
+        top:20.1%;
+        width:250px;
+        height:250px;
+        background:url(/Images/showhtml/组-1-拷贝.png) no-repeat 30% 70%;
+        margin-left:-0px;
+        margin-top:-1px;
+        background-size:100%;
+    }
+
+    .div_sg99{
+        transform-origin:50% 43.5%;
+        -webkit-animation-name: spin;
+        -webkit-animation-duration: 4s;
+        -webkit-animation-iteration-count: infinite;
+        -webkit-animation-timing-function: linear;
+        -moz-animation-name: spin;
+        -moz-animation-duration: 4s;
+        -moz-animation-iteration-count: infinite;
+        -moz-animation-timing-function: linear;
+        -ms-animation-name: spin;
+        -ms-animation-duration: 5s;
+        -ms-animation-iteration-count: infinite;
+        -ms-animation-timing-function: linear;
+        animation-name: spin;
+        animation-duration: 4s;
+        animation-iteration-count: infinite;
+        animation-timing-function: linear;
+        /*-webkit-transform-origin:50% 50% ;*/
+        /*-webkit-animation:circle 1s infinite linear;!*匀速 循环*!*/
+    }
+   
+
+    .div_sg8{
+        position: absolute;
+        left: 66.86%;
+        top: 7.37%;
+        width: 125px;
+        height: 125px;
+        background:url(/Images/showhtml/组-22.png) no-repeat 30% 70%;
+        margin-left:-0px;
+        margin-top:-1px;
+        background-size:100%;
+    }
+    .div_sg998{
+        transform-origin:50% 50%;
+        animation-name: spinback;
+        animation-duration: 5s;
+        animation-iteration-count: infinite;
+        animation-timing-function: linear;
+    }
+
+    .div_sg9{
+        position: absolute;
+        left: 71.09%;
+        top: 56.29%;
+        width: 175px;
+        height: 175px;
+        background:url(/Images/showhtml/组-1-拷贝-4.png) no-repeat 30% 70%;
+        margin-left:-0px;
+        margin-top:-1px;
+        background-size:100%;
+    }
+    .div_sg999{
+        transform-origin:50% 40%;
+        animation-name: spinback;
+        animation-duration: 5s;
+        animation-iteration-count: infinite;
+        animation-timing-function: linear;
+    }
+
+    .div_sg10{
+        position: absolute;
+        left: 46.85%;
+        top: 77.53%;
+        width: 135px;
+        height: 135px;
+        background:url(/Images/showhtml/矢量智能对象_3.png) no-repeat 30% 70%;
+        margin-left:-0px;
+        margin-top:-1px;
+        background-size:100%;
+    }
+    .div_sg1000{
+        transform-origin:50% 50%;
+        animation-name: spinback;
+        animation-duration: 5s;
+        animation-iteration-count: infinite;
+        animation-timing-function: linear;
+    }
+
+    .div_sg11{
+        position: absolute;
+        left: 26.7%;
+        top: 32.06%;
+        width: 130px;
+        height: 130px;
+        background:url(/Images/showhtml/组25.png) no-repeat 30% 70%;
+        margin-left:-0px;
+        margin-top:-1px;
+        background-size:100%;
+    }
+    .div_sg1001{
+        transform-origin:50% 50%;
+        animation-name: spinback;
+        animation-duration: 5s;
+        animation-iteration-count: infinite;
+        animation-timing-function: linear;
+    }
+
+    @keyframes spin{
+        0%{ transform:rotate(0deg); }
+        100%{ transform:rotate(360deg); }
+    }
+    @keyframes spinback{
+        0%{ transform:rotate(0deg); }
+        100%{ transform:rotate(-360deg); }
+    }
+
+    .Include{
+        width: 830px;
+        height: 450px;
+        top:10%;
+        margin: auto;
+        position: relative;
+        margin-left:17.41%;
+
+
+    }
+
+    .div_rool1{
+        transform-origin:50% 50%;
+        animation-name: spin;
+        animation-duration: 8s;
+        animation-iteration-count: infinite;
+        animation-timing-function: linear;
+    }
+    .div_rool2{
+        transform-origin:50% 50%;
+        animation-name: spinback;
+        animation-duration: 8s;
+        animation-iteration-count: infinite;
+        animation-timing-function: linear;
+    }
+    .div_rool3{
+        transform-origin:50% 50%;
+        animation-name: spinback;
+        animation-duration: 8s;
+        animation-iteration-count: infinite;
+        animation-timing-function: linear;
+    }
+    .div_rool4{
+        transform-origin:50% 50%;
+        animation-name: spinback;
+        animation-duration: 8s;
+        animation-iteration-count: infinite;
+        animation-timing-function: linear;
+    }
+    .div_rool5{
+        transform-origin:50% 50%;
+        animation-name: spinback;
+        animation-duration: 8s;
+        animation-iteration-count: infinite;
+        animation-timing-function: linear;
+    }
+    .div_rool6{
+        transform-origin:50% 50%;
+        animation-name: spin;
+        animation-duration: 8s;
+        animation-iteration-count: infinite;
+        animation-timing-function: linear;
+    }
+
+
+

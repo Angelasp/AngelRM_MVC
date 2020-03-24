@@ -1,0 +1,494 @@
+﻿@{
+    ViewBag.Title = "MenuManager";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+@*	<link href="/Scripts/dist/bootstrap-3.3.7/css/bootstrap.min.css" rel="stylesheet"/>*@
+
+@*<link rel="stylesheet" href="/Scripts/dist/ztree/css/zTreeStyle/zTreeStyle.css" type="text/css">*@
+
+<link href="/Scripts/dist/material-design-iconic-font-2.2.0/css/material-design-iconic-font.min.css" rel="stylesheet" />
+<link href="/Scripts/dist/bootstrap-table-1.11.1/bootstrap-table.min.css" rel="stylesheet" />
+<link href="/Scripts/dist/jquery-confirm/dist/jquery-confirm.min.css" rel="stylesheet" />
+<style type="text/css">
+    .modal-dialog, .modal-tree
+    {
+        width: 400px;
+        margin: 30px auto;
+    }
+
+    .fixed-table-pagination
+    {
+        margin: 0px;
+    }
+
+    .form-group
+    {
+        margin-bottom: 0px;
+    }
+
+    .widget-toolbar:before
+    {
+        border: 0px;
+        border-width: 0px;
+    }
+
+    .widget-body
+    {
+        border: 1px solid #B9D7D7;
+    }
+
+        .widget-body .table
+        {
+            border-top: 0px;
+        }
+
+    .fixed-table-pagination
+    {
+        background: #f9f9f9;
+    }
+
+    .orange
+    {
+        color: #6cb7e2!important;
+    }
+
+        .orange:hover
+        {
+            color: #6cb7e2!important;
+
+        }
+
+    #btnSearch
+    {
+        margin: 0px;
+        padding: 0px;
+        width: 40px;
+        height: 30px;
+        background: #a4cbff;
+        border-color: #a4cbff;
+        position: relative;
+        border: 5px solid #a4cbff;
+        margin-right: 10px;
+    }
+
+        #btnSearch:hover
+        {
+            border-color: #52acdf;
+            background: #52acdf;
+            border: 5px solid #52acdf;
+        }
+
+    .onclickbtni
+    {
+        font-size: 18px;
+        background: #5bb9ee ;
+        width: 40px;
+        height: 32px;
+        position: absolute;
+        top: 0px;
+        left: 0px;
+        z-index: 999;
+        margin-top:-6px;
+        margin-left:-5px;
+        padding-top: 7px;
+        text-shadow: none;
+        -webkit-text-stroke: 0.7px #5bb9ee ;
+    }
+
+        .onclickbtni:hover
+        {
+            border-color: #36aaeb;
+            background: #36aaeb;
+           -webkit-text-stroke: 0.7px  #36aaeb;
+        }
+
+.table-hover>tbody>tr:hover {
+    background-color: #f5f5ff;
+   
+    margin:-2px;
+
+}
+
+
+</style>
+
+<div id="main">
+    <div class="widget-header widget-header-blue widget-header-flat" style="background-color: transparent; border: 0px; padding-left: 0px; line-height: 70px;">
+        <h4 class="widget-title" style="color: #333333; left: 0px;">菜单管理</h4>
+        <div class="widget-toolbar" style="padding: 0px; line-height: 70px;">
+            <div class="form-inline form-group " style="line-height: 70px;">
+                <div class="input-group input-group-sm">
+                    <input type="text" class="form-control" id="search-input" placeholder="检索 ..." style="height: 32px; margin-top: 19px; margin-left: 1px" size="40" />
+                    <div id="toggle-result-format" class="input-group-btn">
+
+                        <button title="查询" id="btnSearch" type="button" style="" class="btn btn-success  onclickbtn">
+                            <i class="fa fa-search onclickbtni" style=""></i>
+                        </button>
+
+                        <button title="新增" style="width: 40px;height:32px; border-color: #8fbcd9"; class="btn btn-xs btn-white btn-info" id="btnAdd" onclick="showMenu(this)" name="add">
+                            <i class="ace-icon fa fa-plus bigger-120 orange " style="-webkit-text-stroke: 0.6px #fff"></i>
+
+                        </button>
+                        <button title="修改" style="width: 40px;height:32px; border-color: #8fbcd9" class="btn btn-xs btn-white btn-info" id="btnEdit" onclick="showMenu(this)" name="edit">
+                            <i class="ace-icon fa fa-pencil bigger-120 orange"></i>
+
+                        </button>
+
+                        <button title="删除" style="width: 40px;height:32px; border-color: #8fbcd9" class="btn btn-xs btn-white btn-info" data-toggle="modal" id="btnRemove" onclick="deleteAction()">
+                            <i class="ace-icon  fa fa-trash-o bigger-120 orange "></i>
+
+                        </button>
+
+
+
+
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+
+    <div class="widget-body">
+        <div class="widget-main" style="padding: 0px;">
+            <table id="table"></table>
+        </div>
+    </div>
+
+</div>
+<!-- 新增 -->
+@*<div id="createDialog" class="crudDialog" hidden>
+    <form>
+        <div class="form-group">
+            <label for="input1">菜单名称</label>
+            <input id="input1" type="text" class="form-control">
+        </div>
+        <div class="form-group">
+            <label for="input2">父类ID</label>
+            <input id="input2" type="text" class="form-control" onclick="showMenuTree()">
+        </div>
+        <div class="form-group">
+            <label for="input3">排序号</label>
+            <input id="input3" type="text" class="form-control">
+        </div>
+        <div class="form-group">
+            <label for="input4">图标</label>
+            <input id="input4" type="text" class="form-control">
+        </div>
+        <div class="form-group">
+            <label for="input5">菜单路径</label>
+            <input id="input5" type="text" class="form-control">
+        </div>
+
+        <div class="form-group">
+            <label for="input8">菜单备注</label>
+            <input id="input8" type="text" class="form-control">
+        </div>
+
+        <div class="form-group" style="font-family: inherit; font-weight: 400; color: #393939; line-height: 1.5; position: relative;">
+            <label for="input7" class="activec">是否显示</label><br />
+            <div style="position: absolute; left: 110px; top: 8px;">
+                <input type="radio" value="Y" name="isvisible" checked>&nbsp 是 &nbsp&nbsp
+                 <input type="radio" value="N" name="isvisible">&nbsp 否
+            </div>
+            <div style="height: 5px;"></div>
+        </div>
+        <div class="form-group" style="font-family: inherit; font-weight: 400; color: #393939; line-height: 1.5; position: relative;">
+            <label for="input7" class="activec">是否可用</label><br />
+            <div style="position: absolute; left: 110px; top: 8px;">
+                <input type="radio" value="Y" name="isenabled" checked />&nbsp 是 &nbsp&nbsp
+                 <input type="radio" value="N" name="isenabled" />&nbsp 否
+            </div>
+            <div style="height: 20px;"></div>
+        </div>
+    </form>
+</div>*@
+
+<!-- 树状菜单显示 -->
+<div class="modal fade" id="menuTree" tabindex="9999" style="z-index: 99999;" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-tree" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">选择父目录</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                </button>
+            </div>
+            <div class="modal-body" style="height: 530px; overflow-y: auto;">
+                <div id="treeDemo" class=""></div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal fade" id="menuDialog" tabindex="99" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="menuTitle">新增菜单</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                </button>
+            </div>
+            <div class="modal-body">
+                <div class="form-group">
+                    <label for="input1">菜单名称</label>
+                    <input id="input1" type="text" class="form-control">
+                </div>
+                <div class="form-group">
+                    <label for="input2" name="input2" class="">父类ID</label>
+                    <input id="input2" type="text" class="form-control" onclick="showMenuTree()">
+                </div>
+                <div class="form-group">
+                    <label for="input3">排序号</label>
+                    <input id="input3" type="text" class="form-control">
+                </div>
+                <div class="form-group">
+                    <label for="input4">图标</label>
+                    <input id="input4" type="text" class="form-control" onclick="showIcon()">
+                </div>
+                <div class="form-group">
+                    <label for="input5">菜单路径</label>
+                    <input id="input5" type="text" class="form-control">
+                </div>
+
+                <div class="form-group" id="input8">
+                    <label for="input8">菜单备注</label>
+                    <input type="text" class="form-control" autocomplete="off">
+                </div>
+
+                <div class="form-group" style="font-family: inherit; font-weight: 400; color: #393939; line-height: 1.5; position: relative;">
+                    <label for="input7" class="activec">是否显示</label><br />
+                    <div style="position: absolute; left: 110px; top: 8px;">
+                        <input type="radio" value="Y" name="isvisible" checked>&nbsp 是 &nbsp&nbsp
+                        <input type="radio" value="N" name="isvisible">&nbsp 否
+                    </div>
+                    <div style="height: 5px;"></div>
+                </div>
+                <div class="form-group" style="font-family: inherit; font-weight: 400; color: #393939; line-height: 1.5; position: relative;display:none;">
+                    <label for="input7" class="activec">是否可用</label><br />
+                    <div style="position: absolute; left: 110px; top: 8px;">
+                        <input type="radio" value="Y" name="isenabled" checked />&nbsp 是 &nbsp&nbsp
+                 <input type="radio" value="N" name="isenabled" />&nbsp 否
+                    </div>
+                    <div style="height: 20px;"></div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-primary" name="add" id="save_menu">保存</button>
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">关闭</button>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="modal fade bs-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" id="iconselect">
+  <div class="modal-dialog modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+           <button type="button" class="close" data-dismiss="modal" aria-label="Close" ><span aria-hidden="true">&times;</span></button>
+           @*<h4 class="modal-title" id="myModalLabel">图标选择</h4>*@
+          </div>
+          <div class="modal-body row">
+            <div id="icon">
+               <section id="chart-icons">
+          <h4 class="page-header">图表类图标(7个)</h4>
+          <div class="row fontawesome-icon-list bigicon">
+                      <div class="fa-hover col-md-1 col-xs-2">
+              <a href="javascript:void(0);" onclick="js_method(this)" data-toggle="popover" data-trigger="hover" data-placement="top" title="" data-content="fa-area-chart" class="fancybox fancybox.ajax">
+                <i class="fa fa-area-chart"></i>
+              </a>
+            </div>
+                        <div class="fa-hover col-md-1 col-xs-2">
+              <a href="javascript:void(0);" onclick="js_method(this)" data-toggle="popover" data-trigger="hover" data-placement="top" title="" data-content="fa-bar-chart" class="fancybox fancybox.ajax">
+                <i class="fa fa-bar-chart"></i>
+              </a>
+            </div>
+                        <div class="fa-hover col-md-1 col-xs-2">
+              <a href="javascript:void(0);" onclick="js_method(this)" data-toggle="popover" data-trigger="hover" data-placement="top" title="" data-content="fa-bar-chart-o" class="fancybox fancybox.ajax">
+                <i class="fa fa-bar-chart-o"></i>
+              </a>
+            </div>
+                        <div class="fa-hover col-md-1 col-xs-2">
+              <a href="javascript:void(0);" onclick="js_method(this)" data-toggle="popover" data-trigger="hover" data-placement="top" title="" data-content="fa-line-chart" class="fancybox fancybox.ajax">
+                <i class="fa fa-line-chart"></i>
+              </a>
+            </div>
+                        <div class="fa-hover col-md-1 col-xs-2">
+              <a href="javascript:void(0);" onclick="js_method(this)" data-toggle="popover" data-trigger="hover" data-placement="top" title="" data-content="fa-pie-chart" class="fancybox fancybox.ajax">
+                <i class="fa fa-pie-chart"></i>
+              </a>
+            </div>
+              
+                          <div class="fa-hover col-md-1 col-xs-2">
+              <a href="javascript:void(0);" onclick="js_method(this)" data-toggle="popover" data-trigger="hover" data-placement="top" title="" data-content="fa-pie-chart" class="fancybox fancybox.ajax">
+                <i class="fa fa-wrench"></i>
+              </a>
+            </div>
+              <div class="fa-hover col-md-1 col-xs-2">
+              <a href="javascript:void(0);" onclick="js_method(this)" data-toggle="popover" data-trigger="hover" data-placement="top" title="" data-content="fa-pie-chart" class="fancybox fancybox.ajax">
+                <i class="fa fa-th-large"></i>
+              </a>
+            </div>
+             <div class="fa-hover col-md-1 col-xs-2">
+              <a href="javascript:void(0);" onclick="js_method(this)" data-toggle="popover" data-trigger="hover" data-placement="top" title="" data-content="fa-pie-chart" class="fancybox fancybox.ajax">
+                <i class="fa fa-jsfiddle"></i>
+              </a>
+            </div>
+         </div>
+        </section>
+                 <section id="spinner-icons">
+          <h4 class="page-header">旋转类图标(5个)</h4>
+          <div class="row fontawesome-icon-list bigicon">
+                      <div class="fa-hover col-md-1 col-xs-2">
+              <a href="javascript:void(0);" onclick="js_method(this)" data-toggle="popover" data-trigger="hover" data-placement="top" title="" data-content="fa-circle-o-notch" class="fancybox fancybox.ajax">
+                <i class="fa fa-circle-o-notch"></i>
+              </a>
+            </div>
+                        <div class="fa-hover col-md-1 col-xs-2">
+              <a href="javascript:void(0);" onclick="js_method(this)" data-toggle="popover" data-trigger="hover" data-placement="top" title="" data-content="fa-cog" class="fancybox fancybox.ajax">
+                <i class="fa fa-cog"></i>
+              </a>
+            </div>
+                        <div class="fa-hover col-md-1 col-xs-2">
+              <a href="javascript:void(0);" onclick="js_method(this)" data-toggle="popover" data-trigger="hover" data-placement="top" title="" data-content="fa-gear" class="fancybox fancybox.ajax">
+                <i class="fa fa-gear"></i>
+              </a>
+            </div>
+                        <div class="fa-hover col-md-1 col-xs-2">
+              <a href="javascript:void(0);" onclick="js_method(this)" data-toggle="popover" data-trigger="hover" data-placement="top" title="" data-content="fa-refresh" class="fancybox fancybox.ajax">
+                <i class="fa fa-refresh"></i>
+              </a>
+            </div>
+                        <div class="fa-hover col-md-1 col-xs-2">
+              <a href="javascript:void(0);" onclick="js_method(this)"data-toggle="popover" data-trigger="hover" data-placement="top" title="" data-content="fa-spinner" class="fancybox fancybox.ajax">
+                <i class="fa fa-spinner"></i>
+              </a>
+            </div>
+                      </div>
+        </section>
+		 <section id="filetype-icons">
+          <h4 class="page-header">文件类型图标(18个)</h4>
+          <div class="row fontawesome-icon-list bigicon">
+                      <div class="fa-hover col-md-1 col-xs-2">
+              <a href="javascript:void(0);" onclick="js_method(this)" data-toggle="popover" data-trigger="hover" data-placement="top" title="" data-content="fa-file" class="fancybox fancybox.ajax">
+                <i class="fa fa-file"></i>
+              </a>
+            </div>
+                        <div class="fa-hover col-md-1 col-xs-2">
+              <a href="javascript:void(0);" onclick="js_method(this)" data-toggle="popover" data-trigger="hover" data-placement="top" title="" data-content="fa-file-archive-o" class="fancybox fancybox.ajax">
+                <i class="fa fa-file-archive-o"></i>
+              </a>
+            </div>
+                        <div class="fa-hover col-md-1 col-xs-2">
+              <a href="javascript:void(0);" onclick="js_method(this)" data-toggle="popover" data-trigger="hover" data-placement="top" title="" data-content="fa-file-audio-o" class="fancybox fancybox.ajax">
+                <i class="fa fa-file-audio-o"></i>
+              </a>
+            </div>
+                        <div class="fa-hover col-md-1 col-xs-2">
+              <a href="javascript:void(0);" onclick="js_method(this)" data-toggle="popover" data-trigger="hover" data-placement="top" title="" data-content="fa-file-code-o" class="fancybox fancybox.ajax">
+                <i class="fa fa-file-code-o"></i>
+              </a>
+            </div>
+                        <div class="fa-hover col-md-1 col-xs-2">
+              <a href="javascript:void(0);" onclick="js_method(this)" data-toggle="popover" data-trigger="hover" data-placement="top" title="" data-content="fa-file-excel-o" class="fancybox fancybox.ajax">
+                <i class="fa fa-file-excel-o"></i>
+              </a>
+            </div>
+                        <div class="fa-hover col-md-1 col-xs-2">
+              <a href="javascript:void(0);" onclick="js_method(this)" data-toggle="popover" data-trigger="hover" data-placement="top" title="" data-content="fa-file-image-o" class="fancybox fancybox.ajax">
+                <i class="fa fa-file-image-o"></i>
+              </a>
+            </div>
+                        <div class="fa-hover col-md-1 col-xs-2">
+              <a href="javascript:void(0);" onclick="js_method(this)" data-toggle="popover" data-trigger="hover" data-placement="top" title="" data-content="fa-file-movie-o" class="fancybox fancybox.ajax">
+                <i class="fa fa-file-movie-o"></i>
+              </a>
+            </div>
+                        <div class="fa-hover col-md-1 col-xs-2">
+              <a href="javascript:void(0);" onclick="js_method(this)" data-toggle="popover" data-trigger="hover" data-placement="top" title="" data-content="fa-file-o" class="fancybox fancybox.ajax">
+                <i class="fa fa-file-o"></i>
+              </a>
+            </div>
+                        <div class="fa-hover col-md-1 col-xs-2">
+              <a href="javascript:void(0);" onclick="js_method(this)" data-toggle="popover" data-trigger="hover" data-placement="top" title="" data-content="fa-file-pdf-o" class="fancybox fancybox.ajax">
+                <i class="fa fa-file-pdf-o"></i>
+              </a>
+            </div>
+                        <div class="fa-hover col-md-1 col-xs-2">
+              <a href="javascript:void(0);" onclick="js_method(this)" data-toggle="popover" data-trigger="hover" data-placement="top" title="" data-content="fa-file-photo-o" class="fancybox fancybox.ajax">
+                <i class="fa fa-file-photo-o"></i>
+              </a>
+            </div>
+                        <div class="fa-hover col-md-1 col-xs-2">
+              <a href="javascript:void(0);" onclick="js_method(this)" data-toggle="popover" data-trigger="hover" data-placement="top" title="" data-content="fa-file-picture-o" class="fancybox fancybox.ajax">
+                <i class="fa fa-file-picture-o"></i>
+              </a>
+            </div>
+                        <div class="fa-hover col-md-1 col-xs-2">
+              <a href="javascript:void(0);" onclick="js_method(this)" data-toggle="popover" data-trigger="hover" data-placement="top" title="" data-content="fa-file-powerpoint-o" class="fancybox fancybox.ajax">
+                <i class="fa fa-file-powerpoint-o"></i>
+              </a>
+            </div>
+                        <div class="fa-hover col-md-1 col-xs-2">
+              <a href="javascript:void(0);" onclick="js_method(this)" data-toggle="popover" data-trigger="hover" data-placement="top" title="" data-content="fa-file-sound-o" class="fancybox fancybox.ajax">
+                <i class="fa fa-file-sound-o"></i>
+              </a>
+            </div>
+                        <div class="fa-hover col-md-1 col-xs-2">
+              <a href="javascript:void(0);" onclick="js_method(this)" data-toggle="popover" data-trigger="hover" data-placement="top" title="" data-content="fa-file-text" class="fancybox fancybox.ajax">
+                <i class="fa fa-file-text"></i>
+              </a>
+            </div>
+                        <div class="fa-hover col-md-1 col-xs-2">
+              <a href="javascript:void(0);" onclick="js_method(this)" data-toggle="popover" data-trigger="hover" data-placement="top" title="" data-content="fa-file-text-o" class="fancybox fancybox.ajax">
+                <i class="fa fa-file-text-o"></i>
+              </a>
+            </div>
+                        <div class="fa-hover col-md-1 col-xs-2">
+              <a href="javascript:void(0);" onclick="js_method(this)" data-toggle="popover" data-trigger="hover" data-placement="top" title="" data-content="fa-file-video-o" class="fancybox fancybox.ajax">
+                <i class="fa fa-file-video-o"></i>
+              </a>
+            </div>
+                        <div class="fa-hover col-md-1 col-xs-2">
+              <a href="javascript:void(0);" onclick="js_method(this)" data-toggle="popover" data-trigger="hover" data-placement="top" title="" data-content="fa-file-word-o" class="fancybox fancybox.ajax">
+                <i class="fa fa-file-word-o"></i>
+              </a>
+            </div>
+                        <div class="fa-hover col-md-1 col-xs-2">
+              <a href="javascript:void(0);" onclick="js_method(this)" data-toggle="popover" data-trigger="hover" data-placement="top" title="" data-content="fa-file-zip-o" class="fancybox fancybox.ajax">
+                <i class="fa fa-file-zip-o"></i>
+              </a>
+            </div>
+                      </div>
+        </section>
+            </div>
+        </div>
+      
+        </div>
+      </div>
+  </div>
+
+
+
+<script src="/Scripts/dist/bootstrap-table-1.11.1/bootstrap-table.js"></script>
+<script src="/Scripts/dist/bootstrap-table-1.11.1/locale/bootstrap-table-zh-CN.min.js"></script>
+<script src="/Scripts/dist/jquery-confirm/dist/jquery-confirm.min.js"></script>
+<script src="/Scripts/js/common.js"></script>
+<script src="/Scripts/dist/treeview/bootstrap-treeview.js"></script>
+
+<script src="~/ViewScripts/sysmanager/menu.js"></script>
+
+<script>
+    //toggle display format buttons
+    $('#toggle-result-format .btn').tooltip({ container: 'body' }).on('click', function (e) {
+        $(this).siblings().each(function () {
+            $(this).removeClass($(this).attr('data-class')).addClass('btn-grey');
+        });
+        $(this).removeClass('btn-grey').addClass($(this).attr('data-class'));
+    });
+
+</script>

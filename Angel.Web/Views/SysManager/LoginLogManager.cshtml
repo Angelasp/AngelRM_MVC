@@ -1,0 +1,83 @@
+﻿@{
+    ViewBag.Title = "MenuManager";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<link href="/Scripts/dist/material-design-iconic-font-2.2.0/css/material-design-iconic-font.min.css" rel="stylesheet" />
+<link href="/Scripts/dist/bootstrap-table-1.11.1/bootstrap-table.min.css" rel="stylesheet" />
+<link href="/Scripts/dist/jquery-confirm/dist/jquery-confirm.min.css" rel="stylesheet" />
+<style>
+    .fixed-table-pagination
+    {
+        margin: 0px;
+    }
+
+    .widget-body
+    {
+        border: 1px solid #B9D7D7;
+        color:#717171;
+    }
+    .widget-toolbar:before
+    {
+           border: 1px solid #f5f7fa;
+    }
+
+    .form-group
+    {
+        margin-bottom: 0px;
+    }
+
+    .widget-body .table
+    {
+        border-top: 0px;
+    }
+
+    .fixed-table-pagination
+    {
+        background: #f9f9f9;
+        line-height: 28px;
+    }
+
+
+
+
+
+</style>
+
+<div id="main">
+    <div class="widget-header widget-header-blue widget-header-flat" style="background-color: transparent; border: 0px; padding-left: 0px; line-height: 70px;">
+
+        <h4 class="widget-title">登录日志管理</h4>
+
+        <div class="widget-toolbar" style="padding:0px;line-height:70px;">
+    
+            <div class="form-inline form-group " style="line-height:70px;">
+                <div class="input-group input-group-sm">
+                    <div class="input-group-btn input-group-sm">
+                        <button title="导出全部日志" style="width: auto; border-color: #bbbbbb" class="btn btn-xs btn-white btn-info" id="btnExceportlog" data-toggle="modal">
+                            <i class="ace-icon  fa fa-file-excel-o bigger-110 blue "></i>
+                           导出全部日志
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="widget-body">
+            <div class="widget-main" style="padding: 0px;">
+                <table id="table" style="margin: 0px;"></table>
+            </div>
+            <!-- /.widget-main -->
+        </div>
+        <!-- /.widget-body -->
+    </div>
+</div>
+
+
+<script src="/Scripts/dist/bootstrap-table-1.11.1/bootstrap-table.min.js"></script>
+<script src="/Scripts/dist/bootstrap-table-1.11.1/locale/bootstrap-table-zh-CN.min.js"></script>
+<script src="/Scripts/dist/jquery-confirm/dist/jquery-confirm.min.js"></script>
+<script src="/Scripts/js/common.js"></script>
+<script src="/Scripts/dist/treeview/bootstrap-treeview.js"></script>
+
+<script src="~/ViewScripts/sysmanager/loginlog.js"></script>

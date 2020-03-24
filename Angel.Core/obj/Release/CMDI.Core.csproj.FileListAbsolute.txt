@@ -1,0 +1,17 @@
+E:\2016-12-26\QcSystem\CMDI.Core\bin\Release\CMDI.Core.dll
+E:\2016-12-26\QcSystem\CMDI.Core\bin\Release\CMDI.Core.pdb
+E:\2016-12-26\QcSystem\CMDI.Core\bin\Release\CMDI.Utils.dll
+E:\2016-12-26\QcSystem\CMDI.Core\bin\Release\Newtonsoft.Json.dll
+E:\2016-12-26\QcSystem\CMDI.Core\bin\Release\Ninject.dll
+E:\2016-12-26\QcSystem\CMDI.Core\bin\Release\System.Net.Http.Formatting.dll
+E:\2016-12-26\QcSystem\CMDI.Core\bin\Release\System.Web.Http.dll
+E:\2016-12-26\QcSystem\CMDI.Core\bin\Release\CMDI.Utils.pdb
+E:\2016-12-26\QcSystem\CMDI.Core\bin\Release\Newtonsoft.Json.pdb
+E:\2016-12-26\QcSystem\CMDI.Core\bin\Release\Newtonsoft.Json.xml
+E:\2016-12-26\QcSystem\CMDI.Core\bin\Release\System.Net.Http.Formatting.xml
+E:\2016-12-26\QcSystem\CMDI.Core\bin\Release\System.Web.Http.xml
+E:\2016-12-26\QcSystem\CMDI.Core\bin\Release\zh-Hans\System.Net.Http.Formatting.resources.dll
+E:\2016-12-26\QcSystem\CMDI.Core\bin\Release\zh-Hans\System.Web.Http.resources.dll
+E:\2016-12-26\QcSystem\CMDI.Core\obj\Release\CMDI.Core.csprojResolveAssemblyReference.cache
+E:\2016-12-26\QcSystem\CMDI.Core\obj\Release\CMDI.Core.dll
+E:\2016-12-26\QcSystem\CMDI.Core\obj\Release\CMDI.Core.pdb

@@ -1,0 +1,65 @@
+﻿@{
+    ViewBag.Title = "MenuManager";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<link rel="stylesheet" href="/Scripts/dist/bootstrap-3.3.7/css/bootstrap.min.css" />
+<link rel="stylesheet" href="/Content/themes/css/ace.min.css" class="ace-main-stylesheet" id="main-ace-style" />
+<link rel="stylesheet" href="~/Scripts/dist/bootstrap-table-1.11.1/bootstrap-table.min.css" />
+<link rel="stylesheet" href="~/ViewScripts/bootstrap-fileinput-master/css/fileinput.min.css" />
+<link rel="stylesheet" href="~/ViewScripts/bootstrap-fileinput-master/themes/explorer/theme.css" />
+<style>
+    .fixed-table-pagination {
+        margin: 5px;
+    }
+    .form-group {
+        margin-bottom: 0px;
+    }
+    .widget-toolbar:before {
+        border: 0px;
+        border-width: 0px;
+    }
+</style>
+<script src="~/Scripts/wizard.min.js"></script>
+<script src="~/Scripts/dist/bootstrap-table-1.11.1/bootstrap-table.min.js"></script>
+<script src="~/Scripts/dist/bootstrap-table-1.11.1/locale/bootstrap-table-zh-CN.min.js"></script>
+<script src="~/ViewScripts/bootstrap-fileinput-master/js/fileinput.min.js"></script>
+<script src="~/ViewScripts/bootstrap-fileinput-master/themes/explorer/theme.js"></script>
+<script src="~/ViewScripts/bootstrap-fileinput-master/js/locales/zh.js"></script>
+<script src="~/ViewScripts/datacollection/ReportAuto.js"></script>  
+<div class="widget-box" style="border:0px;">
+    <div class="widget-header widget-header-blue widget-header-flat" style="background-color:transparent;border:0px;padding-left:0px;line-height:70px;">
+        <h4 class="widget-title" style="color:#333333; left:0px;">省公司督导</h4><!--lighter-->
+        <div class="widget-toolbar" style="padding:0px;line-height:70px;">
+            <!--<form class="form-inline">-->
+                <div class="form-inline form-group" style="line-height:70px;">
+                    <div class="input-group input-group-sm">
+                        <div class="input-group-btn input-group-sm">
+                            <select class="form-control" id="select_field" style="height:30.5px;margin-top: 19px;" >
+                                <option value="rname">报表名称</option>
+                                <optgroup label="状态">
+                                    <option value="0">未完成</option>
+                                    <option value="1">已完成</option>
+                                </optgroup>
+                            </select>
+                            <input type="text" class="form-control btnSearch"  placeholder="检索 ..." style="height:30.5px;margin-top: 19px;" size="40" />
+                            <button class="btn btn-group-sm btn-white btn-info" id="btnSearch">
+                                <i class="ace-icon fa fa-search bigger-110 blue"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            <!--</form>-->
+        </div>
+    </div>
+    <div class="widget-body" style="border: 1px solid #CCC;">
+        <div class="widget-main" style="padding:0px;">
+            <table id="tbl_review" style="margin:-1px 0px;"></table>
+        </div><!-- /.widget-main -->
+    </div><!-- /.widget-body -->
+</div>
+<script>
+    var $t = $("#tbl_review");
+    var $bs = $("#btnSearch");
+    ReportAuto.init($t, $bs);
+</script>

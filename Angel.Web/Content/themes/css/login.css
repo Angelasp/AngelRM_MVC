@@ -1,0 +1,139 @@
+.login-layout .widget-box .widget-main
+{
+    padding: 40px 70px 50px!important;
+    background: none!important;
+    border-radius: 4px;
+}
+
+.widget-body
+{
+    background-color: rgba(255,255,255,0.2)!important;
+    border-radius: 3px;
+    z-index: 1;
+    border: 1px solid rgba(0,0,0,.0)!important;
+    border-bottom-width: 0!important;
+}
+
+.light-login .widget-box.login-box
+{
+    background-color: rgba(100,110,120,.0);
+    background-color: rgba(100,110,120,.0);
+}
+
+.input[type=email], input[type=url], input[type=search], input[type=tel], input[type=color], input[type=text], input[type=password], input[type=datetime], input[type=datetime-local], input[type=date], input[type=month], input[type=time], input[type=week], input[type=number], textarea
+{
+    background-color: rgba(255,255,255,1)!important;
+    border-radius: 30px !important;
+    border: 1px solid #fff;
+}
+
+    input[type=email]:hover, input[type=url]:hover, input[type=search]:hover, input[type=tel]:hover, input[type=color]:hover, input[type=text]:hover, input[type=password]:hover, input[type=datetime]:hover, input[type=datetime-local]:hover, input[type=date]:hover, input[type=month]:hover, input[type=time]:hover, input[type=week]:hover, input[type=number]:hover, textarea:hover
+    {
+        border: 1px solid rgba(31,160,250,.7)!important;
+    }
+
+    input[type=email]:focus, input[type=url]:focus, input[type=search]:focus, input[type=tel]:focus, input[type=color]:focus, input[type=text]:focus, input[type=password]:focus, input[type=datetime]:focus, input[type=datetime-local]:focus, input[type=date]:focus, input[type=month]:focus, input[type=time]:focus, input[type=week]:focus, input[type=number]:focus, textarea:focus
+    {
+        -webkit-box-shadow: none;
+        box-shadow: none;
+        color: #333;
+        border-color: rgba(31,160,250,1)!important;
+        background-color: #FFF;
+        outline: 0;
+    }
+
+input[type=checkbox].ace + .lbl, input[type=radio].ace + .lbl
+{
+    text-shadow: none!important;
+}
+
+.header
+{
+    border-bottom: none!important;
+}
+
+.input-icon.input-icon-right > input
+{
+    padding-left: 18px;
+}
+
+.light-login .widget-box
+{
+    box-shadow: 0 0 28px 8px rgba(0,0,0,.4);
+}
+
+.login-container
+{
+    width: 480px;
+}
+
+.login-layout .widget-box
+{
+    color: #fff!important;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.8);
+}
+
+.blue
+{
+    color: #fff!important;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.8);
+}
+
+.green
+{
+    color: #fff!important;
+}
+
+.btn-primary, .btn-primary.focus, .btn-primary:focus
+{
+    background-color: #1fa3ff!important;
+    border-color: #1fa3ff;
+    border-radius: 30px;
+}
+
+.input-icon > .ace-icon
+{
+    text-shadow: none!important;
+    color: #666;
+}
+
+.btn-primary.focus:hover, .btn-primary:active:hover, .btn-primary:focus:active, .btn-primary:focus:hover, .btn-primary:hover, .open > .btn-primary.dropdown-toggle, .open > .btn-primary.dropdown-toggle.focus, .open > .btn-primary.dropdown-toggle:active, .open > .btn-primary.dropdown-toggle:focus, .open > .btn-primary.dropdown-toggle:hover
+{
+    background-color: #1c90e1!important;
+    border-color: #1c90e1;
+}
+
+.login-box .toolbar
+{
+    border-top: 2px solid #060718;
+}
+
+.input-icon.input-icon-right > .ace-icon
+{
+    right: 18px!important;
+}
+
+.redCode
+{
+    color: #F55A53 !important;
+}
+
+.blueCode
+{
+    color: #1F9605 !important;
+}
+
+.logo
+{
+    display: inline-block;
+    width: 100%;
+    vertical-align: middle;
+    overflow: hidden;
+}
+
+.titleFont
+{
+    color: #fff;
+    font-size: 20px;
+    line-height: 40px;
+}

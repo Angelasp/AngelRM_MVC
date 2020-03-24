@@ -1,0 +1,65 @@
+﻿@{
+    ViewBag.Title = "";
+}
+<link href="~/Scripts/dist/bootstrap-select/css/bootstrap-select.css" rel="stylesheet" />
+<link rel="stylesheet" href="/Content/themes/css/chosen.min.css" />
+<link href="/Content/umeditor1_2/themes/default/css/umeditor.css" type="text/css" rel="stylesheet">
+<style>
+    .datetimepicker td, .datetimepicker th
+    {
+        width:30px;
+    }
+</style>
+<script src="~/Scripts/wizard.min.js"></script>
+<script src="~/Scripts/dist/bootstrap-select/js/bootstrap-select.js"></script>
+<script src="/Content/themes/js/chosen.jquery.min.js"></script>
+<script type="text/javascript" charset="utf-8" src="~/Content/umeditor1_2/umeditor.config.js"></script>
+<script type="text/javascript" charset="utf-8" src="~/Content/umeditor1_2/umeditor.min.js"></script>
+<script type="text/javascript" src="~/Content/umeditor1_2/lang/zh-cn/zh-cn.js"></script>
+<script src="~/ViewScripts/provinceReport/reportCollect.js"></script>
+<div class="widget-box" style="border: 0px;">
+    <div class="widget-header widget-header-blue widget-header-flat" style="background-color: transparent; border: 0px; padding-left: 0px;">
+    
+        <span style="font-size: 20px; color: #8ec31f!important;">编辑器测试</span>
+    </div>
+    <div class="widget-body" style="border: 0px solid #CCC;">
+        <div class="widget-main" style="text-align: center; overflow: hidden;">
+            <div class="row" style="padding-left: 15px;">
+                @*<input class="form_datetime col-sm-2" id="date-sel" type="text" data-date-format="yyyy年mm月" style="border: 1px solid #a4cbff; font-size: 12px; margin-right: 10px;">*@
+                <select id="date-sel" style="margin-right: 10px;" class="chosen-select tag-input-style col-sm-2" data-placeholder="请选择省份">
+                </select>
+                <select id="province-sel" style="margin-right: 10px;" class="chosen-select tag-input-style col-sm-2" data-placeholder="请选择省份">
+                    <option>安徽</option>
+                </select>
+            </div>
+            <div class="row" style="margin-top: 10px;padding:0px 10px;text-align:left;">
+                <!--style给定宽度可以影响编辑器的最终宽度-->
+                <h3>最新动态：</h3>
+                <script type="text/plain" id="myEditor1" style="width:95%;height:240px;">
+                    <p></p>
+                </script>
+                <h3>最热门动态：</h3>
+                <script type="text/plain" id="myEditor2" style="width:95%;height:240px;">
+                    <p></p>
+                </script>
+                @*<h3>第三段内容：</h3>
+                <script type="text/plain" id="myEditor3" style="width:95%;height:240px;">
+                    <p>这里我可以写一些第三段内容</p>
+                </script>*@
+            </div>
+            <div class="row" style="margin-top:10px;">
+                <button id="save-btn" class="btn btn-primary">保&nbsp;存</button>
+            </div>
+        </div>
+        <!-- /.widget-main -->
+    </div>
+    <!-- /.widget-body -->
+
+</div>
+<script>
+    var $date = $("#date-sel");
+    var $province = $("#province-sel");
+
+    report.init($date, $province);
+
+</script>

@@ -1,0 +1,60 @@
+﻿@{
+    ViewBag.Title = "MenuManager";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<link rel="stylesheet" href="/Content/themes/css/chosen.min.css" />
+<link rel="stylesheet" href="/Scripts/dist/datetimepicker/css/bootstrap-datetimepicker.min.css" />
+
+<style>
+    .modal-dialog, .modal-tree
+    {
+        /*width: 500px;
+        margin: 30px auto;*/
+    }
+    .widget-toolbar:before {
+        border: 0px;
+        border-width: 0px;
+    }
+</style>
+
+<script src="/Content/themes/js/chosen.jquery.min.js"></script>
+<script src="~/Scripts/bootbox.min.js"></script>
+<script src="/Scripts/dist/datetimepicker/js/bootstrap-datetimepicker.min.js"></script>
+<script src="/Scripts/dist/datetimepicker/js/locales/bootstrap-datetimepicker.zh-CN.js"></script>
+<script src="~/ViewScripts/datacollection/ComplaintAnalysis.js"></script>
+
+<div class="widget-box" style="border:0px;">
+    <div class="widget-header widget-header-blue widget-header-flat" style="background-color:transparent;border:0px;padding-left:0px;line-height:70px;">
+        <h4 class="widget-title" style="color:#333333; left:0px;">数据分析</h4>
+    </div>
+
+    <div class="widget-body" style="border: 1px solid #CCC;">
+        <div class="widget-main">
+            <form class="form-horizontal" role="form">
+                <div class="form-group">
+                    <label class="col-sm-1 control-label left" for="start_date">时间范围：</label>
+                    <div class="col-sm-11">
+                        <!--<select multiple="" class="chosen-select tag-input-style col-xs-10 col-sm-5" id="sel_date" data-placeholder="请选择年月（支持多选）..."></select>
+                        </select>-->
+                        <div class="input-group" style="width: 100%">
+                            <input class="form_datetime" id="start_date" type="text" data-date-format="yyyy年mm月" />
+                            <label class="control-label right">&nbsp;至&nbsp;</label>
+                            <input class="form_datetime" id="end_date" type="text" data-date-format="yyyy年mm月" />
+                            &nbsp;<button class="btn btn-sm btn-primary" id="btn_download" type="button">下&nbsp;&nbsp;&nbsp;&nbsp;载</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group" style="margin-bottom:0px;">
+                    <div class="col-sm-12" style="text-align:center;">
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+<script type="text/javascript">
+    var $sd = $("#start_date");
+    var $ed = $("#end_date");
+    ComplaintAnalysis.init($sd, $ed);
+</script>

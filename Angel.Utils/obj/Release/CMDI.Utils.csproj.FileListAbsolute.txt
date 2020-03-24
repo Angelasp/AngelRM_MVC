@@ -1,0 +1,5 @@
+E:\2016-12-26\QcSystem\CMDI.Utils\bin\Release\CMDI.Utils.dll
+E:\2016-12-26\QcSystem\CMDI.Utils\bin\Release\CMDI.Utils.pdb
+E:\2016-12-26\QcSystem\CMDI.Utils\obj\Release\CMDI.Utils.dll
+E:\2016-12-26\QcSystem\CMDI.Utils\obj\Release\CMDI.Utils.pdb
+E:\2016-12-26\QcSystem\CMDI.Utils\obj\Release\CMDI.Utils.csprojResolveAssemblyReference.cache

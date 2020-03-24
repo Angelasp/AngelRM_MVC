@@ -1,0 +1,323 @@
+﻿@{
+    ViewBag.Title = "UserManager";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+@*	<link href="/Scripts/dist/bootstrap-3.3.7/css/bootstrap.min.css" rel="stylesheet"/>*@
+<link href="/Scripts/dist/material-design-iconic-font-2.2.0/css/material-design-iconic-font.min.css" rel="stylesheet" />
+<link href="/Scripts/dist/bootstrap-table-1.11.1/bootstrap-table.min.css" rel="stylesheet" />
+<link href="/Scripts/dist/jquery-confirm/dist/jquery-confirm.min.css" rel="stylesheet" />
+<link href="~/Scripts/dist/bootstrap-select/css/bootstrap-select.css" rel="stylesheet" />
+<style type="text/css">
+    .modal-dialog, .modal-tree
+    {
+        width: 500px;
+        margin: 30px auto;
+    }
+
+    .fixed-table-pagination
+    {
+        margin: 0px;
+    }
+
+    .form-group
+    {
+        margin-bottom: 0px;
+    }
+
+    .widget-toolbar:before
+    {
+        border: 0px;
+        border-width: 0px;
+    }
+
+    .widget-body
+    {
+        border: 1px solid #B9D7D7;
+    }
+
+        .widget-body .table
+        {
+            border-top: 0px;
+        }
+
+    .fixed-table-pagination
+    {
+        background: #f9f9f9;
+    }
+
+    .orange
+    {
+        color: #6cb7e2!important;
+    }
+
+        .orange:hover
+        {
+            color: #6cb7e2!important;
+        }
+
+
+    #btnSearch
+    {
+        margin: 0px;
+        padding: 0px;
+        width: 40px;
+        height: 30px;
+        background: #a4cbff;
+        border-color: #a4cbff;
+        position: relative;
+        border: 5px solid #a4cbff;
+        margin-right: 10px;
+    }
+
+        #btnSearch:hover
+        {
+            border-color: #52acdf;
+            background: #52acdf;
+            border: 5px solid #52acdf;
+        }
+
+    .onclickbtni
+    {
+        font-size: 18px;
+        background: #5bb9ee;
+        width: 40px;
+        height: 32px;
+        position: absolute;
+        top: 0px;
+        left: 0px;
+        z-index: 999;
+        margin-top: -6px;
+        margin-left: -5px;
+        padding-top: 7px;
+        text-shadow: none;
+        -webkit-text-stroke: 0.7px #5bb9ee;
+    }
+
+  .onclickbtni:hover
+        {
+            border-color: #36aaeb;
+            background: #36aaeb;
+            -webkit-text-stroke: 0.7px #36aaeb;
+        }
+    .nav-search {
+        position: absolute;
+        top: 15px;
+        right: 50px;
+        line-height: 24px;
+        width:155px;
+    }
+
+</style>
+
+
+<div id="main" class="widget-box" style="border: 0px;">
+    <div class="widget-header widget-header-blue widget-header-flat" style="background-color: transparent; border: 0px; padding-left: 0px; line-height: 70px;">
+        <h4 class="widget-title" style="color: #333333; left: 0px;">用户管理</h4>
+        <div class="widget-toolbar" style="padding: 0px; line-height: 70px;">
+            <div class="form-inline form-group " style="line-height: 70px;">
+                <div class="input-group input-group-sm">
+
+                    <div class="input-group input-group-sm">
+                        <input type="text" class="form-control" id="search-input" placeholder="检索 ..." style="height: 32px; margin-top: 19px; margin-left: 1px" size="40" />
+                        <div id="toggle-result-format" class="input-group-btn">
+
+
+                            <button title="查询" id="btnSearch" type="button" style="" class="btn btn-success  onclickbtn">
+                                <i class="fa fa-search onclickbtni" style=""></i>
+                            </button>
+
+                            <button title="新增" style="width: 40px; height: 32px; border-color: #8fbcd9" class="btn btn-xs btn-white btn-info" id="btnAdd" onclick="showUser(this)" name="add">
+                                <i class="ace-icon fa fa-plus bigger-120 orange " style="-webkit-text-stroke: 0.6px #fff"></i>
+
+                            </button>
+                            <button title="修改" style="width: 40px; height: 32px; border-color: #8fbcd9" class="btn btn-xs btn-white btn-info" id="btnEdit" onclick="showUser(this)" name="edit">
+                                <i class="ace-icon fa fa-pencil bigger-120 orange"></i>
+
+                            </button>
+
+                            <button title="删除" style="width: 40px; height: 32px; border-color: #8fbcd9" class="btn btn-xs btn-white btn-info" data-toggle="modal" id="btnRemove" onclick="deleteAction()">
+                                <i class="ace-icon  fa fa-trash-o bigger-120 orange "></i>
+
+                            </button>
+                        </div>
+                    </div>
+
+
+
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="widget-body" style="border: 1px solid #CCC;">
+        <div class="widget-main" style="padding: 0px;">
+
+            <table id="table"></table>
+        </div>
+    </div>
+</div>
+
+<!-- 新增/修改-->
+<div class="modal fade" id="userDialog" tabindex="10" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-tree" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="userTitle">用户管理</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                </button>
+            </div>
+            <ul id="myTab" class="nav nav-tabs">
+                <li class="active"><a href="#userinfo" data-toggle="tab">用户信息</a></li>
+                <li><a href="#userindicator" data-toggle="tab">用户指标配置</a></li>
+            </ul>
+            <div id="myTabContent" class="tab-content">
+                <div class="tab-pane fade in active" id="userinfo">
+                    <div class="modal-body">
+                        <div class="form-group">
+                            <label for="input1" class="activec">用户名称</label>
+                            <input id="input1" type="text" class="form-control">
+                        </div>
+                        <div class="form-group">
+                            <label for="input2" class="activec" id="password1">旧密码</label>
+                            <input id="input2" type="text" class="form-control">
+                        </div>
+                        <div class="form-group">
+                            <label for="input3" name="input3" class="activec" id="password2">新密码</label>
+                            <input id="input3" type="text" class="form-control">
+                        </div>
+
+                        <div class="form-group" style="margin-bottom: 0px; margin-top: 0px;">
+                            <label class="activec">用户角色:</label>
+
+                        </div>
+
+                        <div class="form-group" style="border-top: 2px solid #eee; padding-top: 6px;">
+                            <select id="rolelist" style="width: 100%">
+                            </select>
+                        </div>
+
+                        <div class="form-group" style="border-top: 2px solid #eee; padding-top: 6px;">
+                            <label for="input4" class="activec">是否可用: &nbsp;&nbsp;&nbsp;</label>
+
+                            <label>
+                                <input name="isenabled" type="radio" value="Y" class="ace" checked />
+                                <span class="lbl">是 </span>
+                            </label>
+
+
+                            <label>
+                                <input name="isenabled" type="radio" value="N" class="ace" />
+                                <span class="lbl">否</span>
+                            </label>
+
+
+                            <div style="height: 5px;"></div>
+
+                        </div>
+
+                        <div class="form-group" style="border-top: 2px solid #eee; padding-top: 6px;">
+                            <label for="input5" class="activec">用户资源权限: &nbsp;&nbsp;&nbsp;</label>
+
+                            <label>
+                                <input name="form-field-radio" type="radio" value="1" class="ace" checked />
+                                <span class="lbl">集团用户</span>
+                            </label>
+
+
+                            <label>
+                                <input name="form-field-radio" type="radio" value="2" class="ace" />
+                                <span class="lbl">省公司用户</span>
+                            </label>
+
+                        </div>
+
+                        <div id="cityname" class="form-group" style="border-top: 2px solid #eee; padding-top: 6px; display: none">
+                            <select id="citylist" style="width: 100%">
+                            </select>
+                        </div>
+
+                    </div>
+                </div>
+
+                <div class="tab-pane fade" id="userindicator">
+                    <div class="modal-body" style="height: 300px; overflow-y: auto;">
+                    <div id="treeloading" style="display: none; z-index: 920; position: absolute; left: 0%; top: 0%; background-color: #ffffff; width: 100%; height: 100%">
+                        <img src="~/Content/images/loading.gif" style="margin-top: 30%;margin-left:40%" /></div>
+                        <div id="itree" class=""></div>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-primary" name="add" id="save_user">保存</button>
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">关闭</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<!-- 用户模板模态框（Modal） -->
+<div class="modal fade" id="userIndicatorDialog" tabindex="-1" role="dialog" aria-labelledby="userModalLabel" aria-hidden="true">
+    <div class="modal-dialog" style="width:680px;">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                <h4 class="modal-title" style="width:auto;" id="userModalLabel">
+                    数据模板列表
+                </h4>
+                <div class="nav-search" id="nav-search">
+                    <form class="form-search">
+                        <span class="input-icon">
+                            <input type="text" placeholder="搜索 ..." class="nav-search-input" id="nav-search-input" autocomplete="off" />
+                            <i class="ace-icon fa fa-search nav-search-icon" id="searchT"></i>
+                        </span>
+                    </form>
+                </div><!-- /.nav-search -->
+            </div>
+            <div class="modal-body" style="padding:0px">
+                <table id="user_indicatorlist" class="mychar1-table"></table>
+            </div>
+        </div><!-- /.modal-content -->
+    </div><!-- /.modal -->
+</div> 
+
+
+
+<script src="/Scripts/dist/bootstrap-table-1.11.1/bootstrap-table.min.js"></script>
+<script src="/Scripts/dist/bootstrap-table-1.11.1/locale/bootstrap-table-zh-CN.min.js"></script>
+<script src="/Scripts/dist/bootstrap-select/js/bootstrap-select.js"></script>
+<script src="/Scripts/dist/waves/waves-0.7.5/waves.min.js"></script>
+<script src="/Scripts/dist/jquery-confirm/dist/jquery-confirm.min.js"></script>
+<script src="/Scripts/js/common.js"></script>
+<script src="/Scripts/dist/treeview/bootstrap-treeview.js"></script>
+<script src="~/ViewScripts/sysmanager/usermanager.js"></script>
+<script>
+    //toggle display format buttons
+    $('#toggle-result-format .btn').tooltip({ container: 'body' }).on('click', function (e) {
+        $(this).siblings().each(function () {
+            $(this).removeClass($(this).attr('data-class')).addClass('btn-grey');
+        });
+        $(this).removeClass('btn-grey').addClass($(this).attr('data-class'));
+    });
+
+    $(function () {
+        $('a[data-toggle="tab"]').on('shown.bs.tab', function (e) {
+            //// 获取已激活的标签页的名称
+            //var activeTab = $(e.target).text();
+            //if (activeTab == "用户指标") {
+            //}
+            //// 获取前一个激活的标签页的名称
+            //var previousTab = $(e.relatedTarget).text();
+
+            // $(".active-tab span").html(activeTab);
+            //  $(".previous-tab span").html(previousTab);
+        });
+    });
+
+
+
+
+
+</script>

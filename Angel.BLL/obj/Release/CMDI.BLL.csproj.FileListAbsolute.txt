@@ -1,0 +1,10 @@
+E:\2016-12-26\QcSystem\CMDI.BLL\bin\Release\CMDI.BLL.dll
+E:\2016-12-26\QcSystem\CMDI.BLL\bin\Release\CMDI.BLL.pdb
+E:\2016-12-26\QcSystem\CMDI.BLL\bin\Release\CMDI.Model.dll
+E:\2016-12-26\QcSystem\CMDI.BLL\bin\Release\Newtonsoft.Json.dll
+E:\2016-12-26\QcSystem\CMDI.BLL\bin\Release\CMDI.Model.pdb
+E:\2016-12-26\QcSystem\CMDI.BLL\bin\Release\Newtonsoft.Json.pdb
+E:\2016-12-26\QcSystem\CMDI.BLL\bin\Release\Newtonsoft.Json.xml
+E:\2016-12-26\QcSystem\CMDI.BLL\obj\Release\CMDI.BLL.csprojResolveAssemblyReference.cache
+E:\2016-12-26\QcSystem\CMDI.BLL\obj\Release\CMDI.BLL.dll
+E:\2016-12-26\QcSystem\CMDI.BLL\obj\Release\CMDI.BLL.pdb

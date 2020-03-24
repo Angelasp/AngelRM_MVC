@@ -1,0 +1,10 @@
+E:\2016-12-26\AngelSystem\AngelWeb\Angel.DBHelper\bin\Debug\Angel.DBHelper.dll
+E:\2016-12-26\AngelSystem\AngelWeb\Angel.DBHelper\bin\Debug\Angel.DBHelper.pdb
+E:\2016-12-26\AngelSystem\AngelWeb\Angel.DBHelper\bin\Debug\Angel.Utils.dll
+E:\2016-12-26\AngelSystem\AngelWeb\Angel.DBHelper\bin\Debug\Angel.Model.dll
+E:\2016-12-26\AngelSystem\AngelWeb\Angel.DBHelper\bin\Debug\Newtonsoft.Json.dll
+E:\2016-12-26\AngelSystem\AngelWeb\Angel.DBHelper\bin\Debug\Angel.Utils.pdb
+E:\2016-12-26\AngelSystem\AngelWeb\Angel.DBHelper\bin\Debug\Angel.Model.pdb
+E:\2016-12-26\AngelSystem\AngelWeb\Angel.DBHelper\obj\Debug\Angel.DBHelper.csprojResolveAssemblyReference.cache
+E:\2016-12-26\AngelSystem\AngelWeb\Angel.DBHelper\obj\Debug\Angel.DBHelper.dll
+E:\2016-12-26\AngelSystem\AngelWeb\Angel.DBHelper\obj\Debug\Angel.DBHelper.pdb

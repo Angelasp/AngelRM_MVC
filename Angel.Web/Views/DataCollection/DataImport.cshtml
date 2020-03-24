@@ -1,0 +1,210 @@
+﻿@{
+    ViewBag.Title = "MenuManager";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<link rel="stylesheet" href="~/Scripts/dist/bootstrap-table-1.11.1/bootstrap-table.min.css" />
+<link rel="stylesheet" href="~/Scripts/dist/bootstrap3-editable/css/bootstrap-editable.css" />
+<link rel="stylesheet" href="~/ViewScripts/bootstrap-fileinput-master/css/fileinput.min.css" />
+<link rel="stylesheet" href="~/ViewScripts/bootstrap-fileinput-master/themes/explorer/theme.css" />
+<style>
+    .fixed-table-pagination {
+        margin: 5px;
+    }
+    .fixed-table-pagination {
+        margin: 5px;
+    }
+
+    .form-group {
+        margin-bottom: 0px;
+    }
+    .row {
+        margin-right: 0px;
+        margin-left: 0px;
+    }
+    .header {
+        margin-bottom: 0px;
+        margin-top: 0px;
+        padding-bottom: 0px;
+    }
+    .nav-search {
+        position: absolute;
+        top: 15px;
+        right: 50px;
+        line-height: 24px;
+        width:155px;
+    }
+    .danger {
+        background: #f00;
+    }
+    .widget-toolbar:before {
+        border: 0px;
+        border-width: 0px;
+    }
+
+
+
+</style>
+<script src="~/Scripts/wizard.min.js"></script>
+<script src="~/Scripts/dist/bootstrap-table-1.11.1/bootstrap-table.min.js"></script>
+<script src="~/Scripts/dist/bootstrap-table-1.11.1/locale/bootstrap-table-zh-CN.min.js"></script>
+<script src="~/Scripts/dist/bootstrap3-editable/js/bootstrap-editable.min.js"></script>
+<script src="~/Scripts/dist/bootstrap3-editable/js/bootstrap-table-editable.js"></script>
+<script src="~/ViewScripts/bootstrap-fileinput-master/js/fileinput.min.js"></script>
+<script src="~/ViewScripts/bootstrap-fileinput-master/themes/explorer/theme.js"></script>
+<script src="~/ViewScripts/bootstrap-fileinput-master/js/locales/zh.js"></script>
+<script src="~/Scripts/bootbox.min.js"></script>
+<script src="/Scripts/js/common.js"></script>
+<script src="~/ViewScripts/datacollection/DataImport.js"></script>
+<!-- 数据模板模态框（Modal） -->
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                <h4 class="modal-title" id="myModalLabel">
+                    数据模板列表
+                </h4>
+                <!--<div class="nav-search" id="nav-search">
+                    <form class="form-search">
+                        <span class="input-icon">
+                            <input type="text" placeholder="搜索 ..." class="nav-search-input" id="nav-search-input" autocomplete="off" />
+                            <i class="ace-icon fa fa-search nav-search-icon" id="searchT"></i>
+                        </span>
+                    </form>
+                </div>--><!-- /.nav-search -->
+            </div>
+            <div class="modal-body" style="padding:0px">
+                <table id="tbl_template" class="mychar1-table"></table>
+            </div>
+        </div><!-- /.modal-content -->
+    </div><!-- /.modal -->
+</div> 
+
+<!-- 上传文件存档模态框（Modal） -->
+<div class="modal fade" id="myArchiveModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                <h4 class="modal-title" id="myModalLabel">
+                    历史上传数据文件列表
+                </h4>
+                <div class="nav-search" id="nav-search">
+                    <form class="form-search">
+                        <span class="input-icon">
+                            <input type="text" placeholder="搜索 ..." class="nav-search-input" id="archive_search-input" autocomplete="off" />
+                            <i class="ace-icon fa fa-search nav-search-icon" id="searchA"></i>
+                        </span>
+                    </form>
+                </div><!-- /.nav-search -->
+            </div>
+            <div class="modal-body" style="padding:0px">
+                <table id="tbl_archive" class="mychar1-table"></table>
+            </div>
+        </div><!-- /.modal-content -->
+    </div><!-- /.modal -->
+</div> 
+<div class="widget-box" style="border:0px;">
+    <div class="widget-header widget-header-blue widget-header-flat" style="background-color:transparent;border:0px;padding-left:0px;line-height:70px;">
+        <h4 class="widget-title" style="color:#333333; left:0px;">多文件上传</h4><!--lighter-->
+        <div class="widget-toolbar" style="padding:0px;line-height:70px;">
+            <!--
+            <button class="btn btn-xs btn-white btn-info" id="btnUpload"  data-toggle="modal" data-target="#myModal">
+                <i class="ace-icon fa fa-cloud-download bigger-110 blue"></i>
+                下载数据模板
+            </button>-->
+            <button class="btn btn-xs btn-white btn-info" id="btnArchive"  data-toggle="modal" data-target="#myArchiveModal">
+                <i class="ace-icon glyphicon glyphicon-star bigger-110 blue"></i>
+                历史上传数据文件管理
+            </button>
+        </div>
+    </div>
+
+    <div class="widget-body" style="border: 1px solid #CCC;">
+        <div class="widget-main">
+            <div id="fuelux-wizard-container">
+                <div>
+                    <ul class="steps">
+                        <li data-step="1" class="active">
+                            <span class="step">1</span>
+                            <span class="title">导入</span>
+                        </li>
+                        <li data-step="2">
+                            <span class="step">2</span>
+                            <span class="title">完成文件上传</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <hr />
+
+                <div class="step-content pos-rel">
+                    <div class="step-pane active" data-step="1" style="padding:0px;margin-top:-21px;margin-bottom:-21px;">
+                        <input id="input-ke-import" name="inputKEImport[]" type="file" multiple class="file-loading">
+                    </div>
+                    <div class="step-pane" data-step="4" style="padding:0px;margin-top:-20px;margin-bottom:-20px;">
+                        <h3 class="row header smaller lighter orange">
+                            <div class="form-inline form-group pull-right">
+                                <div class="input-group input-group-sm">
+                                    <div class="input-group-btn input-group-sm">
+                                        <select class="form-control" id="select_field" style="margin-top: 0px;">
+                                            <option value="i.indicatorname">指标名称</option>
+                                            <option value="NOP_NUMBER">期数</option>
+                                            <option value="CITY_NO">省份</option>
+                                            <option value="sourcename">数据来源</option>
+                                        </select>
+                                        <input type="text" class="form-control" id="input_search" placeholder="检索 ..." style="margin-top: 0px;" size="40" />
+                                        <button class="btn btn-xs btn-white btn-info" id="btnSearch">
+                                            <i class="ace-icon fa fa-search bigger-110 blue"></i>
+                                        </button>
+                                    </div>
+                                </div>
+                                <div class="input-group input-group-sm">
+                                    <div class="input-group-btn input-group-sm">
+                                        <button class="btn btn-xs btn-white btn-info" id="btnNo" disabled>
+                                            <i class="ace-icon glyphicon glyphicon-trash bigger-110 blue"></i>
+                                            放弃更新
+                                        </button>
+                                        <button class="btn btn-xs btn-white btn-info" id="btnOk" disabled>
+                                            <i class="ace-icon glyphicon glyphicon-check bigger-110 blue"></i>
+                                            提交审核
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </h3>
+                        <table id="tbl_repeat" class="mychar1-table" style="margin:-1px 0px;"></table>
+                        <!--<div class="center">
+                            <h3 class="green">完成!</h3>
+                            您的数据已成功上传！
+                        </div>-->
+                    </div>
+                </div>
+            </div>
+
+            <hr />
+            <div class="wizard-actions">
+                <button class="btn btn-prev">
+                    <i class="ace-icon fa fa-arrow-left"></i>
+                    上一步
+                </button>
+
+                <button class="btn btn-success btn-next" data-last="完成">
+                    下一步
+                    <i class="ace-icon fa fa-arrow-right icon-on-right"></i>
+                </button>
+            </div>
+        </div><!-- /.widget-main -->
+    </div><!-- /.widget-body -->
+</div>
+<script>
+    var $w = $('#fuelux-wizard-container');
+    var $f = $("#input-ke-import");
+    var $tT = $("#tbl_template");
+    var $tE = $("#tbl_error");
+    var $tR = $("#tbl_repeat");
+    var $tR2 = $("#tbl_repeat2");
+    var $tA = $("#tbl_archive");
+    DataImport.init($w, $f, $tT, $tE, $tR, $tR2, $tA);
+</script>

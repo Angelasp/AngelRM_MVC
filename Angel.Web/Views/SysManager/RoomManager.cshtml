@@ -1,0 +1,245 @@
+﻿@{
+    ViewBag.Title = "RoleManager";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+@*	<link href="/Scripts/dist/bootstrap-3.3.7/css/bootstrap.min.css" rel="stylesheet"/>*@
+<link href="/Scripts/dist/material-design-iconic-font-2.2.0/css/material-design-iconic-font.min.css" rel="stylesheet" />
+<link href="/Scripts/dist/bootstrap-table-1.11.1/bootstrap-table.min.css" rel="stylesheet" />
+<link href="/Scripts/dist/jquery-confirm/dist/jquery-confirm.min.css" rel="stylesheet" />
+<link href="~/Scripts/dist/bootstrap-select/css/bootstrap-select.css" rel="stylesheet" />
+<style type="text/css">
+    .modal-dialog, .modal-tree {
+        width: 400px;
+        margin: 30px auto;
+    }
+
+    .fixed-table-pagination {
+        margin: 0px;
+    }
+
+    .form-group {
+        margin-bottom: 0px;
+    }
+
+    .widget-toolbar:before {
+        border: 0px;
+        border-width: 0px;
+    }
+
+    .widget-body {
+        border: 1px solid #B9D7D7;
+    }
+
+        .widget-body .table {
+            border-top: 0px;
+        }
+
+    .fixed-table-pagination {
+        background: #f9f9f9;
+    }
+
+    .change {
+        margin: 0px;
+        padding: 0px;
+        width: 40px;
+        height: 30px;
+        background: #fff;
+        position: relative;
+        padding: 0px;
+        border-top: 1px solid #bbbbbb;
+        border-right: 1px solid #bbbbbb;
+        border-bottom: 1px solid #bbbbbb;
+        border-left: 1px solid #bbbbbb;
+    }
+
+    .change-i {
+        background: #fff;
+        width: 11px;
+        height: 11px;
+        position: absolute;
+        top: 0px;
+        left: 0px;
+        margin: auto;
+        padding: 0px;
+        z-index: 999;
+        color: #666666;
+    }
+
+
+    #btnSearch {
+        margin: 0px;
+        padding: 0px;
+        width: 40px;
+        height: 30px;
+        background: #a4cbff;
+        border-color: #a4cbff;
+        position: relative;
+        border: 5px solid #a4cbff;
+        margin-right: 10px;
+    }
+
+         #btnSearch:hover {
+            border-color: #52acdf;
+            background: #52acdf;
+            border: 5px solid #52acdf;
+        }
+
+    .onclickbtni {
+        font-size: 18px;
+        background: #5bb9ee;
+        width: 40px;
+        height: 32px;
+        position: absolute;
+        top: 0px;
+        left: 0px;
+        z-index: 999;
+        margin-top:-6px;
+        margin-left:-5px;
+        padding-top: 7px;
+        text-shadow: none;
+        -webkit-text-stroke: 0.7px #5bb9ee;
+
+    }
+
+    .onclickbtni:hover {
+            border-color: #36aaeb;
+            background: #36aaeb;
+             -webkit-text-stroke: 0.7px #36aaeb;
+        }
+
+      .orange {
+        color:  #6cb7e2!important;
+    }
+
+        .orange:hover {
+            color:  #6cb7e2!important;
+        }
+</style>
+<div id="main">
+
+    <div class="widget-header widget-header-blue widget-header-flat" style="background-color: transparent; border: 0px; padding-left: 0px; line-height: 70px;">
+        <h4 class="widget-title" style="color: #333333; left: 0px;">处室管理</h4>
+        <div class="widget-toolbar" style="padding: 0px; line-height: 70px;">
+            <div class="form-inline form-group " style="line-height: 70px;">
+
+                <div class="input-group input-group-sm">
+                    <input type="text" class="form-control" id="search-input" placeholder="检索 ..." style="height: 32px; margin-top: 19px; margin-left: 1px" size="40" />
+                    <div id="toggle-result-format" class="input-group-btn">
+
+
+                          <button title="查询" id="btnSearch" type="button" style="" class="btn btn-success  onclickbtn">
+                            <i class="fa fa-search onclickbtni" style=""></i>
+                            </button>
+
+
+                        <button title="新增" style="width: 40px;height:32px; border-color:  #8fbcd9" class="btn btn-xs btn-white btn-info" id="btnAdd" onclick="showRole(this)" name="add">
+                            <i class="ace-icon fa fa-plus bigger-120 orange " style="-webkit-text-stroke: 0.6px #fff"></i>
+
+                        </button>
+                        <button title="修改" style="width: 40px;height:32px; border-color:  #8fbcd9" class="btn btn-xs btn-white btn-info" id="btnEdit" onclick="showRole(this)" name="edit">
+                            <i class="ace-icon fa fa-pencil bigger-120 orange"></i>
+
+                        </button>
+
+                        <button title="删除" style="width: 40px;height:32px; border-color:  #8fbcd9" class="btn btn-xs btn-white btn-info" data-toggle="modal" id="btnRemove" onclick="deleteAction()">
+                            <i class="ace-icon  fa fa-trash-o bigger-120 orange "></i>
+
+                        </button>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+
+
+    <div class="widget-body" style="border: 1px solid #CCC;">
+        <div class="widget-main" style="padding: 0px;">
+            <table id="table"></table>
+        </div>
+    </div>
+</div>
+
+<!-- 树状菜单显示 -->
+<div class="modal fade" id="menuTree" tabindex="9999" style="z-index: 99999;" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-tree" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">管理菜单</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                </button>
+            </div>
+            <div class="modal-body" style="height: 450px; overflow-y: auto;">
+                <div id="treeDemo" class=""></div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">关闭</button>
+                <button type="button" class="btn btn-primary" name="add" id="save_tree">保存</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal fade" id="roleDialog" tabindex="9999" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-tree" role="document"  style="margin: 100px auto;">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="roleTitle">处室管理</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                </button>
+            </div>
+            <div class="modal-body" style="height: 220px; overflow-y: auto;">
+                <div class="form-group">
+                    <label for="input1">处室名称</label>
+                    <input id="input1" type="text" class="form-control">
+                </div>
+                <div class="form-group">
+                    <label for="input2">处室备注</label>
+                    <input  type="text" class="form-control input2">
+                </div>
+                <div class="form-group" style="font-family: inherit; font-weight: 400; color: #393939; line-height: 1.5; position: relative;margin-top:30px;">
+
+                            <label for="input4" class="activec">是否可用: &nbsp;&nbsp;&nbsp;</label>
+                            <label>
+                                <input name="isenabled" type="radio" value="Y" class="ace" checked />
+                                <span class="lbl">是 </span>
+                            </label>
+
+
+                            <label>
+                                <input name="isenabled" type="radio" value="N" class="ace" />
+                                <span class="lbl">否</span>
+                            </label>
+
+                    <div style="height: 5px;"></div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-primary" name="add" id="save_role">保存</button>
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">关闭</button>
+                
+            </div>
+        </div>
+    </div>
+</div>
+<script src="/Scripts/dist/bootstrap-table-1.11.1/bootstrap-table.min.js"></script>
+<script src="/Scripts/dist/bootstrap-table-1.11.1/locale/bootstrap-table-zh-CN.min.js"></script>
+<script src="/Scripts/dist/bootstrap-select/js/bootstrap-select.js"></script>
+<script src="/Scripts/dist/waves/waves-0.7.5/waves.min.js"></script>
+<script src="/Scripts/dist/jquery-confirm/dist/jquery-confirm.min.js"></script>
+<script src="/Scripts/js/common.js"></script>
+<script src="/Scripts/dist/treeview/bootstrap-treeview.js"></script>
+
+<script src="~/ViewScripts/sysmanager/roommanager.js"></script>
+
+<script>
+    //toggle display format buttons
+    $('#toggle-result-format .btn').tooltip({ container: 'body' }).on('click', function (e) {
+        $(this).siblings().each(function () {
+            $(this).removeClass($(this).attr('data-class')).addClass('btn-grey');
+        });
+        $(this).removeClass('btn-grey').addClass($(this).attr('data-class'));
+    });
+</script>
