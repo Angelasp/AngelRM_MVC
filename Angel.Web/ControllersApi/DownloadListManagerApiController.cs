@@ -41,7 +41,7 @@ namespace Angel.Web.ControllersApi
                 string value = "{\"userid\": \"'" + userid + " '\"}";
                 var list = Newtonsoft.Json.Linq.JObject.Parse(value);
 
-                FileLog.WriteLog("InfoApiTime：" + DateTime.Now.ToString() + ",调用：QcSystem.ControllersApi/ControllerApi/DownloadListManagerApiController/Get()方法");
+                FileLog.WriteLog("InfoApiTime：" + DateTime.Now.ToString() + ",调用：Angel.ControllersApi/ControllerApi/DownloadListManagerApiController/Get()方法");
                 if (userid == "1")
                     return GetJSONMessage(QueryService.GetData(null, "alluserdownload"));
                 else
@@ -49,7 +49,7 @@ namespace Angel.Web.ControllersApi
             }
             catch (Exception er)
             {
-                FileLog.WriteLog("Error：调用QcSystem.ControllersApi/ControllerApi/DownloadListManagerApiController/Get()方法," + er.ToString());
+                FileLog.WriteLog("Error：调用Angel.ControllersApi/ControllerApi/DownloadListManagerApiController/Get()方法," + er.ToString());
                 return GetJSONMessage("");
             }
         }
@@ -62,12 +62,12 @@ namespace Angel.Web.ControllersApi
                 string value = "{\"userid\": \"'" + userid + " '\"}";
                 var list = Newtonsoft.Json.Linq.JObject.Parse(value);
 
-                FileLog.WriteLog("InfoApiTime：" + DateTime.Now.ToString() + ",调用：QcSystem.ControllersApi/ControllerApi/DownloadListManagerApiController/Get()方法");
+                FileLog.WriteLog("InfoApiTime：" + DateTime.Now.ToString() + ",调用：Angel.ControllersApi/ControllerApi/DownloadListManagerApiController/Get()方法");
                 return GetJSONMessage(QueryService.GetData(list, "downloadList"));
             }
             catch (Exception er)
             {
-                FileLog.WriteLog("Error：调用QcSystem.ControllersApi/ControllerApi/DownloadListManagerApiController/Get()方法," + er.ToString());
+                FileLog.WriteLog("Error：调用Angel.ControllersApi/ControllerApi/DownloadListManagerApiController/Get()方法," + er.ToString());
                 return GetJSONMessage("");
             }
         }
@@ -81,7 +81,7 @@ namespace Angel.Web.ControllersApi
             Dictionary<string, JArray> dict = new Dictionary<string, JArray>();
             try
             {
-                FileLog.WriteLog("InfoApiTime：" + DateTime.Now.ToString() + ",调用：QcSystem.ControllersApi/ControllerApi/DownloadListManagerApiController/Post([FromBody]string value)方法");
+                FileLog.WriteLog("InfoApiTime：" + DateTime.Now.ToString() + ",调用：Angel.ControllersApi/ControllerApi/DownloadListManagerApiController/Post([FromBody]string value)方法");
                 string serverName = "";
                 Newtonsoft.Json.Linq.JArray jArray = new JArray();
 
@@ -106,7 +106,7 @@ namespace Angel.Web.ControllersApi
                 }
                 if (serverName == "delete7daysBefore")
                 {
-                    string selectSql = "SELECT username, filename FROM Angel_DownloadList where datediff('" + value.Split('"')[7] + "', createtime)>=" + value.Split('"')[4].Split(':')[1].Split(',')[0] + " and username = '" + value.Split('"')[11] + "';";
+                    string selectSql = "SELECT username, filename FROM angel_downloadlist where datediff('" + value.Split('"')[7] + "', createtime)>=" + value.Split('"')[4].Split(':')[1].Split(',')[0] + " and username = '" + value.Split('"')[11] + "';";
                     DataTable dt = MySqlHelpers.GetDataTable(selectSql);
                     string uname = string.Empty, filename = string.Empty, filepath = string.Empty;
                     if(dt != null && dt.Rows.Count !=0)
@@ -127,7 +127,7 @@ namespace Angel.Web.ControllersApi
             }
             catch (Exception er)
             {
-                FileLog.WriteLog("Error：调用 QcSystem.ControllersApi/ControllerApi/DownloadListManagerApiController/Post([FromBody]string value)方法," + er.ToString());
+                FileLog.WriteLog("Error：调用 Angel.ControllersApi/ControllerApi/DownloadListManagerApiController/Post([FromBody]string value)方法," + er.ToString());
                 return GetJSONMessage("");
             }
         }

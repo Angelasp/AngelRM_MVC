@@ -39,12 +39,12 @@ namespace Angel.Web.ControllersApi
                     levels = Convert.ToInt32(level);
                 }
                 var list = Newtonsoft.Json.Linq.JObject.Parse("{level:" + levels + "}");
-                FileLog.WriteLog("InfoApiTime：" + DateTime.Now.ToString() + ",调用：QcSystem.ControllersApi/ControllerApi/RoleApiController/Get()方法");
+                FileLog.WriteLog("InfoApiTime：" + DateTime.Now.ToString() + ",调用：Angel.ControllersApi/ControllerApi/RoleApiController/Get()方法");
                 return GetJSONMessage(QueryService.GetData(list, "2_2"));
             }
             catch (Exception er)
             {
-                FileLog.WriteLog("Error：调用QcSystem.ControllersApi/ControllerApi/RoleApiController/Get()方法," + er.ToString());
+                FileLog.WriteLog("Error：调用Angel.ControllersApi/ControllerApi/RoleApiController/Get()方法," + er.ToString());
                 return GetJSONMessage("");
             }
         }
@@ -59,12 +59,12 @@ namespace Angel.Web.ControllersApi
                 //string roleid = "46";
                 string value = "{ \"RoleID\": " + roleid + "}";
                 var list = Newtonsoft.Json.Linq.JObject.Parse(value);
-                FileLog.WriteLog("InfoApiTime：" + DateTime.Now.ToString() + ",调用：QcSystem.ControllersApi/ControllerApi/RoleApiController/GetRolemeul()方法");
+                FileLog.WriteLog("InfoApiTime：" + DateTime.Now.ToString() + ",调用：Angel.ControllersApi/ControllerApi/RoleApiController/GetRolemeul()方法");
                 return GetJSONMessage(QueryService.GetData(list, "2_5"));
             }
             catch (Exception er)
             {
-                FileLog.WriteLog("Error：调用QcSystem.ControllersApi/ControllerApi/RoleApiController/GetRolemeul()方法," + er.ToString());
+                FileLog.WriteLog("Error：调用Angel.ControllersApi/ControllerApi/RoleApiController/GetRolemeul()方法," + er.ToString());
                 return GetJSONMessage("");
             }
         }
@@ -79,7 +79,7 @@ namespace Angel.Web.ControllersApi
             string serverName = "";
             try
             {
-                FileLog.WriteLog("InfoApiTime：" + DateTime.Now.ToString() + ",调用：QcSystem.ControllersApi/ControllerApi/RoleApiController/Post([FromBody]string value)方法");
+                FileLog.WriteLog("InfoApiTime：" + DateTime.Now.ToString() + ",调用：Angel.ControllersApi/ControllerApi/RoleApiController/Post([FromBody]string value)方法");
                 if (list != null && list.Count > 0)
                 {
 
@@ -128,7 +128,7 @@ namespace Angel.Web.ControllersApi
             }
             catch (Exception er)
             {
-                FileLog.WriteLog("Error：调用 QcSystem.ControllersApi/ControllerApi/RoleApiController/Post([FromBody]string value)方法," + er.ToString());
+                FileLog.WriteLog("Error：调用 Angel.ControllersApi/ControllerApi/RoleApiController/Post([FromBody]string value)方法," + er.ToString());
                 return GetJSONMessage("");
             }
         }

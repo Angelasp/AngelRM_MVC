@@ -28,12 +28,12 @@ namespace Angel.Web.ControllersApi
         {
             try
             {
-                FileLog.WriteLog("InfoApiTime：" + DateTime.Now.ToString() + ",调用：QcSystem.ControllersApi/ControllerApi/MenuApiController/Get()方法");
+                FileLog.WriteLog("InfoApiTime：" + DateTime.Now.ToString() + ",调用：Angel.ControllersApi/ControllerApi/MenuApiController/Get()方法");
                 return GetJSONMessage(QueryService.GetData(null, "0_1"));
             }
             catch (Exception er)
             {
-                FileLog.WriteLog("Error：调用QcSystem.ControllersApi/ControllerApi/MenuApiController/Get()方法," + er.ToString());
+                FileLog.WriteLog("Error：调用Angel.ControllersApi/ControllerApi/MenuApiController/Get()方法," + er.ToString());
                 return GetJSONMessage("");
             }
         }
@@ -44,12 +44,12 @@ namespace Angel.Web.ControllersApi
             try
             {
                 var list = Newtonsoft.Json.Linq.JObject.Parse("{roleid:"+roleid+"}");
-                FileLog.WriteLog("InfoApiTime：" + DateTime.Now.ToString() + ",调用：QcSystem.ControllersApi/ControllerApi/MenuApiController/Getroleid()方法");
+                FileLog.WriteLog("InfoApiTime：" + DateTime.Now.ToString() + ",调用：Angel.ControllersApi/ControllerApi/MenuApiController/Getroleid()方法");
                 return GetJSONMessage(QueryService.GetData(list, "0_8"));
             }
             catch (Exception er)
             {
-                FileLog.WriteLog("Error：调用QcSystem.ControllersApi/ControllerApi/MenuApiController/Getroleid()方法," + er.ToString());
+                FileLog.WriteLog("Error：调用Angel.ControllersApi/ControllerApi/MenuApiController/Getroleid()方法," + er.ToString());
                 return GetJSONMessage("");
             }
         }
@@ -63,7 +63,7 @@ namespace Angel.Web.ControllersApi
             Dictionary<string, JArray> dict = new Dictionary<string, JArray>();
             try
             {
-                FileLog.WriteLog("InfoApiTime：" + DateTime.Now.ToString() + ",调用：QcSystem.ControllersApi/ControllerApi/MenuApiController/Post([FromBody]string value)方法");
+                FileLog.WriteLog("InfoApiTime：" + DateTime.Now.ToString() + ",调用：Angel.ControllersApi/ControllerApi/MenuApiController/Post([FromBody]string value)方法");
                 if (list != null && list.Count > 0)
                 {
                     string serverName = "";
@@ -95,7 +95,7 @@ namespace Angel.Web.ControllersApi
             }
             catch (Exception er)
             {
-                FileLog.WriteLog("Error：调用 QcSystem.ControllersApi/ControllerApi/MenuApiController/Post([FromBody]string value)方法," + er.ToString());
+                FileLog.WriteLog("Error：调用 Angel.ControllersApi/ControllerApi/MenuApiController/Post([FromBody]string value)方法," + er.ToString());
                 return GetJSONMessage("");
             }
         }

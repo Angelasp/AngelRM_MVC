@@ -49,12 +49,12 @@ namespace Angel.Web.ControllersApi
                 }
                 var list = Newtonsoft.Json.Linq.JObject.Parse("{level:" + levels + "}");
 
-                FileLog.WriteLog("InfoApiTime：" + DateTime.Now.ToString() + ",调用：QcSystem.ControllersApi/ControllerApi/UserApiController/Get()方法");
+                FileLog.WriteLog("InfoApiTime：" + DateTime.Now.ToString() + ",调用：Angel.ControllersApi/ControllerApi/UserApiController/Get()方法");
                 return GetJSONMessage(QueryService.GetData(list, "1_2"));
             }
             catch (Exception er)
             {
-                FileLog.WriteLog("Error：调用QcSystem.ControllersApi/ControllerApi/UserApiController/Get()方法," + er.ToString());
+                FileLog.WriteLog("Error：调用Angel.ControllersApi/ControllerApi/UserApiController/Get()方法," + er.ToString());
                 return GetJSONMessage("");
             }
         }
@@ -68,7 +68,7 @@ namespace Angel.Web.ControllersApi
             Dictionary<string, JArray> dict = new Dictionary<string, JArray>();
             try
             {
-                FileLog.WriteLog("InfoApiTime：" + DateTime.Now.ToString() + ",调用：QcSystem.ControllersApi/ControllerApi/UserApiController/Post([FromBody]string value)方法");
+                FileLog.WriteLog("InfoApiTime：" + DateTime.Now.ToString() + ",调用：Angel.ControllersApi/ControllerApi/UserApiController/Post([FromBody]string value)方法");
                 string serverName = "";
                 Newtonsoft.Json.Linq.JArray jArray = new JArray();
 
@@ -103,7 +103,7 @@ namespace Angel.Web.ControllersApi
                                 }
                                 catch (Exception ex)
                                 {
-                                    FileLog.WriteLog("Error：调用 QcSystem.ControllersApi/ControllerApi/UserApiController/Post([FromBody]string value)方法-用户生成模板错误," + ex.ToString());
+                                    FileLog.WriteLog("Error：调用 Angel.ControllersApi/ControllerApi/UserApiController/Post([FromBody]string value)方法-用户生成模板错误," + ex.ToString());
 
                                 }
                                 break;
@@ -133,7 +133,7 @@ namespace Angel.Web.ControllersApi
                                 }
                                 catch (Exception ex)
                                 {
-                                    FileLog.WriteLog("Error：调用 QcSystem.ControllersApi/ControllerApi/UserApiController/Post([FromBody]string value)方法-用户生成模板错误," + ex.ToString());
+                                    FileLog.WriteLog("Error：调用 Angel.ControllersApi/ControllerApi/UserApiController/Post([FromBody]string value)方法-用户生成模板错误," + ex.ToString());
 
                                 }
                                 break;
@@ -160,7 +160,7 @@ namespace Angel.Web.ControllersApi
             }
             catch (Exception er)
             {
-                FileLog.WriteLog("Error：调用 QcSystem.ControllersApi/ControllerApi/UserApiController/Post([FromBody]string value)方法," + er.ToString());
+                FileLog.WriteLog("Error：调用 Angel.ControllersApi/ControllerApi/UserApiController/Post([FromBody]string value)方法," + er.ToString());
                 return GetJSONMessage("");
             }
         }
@@ -175,7 +175,7 @@ namespace Angel.Web.ControllersApi
         {
             try
             {
-                FileLog.WriteLog("InfoApiTime：" + DateTime.Now.ToString() + ",调用：QcSystem.ControllersApi/ControllerApi/UserApiController/GetTBTreeView()方法");
+                FileLog.WriteLog("InfoApiTime：" + DateTime.Now.ToString() + ",调用：Angel.ControllersApi/ControllerApi/UserApiController/GetTBTreeView()方法");
                 string[] IndicatoryList = { "" };
                 if (userid > 0)
                 {
@@ -281,7 +281,7 @@ namespace Angel.Web.ControllersApi
             }
             catch (Exception er)
             {
-                FileLog.WriteLog("Error：调用QcSystem.ControllersApi/ControllerApi/UserApiController/GetTBTreeView()方法," + er.ToString());
+                FileLog.WriteLog("Error：调用Angel.ControllersApi/ControllerApi/UserApiController/GetTBTreeView()方法," + er.ToString());
                 return GetJSONMessage("");
             }
         }
@@ -294,7 +294,7 @@ namespace Angel.Web.ControllersApi
         public HttpResponseMessage GetUserIndicatorView(int userid)
         {
 
-            FileLog.WriteLog("InfoApiTime：" + DateTime.Now.ToString() + ",调用：QcSystem.ControllersApi/ControllerApi/UserApiController/GetUserIndicatorView()方法");
+            FileLog.WriteLog("InfoApiTime：" + DateTime.Now.ToString() + ",调用：Angel.ControllersApi/ControllerApi/UserApiController/GetUserIndicatorView()方法");
             try
             {
                 string indicatorlist = IndicatorListdata(userid);
@@ -329,7 +329,7 @@ namespace Angel.Web.ControllersApi
             }
             catch (Exception er)
             {
-                FileLog.WriteLog("Error：调用QcSystem.ControllersApi/ControllerApi/UserApiController/GetUserIndicatorView()方法," + er.ToString());
+                FileLog.WriteLog("Error：调用Angel.ControllersApi/ControllerApi/UserApiController/GetUserIndicatorView()方法," + er.ToString());
                 return GetJSONMessage("");
             }
         }
@@ -369,7 +369,7 @@ namespace Angel.Web.ControllersApi
             Dictionary<string, JArray> dict = new Dictionary<string, JArray>();
             try
             {
-                FileLog.WriteLog("InfoApiTime：" + DateTime.Now.ToString() + ",调用：QcSystem.ControllersApi/ControllerApi/UserApiController/PostUpPwd([FromBody]string value)方法");
+                FileLog.WriteLog("InfoApiTime：" + DateTime.Now.ToString() + ",调用：Angel.ControllersApi/ControllerApi/UserApiController/PostUpPwd([FromBody]string value)方法");
                 string serverName = "";
                 Newtonsoft.Json.Linq.JArray jArray = new JArray();
 
@@ -394,7 +394,7 @@ namespace Angel.Web.ControllersApi
             }
             catch (Exception er)
             {
-                FileLog.WriteLog("Error：调用 QcSystem.ControllersApi/ControllerApi/UserApiController/PostUpPwd([FromBody]string value)方法," + er.ToString());
+                FileLog.WriteLog("Error：调用 Angel.ControllersApi/ControllerApi/UserApiController/PostUpPwd([FromBody]string value)方法," + er.ToString());
                 return GetJSONMessage("");
             }
         }
@@ -446,7 +446,7 @@ namespace Angel.Web.ControllersApi
             }
             catch (Exception ex)
             {
-                FileLog.WriteLog("Error：调用QcSystem.ControllersApi/ControllerApi/UserApiController/GetSetStringIndicator()方法," + ex.ToString());
+                FileLog.WriteLog("Error：调用Angel.ControllersApi/ControllerApi/UserApiController/GetSetStringIndicator()方法," + ex.ToString());
                 return "";
 
             }

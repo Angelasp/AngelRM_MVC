@@ -17,7 +17,7 @@ namespace Angel.Web.ControllersApi
     * 文件名称 ：LoginlogApiController.cs                          
     * 描述说明 ：用户登录日志API控制器
     * 创建信息 : create by QQ：815657032、709047174  E-mail:Angel_asp@126.com on 2018-02-10
-    * 修订信息 : modify by (person) on (date) for (reason)
+    * 修订信息 : modify by (person) on (date) for (rheason)
     * 
     * 版权信息 : Copyright (c) 2009 Angel工作室 www.angelasp.com
     **************************************************************************/
@@ -38,7 +38,7 @@ namespace Angel.Web.ControllersApi
         {
             try
             {
-                FileLog.WriteLog("InfoApiTime：" + DateTime.Now.ToString() + ",调用：QcSystem.ControllersApi/ControllerApi/LoginlogApiController/PostList()方法");
+                FileLog.WriteLog("InfoApiTime：" + DateTime.Now.ToString() + ",调用：Angel.ControllersApi/ControllerApi/LoginlogApiController/PostList()方法");
                 int pagenumber = page.offset;//从多少行开始查询
                 int pSize = page.pageSize;
                 UtilFunction utf1 = new UtilFunction();
@@ -61,7 +61,7 @@ namespace Angel.Web.ControllersApi
             }
             catch (Exception er)
             {
-                FileLog.WriteLog("Error：调用QcSystem.ControllersApi/ControllerApi/LoginlogApiController/PostList()方法," + er.ToString());
+                FileLog.WriteLog("Error：调用Angel.ControllersApi/ControllerApi/LoginlogApiController/PostList()方法," + er.ToString());
                 return GetJSONMessage("");
             }
         }
@@ -75,7 +75,7 @@ namespace Angel.Web.ControllersApi
             Dictionary<string, JArray> dict = new Dictionary<string, JArray>();
             try
             {
-                FileLog.WriteLog("InfoApiTime：" + DateTime.Now.ToString() + ",调用：QcSystem.ControllersApi/ControllerApi/MenuApiController/Post([FromBody]string value)方法");
+                FileLog.WriteLog("InfoApiTime：" + DateTime.Now.ToString() + ",调用：Angel.ControllersApi/ControllerApi/MenuApiController/Post([FromBody]string value)方法");
                 if (list != null && list.Count > 0)
                 {
                     string serverName = "";
@@ -107,7 +107,7 @@ namespace Angel.Web.ControllersApi
             }
             catch (Exception er)
             {
-                FileLog.WriteLog("Error：调用 QcSystem.ControllersApi/ControllerApi/MenuApiController/Post([FromBody]string value)方法," + er.ToString());
+                FileLog.WriteLog("Error：调用 Angel.ControllersApi/ControllerApi/MenuApiController/Post([FromBody]string value)方法," + er.ToString());
                 return GetJSONMessage("");
             }
         }
@@ -153,12 +153,12 @@ namespace Angel.Web.ControllersApi
             string userid = UtilFunction.GetCookie("uid");
             string username = UtilFunction.GetCookie("uname");
             string roleid = UtilFunction.GetCookie("roleid");
-            string rolename = Convert.ToString(MySqlHelpers.ExecuteScalar("select rolename from angel_SYS_ROLE where id = '" + roleid + "'"));
+            string rolename = Convert.ToString(MySqlHelpers.ExecuteScalar("select rolename from angel_sys_role where id = '" + roleid + "'"));
             string logposition = value.Split('"')[5];
             string operationtype = value.Split('"')[9];
             try
             {
-                int count = Convert.ToInt32(MySqlHelpers.ExecuteScalar("SELECT COUNT(*) FROM angel_SYS_OPERATIONLOG"));
+                int count = Convert.ToInt32(MySqlHelpers.ExecuteScalar("SELECT COUNT(*) FROM angel_sys_operationlog"));
                 int ID = 0;
                 if (count == 0)
                 {
@@ -166,9 +166,9 @@ namespace Angel.Web.ControllersApi
                 }
                 else
                 {
-                    ID = Convert.ToInt32(MySqlHelpers.ExecuteScalar("SELECT MAX(ID) FROM angel_SYS_OPERATIONLOG")) + 1;
+                    ID = Convert.ToInt32(MySqlHelpers.ExecuteScalar("SELECT MAX(ID) FROM angel_sys_operationlog")) + 1;
                 }
-                string sql = "INSERT INTO angel_SYS_OPERATIONLOG VALUES (" + ID + ", '" + userid + "', '" + username + "', '" + roleid + "','" + rolename + "','" + logposition + "','" + operationtype + "','" + value.ToString() + "','" + username + "','" + System.DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss") + "')";
+                string sql = "INSERT INTO angel_sys_operationlog VALUES (" + ID + ", '" + userid + "', '" + username + "', '" + roleid + "','" + rolename + "','" + logposition + "','" + operationtype + "','" + value.ToString() + "','" + username + "','" + System.DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss") + "')";
                 MySqlHelpers.ExecuteNonQuery(sql);
                 StringBuilder result = new StringBuilder();
                 result.Append("{");

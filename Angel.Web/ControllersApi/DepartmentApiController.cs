@@ -33,12 +33,12 @@ namespace Angel.Web.ControllersApi
         {
             try
             {
-                FileLog.WriteLog("InfoApiTime：" + DateTime.Now.ToString() + ",调用：QcSystem.ControllersApi/ControllerApi/RoomApiController/Get()方法");
+                FileLog.WriteLog("InfoApiTime：" + DateTime.Now.ToString() + ",调用：Angel.ControllersApi/ControllerApi/RoomApiController/Get()方法");
                 return GetJSONMessage(QueryService.GetData(null, "7_1"));
             }
             catch (Exception er)
             {
-                FileLog.WriteLog("Error：调用QcSystem.ControllersApi/ControllerApi/RoomApiController/Get()方法," + er.ToString());
+                FileLog.WriteLog("Error：调用Angel.ControllersApi/ControllerApi/RoomApiController/Get()方法," + er.ToString());
                 return GetJSONMessage("");
             }
         }
@@ -48,12 +48,12 @@ namespace Angel.Web.ControllersApi
         {
             try
             {
-                FileLog.WriteLog("InfoApiTime：" + DateTime.Now.ToString() + ",调用：QcSystem.ControllersApi/ControllerApi/RoomApiController/GetD()方法");
+                FileLog.WriteLog("InfoApiTime：" + DateTime.Now.ToString() + ",调用：Angel.ControllersApi/ControllerApi/RoomApiController/GetD()方法");
                 return GetJSONMessage(QueryService.GetData(null, "7_2"));
             }
             catch (Exception er)
             {
-                FileLog.WriteLog("Error：调用QcSystem.ControllersApi/ControllerApi/RoomApiController/GetD()方法," + er.ToString());
+                FileLog.WriteLog("Error：调用Angel.ControllersApi/ControllerApi/RoomApiController/GetD()方法," + er.ToString());
                 return GetJSONMessage("");
             }
         }
@@ -103,12 +103,12 @@ namespace Angel.Web.ControllersApi
                 //string roomid = "46";
                 string value = "{ \"RoomID\": " + roomid + "}";
                 var list = Newtonsoft.Json.Linq.JObject.Parse(value);
-                FileLog.WriteLog("InfoApiTime：" + DateTime.Now.ToString() + ",调用：QcSystem.ControllersApi/ControllerApi/RoomApiController/GetRoommeul()方法");
+                FileLog.WriteLog("InfoApiTime：" + DateTime.Now.ToString() + ",调用：Angel.ControllersApi/ControllerApi/RoomApiController/GetRoommeul()方法");
                 return GetJSONMessage(QueryService.GetData(list, "33_5"));
             }
             catch (Exception er)
             {
-                FileLog.WriteLog("Error：调用QcSystem.ControllersApi/ControllerApi/RoomApiController/GetRoommeul()方法," + er.ToString());
+                FileLog.WriteLog("Error：调用Angel.ControllersApi/ControllerApi/RoomApiController/GetRoommeul()方法," + er.ToString());
                 return GetJSONMessage("");
             }
         }
@@ -127,7 +127,7 @@ namespace Angel.Web.ControllersApi
             string serverName = "";
             try
             {
-                FileLog.WriteLog("InfoApiTime：" + DateTime.Now.ToString() + ",调用：QcSystem.ControllersApi/ControllerApi/RoomApiController/Post([FromBody]string value)方法");
+                FileLog.WriteLog("InfoApiTime：" + DateTime.Now.ToString() + ",调用：Angel.ControllersApi/ControllerApi/RoomApiController/Post([FromBody]string value)方法");
                 if (list != null && list.Count > 0)
                 {
 
@@ -176,7 +176,7 @@ namespace Angel.Web.ControllersApi
             }
             catch (Exception er)
             {
-                FileLog.WriteLog("Error：调用 QcSystem.ControllersApi/ControllerApi/RoomApiController/Post([FromBody]string value)方法," + er.ToString());
+                FileLog.WriteLog("Error：调用 Angel.ControllersApi/ControllerApi/RoomApiController/Post([FromBody]string value)方法," + er.ToString());
                 return GetJSONMessage("");
             }
         }

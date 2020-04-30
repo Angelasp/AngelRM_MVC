@@ -38,7 +38,7 @@ namespace Angel.Web.ControllersApi
             JObject obj = new JObject();
             try
             {
-                FileLog.WriteLog("InfoApiTime：" + DateTime.Now.ToString() + ",调用：QcSystem.ControllersApi/ControllerAPI/LoginApiController/Get()方法");
+                FileLog.WriteLog("InfoApiTime：" + DateTime.Now.ToString() + ",调用：Angel.ControllersApi/ControllerAPI/LoginApiController/Get()方法");
                 string mycode = value.mycode;
                 string username = value.username;
                 obj.Add("username", value.username);
@@ -88,7 +88,7 @@ namespace Angel.Web.ControllersApi
             }
             catch (Exception er)
             {
-                FileLog.WriteLog("Error：调用QcSystem.ControllersApi/ControllerAPI/LoginApiController/Get()方法," + er.ToString());
+                FileLog.WriteLog("Error：调用Angel.ControllersApi/ControllerAPI/LoginApiController/Get()方法," + er.ToString());
                 return GetJSONMessage("");
             }
         }
@@ -101,7 +101,7 @@ namespace Angel.Web.ControllersApi
             Dictionary<string, JArray> dict = new Dictionary<string, JArray>();
             try
             {
-                FileLog.WriteLog("InfoApiTime：" + DateTime.Now.ToString() + ",调用：QcSystem.ControllersApi/ControllerApi/UserApiController/Post([FromBody]string value)方法");
+                FileLog.WriteLog("InfoApiTime：" + DateTime.Now.ToString() + ",调用：Angel.ControllersApi/ControllerApi/UserApiController/Post([FromBody]string value)方法");
                 string serverName = "";
                 Newtonsoft.Json.Linq.JArray jArray = new JArray();
 
@@ -131,7 +131,7 @@ namespace Angel.Web.ControllersApi
             }
             catch (Exception er)
             {
-                FileLog.WriteLog("Error：调用 QcSystem.ControllersApi/ControllerApi/UserApiController/Post([FromBody]string value)方法," + er.ToString());
+                FileLog.WriteLog("Error：调用 Angel.ControllersApi/ControllerApi/UserApiController/Post([FromBody]string value)方法," + er.ToString());
                 return GetJSONMessage("");
             }
         }
