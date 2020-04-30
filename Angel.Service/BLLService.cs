@@ -78,16 +78,6 @@ namespace Angel.Service
                                         sql = sql.Replace(o.Key, o.Value);
                                     }
                                 }
-                                if (serverName == "get_Province_BarLine_Avg" || serverName == "get_Province_BarLine_Province" || serverName == "get_gt_line_bar" || serverName == "get_gt_city_bar" || serverName == "get_gt_city_bar_avg")
-                                {
-                                    string par1 = param.Last.ToString().Split('"')[3].Split('&')[0].Replace("'", "");
-                                    string par2 = param.Last.ToString().Split('"')[3].Split('&')[1].Replace("'", "");
-                                    string aa = "\\r";
-                                    string par3 = param.Last.ToString().Split('"')[3].Split('&')[2].Replace(aa, "").Replace("'", "");
-                                    sql = sql.Replace("CMCC_COMPREHENSIVE_COVERAGE_RAT", par1);
-                                    sql = sql.Replace("CTCC_COMPREHENSIVE_COVERAGE_RAT", par2);
-                                    sql = sql.Replace("CUCC_COMPREHENSIVE_COVERAGE_RAT", par3);
-                                }
                                 repSql.Add(s.Key, sql);
                             }
 

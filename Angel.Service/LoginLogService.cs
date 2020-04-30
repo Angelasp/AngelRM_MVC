@@ -60,7 +60,7 @@ namespace Angel.Service
         /// </summary>
         public object counttotal()
         {
-            string sql = " select count(*) from angel_SYS_LOGINLOG";
+            string sql = " select count(*) from angel_sys_loginlog";
             return MySqlHelpers.ExecuteScalar(sql);
         }
 
@@ -106,7 +106,7 @@ namespace Angel.Service
 
             }
             catch (Exception er)
-            { FileLog.WriteLog("异常捕捉：CMDI.Service.LoginLogService" + er.ToString()); }
+            { FileLog.WriteLog("异常捕捉：Angel.Service.LoginLogService" + er.ToString()); }
             return logs;
         }
     }
