@@ -6,7 +6,7 @@
     </parameters>
     <values>
       <value identify="0">
-        SELECT DISTINCT userid,username FROM Angel_DownloadList;
+        SELECT DISTINCT userid,username FROM angel_downloadlist;
       </value>
     </values>
   </option>
@@ -17,7 +17,7 @@
     </parameters>
     <values>
       <value identify="0">
-        SELECT DISTINCT userid,username FROM Angel_DownloadList where userid = %(condition0)d;
+        SELECT DISTINCT userid,username FROM angel_downloadlist where userid = %(condition0)d;
       </value>
     </values>
   </option>
@@ -28,7 +28,7 @@
     </parameters>
     <values>
       <value identify="0">
-        SELECT userid,username,filename,createuser,createtime,downloadhref FROM Angel_DownloadList where userid = %(condition0)d ORDER BY createtime desc;
+        SELECT userid,username,filename,createuser,createtime,downloadhref FROM angel_downloadlist where userid = %(condition0)d ORDER BY createtime desc;
       </value>
     </values>
   </option>
@@ -41,7 +41,7 @@
     </parameters>
     <values>
       <value identify="0">
-        delete FROM Angel_DownloadList where datediff('%(condition1)s', createtime)>=%(condition0)d and username = '%(condition2)s';
+        delete FROM angel_downloadlist where datediff('%(condition1)s', createtime)>=%(condition0)d and username = '%(condition2)s';
       </value>
     </values>
   </option>
@@ -58,7 +58,7 @@
     </parameters>
     <values>
       <value identify="0">
-        INSERT INTO Angel_DownloadList VALUES(%(condition0)d,'%(condition1)s','%(condition2)s',1,'%(condition3)s','%(condition4)s','%(condition5)s');
+        INSERT INTO angel_downloadlist VALUES(%(condition0)d,'%(condition1)s','%(condition2)s',1,'%(condition3)s','%(condition4)s','%(condition5)s');
       </value>
     </values>
   </option>
