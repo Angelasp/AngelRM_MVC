@@ -6,7 +6,7 @@
     </parameters>
     <values>
       <value identify="menu">
-        SELECT * FROM angel_SYS_MENU;
+        SELECT * FROM angel_sys_menu;
       </value>
     </values>
   </option>
@@ -17,7 +17,7 @@
     </parameters>
     <values>
       <value identify="menu">
-        SELECT id, menuname, parentid, remark, orderid, menuicon, menuurl, isvisible, isenabled, createuser, createtime, updateuser, updatetime, menucode FROM angel_SYS_MENU where id==%(condition0)d;
+        SELECT id, menuname, parentid, remark, orderid, menuicon, menuurl, isvisible, isenabled, createuser, createtime, updateuser, updatetime, menucode FROM angel_sys_menu where id==%(condition0)d;
       </value>
     </values>
   </option> 
@@ -29,7 +29,7 @@
     </parameters>
     <values>
       <value identify="menu">
-        SELECT id,menuname,parentid,remark,orderid,menuicon,menuurl,isvisible,isenabled,createuser,createtime,updateuser,updatetime FROM angel_SYS_MENU WHERE ParentID=%(condition0)d ORDER BY OrderID
+        SELECT id,menuname,parentid,remark,orderid,menuicon,menuurl,isvisible,isenabled,createuser,createtime,updateuser,updatetime FROM angel_sys_menu WHERE ParentID=%(condition0)d ORDER BY OrderID
       </value>
     </values>
   </option>
@@ -50,7 +50,7 @@
     </parameters>
     <values>
       <value identify="0">
-        UPDATE angel_SYS_MENU SET MenuName='%(condition1)s',ParentID=%(condition2)d,Remark='%(condition3)s',OrderID=%(condition4)d,MenuIcon='%(condition5)s',MenuUrl='%(condition6)s',IsVisible='%(condition7)c',IsEnabled='%(condition8)c',UpdateUser='%(condition9)s',UpdateTime=now() WHERE ID=%(condition0)d
+        UPDATE angel_sys_menu SET MenuName='%(condition1)s',ParentID=%(condition2)d,Remark='%(condition3)s',OrderID=%(condition4)d,MenuIcon='%(condition5)s',MenuUrl='%(condition6)s',IsVisible='%(condition7)c',IsEnabled='%(condition8)c',UpdateUser='%(condition9)s',UpdateTime=now() WHERE ID=%(condition0)d
       </value>
     </values>
   </option> 
@@ -71,7 +71,7 @@
     </parameters>
     <values>
       <value identify="1">
-        INSERT INTO angel_SYS_MENU  VALUES(null,'%(condition0)s',%(condition1)d,'%(condition2)s',%(condition3)d,'%(condition4)s','%(condition5)s','%(condition6)c','%(condition7)c','%(condition8)s',now(),'',now(),'')
+        INSERT INTO angel_sys_menu  VALUES(null,'%(condition0)s',%(condition1)d,'%(condition2)s',%(condition3)d,'%(condition4)s','%(condition5)s','%(condition6)c','%(condition7)c','%(condition8)s',now(),'',now(),'')
       </value>
     </values>
   </option>
@@ -83,7 +83,7 @@
     </parameters>
     <values>
       <value identify="0">
-        DELETE from angel_SYS_MENU WHERE ID=%(condition0)d
+        DELETE from angel_sys_menu WHERE ID=%(condition0)d
       </value>
     </values>
   </option>
@@ -95,7 +95,7 @@
     </parameters>
     <values>
       <value identify="menu">
-        select id,menuname from angel_SYS_MENU where id in(select menuid from angel_SYS_MENUSOFROLES where roleid=%(condition0)d);
+        select id,menuname from angel_sys_menu where id in(select menuid from angel_sys_menusofroles where roleid=%(condition0)d);
       </value>
     </values>
   </option>
@@ -110,7 +110,7 @@
     </parameters>
     <values>
       <value identify="0">
-        UPDATE Angel_D_I_TABLE SET NOP_NUMBER='%(condition3)s' WHERE RID='%(condition1)s' AND SDIID='%(condition2)s'
+        UPDATE angel_d_i_table SET NOP_NUMBER='%(condition3)s' WHERE RID='%(condition1)s' AND SDIID='%(condition2)s'
       </value>
     </values>
   </option> 
@@ -132,10 +132,10 @@
     </parameters>
     <values>
       <value identify="0">
-        SELECT COUNT(*) FROM angel_SYS_USER WHERE UserName='%(condition0)s'
+        SELECT COUNT(*) FROM angel_sys_user WHERE UserName='%(condition0)s'
       </value>
       <value identify="1">
-        INSERT INTO angel_SYS_USER  VALUES(null,'%(condition0)s','%(condition1)s','%(condition2)c',%(condition3)d,now(),'%(condition4)s',now(),'',now(),'%(condition6)s')
+        INSERT INTO angel_sys_user  VALUES(null,'%(condition0)s','%(condition1)s','%(condition2)c',%(condition3)d,now(),'%(condition4)s',now(),'',now(),'%(condition6)s')
       </value>    
     </values>
   </option>
@@ -150,14 +150,14 @@
         select userrole_table.*,room.roomid,room.roomname from (
         select c.id, c.username, c.password, c.isenabled, c.logincount, c.lastlogintime, c.createuser, c.createtime, c.updateuser, c.updatetime, c.cityid,c.roleid as roleid,d.rolename as rolename
         from(
-        SELECT id, username, password, isenabled, logincount, lastlogintime, createuser, createtime, updateuser, updatetime, cityid,b.* FROM angel_SYS_USER a
-        left join  angel_SYS_USERROLE  b on a.id=b.userid
-        ) c  left join angel_SYS_ROLE d on c.roleid=d.id where d.level  &lt; %(condition0)d
+        SELECT id, username, password, isenabled, logincount, lastlogintime, createuser, createtime, updateuser, updatetime, cityid,b.* FROM angel_sys_user a
+        left join  angel_sys_userrole  b on a.id=b.userid
+        ) c  left join angel_sys_role d on c.roleid=d.id where d.level  &lt; %(condition0)d
         ) as  userrole_table
         left join
         (
-        SELECT f.userid as userid,g.id as roomid,g.roomname as roomname from angel_SYS_USERDEPARTMENT f
-        left join  angel_SYS_ROOM  g on f.roomid=g.id
+        SELECT f.userid as userid,g.id as roomid,g.roomname as roomname from angel_sys_userdepartment f
+        left join  angel_sys_room  g on f.roomid=g.id
         ) room  on userrole_table.id=room.userid
       </value>
     </values>
@@ -170,7 +170,7 @@
     </parameters>
     <values>
       <value identify="0">
-        UPDATE angel_SYS_USER SET LoginCount=LoginCount+1,LastLoginTime=now() WHERE ID=%(condition0)d
+        UPDATE angel_sys_user SET LoginCount=LoginCount+1,LastLoginTime=now() WHERE ID=%(condition0)d
       </value>
     </values>
   </option>
@@ -188,10 +188,10 @@
     </parameters>
     <values>
       <value identify="0">
-        select count(0) from angel_SYS_USER WHERE ID=%(condition0)d and Password='%(condition1)d'
+        select count(0) from angel_sys_user WHERE ID=%(condition0)d and Password='%(condition1)d'
       </value>
       <value identify="1">
-        UPDATE angel_SYS_USER SET Password='%(condition2)d',isenabled='%(condition4)s',UpdateUser='%(condition3)s',UpdateTime=now(),cityid='%(condition5)s' WHERE ID=%(condition0)d
+        UPDATE angel_sys_user SET Password='%(condition2)d',isenabled='%(condition4)s',UpdateUser='%(condition3)s',UpdateTime=now(),cityid='%(condition5)s' WHERE ID=%(condition0)d
       </value>
     </values>
   </option>
@@ -205,7 +205,7 @@
     </parameters>
     <values>
       <value identify="0">
-        UPDATE angel_SYS_USER SET isenabled='%(condition2)s',UpdateUser='%(condition1)s',UpdateTime=now(),cityid='%(condition3)s' WHERE ID=%(condition0)d
+        UPDATE angel_sys_user SET isenabled='%(condition2)s',UpdateUser='%(condition1)s',UpdateTime=now(),cityid='%(condition3)s' WHERE ID=%(condition0)d
       </value>
     </values>
   </option>
@@ -217,7 +217,7 @@
     </parameters>
     <values>
       <value identify="0">
-        SELECT ID,UserName FROM angel_SYS_USER WHERE UserName='%(condition0)s'
+        SELECT ID,UserName FROM angel_sys_user WHERE UserName='%(condition0)s'
       </value>
     </values>
   </option>
@@ -230,16 +230,16 @@
     </parameters>
     <values>
       <value identify="login">
-        SELECT COUNT(*) FROM angel_SYS_USER WHERE UserName='%(condition0)s' AND Password='%(condition1)s' AND ISENABLED='Y'
+        SELECT COUNT(*) FROM angel_sys_user WHERE UserName='%(condition0)s' AND Password='%(condition1)s' AND ISENABLED='Y'
       </value>
       <value identify="user">
-        SELECT ID,UserName,cityid FROM angel_SYS_USER WHERE UserName='%(condition0)s' AND Password='%(condition1)s'
+        SELECT ID,UserName,cityid FROM angel_sys_user WHERE UserName='%(condition0)s' AND Password='%(condition1)s'
       </value>
       <value identify="role">
-        SELECT RoleID,RoleName,b.`level` FROM angel_SYS_USERROLE a LEFT JOIN angel_SYS_ROLE b ON a.RoleID=b.ID WHERE userid=(SELECT ID FROM angel_SYS_USER WHERE username='%(condition0)s')
+        SELECT RoleID,RoleName,b.`level` FROM angel_sys_userrole a LEFT JOIN angel_sys_role b ON a.RoleID=b.ID WHERE userid=(SELECT ID FROM angel_sys_user WHERE username='%(condition0)s')
       </value>
       <value identify="logincount">
-        UPDATE angel_SYS_USER SET LoginCount=LoginCount+1,LastLoginTime=now() WHERE username='%(condition0)s'
+        UPDATE angel_sys_user SET LoginCount=LoginCount+1,LastLoginTime=now() WHERE username='%(condition0)s'
       </value>
     </values>
   </option>
@@ -251,7 +251,7 @@
     </parameters>
     <values>
       <value identify="user">
-        SELECT ID,UserName,IsEnabled,LoginCount,LastLoginTime FROM angel_SYS_USER WHERE ID=%(condition0)d
+        SELECT ID,UserName,IsEnabled,LoginCount,LastLoginTime FROM angel_sys_user WHERE ID=%(condition0)d
       </value>
     </values>
   </option>
@@ -263,7 +263,7 @@
     </parameters>
     <values>
       <value identify="0">
-        DELETE FROM angel_SYS_USER WHERE ID=%(condition0)d
+        DELETE FROM angel_sys_user WHERE ID=%(condition0)d
       </value>
     </values>
   </option>
@@ -277,7 +277,7 @@
     </parameters>
     <values>
       <value identify="0">
-        UPDATE angel_SYS_USER SET IsEnabled='%(condition1)c',UpdateUser='%(condition2)d',UpdateTime=now() WHERE ID=%(condition0)d
+        UPDATE angel_sys_user SET IsEnabled='%(condition1)c',UpdateUser='%(condition2)d',UpdateTime=now() WHERE ID=%(condition0)d
       </value>
     </values>
   </option>
@@ -289,7 +289,7 @@
     </parameters>
     <values>
       <value identify="0">
-        select r.id,r.rolename,case when u.roleid=r.id and u.userid=%(condition0)d  then 'true' else 'false' end as ischeck from angel_SYS_ROLE r left join  angel_SYS_USERROLE u on r.id=u.roleid where isenabled='Y'
+        select r.id,r.rolename,case when u.roleid=r.id and u.userid=%(condition0)d  then 'true' else 'false' end as ischeck from angel_sys_role r left join  angel_sys_userrole u on r.id=u.roleid where isenabled='Y'
       </value>
     </values>
   </option>
@@ -303,16 +303,16 @@
     </parameters>
     <values>
       <value identify="0">
-        delete from angel_SYS_USERROLE where userid=%(condition0)d
+        delete from angel_sys_userrole where userid=%(condition0)d
       </value>
       <value identify="1">
-        insert into angel_SYS_USERROLE values(%(condition0)d,%(condition1)d)
+        insert into angel_sys_userrole values(%(condition0)d,%(condition1)d)
       </value>
       <value identify="2">
-        delete from angel_SYS_USEROFINDICATOR where userid=%(condition0)d
+        delete from angel_sys_userOFINDICATOR where userid=%(condition0)d
       </value>
       <value identify="3">
-        insert into angel_SYS_USEROFINDICATOR values(null,%(condition0)d,'%(condition2)s')
+        insert into angel_sys_userOFINDICATOR values(null,%(condition0)d,'%(condition2)s')
       </value>
     </values>
   </option>
@@ -326,10 +326,10 @@
     </parameters>
     <values>
       <value identify="0">
-        delete from angel_SYS_USERDEPARTMENT where userid=%(condition0)d
+        delete from angel_sys_userdepartment where userid=%(condition0)d
       </value>
       <value identify="1">
-        INSERT INTO angel_SYS_USERDEPARTMENT VALUES (%(condition0)d,%(condition1)d)
+        INSERT INTO angel_sys_userdepartment VALUES (%(condition0)d,%(condition1)d)
       </value>
     </values>
   </option>
@@ -343,7 +343,7 @@
     </parameters>
     <values>
       <value identify="0">
-        delete from angel_SYS_USEROFINDICATOR where userid=%(condition0)d
+        delete from angel_sys_userOFINDICATOR where userid=%(condition0)d
       </value>
 
     </values>
@@ -355,7 +355,7 @@
   <option key="1_12">
     <values>
       <value identify="0">
-        select max(id) as userid from angel_SYS_USER
+        select max(id) as userid from angel_sys_user
       </value>
     </values>
   </option>
@@ -372,7 +372,7 @@
   <option key="1_1331">
     <values>
       <value identify="0">
-        select id,roomname from angel_SYS_ROOM
+        select id,roomname from angel_sys_room
       </value>
     </values>
   </option>
@@ -386,7 +386,7 @@
     </parameters>
     <values>
       <value identify="0">
-        select indicator_content from angel_SYS_USEROFINDICATOR where userid=%(condition0)d
+        select indicator_content from angel_sys_userOFINDICATOR where userid=%(condition0)d
       </value>
     </values>
   </option>
@@ -413,10 +413,10 @@
     </parameters>
     <values>
       <value identify="0">
-        select count(0) from angel_SYS_USER WHERE ID=%(condition0)d and Password='%(condition1)d'
+        select count(0) from angel_sys_user WHERE ID=%(condition0)d and Password='%(condition1)d'
       </value>
       <value identify="1">
-        UPDATE angel_SYS_USER SET Password='%(condition2)d',UpdateUser='%(condition3)s',UpdateTime=now() WHERE ID=%(condition0)d
+        UPDATE angel_sys_user SET Password='%(condition2)d',UpdateUser='%(condition3)s',UpdateTime=now() WHERE ID=%(condition0)d
       </value>
     </values>
   </option>
@@ -429,10 +429,10 @@
     </parameters>
     <values>
       <value identify="0">
-        delete from angel_SYS_USEROFINDICATOR where userid=%(condition0)d
+        delete from angel_sys_userOFINDICATOR where userid=%(condition0)d
       </value>
       <value identify="1">
-        insert into angel_SYS_USEROFINDICATOR values(null,%(condition0)d,'%(condition1)s')
+        insert into angel_sys_userOFINDICATOR values(null,%(condition0)d,'%(condition1)s')
       </value>
     </values>
   </option>
@@ -444,7 +444,7 @@
     </parameters>
     <values>
       <value identify="0">
-        delete from angel_SYS_USEROFINDICATOR where userid=%(condition0)d
+        delete from angel_sys_userOFINDICATOR where userid=%(condition0)d
       </value>
      
     </values>
@@ -461,7 +461,7 @@
     </parameters>
     <values>
       <value identify="1">
-        INSERT INTO angel_SYS_ROLE  VALUES(null,'%(condition0)s',%(condition1)d,'%(condition2)s','%(condition3)c','%(condition4)s',now(),'',now())
+        INSERT INTO angel_sys_role  VALUES(null,'%(condition0)s',%(condition1)d,'%(condition2)s','%(condition3)c','%(condition4)s',now(),'',now())
       </value>
     </values>
   </option>
@@ -472,7 +472,7 @@
     </parameters>
     <values>
       <value identify="1">
-        INSERT INTO angel_SYS_MENUSOFROLES(roleid,menuid,isindex) VALUES %(condition0)s;
+        INSERT INTO angel_sys_menusofroles(roleid,menuid,isindex) VALUES %(condition0)s;
       </value>
     </values>
   </option>
@@ -484,7 +484,7 @@
     </parameters>
     <values>
       <value identify="1">
-        delete from angel_SYS_MENUSOFROLES where roleid=%(condition0)s;
+        delete from angel_sys_menusofroles where roleid=%(condition0)s;
       </value>
     </values>
   </option>
@@ -497,7 +497,7 @@
     </parameters>
     <values>
       <value identify="role">
-        SELECT ID,RoleName,level,Remark,IsEnabled,createuser,createtime,updateuser FROM angel_SYS_ROLE where `level` &lt; %(condition0)d
+        SELECT ID,RoleName,level,Remark,IsEnabled,createuser,createtime,updateuser FROM angel_sys_role where `level` &lt; %(condition0)d
       </value>
     </values>
   </option>
@@ -514,7 +514,7 @@
     </parameters>
     <values>
       <value identify="1">
-        UPDATE angel_SYS_ROLE  SET RoleName='%(condition1)s',level=%(condition2)d,Remark='%(condition3)s',IsEnabled='%(condition4)c',UpdateUser='%(condition5)s' WHERE ID=%(condition0)d
+        UPDATE angel_sys_role  SET RoleName='%(condition1)s',level=%(condition2)d,Remark='%(condition3)s',IsEnabled='%(condition4)c',UpdateUser='%(condition5)s' WHERE ID=%(condition0)d
       </value>
     </values>
   </option>
@@ -526,7 +526,7 @@
     </parameters>
     <values>
       <value identify="role">
-        DELETE FROM angel_SYS_ROLE WHERE ID=%(condition0)d
+        DELETE FROM angel_sys_role WHERE ID=%(condition0)d
       </value>
     </values>
   </option>
@@ -538,7 +538,7 @@
     </parameters>
     <values>
       <value identify="0">
-        SELECT a.id,a.menuname,a.parentid,a.orderid,a.menuicon,a.menuurl,a.isenabled as isenabled FROM angel_SYS_MENU a RIGHT JOIN (SELECT * FROM angel_SYS_MENUSOFROLES WHERE RoleID in (%(condition0)d)) b ON a.ID=b.MenuID WHERE  a.isvisible='Y'  ORDER BY a.orderid ASC
+        SELECT a.id,a.menuname,a.parentid,a.orderid,a.menuicon,a.menuurl,a.isenabled as isenabled FROM angel_sys_menu a RIGHT JOIN (SELECT * FROM angel_sys_menusofroles WHERE RoleID in (%(condition0)d)) b ON a.ID=b.MenuID WHERE  a.isvisible='Y'  ORDER BY a.orderid ASC
       </value>
     </values>
   </option>
@@ -551,10 +551,10 @@
     </parameters>
     <values>
       <value identify="0">
-        DELETE FROM angel_SYS_MENUSOFROLES WHERE RoleID=%(condition0)d
+        DELETE FROM angel_sys_menusofroles WHERE RoleID=%(condition0)d
       </value>
       <value identify="1">
-        INSERT INTO angel_SYS_MENUSOFROLES VALUES(null,%(condition0)d,%(condition1)d)
+        INSERT INTO angel_sys_menusofroles VALUES(null,%(condition0)d,%(condition1)d)
       </value>
     </values>
   </option>
@@ -563,10 +563,10 @@
   <option key="2_7">
     <values>
       <value identify="1">
-        DELETE FROM angel_SYS_MENUSOFROLES WHERE RoleID={0}
+        DELETE FROM angel_sys_menusofroles WHERE RoleID={0}
       </value>
       <value identify="2">
-        INSERT INTO angel_SYS_MENUSOFROLES VALUES(null,{0},{1})
+        INSERT INTO angel_sys_menusofroles VALUES(null,{0},{1})
       </value>
     </values>
   </option>
@@ -591,7 +591,7 @@
     </parameters>
     <values>
       <value identify="1">
-        INSERT INTO angel_SYS_ROOM  VALUES(null,'%(condition0)s','%(condition1)s','%(condition2)c','%(condition3)s',now(),'',now())
+        INSERT INTO angel_sys_room  VALUES(null,'%(condition0)s','%(condition1)s','%(condition2)c','%(condition3)s',now(),'',now())
       </value>
     </values>
   </option>
@@ -602,7 +602,7 @@
     </parameters>
     <values>
       <value identify="1">
-        INSERT INTO angel_SYS_MENUSOFROOMS(roomid,menuid,isindex) VALUES %(condition0)s;
+        INSERT INTO angel_sys_menusofrooms(roomid,menuid,isindex) VALUES %(condition0)s;
       </value>
     </values>
   </option>
@@ -614,7 +614,7 @@
     </parameters>
     <values>
       <value identify="1">
-        delete from angel_SYS_MENUSOFROOMS where roomid=%(condition0)s;
+        delete from angel_sys_menusofrooms where roomid=%(condition0)s;
       </value>
     </values>
   </option>
@@ -626,7 +626,7 @@
     </parameters>
     <values>
       <value identify="room">
-        SELECT ID,RoomName,Remark,IsEnabled,createuser,createtime,updateuser FROM angel_SYS_ROOM
+        SELECT ID,RoomName,Remark,IsEnabled,createuser,createtime,updateuser FROM angel_sys_room
       </value>
     </values>
   </option>
@@ -642,7 +642,7 @@
     </parameters>
     <values>
       <value identify="1">
-        UPDATE angel_SYS_ROOM  SET RoomName='%(condition1)s',Remark='%(condition2)s',IsEnabled='%(condition3)c',UpdateUser='%(condition4)s' WHERE ID=%(condition0)d
+        UPDATE angel_sys_room  SET RoomName='%(condition1)s',Remark='%(condition2)s',IsEnabled='%(condition3)c',UpdateUser='%(condition4)s' WHERE ID=%(condition0)d
       </value>
     </values>
   </option>
@@ -654,7 +654,7 @@
     </parameters>
     <values>
       <value identify="room">
-        DELETE FROM angel_SYS_ROOM WHERE ID=%(condition0)d
+        DELETE FROM angel_sys_room WHERE ID=%(condition0)d
       </value>
     </values>
   </option>
@@ -666,7 +666,7 @@
     </parameters>
     <values>
       <value identify="0">
-        SELECT a.id,a.menuname,a.parentid,a.orderid,a.menuurl,a.isenabled as isenabled FROM angel_SYS_MENU a RIGHT JOIN (SELECT * FROM angel_SYS_MENUSOFROOMS WHERE RoomID in (%(condition0)d)) b ON a.ID=b.MenuID WHERE a.isenabled='Y' and a.isvisible='Y'  ORDER BY a.orderid ASC
+        SELECT a.id,a.menuname,a.parentid,a.orderid,a.menuurl,a.isenabled as isenabled FROM angel_sys_menu a RIGHT JOIN (SELECT * FROM angel_sys_menusofrooms WHERE RoomID in (%(condition0)d)) b ON a.ID=b.MenuID WHERE a.isenabled='Y' and a.isvisible='Y'  ORDER BY a.orderid ASC
       </value>
     </values>
   </option>
@@ -675,10 +675,10 @@
   <option key="33_7">
     <values>
       <value identify="1">
-        DELETE FROM angel_SYS_MENUSOFROOMS WHERE RoomID={0}
+        DELETE FROM angel_sys_menusofrooms WHERE RoomID={0}
       </value>
       <value identify="2">
-        INSERT INTO angel_SYS_MENUSOFROOMS VALUES(null,{0},{1})
+        INSERT INTO angel_sys_menusofrooms VALUES(null,{0},{1})
       </value>
     </values>
   </option>
@@ -689,7 +689,7 @@
     </parameters>
     <values>
       <value identify="department">
-        SELECT  id,dname,level,parent_id,seq,remark,isenabled, createuser,createtime,updateuser,updatetime FROM angel_SYS_DEPARTMENT
+        SELECT  id,dname,level,parent_id,seq,remark,isenabled, createuser,createtime,updateuser,updatetime FROM angel_sys_department
       </value>
     </values>
   </option>
@@ -699,7 +699,7 @@
     </parameters>
     <values>
       <value identify="department">
-        SELECT  id,parent_id as pId,dname as name FROM  angel_SYS_DEPARTMENT
+        SELECT  id,parent_id as pId,dname as name FROM  angel_sys_department
       </value>
     </values>
   </option>
@@ -715,7 +715,7 @@
     </parameters>
     <values>
       <value identify="1">
-        INSERT INTO angel_SYS_DEPARTMENT  VALUES(null,'%(condition0)s','0',%(condition1)d ,1,'%(condition2)s','%(condition3)c','%(condition4)s',now(),'%(condition4)s',now())
+        INSERT INTO angel_sys_department  VALUES(null,'%(condition0)s','0',%(condition1)d ,1,'%(condition2)s','%(condition3)c','%(condition4)s',now(),'%(condition4)s',now())
       </value>
     </values>
   </option>
@@ -732,7 +732,7 @@
     </parameters>
     <values>
       <value identify="1">
-        UPDATE angel_SYS_DEPARTMENT  SET dname='%(condition1)s',parent_id=%(condition2)d ,remark='%(condition3)s',IsEnabled='%(condition4)c',UpdateUser='%(condition5)s' WHERE id=%(condition0)d
+        UPDATE angel_sys_department  SET dname='%(condition1)s',parent_id=%(condition2)d ,remark='%(condition3)s',IsEnabled='%(condition4)c',UpdateUser='%(condition5)s' WHERE id=%(condition0)d
       </value>
     </values>
   </option>
@@ -744,7 +744,7 @@
     </parameters>
     <values>
       <value identify="room">
-        DELETE FROM angel_SYS_DEPARTMENT WHERE id=%(condition0)d
+        DELETE FROM angel_sys_department WHERE id=%(condition0)d
       </value>
     </values>
   </option>
@@ -757,10 +757,10 @@
     </parameters>
     <values>
       <value identify="0">
-        delete from angel_SYS_USERDEPARTMENT where userid=%(condition0)d
+        delete from angel_sys_userdepartment where userid=%(condition0)d
       </value>
       <value identify="1">
-        INSERT INTO angel_SYS_USERDEPARTMENT VALUES (%(condition0)d,%(condition1)d)
+        INSERT INTO angel_sys_userdepartment VALUES (%(condition0)d,%(condition1)d)
       </value>
     </values>
   </option>
@@ -772,7 +772,7 @@
     </parameters>
     <values>
       <value identify="0">
-        delete from angel_SYS_USERDEPARTMENT where userid=%(condition0)d
+        delete from angel_sys_userdepartment where userid=%(condition0)d
       </value>
     </values>
   </option>
@@ -782,7 +782,7 @@
   <option key="selectloginloglist">
     <values>
       <value>
-        select * from angel_SYS_LOGINLOG order by logintime desc limit {0},{1}
+        select * from angel_sys_loginlog order by logintime desc limit {0},{1}
         
       </value>
     </values>
@@ -794,7 +794,7 @@
         SELECT * FROM
         (
         SELECT A.*, ROWNUM RN
-        FROM (SELECT * FROM angel_SYS_LOGINLOG order by logintime desc ) A
+        FROM (SELECT * FROM angel_sys_loginlog order by logintime desc ) A
         WHERE ROWNUM &lt;= {0}*{1}
         )
         WHERE RN >= ({0}-1)*{1}+1
@@ -806,7 +806,7 @@
   <option key="insertloginlog">
     <values>
       <value>
-        insert into angel_SYS_LOGINLOG(USERID,USERNAME,ROLEID,ROLENAME,CREATEUSER,CLIENTIP,LOGINTIME,CREATETIME) values({0},'{1}',{2},'{3}','{4}','{5}','{6}','{7}')
+        insert into angel_sys_loginlog(USERID,USERNAME,ROLEID,ROLENAME,CREATEUSER,CLIENTIP,LOGINTIME,CREATETIME) values({0},'{1}',{2},'{3}','{4}','{5}','{6}','{7}')
       </value>
     </values>
   </option>
@@ -814,7 +814,7 @@
   <option key="countlogtotal">
     <values>
       <value>
-        select count(*) from angel_SYS_LOGINLOG
+        select count(*) from angel_sys_loginlog
       </value>
     </values>
   </option>
@@ -825,14 +825,14 @@
     </parameters>
     <values>
       <value>
-        select * from angel_SYS_OPERATIONLOG where username = %(condition0)d order by createdate desc
+        select * from angel_sys_operationlog where username = %(condition0)d order by createdate desc
       </value>
     </values>
   </option>
   <option key="selectoperationloglist_admin">
     <values>
       <value>
-        select * from angel_SYS_OPERATIONLOG order by createdate desc
+        select * from angel_sys_operationlog order by createdate desc
       </value>
     </values>
   </option>
@@ -840,7 +840,7 @@
   <option key="selectqueryoperationloglist">
     <values>
       <value>
-        select * from angel_SYS_OPERATIONLOG order by createdate desc offset {0} limit {1}
+        select * from angel_sys_operationlog order by createdate desc offset {0} limit {1}
       </value>
     </values>
   </option>
@@ -848,7 +848,7 @@
   <option key="insertoperationlog">
     <values>
       <value>
-        insert into angel_SYS_OPERATIONLOG(ID,USERID,USERNAME,ROLEID,ROLENAME,LOGPOSITION,OPERATIONTYPE,OPERATIONPARAM,CREATEUSER,createdate) values(sys_operationlog_id_seq.nextval,{0},'{1}',{2},'{3}','{4}','{5}','{6}','{7}','{8}')
+        insert into angel_sys_operationlog(USERID,USERNAME,ROLEID,ROLENAME,LOGPOSITION,OPERATIONTYPE,OPERATIONPARAM,CREATEUSER,createdate) values({0},'{1}',{2},'{3}','{4}','{5}','{6}','{7}','{8}')
       </value>
     </values>
   </option>
