@@ -1,0 +1,17 @@
+InfoApiTime：2020/7/24 15:44:07,调用：Angel.ControllersApi/ControllerApi/RoleApiController/GetRolemeul()方法
+InfoApiTime：2020/7/24 15:44:18,调用：Angel.ControllersApi/ControllerApi/MenuApiController/Get()方法
+InfoApiTime：2020/7/24 15:44:20,调用：Angel.ControllersApi/ControllerApi/RoleApiController/Get()方法
+InfoApiTime：2020/7/24 15:44:20,调用：Angel.ControllersApi/ControllerApi/UserApiController/Get()方法
+InfoApiTime：2020/7/24 15:44:22,调用：Angel.ControllersApi/ControllerApi/RoomApiController/Get()方法
+InfoApiTime：2020/7/24 15:44:22,调用：Angel.ControllersApi/ControllerApi/RoomApiController/GetD()方法
+InfoApiTime：2020/7/24 15:44:24,调用：Angel.ControllersApi/ControllerApi/RoleApiController/Get()方法
+InfoApiTime：2020/7/24 15:44:25,调用：Angel.ControllersApi/ControllerApi/LoginlogApiController/PostList()方法
+InfoApiTime：2020/7/24 15:44:29,调用：Angel.ControllersApi/ControllerApi/DownloadListManagerApiController/Get()方法
+InfoApiTime：2020/7/24 15:44:36,调用：Angel.ControllersApi/ControllerApi/LoginlogApiController/PostList()方法
+InfoApiTime：2020/7/24 15:44:39,调用：Angel.ControllersApi/ControllerApi/DownloadListManagerApiController/Get()方法
+InfoApiTime：2020/7/24 15:44:54,调用：Angel.ControllersApi/ControllerApi/DownloadListManagerApiController/Get()方法
+InfoApiTime：2020/7/24 15:45:09,调用：Angel.ControllersApi/ControllerApi/RoleApiController/GetRolemeul()方法
+InfoApiTime：2020/7/24 15:45:22,调用：Angel.ControllersApi/ControllerApi/DownloadListManagerApiController/Get()方法
+InfoApiTime：2020/7/24 16:47:58,调用：Angel.ControllersApi/ControllerAPI/LoginApiController/Get()方法
+InfoApiTime：2020/7/24 16:48:00,调用：Angel.ControllersApi/ControllerApi/RoleApiController/GetRolemeul()方法
+InfoApiTime：2020/7/24 16:48:07,调用：Angel.ControllersApi/ControllerApi/LoginlogApiController/PostList()方法

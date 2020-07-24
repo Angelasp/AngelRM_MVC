@@ -1,0 +1,860 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<config key="1" value="SqlQuery" name="sys" dialect="mysql_dialect">
+  <!--0_1 查询所有菜单记录-->
+  <option key="0_1">
+    <parameters>
+    </parameters>
+    <values>
+      <value identify="menu">
+        SELECT * FROM angel_sys_menu;
+      </value>
+    </values>
+  </option>
+  <!--0_2 根据菜单编号 获取一条菜单记录-->
+  <option key="0_2">
+    <parameters>
+      <parameter paramename="ID" contidion="%(condition0)d" columnname="id" index="1" />
+    </parameters>
+    <values>
+      <value identify="menu">
+        SELECT id, menuname, parentid, remark, orderid, menuicon, menuurl, isvisible, isenabled, createuser, createtime, updateuser, updatetime, menucode FROM angel_sys_menu where id==%(condition0)d;
+      </value>
+    </values>
+  </option> 
+  
+  <!--0_3 根据父编号 获取多条同级记录-->
+  <option key="0_3">
+    <parameters>
+      <parameter paramename="parentid" contidion="%(condition0)d" columnname="parentid" index="1"/>
+    </parameters>
+    <values>
+      <value identify="menu">
+        SELECT id,menuname,parentid,remark,orderid,menuicon,menuurl,isvisible,isenabled,createuser,createtime,updateuser,updatetime FROM angel_sys_menu WHERE ParentID=%(condition0)d ORDER BY OrderID
+      </value>
+    </values>
+  </option>
+
+  <!--0_4 根据菜单编号 更新菜单记录-->
+  <option key="0_4">
+    <parameters>
+      <parameter paramename="id" contidion="%(condition0)d" columnname="id" index="1" />
+      <parameter paramename="menuname" contidion="%(condition1)s" columnname="menuname" index="2" />
+      <parameter paramename="parentid" contidion="%(condition2)d" columnname="parentid" index="3"/>
+      <parameter paramename="remark" contidion="%(condition3)s" columnname="remark" index="4"/>
+      <parameter paramename="orderid" contidion="%(condition4)d" columnname="orderid" index="5"/>
+      <parameter paramename="menuicon" contidion="%(condition5)s" columnname="menuicon" index="6"/>
+      <parameter paramename="menuurl" contidion="%(condition6)s" columnname="menuurl" index="7"/>
+      <parameter paramename="isvisible" contidion="%(condition7)c" columnname="isvisible" index="8"/>
+      <parameter paramename="isenabled" contidion="%(condition8)c" columnname="isenabled" index="9"/>
+      <parameter paramename="updateuser" contidion="%(condition9)s" columnname="updateuser" index="10"/>
+    </parameters>
+    <values>
+      <value identify="0">
+        UPDATE angel_sys_menu SET MenuName='%(condition1)s',ParentID=%(condition2)d,Remark='%(condition3)s',OrderID=%(condition4)d,MenuIcon='%(condition5)s',MenuUrl='%(condition6)s',IsVisible='%(condition7)c',IsEnabled='%(condition8)c',UpdateUser='%(condition9)s',UpdateTime=getdate() WHERE ID=%(condition0)d
+      </value>
+    </values>
+  </option> 
+  
+  
+    <!-- 0_5 添加菜单，并且同级名称不能重复-->
+  <option key="0_5">
+    <parameters>
+      <parameter paramename="MenuName" contidion="%(condition0)s" columnname="MenuName" index="1" />
+      <parameter paramename="ParentID" contidion="%(condition1)d" columnname="ParentID" index="2"/>
+      <parameter paramename="Remark" contidion="%(condition2)s" columnname="Remark" index="3"/>
+      <parameter paramename="OrderID" contidion="%(condition3)d" columnname="OrderID" index="4"/>
+      <parameter paramename="MenuIcon" contidion="%(condition4)s" columnname="MenuIcon" index="5"/>
+      <parameter paramename="MenuUrl" contidion="%(condition5)s" columnname="MenuUrl" index="6"/>
+      <parameter paramename="IsVisible" contidion="%(condition6)c" columnname="IsVisible" index="7"/>
+      <parameter paramename="IsEnabled" contidion="%(condition7)c" columnname="IsEnabled" index="8"/>
+      <parameter paramename="CreateUser" contidion="%(condition8)s" columnname="CreateUser" index="9"/>
+    </parameters>
+    <values>
+      <value identify="1">
+        INSERT INTO angel_sys_menu  VALUES('%(condition0)s',%(condition1)d,'%(condition2)s',%(condition3)d,'%(condition4)s','%(condition5)s','%(condition6)c','%(condition7)c','%(condition8)s',getdate(),'',getdate(),'')
+      </value>
+    </values>
+  </option>
+  
+  <!--0_6根据菜单编号 删除该条记录及其子记录-->
+  <option key="0_6">
+    <parameters>
+      <parameter paramename="ID" contidion="%(condition0)d" columnname="id" index="1"/>
+    </parameters>
+    <values>
+      <value identify="0">
+        DELETE from angel_sys_menu WHERE ID=%(condition0)d
+      </value>
+    </values>
+  </option>
+
+  <!--0_8 根据角色ID 获取菜单记录-->
+  <option key="0_8">
+    <parameters>
+      <parameter paramename="roleid" contidion="%(condition0)d" columnname="roleid" index="1" />
+    </parameters>
+    <values>
+      <value identify="menu">
+        select id,menuname from angel_sys_menu where id in(select menuid from angel_sys_menusofroles where roleid=%(condition0)d);
+      </value>
+    </values>
+  </option>
+  
+  <!--0_10 更新数据期数-->
+  <option key="0_10">
+    <parameters>
+      <parameter paramename="sid" contidion="%(condition0)s" columnname="Sid" index="1" />
+      <parameter paramename="rid" contidion="%(condition1)s" columnname="RID" index="2" />
+      <parameter paramename="sdiid" contidion="%(condition2)s" columnname="SDIID" index="3"/>
+      <parameter paramename="nop_number" contidion="%(condition3)s" columnname="NOP_NUMBER" index="4"/>
+    </parameters>
+    <values>
+      <value identify="0">
+        UPDATE angel_d_i_table SET NOP_NUMBER='%(condition3)s' WHERE RID='%(condition1)s' AND SDIID='%(condition2)s'
+      </value>
+    </values>
+  </option> 
+  
+  
+  
+  
+  
+  <!-- 1_1 添加用户，并且用户名不能重复-->
+  <option key="1_1">
+    <parameters>
+      <parameter paramename="UserName" contidion="%(condition0)s" columnname="UserName" index="1" />
+      <parameter paramename="Password" contidion="%(condition1)s" columnname="Password" index="2"/>
+      <parameter paramename="IsEnabled" contidion="%(condition2)c" columnname="IsEnabled" index="3"/>
+      <parameter paramename="LoginCount" contidion="%(condition3)d" columnname="LoginCount" index="4"/>
+      <parameter paramename="CreateUser" contidion="%(condition4)s" columnname="CreateUser" index="5"/>
+      <parameter paramename="RoleId" contidion="%(condition5)d" columnname="RoleId" index="6"/>
+      <parameter paramename="cityid" contidion="%(condition6)s" columnname="cityid" index="7"/>
+    </parameters>
+    <values>
+      <value identify="0">
+        SELECT COUNT(*) FROM angel_sys_user WHERE UserName='%(condition0)s'
+      </value>
+      <value identify="1">
+        INSERT INTO angel_sys_user  VALUES('%(condition0)s','%(condition1)s','%(condition2)c',%(condition3)d,getdate(),'%(condition4)s',getdate(),'',getdate(),'%(condition6)s')
+      </value>    
+    </values>
+  </option>
+  
+  <!--1_2 查询所有管理员记录-->
+  <option key="1_2">
+    <parameters>
+      <parameter paramename="level" contidion="%(condition0)d" columnname="level" index="1" />
+    </parameters>
+    <values>
+      <value identify="user">
+        select userrole_table.*,room.roomid,room.roomname from (
+        select c.id, c.username, c.password, c.isenabled, c.logincount, c.lastlogintime, c.createuser, c.createtime, c.updateuser, c.updatetime, c.cityid,c.roleid as roleid,d.rolename as rolename
+        from(
+        SELECT id, username, password, isenabled, logincount, lastlogintime, createuser, createtime, updateuser, updatetime, cityid,b.* FROM angel_sys_user a
+        left join  angel_sys_userrole  b on a.id=b.userid
+        ) c  left join angel_sys_role d on c.roleid=d.id where d.level  &lt; %(condition0)d
+        ) as  userrole_table
+        left join
+        (
+        SELECT f.userid as userid,g.id as roomid,g.roomname as roomname from angel_sys_userdepartment f
+        left join  angel_sys_room  g on f.roomid=g.id
+        ) room  on userrole_table.id=room.userid
+      </value>
+    </values>
+  </option>
+
+  <!--1_3 根据用户编号 更新登录次数和最后登录时间-->
+  <option key="1_3">
+    <parameters>
+      <parameter paramename="ID" contidion="%(condition0)d" columnname="ID" index="1" />
+    </parameters>
+    <values>
+      <value identify="0">
+        UPDATE angel_sys_user SET LoginCount=LoginCount+1,LastLoginTime=getdate() WHERE ID=%(condition0)d
+      </value>
+    </values>
+  </option>
+
+  
+  <!--1_4 根据用户编号 修改密码-->
+  <option key="1_4">
+    <parameters>
+      <parameter paramename="ID" contidion="%(condition0)d" columnname="ID" index="1" />
+      <parameter paramename="oldpwd" contidion="%(condition1)d" columnname="Password" index="2"/>
+      <parameter paramename="Password" contidion="%(condition2)d" columnname="Password" index="2"/>
+      <parameter paramename="UpdateUser" contidion="%(condition3)s" columnname="UpdateUser" index="3"/>
+      <parameter paramename="IsEnabled" contidion="%(condition4)s" columnname="IsEnabled" index="4"/>
+      <parameter paramename="cityid" contidion="%(condition5)s" columnname="cityid" index="5"/>
+    </parameters>
+    <values>
+      <value identify="0">
+        select count(0) from angel_sys_user WHERE ID=%(condition0)d and Password='%(condition1)d'
+      </value>
+      <value identify="1">
+        UPDATE angel_sys_user SET Password='%(condition2)d',isenabled='%(condition4)s',UpdateUser='%(condition3)s',UpdateTime=getdate(),cityid='%(condition5)s' WHERE ID=%(condition0)d
+      </value>
+    </values>
+  </option>
+  <!--1_4_1 根据用户编号 修改密码-->
+  <option key="1_4_1">
+    <parameters>
+      <parameter paramename="ID" contidion="%(condition0)d" columnname="ID" index="1" />
+      <parameter paramename="UpdateUser" contidion="%(condition1)s" columnname="UpdateUser" index="2"/>
+      <parameter paramename="IsEnabled" contidion="%(condition2)s" columnname="IsEnabled" index="3"/>
+      <parameter paramename="cityid" contidion="%(condition3)s" columnname="cityid" index="4"/>
+    </parameters>
+    <values>
+      <value identify="0">
+        UPDATE angel_sys_user SET isenabled='%(condition2)s',UpdateUser='%(condition1)s',UpdateTime=getdate(),cityid='%(condition3)s' WHERE ID=%(condition0)d
+      </value>
+    </values>
+  </option>
+  
+  <!--1_5 判断用户是否存在-->
+  <option key="1_5">
+    <parameters>
+      <parameter paramename="UserName" contidion="%(condition0)s" columnname="UserName" index="1" />
+    </parameters>
+    <values>
+      <value identify="0">
+        SELECT ID,UserName FROM angel_sys_user WHERE UserName='%(condition0)s'
+      </value>
+    </values>
+  </option>
+
+  <!--1_6 登录-->
+  <option key="1_6">
+    <parameters>
+      <parameter paramename="UserName" contidion="%(condition0)s" columnname="UserName" index="1" />
+      <parameter paramename="Password" contidion="%(condition1)s" columnname="Password" index="2"/>
+    </parameters>
+    <values>
+      <value identify="login">
+        SELECT COUNT(*) FROM angel_sys_user WHERE UserName='%(condition0)s' AND Password='%(condition1)s' AND ISENABLED='Y'
+      </value>
+      <value identify="user">
+        SELECT ID,UserName,cityid FROM angel_sys_user WHERE UserName='%(condition0)s' AND Password='%(condition1)s'
+      </value>
+      <value identify="role">
+        SELECT RoleID,RoleName,b.level FROM angel_sys_userrole a LEFT JOIN angel_sys_role b ON a.RoleID=b.ID WHERE userid=(SELECT ID FROM angel_sys_user WHERE username='%(condition0)s')
+      </value>
+      <value identify="logincount">
+        UPDATE angel_sys_user SET LoginCount=LoginCount+1,LastLoginTime=getdate() WHERE username='%(condition0)s'
+      </value>
+    </values>
+  </option>
+
+  <!--1_7 根据用户编号获取一条用户信息-->
+  <option key="1_7">
+    <parameters>
+      <parameter paramename="ID" contidion="%(condition0)d" columnname="ID" index="1" />
+    </parameters>
+    <values>
+      <value identify="user">
+        SELECT ID,UserName,IsEnabled,LoginCount,LastLoginTime FROM angel_sys_user WHERE ID=%(condition0)d
+      </value>
+    </values>
+  </option>
+
+  <!--1_8 根据用户编号删除一条用户信息-->
+  <option key="1_8">
+    <parameters>
+      <parameter paramename="ID" contidion="%(condition0)d" columnname="ID" index="1" />
+    </parameters>
+    <values>
+      <value identify="0">
+        DELETE FROM angel_sys_user WHERE ID=%(condition0)d
+      </value>
+    </values>
+  </option>
+
+  <!--1_9 根据用户编号修改用户信息-->
+  <option key="1_9">
+    <parameters>
+      <parameter paramename="ID" contidion="%(condition0)d" columnname="ID" index="1" />
+      <parameter paramename="IsEnabled" contidion="%(condition1)c" columnname="IsEnabled" index="2"/>
+      <parameter paramename="UpdateUser" contidion="%(condition2)d" columnname="UpdateUser" index="3" />
+    </parameters>
+    <values>
+      <value identify="0">
+        UPDATE angel_sys_user SET IsEnabled='%(condition1)c',UpdateUser='%(condition2)d',UpdateTime=getdate() WHERE ID=%(condition0)d
+      </value>
+    </values>
+  </option>
+
+  <!--1_10 根据用户编号查询角色-->
+  <option key="1_10">
+    <parameters>
+      <parameter paramename="ID" contidion="%(condition0)d" columnname="ID" index="1" />
+    </parameters>
+    <values>
+      <value identify="0">
+        select r.id,r.rolename,case when u.roleid=r.id and u.userid=%(condition0)d  then 'true' else 'false' end as ischeck from angel_sys_role r left join  angel_sys_userrole u on r.id=u.roleid where isenabled='Y'
+      </value>
+    </values>
+  </option>
+
+  <!--1_11 根据用户编号设置角色-->
+  <option key="1_11">
+    <parameters>
+      <parameter paramename="userid" contidion="%(condition0)d" columnname="userid" index="1" />
+      <parameter paramename="roleid" contidion="%(condition1)d" columnname="roleid" index="2" />
+      <parameter paramename="indicatorcontent" contidion="%(condition2)s" columnname="indicatorcontent" index="3" />
+    </parameters>
+    <values>
+      <value identify="0">
+        delete from angel_sys_userrole where userid=%(condition0)d
+      </value>
+      <value identify="1">
+        insert into angel_sys_userrole values(%(condition0)d,%(condition1)d)
+      </value>
+      <value identify="2">
+        delete from angel_sys_userOFINDICATOR where userid=%(condition0)d
+      </value>
+      <value identify="3">
+        insert into angel_sys_userOFINDICATOR values(%(condition0)d,'%(condition2)s')
+      </value>
+    </values>
+  </option>
+
+  <!--1_1122 根据用户编号设置角色(处室管理)-->
+
+  <option key="1_1122">
+    <parameters>
+      <parameter paramename="userid" contidion="%(condition0)d" columnname="userid" index="1" />
+      <parameter paramename="roomid" contidion="%(condition1)d" columnname="roomid" index="2"/>
+    </parameters>
+    <values>
+      <value identify="0">
+        delete from angel_sys_userdepartment where userid=%(condition0)d
+      </value>
+      <value identify="1">
+        INSERT INTO angel_sys_userdepartment VALUES (%(condition0)d,%(condition1)d)
+      </value>
+    </values>
+  </option>
+  
+  
+  <!--1_1133 根据用户编号删除角色(处室管理)-->
+  <option key="1_1133">
+    <parameters>
+      <parameter paramename="userid" contidion="%(condition0)d" columnname="userid" index="1" />
+
+    </parameters>
+    <values>
+      <value identify="0">
+        delete from angel_sys_userOFINDICATOR where userid=%(condition0)d
+      </value>
+
+    </values>
+  </option>
+
+
+
+  <!--1_12 获取插入最大ID-->
+  <option key="1_12">
+    <values>
+      <value identify="0">
+        select max(id) as userid from angel_sys_user
+      </value>
+    </values>
+  </option>
+  
+  <!--1_13 获取所有省份城市-->
+  <option key="1_13">
+    <values>
+      <value identify="0">
+        select CITYNAME as PRONAME from CITY where CITYNAME &lt;>'全网'
+      </value>
+    </values>
+  </option>
+
+  <option key="1_1331">
+    <values>
+      <value identify="0">
+        select id,roomname from angel_sys_room
+      </value>
+    </values>
+  </option>
+  
+  
+  
+  <!--1_14 获取某用户所属指标编号-->
+  <option key="1_14">
+    <parameters>
+      <parameter paramename="userid" contidion="%(condition0)d" columnname="userid" index="1" />
+    </parameters>
+    <values>
+      <value identify="0">
+        select indicator_content from angel_sys_userOFINDICATOR where userid=%(condition0)d
+      </value>
+    </values>
+  </option>
+  
+    <!--1_15 获取某用户所属指标信息-->
+  <option key="1_15">
+    <parameters>
+      <parameter paramename="Indicatorids" contidion="%(condition0)s" columnname="Indicatorids" index="1" />
+    </parameters>
+    <values>
+      <value identify="0">
+       select * from Angel_Indicator where Indicatorid in (%(condition0)s)
+      </value>
+    </values>
+  </option>
+
+  <!--1_16 修改当前用户密码-->
+  <option key="1_16">
+    <parameters>
+      <parameter paramename="userid" contidion="%(condition0)d" columnname="ID" index="1" />
+      <parameter paramename="oldPwd" contidion="%(condition1)d" columnname="Password" index="2"/>
+      <parameter paramename="newPwd" contidion="%(condition2)d" columnname="Password" index="2"/>
+      <parameter paramename="UpdateUser" contidion="%(condition3)s" columnname="UpdateUser" index="3"/>
+    </parameters>
+    <values>
+      <value identify="0">
+        select count(0) from angel_sys_user WHERE ID=%(condition0)d and Password='%(condition1)d'
+      </value>
+      <value identify="1">
+        UPDATE angel_sys_user SET Password='%(condition2)d',UpdateUser='%(condition3)s',UpdateTime=getdate() WHERE ID=%(condition0)d
+      </value>
+    </values>
+  </option>
+  
+  <!--1_17 单修改用户指标-->
+  <option key="1_17">
+    <parameters>
+      <parameter paramename="userid" contidion="%(condition0)d" columnname="userid" index="1" />
+      <parameter paramename="indicatorcontent" contidion="%(condition1)s" columnname="indicatorcontent" index="2" />
+    </parameters>
+    <values>
+      <value identify="0">
+        delete from angel_sys_userOFINDICATOR where userid=%(condition0)d
+      </value>
+      <value identify="1">
+        insert into angel_sys_userOFINDICATOR values(%(condition0)d,'%(condition1)s')
+      </value>
+    </values>
+  </option>
+  <!--1_18 单修改用户指标-->
+  <option key="1_18">
+    <parameters>
+      <parameter paramename="userid" contidion="%(condition0)d" columnname="userid" index="1" />
+      <parameter paramename="indicatorcontent" contidion="%(condition1)s" columnname="indicatorcontent" index="2" />
+    </parameters>
+    <values>
+      <value identify="0">
+        delete from angel_sys_userOFINDICATOR where userid=%(condition0)d
+      </value>
+     
+    </values>
+  </option>
+  
+  <!-- 2_1 添加角色-->
+  <option key="2_1">
+    <parameters>
+      <parameter paramename="RoleName" contidion="%(condition0)s" columnname="RoleName" index="1" />
+      <parameter paramename="level" contidion="%(condition1)d" columnname="level" index="2" />
+      <parameter paramename="Remark" contidion="%(condition2)s" columnname="Remark" index="3"/>
+      <parameter paramename="IsEnabled" contidion="%(condition3)c" columnname="IsEnabled" index="4"/>
+      <parameter paramename="CreateUser" contidion="%(condition4)s" columnname="CreateUser" index="5"/>
+    </parameters>
+    <values>
+      <value identify="1">
+        INSERT INTO angel_sys_role  VALUES('%(condition0)s',%(condition1)d,'%(condition2)s','%(condition3)c','%(condition4)s',getdate(),'',getdate())
+      </value>
+    </values>
+  </option>
+  <!-- 2_11 添加角色菜单中间表-->
+  <option key="2_11">
+    <parameters>
+      <parameter paramename="roleMenusql" contidion="%(condition0)s" columnname="roleMenusql" index="1" />
+    </parameters>
+    <values>
+      <value identify="1">
+        INSERT INTO angel_sys_menusofroles(roleid,menuid,isindex) VALUES %(condition0)s;
+      </value>
+    </values>
+  </option>
+
+  <!-- 2_12 删除角色菜单中间表-->
+  <option key="2_12">
+    <parameters>
+      <parameter paramename="roleid" contidion="%(condition0)s" columnname="roleid" index="1" />
+    </parameters>
+    <values>
+      <value identify="1">
+        delete from angel_sys_menusofroles where roleid=%(condition0)s;
+      </value>
+    </values>
+  </option>
+
+
+  <!--2_2 查询角色-->
+  <option key="2_2">
+    <parameters>
+      <parameter paramename="level" contidion="%(condition0)d" columnname="level" index="1" />
+    </parameters>
+    <values>
+      <value identify="role">
+        SELECT ID,RoleName,level,Remark,IsEnabled,createuser,createtime,updateuser FROM angel_sys_role where level &lt; %(condition0)d
+      </value>
+    </values>
+  </option>
+
+  <!-- 2_3 更新角色-->
+  <option key="2_3">
+    <parameters>
+      <parameter paramename="ID" contidion="%(condition0)d" columnname="ID" index="1" />
+      <parameter paramename="RoleName" contidion="%(condition1)s" columnname="RoleName" index="2" />
+      <parameter paramename="level" contidion="%(condition2)d" columnname="level" index="3" />
+      <parameter paramename="Remark" contidion="%(condition3)s" columnname="Remark" index="4"/>
+      <parameter paramename="IsEnabled" contidion="%(condition4)c" columnname="IsEnabled" index="5"/>
+      <parameter paramename="UpdateUser" contidion="%(condition5)s" columnname="UpdateUser" index="6"/>
+    </parameters>
+    <values>
+      <value identify="1">
+        UPDATE angel_sys_role  SET RoleName='%(condition1)s',level=%(condition2)d,Remark='%(condition3)s',IsEnabled='%(condition4)c',UpdateUser='%(condition5)s' WHERE ID=%(condition0)d
+      </value>
+    </values>
+  </option>
+
+  <!--2_4 删除角色-->
+  <option key="2_4">
+    <parameters>
+      <parameter paramename="ID" contidion="%(condition0)d" columnname="ID" index="1" />
+    </parameters>
+    <values>
+      <value identify="role">
+        DELETE FROM angel_sys_role WHERE ID=%(condition0)d
+      </value>
+    </values>
+  </option>
+
+  <!-- 2_5 根据角色编号 获取菜单信息-->
+  <option key="2_5">
+    <parameters>
+      <parameter paramename="RoleID" contidion="%(condition0)d" columnname="RoleID" index="1" />
+    </parameters>
+    <values>
+      <value identify="0">
+        SELECT a.id,a.menuname,a.parentid,a.orderid,a.menuicon,a.menuurl,a.isenabled as isenabled FROM angel_sys_menu a RIGHT JOIN (SELECT * FROM angel_sys_menusofroles WHERE RoleID in (%(condition0)d)) b ON a.ID=b.MenuID WHERE  a.isvisible='Y'  ORDER BY a.orderid ASC
+      </value>
+    </values>
+  </option>
+
+  <!--2_6 添加角色菜单-->
+  <option key="2_6">
+    <parameters>
+      <parameter paramename="RoleID" contidion="%(condition0)d" columnname="RoleID" index="1" />
+      <parameter paramename="MenuID" contidion="%(condition1)d" columnname="MenuID" index="1" />
+    </parameters>
+    <values>
+      <value identify="0">
+        DELETE FROM angel_sys_menusofroles WHERE RoleID=%(condition0)d
+      </value>
+      <value identify="1">
+        INSERT INTO angel_sys_menusofroles VALUES(%(condition0)d,%(condition1)d)
+      </value>
+    </values>
+  </option>
+  
+  <!-- 2_7 添加菜单权限-->
+  <option key="2_7">
+    <values>
+      <value identify="1">
+        DELETE FROM angel_sys_menusofroles WHERE RoleID={0}
+      </value>
+      <value identify="2">
+        INSERT INTO angel_sys_menusofroles VALUES({0},{1})
+      </value>
+    </values>
+  </option>
+
+  <!--2_9 查询客户反映维度下指标数据期数-->
+  <option key="2_9">
+    <values>
+      <value identify="1">
+        select ID,MODE FROM GRADEMODE
+      </value>
+    </values>
+  </option>
+  
+  
+  <!-- 33_1 添加角色-->
+  <option key="33_1">
+    <parameters>
+      <parameter paramename="RoomName" contidion="%(condition0)s" columnname="RoomName" index="1" />
+      <parameter paramename="Remark" contidion="%(condition1)s" columnname="Remark" index="2"/>
+      <parameter paramename="IsEnabled" contidion="%(condition2)c" columnname="IsEnabled" index="3"/>
+      <parameter paramename="CreateUser" contidion="%(condition3)s" columnname="CreateUser" index="4"/>
+    </parameters>
+    <values>
+      <value identify="1">
+        INSERT INTO angel_sys_room  VALUES('%(condition0)s','%(condition1)s','%(condition2)c','%(condition3)s',getdate(),'',getdate())
+      </value>
+    </values>
+  </option>
+  <!-- 33_11 添加角色菜单中间表-->
+  <option key="33_11">
+    <parameters>
+      <parameter paramename="roomMenusql" contidion="%(condition0)s" columnname="roomMenusql" index="1" />
+    </parameters>
+    <values>
+      <value identify="1">
+        INSERT INTO angel_sys_menusofrooms(roomid,menuid,isindex) VALUES %(condition0)s;
+      </value>
+    </values>
+  </option>
+
+  <!-- 33_12 删除角色菜单中间表-->
+  <option key="33_12">
+    <parameters>
+      <parameter paramename="roomid" contidion="%(condition0)s" columnname="roomid" index="1" />
+    </parameters>
+    <values>
+      <value identify="1">
+        delete from angel_sys_menusofrooms where roomid=%(condition0)s;
+      </value>
+    </values>
+  </option>
+
+
+  <!--33_2 查询角色-->
+  <option key="33_2">
+    <parameters>
+    </parameters>
+    <values>
+      <value identify="room">
+        SELECT ID,RoomName,Remark,IsEnabled,createuser,createtime,updateuser FROM angel_sys_room
+      </value>
+    </values>
+  </option>
+
+  <!-- 33_3 更新角色-->
+  <option key="33_3">
+    <parameters>
+      <parameter paramename="ID" contidion="%(condition0)d" columnname="ID" index="1" />
+      <parameter paramename="RoomName" contidion="%(condition1)s" columnname="RoomName" index="2" />
+      <parameter paramename="Remark" contidion="%(condition2)s" columnname="Remark" index="3"/>
+      <parameter paramename="IsEnabled" contidion="%(condition3)c" columnname="IsEnabled" index="4"/>
+      <parameter paramename="UpdateUser" contidion="%(condition4)s" columnname="UpdateUser" index="5"/>
+    </parameters>
+    <values>
+      <value identify="1">
+        UPDATE angel_sys_room  SET RoomName='%(condition1)s',Remark='%(condition2)s',IsEnabled='%(condition3)c',UpdateUser='%(condition4)s' WHERE ID=%(condition0)d
+      </value>
+    </values>
+  </option>
+
+  <!--33_4 删除角色-->
+  <option key="33_4">
+    <parameters>
+      <parameter paramename="ID" contidion="%(condition0)d" columnname="ID" index="1" />
+    </parameters>
+    <values>
+      <value identify="room">
+        DELETE FROM angel_sys_room WHERE ID=%(condition0)d
+      </value>
+    </values>
+  </option>
+
+  <!-- 33_5 根据角色编号 获取菜单信息-->
+  <option key="33_5">
+    <parameters>
+      <parameter paramename="RoomID" contidion="%(condition0)d" columnname="RoomID" index="1" />
+    </parameters>
+    <values>
+      <value identify="0">
+        SELECT a.id,a.menuname,a.parentid,a.orderid,a.menuurl,a.isenabled as isenabled FROM angel_sys_menu a RIGHT JOIN (SELECT * FROM angel_sys_menusofrooms WHERE RoomID in (%(condition0)d)) b ON a.ID=b.MenuID WHERE a.isenabled='Y' and a.isvisible='Y'  ORDER BY a.orderid ASC
+      </value>
+    </values>
+  </option>
+
+  <!-- 33_7 添加菜单权限-->
+  <option key="33_7">
+    <values>
+      <value identify="1">
+        DELETE FROM angel_sys_menusofrooms WHERE RoomID={0}
+      </value>
+      <value identify="2">
+        INSERT INTO angel_sys_menusofrooms VALUES(null,{0},{1})
+      </value>
+    </values>
+  </option>
+
+  <!--7_1 查询部门-->
+  <option key="7_1">
+    <parameters>
+    </parameters>
+    <values>
+      <value identify="department">
+        SELECT  id,dname,level,parent_id,seq,remark,isenabled, createuser,createtime,updateuser,updatetime FROM angel_sys_department
+      </value>
+    </values>
+  </option>
+  <!--7_2 查询部门父类-->
+  <option key="7_2">
+    <parameters>
+    </parameters>
+    <values>
+      <value identify="department">
+        SELECT  id,parent_id as pId,dname as name FROM  angel_sys_department
+      </value>
+    </values>
+  </option>
+
+  <!-- 7_3 添加部门-->
+  <option key="7_3">
+    <parameters>
+      <parameter paramename="DName" contidion="%(condition0)s" columnname="DName" index="1" />
+      <parameter paramename="Pid" contidion="%(condition1)d" columnname="Pid" index="2"/>
+      <parameter paramename="Remark" contidion="%(condition2)s" columnname="Remark" index="3"/>
+      <parameter paramename="IsEnabled" contidion="%(condition3)c" columnname="IsEnabled" index="4"/>
+      <parameter paramename="CreateUser" contidion="%(condition4)s" columnname="CreateUser" index="5"/>
+    </parameters>
+    <values>
+      <value identify="1">
+        INSERT INTO angel_sys_department  VALUES('%(condition0)s','0',%(condition1)d ,1,'%(condition2)s','%(condition3)c','%(condition4)s',getdate(),'%(condition4)s',getdate())
+      </value>
+    </values>
+  </option>
+
+  <!-- 7_4更新角色-->
+  <option key="7_4">
+    <parameters>
+      <parameter paramename="ID" contidion="%(condition0)d" columnname="ID" index="1" />
+      <parameter paramename="DName" contidion="%(condition1)s" columnname="DName" index="2" />
+      <parameter paramename="Pid" contidion="%(condition2)d" columnname="Pid" index="3" />
+      <parameter paramename="Remark" contidion="%(condition3)s" columnname="Remark" index="4"/>
+      <parameter paramename="IsEnabled" contidion="%(condition4)c" columnname="IsEnabled" index="5"/>
+      <parameter paramename="UpdateUser" contidion="%(condition5)s" columnname="UpdateUser" index="6"/>
+    </parameters>
+    <values>
+      <value identify="1">
+        UPDATE angel_sys_department  SET dname='%(condition1)s',parent_id=%(condition2)d ,remark='%(condition3)s',IsEnabled='%(condition4)c',UpdateUser='%(condition5)s' WHERE id=%(condition0)d
+      </value>
+    </values>
+  </option>
+
+  <!-- 7_5 删除部门-->
+  <option key="7_5">
+    <parameters>
+      <parameter paramename="ID" contidion="%(condition0)d" columnname="ID" index="1" />
+    </parameters>
+    <values>
+      <value identify="room">
+        DELETE FROM angel_sys_department WHERE id=%(condition0)d
+      </value>
+    </values>
+  </option>
+
+  <!--7_6 根据用户编号新增(部门)-->
+  <option key="7_6">
+    <parameters>
+      <parameter paramename="userid" contidion="%(condition0)d" columnname="userid" index="1" />
+      <parameter paramename="did" contidion="%(condition1)d" columnname="did" index="2"/>
+    </parameters>
+    <values>
+      <value identify="0">
+        delete from angel_sys_userdepartment where userid=%(condition0)d
+      </value>
+      <value identify="1">
+        INSERT INTO angel_sys_userdepartment VALUES (%(condition0)d,%(condition1)d)
+      </value>
+    </values>
+  </option>
+
+  <!--7_7 根据用户编号删除用户-部门-->
+  <option key="7_7">
+    <parameters>
+      <parameter paramename="userid" contidion="%(condition0)d" columnname="userid" index="1" />
+    </parameters>
+    <values>
+      <value identify="0">
+        delete from angel_sys_userdepartment where userid=%(condition0)d
+      </value>
+    </values>
+  </option>
+
+
+  <!--登录日志列表-->
+  <option key="selectloginloglist">
+    <values>
+      <value>
+        select top {1} *
+        from (select row_number()
+        over(order by id desc) as rownumber,*
+        from angel_sys_loginlog) temp_row
+        where rownumber>({0}*{1})
+      </value>
+    </values>
+  </option>
+  <!--登录日志高级查询-->
+  <option key="getqueryloginlog">
+    <values>
+      <value>
+        SELECT * FROM
+        (
+        SELECT A.*, ROWNUM RN
+        FROM (SELECT * FROM angel_sys_loginlog order by logintime desc ) A
+        WHERE ROWNUM &lt;= {0}*{1}
+        )
+        WHERE RN >= ({0}-1)*{1}+1
+        and to_char(logintime,'yyyy/mm/dd')='{2}'
+      </value>
+    </values>
+  </option>
+  <!--写入登录日志-->
+  <option key="insertloginlog">
+    <values>
+      <value>
+        insert into angel_sys_loginlog(USERID,USERNAME,ROLEID,ROLENAME,CREATEUSER,CLIENTIP,LOGINTIME,CREATETIME) values({0},'{1}',{2},'{3}','{4}','{5}','{6}','{7}')
+      </value>
+    </values>
+  </option>
+  <!--获取登录日志总条数-->
+  <option key="countlogtotal">
+    <values>
+      <value>
+        select count(*) from angel_sys_loginlog
+      </value>
+    </values>
+  </option>
+  <!--操作日志列表-->
+  <option key="selectoperationloglist">
+    <parameters>
+      <parameter paramename="uname" contidion="%(condition0)d" columnname="username" index="1" />
+    </parameters>
+    <values>
+      <value>
+        select * from angel_sys_operationlog where username = %(condition0)d order by createdate desc
+      </value>
+    </values>
+  </option>
+  <option key="selectoperationloglist_admin">
+    <values>
+      <value>
+        select * from angel_sys_operationlog order by createdate desc
+      </value>
+    </values>
+  </option>
+  <!--查询操作日志列表-->
+  <option key="selectqueryoperationloglist">
+    <values>
+      <value>
+        select * from angel_sys_operationlog order by createdate desc offset {0} limit {1}
+      </value>
+    </values>
+  </option>
+  <!--写入操作日志-->
+  <option key="insertoperationlog">
+    <values>
+      <value>
+        insert into angel_sys_operationlog(USERID,USERNAME,ROLEID,ROLENAME,LOGPOSITION,OPERATIONTYPE,OPERATIONPARAM,CREATEUSER,createdate) values({0},'{1}',{2},'{3}','{4}','{5}','{6}','{7}','{8}')
+      </value>
+    </values>
+  </option>
+  
+</config>
+

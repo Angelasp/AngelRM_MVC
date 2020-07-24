@@ -1,0 +1,14 @@
+E:\2016-12-26\QcSystem\CMDI.ExcelHelper\bin\Release\CMDI.ExcelHelper.dll
+E:\2016-12-26\QcSystem\CMDI.ExcelHelper\bin\Release\CMDI.ExcelHelper.pdb
+E:\2016-12-26\QcSystem\CMDI.ExcelHelper\bin\Release\Aspose.Cells.dll
+E:\2016-12-26\QcSystem\CMDI.ExcelHelper\bin\Release\CMDI.Utils.dll
+E:\2016-12-26\QcSystem\CMDI.ExcelHelper\bin\Release\HtmlAgilityPack.dll
+E:\2016-12-26\QcSystem\CMDI.ExcelHelper\bin\Release\ICSharpCode.SharpZipLib.dll
+E:\2016-12-26\QcSystem\CMDI.ExcelHelper\bin\Release\NPOI.dll
+E:\2016-12-26\QcSystem\CMDI.ExcelHelper\bin\Release\NPOI.OOXML.dll
+E:\2016-12-26\QcSystem\CMDI.ExcelHelper\bin\Release\NPOI.OpenXml4Net.dll
+E:\2016-12-26\QcSystem\CMDI.ExcelHelper\bin\Release\NPOI.OpenXmlFormats.dll
+E:\2016-12-26\QcSystem\CMDI.ExcelHelper\bin\Release\CMDI.Utils.pdb
+E:\2016-12-26\QcSystem\CMDI.ExcelHelper\obj\Release\CMDI.ExcelHelper.csprojResolveAssemblyReference.cache
+E:\2016-12-26\QcSystem\CMDI.ExcelHelper\obj\Release\CMDI.ExcelHelper.dll
+E:\2016-12-26\QcSystem\CMDI.ExcelHelper\obj\Release\CMDI.ExcelHelper.pdb

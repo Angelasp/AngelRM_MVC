@@ -1,0 +1,89 @@
+InfoApiTime：2020/4/30 20:44:27,调用：QcSystem.ControllersApi/ControllerApi/DownloadListManagerApiController/Get()方法
+InfoApiTime：2020/4/30 20:44:55,调用：QcSystem.ControllersApi/ControllerApi/DownloadListManagerApiController/Get()方法
+InfoApiTime：2020/4/30 20:47:39,调用：QcSystem.ControllersApi/ControllerAPI/LoginApiController/Get()方法
+InfoApiTime：2020/4/30 20:47:46,调用：QcSystem.ControllersApi/ControllerAPI/LoginApiController/Get()方法
+InfoApiTime：2020/4/30 20:47:46,调用：QcSystem.ControllersApi/ControllerApi/RoleApiController/GetRolemeul()方法
+InfoApiTime：2020/4/30 20:48:32,调用：QcSystem.ControllersApi/ControllerApi/DownloadListManagerApiController/Get()方法
+InfoApiTime：2020/4/30 20:50:00,调用：QcSystem.ControllersApi/ControllerApi/DownloadListManagerApiController/Get()方法
+InfoApiTime：2020/4/30 20:50:26,调用：QcSystem.ControllersApi/ControllerApi/DownloadListManagerApiController/Get()方法
+InfoApiTime：2020/4/30 20:50:43,调用：QcSystem.ControllersApi/ControllerApi/RoleApiController/GetRolemeul()方法
+InfoApiTime：2020/4/30 20:50:47,调用：QcSystem.ControllersApi/ControllerApi/DownloadListManagerApiController/Get()方法
+InfoApiTime：2020/4/30 20:51:00,调用：QcSystem.ControllersApi/ControllerApi/LoginlogApiController/PostList()方法
+System.Collections.Generic.KeyNotFoundException: 给定关键字不在字典中。
+   在 System.Collections.Generic.Dictionary`2.get_Item(TKey key)
+   在 Angel.DataAccess.BaseService.GetDataTableToParamID(Dictionary`2 param) 位置 f:\AngelProGramCode\AngelRM_MVC\AngelRM_MVC\Angel.DataAccess\BaseService.cs:行号 358
+Error：调用CMDI.Service.SaveExcel/Export()方法。System.ArgumentNullException: “table”参数不能为空。
+参数名: table
+   在 System.Data.DataTableCollection.BaseAdd(DataTable table)
+   在 System.Data.DataTableCollection.Add(DataTable table)
+   在 Angel.Service.SaveExcel.Export(Object bo) 位置 f:\AngelProGramCode\AngelRM_MVC\AngelRM_MVC\Angel.Service\SaveExcel.cs:行号 70
+测试(catch)：SaveExcel.State=3
+测试(finally)：SaveExcel.State=3
+MySql.Data.MySqlClient.MySqlException (0x80004005): Table 'angelmvc.angel_SYS_ROLE' doesn't exist
+   在 MySql.Data.MySqlClient.MySqlStream.ReadPacket()
+   在 MySql.Data.MySqlClient.NativeDriver.GetResult(Int32& affectedRow, Int64& insertedId)
+   在 MySql.Data.MySqlClient.Driver.GetResult(Int32 statementId, Int32& affectedRows, Int64& insertedId)
+   在 MySql.Data.MySqlClient.Driver.NextResult(Int32 statementId, Boolean force)
+   在 MySql.Data.MySqlClient.MySqlDataReader.NextResult()
+   在 MySql.Data.MySqlClient.MySqlCommand.ExecuteReader(CommandBehavior behavior)
+   在 MySql.Data.MySqlClient.MySqlCommand.ExecuteReader()
+   在 MySql.Data.MySqlClient.MySqlCommand.ExecuteScalar()
+   在 Angel.DBHelper.MySqlHelpers.ExecuteScalar(String cmdText) 位置 f:\AngelProGramCode\AngelRM_MVC\AngelRM_MVC\Angel.DBHelper\MySqlHelpers.cs:行号 377
+InfoApiTime：2020/4/30 20:51:54,调用：QcSystem.ControllersApi/ControllerApi/DownloadListManagerApiController/Get()方法
+InfoApiTime：2020/4/30 20:52:06,调用：QcSystem.ControllersApi/ControllerApi/DownloadListManagerApiController/Get()方法
+InfoApiTime：2020/4/30 20:52:41,调用：QcSystem.ControllersApi/ControllerApi/DownloadListManagerApiController/Get()方法
+InfoApiTime：2020/4/30 21:02:22,调用：Angel.ControllersApi/ControllerApi/DownloadListManagerApiController/Get()方法
+InfoApiTime：2020/4/30 21:02:32,调用：Angel.ControllersApi/ControllerApi/DownloadListManagerApiController/Get()方法
+InfoApiTime：2020/4/30 21:03:23,调用：Angel.ControllersApi/ControllerApi/DownloadListManagerApiController/Get()方法
+InfoApiTime：2020/4/30 21:07:11,调用：Angel.ControllersApi/ControllerApi/DownloadListManagerApiController/Get()方法
+InfoApiTime：2020/4/30 21:07:34,调用：Angel.ControllersApi/ControllerApi/MenuApiController/Get()方法
+MySql.Data.MySqlClient.MySqlException (0x80004005): Table 'angelmvc.CITY' doesn't exist
+   在 MySql.Data.MySqlClient.MySqlStream.ReadPacket()
+   在 MySql.Data.MySqlClient.NativeDriver.GetResult(Int32& affectedRow, Int64& insertedId)
+   在 MySql.Data.MySqlClient.Driver.GetResult(Int32 statementId, Int32& affectedRows, Int64& insertedId)
+   在 MySql.Data.MySqlClient.Driver.NextResult(Int32 statementId, Boolean force)
+   在 MySql.Data.MySqlClient.MySqlDataReader.NextResult()
+   在 MySql.Data.MySqlClient.MySqlCommand.ExecuteReader(CommandBehavior behavior)
+   在 MySql.Data.MySqlClient.MySqlCommand.ExecuteDbDataReader(CommandBehavior behavior)
+   在 System.Data.Common.DbCommand.System.Data.IDbCommand.ExecuteReader(CommandBehavior behavior)
+   在 System.Data.Common.DbDataAdapter.FillInternal(DataSet dataset, DataTable[] datatables, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   在 System.Data.Common.DbDataAdapter.Fill(DataTable[] dataTables, Int32 startRecord, Int32 maxRecords, IDbCommand command, CommandBehavior behavior)
+   在 System.Data.Common.DbDataAdapter.Fill(DataTable dataTable)
+   在 Angel.DBHelper.MySqlHelpers.ExecuteDataTable(String connectionString, CommandType cmdType, String cmdText, MySqlParameter[] commandParameters) 位置 f:\AngelProGramCode\AngelRM_MVC\AngelRM_MVC\Angel.DBHelper\MySqlHelpers.cs:行号 300
+MySql.Data.MySqlClient.MySqlException (0x80004005): Table 'angelmvc.CITY' doesn't exist
+   在 MySql.Data.MySqlClient.MySqlStream.ReadPacket()
+   在 MySql.Data.MySqlClient.NativeDriver.GetResult(Int32& affectedRow, Int64& insertedId)
+   在 MySql.Data.MySqlClient.Driver.GetResult(Int32 statementId, Int32& affectedRows, Int64& insertedId)
+   在 MySql.Data.MySqlClient.Driver.NextResult(Int32 statementId, Boolean force)
+   在 MySql.Data.MySqlClient.MySqlDataReader.NextResult()
+   在 MySql.Data.MySqlClient.MySqlCommand.ExecuteReader(CommandBehavior behavior)
+   在 MySql.Data.MySqlClient.MySqlCommand.ExecuteDbDataReader(CommandBehavior behavior)
+   在 System.Data.Common.DbCommand.System.Data.IDbCommand.ExecuteReader(CommandBehavior behavior)
+   在 System.Data.Common.DbDataAdapter.FillInternal(DataSet dataset, DataTable[] datatables, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   在 System.Data.Common.DbDataAdapter.Fill(DataTable[] dataTables, Int32 startRecord, Int32 maxRecords, IDbCommand command, CommandBehavior behavior)
+   在 System.Data.Common.DbDataAdapter.Fill(DataTable dataTable)
+   在 Angel.DBHelper.MySqlHelpers.ExecuteDataTable(String connectionString, CommandType cmdType, String cmdText, MySqlParameter[] commandParameters) 位置 f:\AngelProGramCode\AngelRM_MVC\AngelRM_MVC\Angel.DBHelper\MySqlHelpers.cs:行号 311
+   在 Angel.Service.MysqlService.Select(String sql) 位置 f:\AngelProGramCode\AngelRM_MVC\AngelRM_MVC\Angel.Service\MysqlService.cs:行号 22
+   在 Angel.Service.BLLService.GetData(JObject param, String serverName) 位置 f:\AngelProGramCode\AngelRM_MVC\AngelRM_MVC\Angel.Service\BLLService.cs:行号 88
+InfoApiTime：2020/4/30 21:07:37,调用：Angel.ControllersApi/ControllerApi/RoleApiController/Get()方法
+InfoApiTime：2020/4/30 21:07:37,调用：Angel.ControllersApi/ControllerApi/UserApiController/Get()方法
+InfoApiTime：2020/4/30 21:07:39,调用：Angel.ControllersApi/ControllerApi/RoleApiController/Get()方法
+InfoApiTime：2020/4/30 21:07:40,调用：Angel.ControllersApi/ControllerApi/RoomApiController/Get()方法
+InfoApiTime：2020/4/30 21:07:40,调用：Angel.ControllersApi/ControllerApi/RoomApiController/GetD()方法
+InfoApiTime：2020/4/30 21:07:42,调用：Angel.ControllersApi/ControllerApi/DownloadListManagerApiController/Get()方法
+InfoApiTime：2020/4/30 21:07:47,调用：Angel.ControllersApi/ControllerApi/LoginlogApiController/PostList()方法
+System.Collections.Generic.KeyNotFoundException: 给定关键字不在字典中。
+   在 System.Collections.Generic.Dictionary`2.get_Item(TKey key)
+   在 Angel.DataAccess.BaseService.GetDataTableToParamID(Dictionary`2 param) 位置 f:\AngelProGramCode\AngelRM_MVC\AngelRM_MVC\Angel.DataAccess\BaseService.cs:行号 358
+Error：调用CMDI.Service.SaveExcel/Export()方法。System.ArgumentNullException: “table”参数不能为空。
+参数名: table
+   在 System.Data.DataTableCollection.BaseAdd(DataTable table)
+   在 System.Data.DataTableCollection.Add(DataTable table)
+   在 Angel.Service.SaveExcel.Export(Object bo) 位置 f:\AngelProGramCode\AngelRM_MVC\AngelRM_MVC\Angel.Service\SaveExcel.cs:行号 70
+测试(catch)：SaveExcel.State=3
+测试(finally)：SaveExcel.State=3
+InfoApiTime：2020/4/30 21:08:04,调用：Angel.ControllersApi/ControllerApi/RoleApiController/GetRolemeul()方法
+InfoApiTime：2020/4/30 21:08:10,调用：Angel.ControllersApi/ControllerApi/DownloadListManagerApiController/Get()方法
+InfoApiTime：2020/4/30 21:08:16,调用：Angel.ControllersApi/ControllerApi/LoginlogApiController/PostList()方法
+InfoApiTime：2020/4/30 21:11:42,调用：Angel.ControllersApi/ControllerApi/DownloadListManagerApiController/Get()方法
+InfoApiTime：2020/4/30 21:14:51,调用：Angel.ControllersApi/ControllerApi/DownloadListManagerApiController/Get()方法

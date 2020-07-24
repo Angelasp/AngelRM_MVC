@@ -3,3 +3,8 @@ E:\2016-12-26\AngelSystem\AngelWeb\Angel.ReferenceLibrary\bin\Debug\Angel.Refere
 E:\2016-12-26\AngelSystem\AngelWeb\Angel.ReferenceLibrary\obj\Debug\Angel.ReferenceLibrary.csprojResolveAssemblyReference.cache
 E:\2016-12-26\AngelSystem\AngelWeb\Angel.ReferenceLibrary\obj\Debug\Angel.ReferenceLibrary.dll
 E:\2016-12-26\AngelSystem\AngelWeb\Angel.ReferenceLibrary\obj\Debug\Angel.ReferenceLibrary.pdb
+F:\AngelProGramCode\AngelRM_MVC\AngelRM_MVC\Angel.ReferenceLibrary\bin\Debug\Angel.ReferenceLibrary.dll
+F:\AngelProGramCode\AngelRM_MVC\AngelRM_MVC\Angel.ReferenceLibrary\bin\Debug\Angel.ReferenceLibrary.pdb
+F:\AngelProGramCode\AngelRM_MVC\AngelRM_MVC\Angel.ReferenceLibrary\obj\Debug\Angel.ReferenceLibrary.csprojResolveAssemblyReference.cache
+F:\AngelProGramCode\AngelRM_MVC\AngelRM_MVC\Angel.ReferenceLibrary\obj\Debug\Angel.ReferenceLibrary.dll
+F:\AngelProGramCode\AngelRM_MVC\AngelRM_MVC\Angel.ReferenceLibrary\obj\Debug\Angel.ReferenceLibrary.pdb

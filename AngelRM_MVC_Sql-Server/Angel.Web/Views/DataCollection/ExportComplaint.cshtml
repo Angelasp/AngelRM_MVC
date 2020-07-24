@@ -1,0 +1,90 @@
+﻿@{
+    ViewBag.Title = "MenuManager";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<link rel="stylesheet" href="/Scripts/dist/bootstrap-3.3.7/css/bootstrap.min.css" />
+<link rel="stylesheet" href="/Content/themes/css/ace.min.css" class="ace-main-stylesheet" id="main-ace-style" />
+<link rel="stylesheet" href="/Content/themes/css/chosen.min.css" />
+<link rel="stylesheet" href="/Scripts/dist/datetimepicker/css/bootstrap-datetimepicker.min.css" />
+
+<style>
+    .modal-dialog, .modal-tree
+    {
+        /*width: 500px;
+        margin: 30px auto;*/
+    }
+    .widget-toolbar:before {
+        border: 0px;
+        border-width: 0px;
+    }
+</style>
+
+<script src="/Content/themes/js/chosen.jquery.min.js"></script>
+<script src="~/Scripts/bootbox.min.js"></script>
+<script src="~/ViewScripts/datacollection/ExportComplaint.js"></script>
+<script src="/Scripts/dist/datetimepicker/js/bootstrap-datetimepicker.min.js"></script>
+<script src="/Scripts/dist/datetimepicker/js/locales/bootstrap-datetimepicker.zh-CN.js"></script>
+<div class="widget-box" style="border:0px;">
+    <div class="widget-header widget-header-blue widget-header-flat" style="background-color:transparent;border:0px;padding-left:0px;line-height:70px;">
+        <h4 class="widget-title" style="color:#333333; left:0px;">导出投诉详表</h4>
+    </div>
+
+    <div class="widget-body" style="border: 1px solid #CCC;">
+        <div class="widget-main">
+            <form class="form-horizontal" role="form">
+                <div class="form-group" style="margin-top:20px;">
+                    <label class="col-sm-1 control-label left" for="sel_city">报&nbsp;&nbsp;表：</label>
+                    <div class="col-sm-11">
+                        <select id="sel_table" style="width: 100%">
+                            <option value="1">业务投诉详表</option>
+                            <option value="2">广义投诉表</option>
+                            <option value="3">建单表</option>
+                            <option value="4">网络原因</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="form-group" style="margin-top:20px;">
+                    <label class="col-sm-1 control-label left" for="sel_city">业&nbsp;&nbsp;务：</label>
+                    <div class="col-sm-11">
+                        <select id="sel_type" style="width: 100%">
+                            <option value="">--请选择--</option>
+                            <option value="1">国际业务</option>
+                            <option value="2">基础通信</option>
+                            <option value="3">集团业务</option>
+                            <option value="4">家庭业务</option>
+                            <option value="5">融合通信</option>
+                            <option value="6">自有业务</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="form-group" style="margin-top:20px;">
+                    <label class="col-sm-1 control-label left" for="sel_city">省&nbsp;&nbsp;份：</label>
+                    <div class="col-sm-11">
+                        <select multiple="" class="chosen-select tag-input-style col-xs-10 col-sm-5" id="sel_city" data-placeholder="请选择省份（支持多选）...">
+                            
+                        </select>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="col-sm-1 control-label left" for="sel_date">年&nbsp;&nbsp;月：</label>
+                    <div class="col-sm-11">
+                        <!--<select multiple="" class="chosen-select tag-input-style col-xs-10 col-sm-5" id="sel_date" data-placeholder="请选择年月（支持多选）..."></select>
+                        </select>-->
+                        <div class="input-group" style="width: 100%">
+                            <input class="form_datetime" id="currentMonthk" type="text" data-date-format="yyyy年mm月" style="width: 100%; margin-top: 0px; height: 30px; border: 1px solid #a4cbff; font-size: 12px">
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group" style="margin-bottom:0px;">
+                    <div class="col-sm-12" style="text-align:center;">
+                        <button class="btn btn-sm btn-primary" id="btn_export" type="button" style="">导&nbsp;&nbsp;&nbsp;&nbsp;出</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+<script type="text/javascript">
+    ExportComplaint.init($("#sel_table"), $("#sel_type"), $("#sel_city"), $("#currentMonthk"));
+</script>

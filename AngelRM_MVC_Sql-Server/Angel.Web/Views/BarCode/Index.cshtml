@@ -1,0 +1,126 @@
+﻿@{
+    ViewBag.Title = "生成二维码工具";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<script src="~/Content/js/validate/jquery.validate.min.js"></script>
+<script src="~/Content/js/qrcode/jquery.qrcode.js"></script>
+<script src="~/Content/js/qrcode/qrcode.js"></script>
+<style type="text/css">
+.mail-header {
+    background-color: #fff;
+    border-bottom: 1px solid #ddd;
+    font-size: 20px;
+    height: 60px;
+    line-height: 60px;
+    padding-left: 30px;
+    padding-right: 30px;
+}
+.mail-body {
+    padding: 20px;
+}
+.mail-box {
+    border: 1px solid #ddd;
+}
+.form {
+    width: 100%;
+    margin: 0px;
+    padding: 0px;
+    border-collapse: collapse;
+    border-width: 3px 1px 1px;
+    table-layout: fixed;
+}
+.form .formTitle {
+    position: relative;
+    left: 0px;
+    text-align: right;
+    white-space: nowrap;
+    font-weight: normal;
+    width: 90px;
+    padding-right: 15px;
+}
+.form .formValue {
+    position: relative;
+    padding: 5px;
+    width: auto;
+} 
+.error {
+    color: #e46f61;
+    font-size: 16px;
+    cursor: pointer;
+    z-index: 99;
+}
+
+    .has-error .form-control
+    {
+        border:1px solid #a4cbff;
+    }
+
+
+</style>
+<script>
+    $.fn.formValid = function () {
+        return $(this).valid({
+            errorPlacement: function (error, element) {
+                element.parents('.formValue').addClass('has-error');
+                element.parents('.has-error').find('i.error').remove();
+                element.parents('.has-error').append('<i class="form-control-feedback fa fa-exclamation-circle error" data-placement="left" data-toggle="tooltip" title="' + error + '"></i>');
+                $("[data-toggle='tooltip']").tooltip();
+                if (element.parents('.input-group').hasClass('input-group')) {
+                    element.parents('.has-error').find('i.error').css('right', '33px')
+                }
+            },
+            success: function (element) {
+                element.parents('.has-error').find('i.error').remove();
+                element.parent().removeClass('has-error');
+            }
+        });
+    }
+
+    $(function () {
+        $('#qrcodeTable').qrcode({
+            render: "table",
+            text: "http://www.angelasp.com",
+            width: "265",
+            height: "265"
+        });
+    });
+    function createqrcode() {
+        if (!$('#form1').formValid()) {
+            return false;
+        }
+        $("#qrcodeTable").html("");
+        $('#qrcodeTable').qrcode({
+            render: "table",
+            text: $("#txt_barcod").val(),
+            width: "265",
+            height: "265"
+        });
+    }
+</script>
+<form id="form1">
+    <div class="mail-box">
+        <div class="mail-header">生成二维码</div>
+        <div class="mail-body">
+            <table class="form">
+                <tr>
+                    <th class="formTitle">二维码内容</th>
+                    <td class="formValue">
+                        <div class="input-group">
+                            <input id="txt_barcod" name="txt_barcod" type="text" class="form-control required" placeholder="请输入要生成二维码的字符串">
+                            <span class="input-group-btn">
+                                <a onclick="createqrcode()" class="btn  btn-primary" style="padding-left:10px;padding-right:10px;font-size:12px;line-height: 20px;">生成</a>
+                            </span>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <th class="formTitle" valign="top" style="padding-top:25px;">二维码图像</th>
+                    <td class="formValue" style="padding-top:20px;">
+                        <div id="qrcodeTable"></div>
+                        <div style="color: #aaaaaa;margin-top:10px;">使用微信扫一扫</div>
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </div>
+</form>

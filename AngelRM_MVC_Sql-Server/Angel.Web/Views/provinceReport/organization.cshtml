@@ -1,0 +1,118 @@
+﻿@{
+    ViewBag.Title = "";
+}
+<link rel="stylesheet" href="/Scripts/dist/bootstrap-3.3.7/css/bootstrap.min.css" />
+<link rel="stylesheet" href="/Content/themes/css/ace.style.css" class="ace-main-stylesheet" id="main-ace-style" />
+<link href="~/Scripts/dist/bootstrap-select/css/bootstrap-select.css" rel="stylesheet" />
+<link rel="stylesheet" href="/Content/themes/css/chosen.min.css" />
+<link href="/Content/umeditor1_2/themes/default/css/umeditor.css" type="text/css" rel="stylesheet">
+<style>
+    .datetimepicker td, .datetimepicker th
+    {
+        width: 30px;
+    }
+
+    .whiteBox
+    {
+        background: #fff;
+        box-shadow: 0 2px 16px rgba(0, 0, 0, 0.18);
+        margin-top: 20px;
+        width:49%;
+        float:left;
+        margin-right:10px;
+    }
+
+    .clearfix:after {
+        content: ".";
+        display: block;
+        height: 0;
+        visibility: hidden;
+        clear: both;
+    }
+
+    .clearfix {
+        *zoom: 1;
+    }
+</style>
+<script src="~/Scripts/wizard.min.js"></script>
+<script src="~/Scripts/dist/bootstrap-select/js/bootstrap-select.js"></script>
+<script src="/Content/themes/js/chosen.jquery.min.js"></script>
+@*<script src="/Scripts/dist/datetimepicker/js/bootstrap-datetimepicker.min.js"></script>
+<script src="/Scripts/dist/datetimepicker/js/locales/bootstrap-datetimepicker.zh-CN.js"></script>*@
+
+<script src="~/ViewScripts/provinceReport/organization.js"></script>
+<div class="widget-box" style="border: 0px;">
+    <div class="widget-header widget-header-blue widget-header-flat" style="background-color: transparent; border: 0px; padding-left: 0px;">
+        <span style="font-size: 20px; color: #8ec31f!important;">组织结构</span>
+    </div>
+
+    <div style="width:100%;position:relative;">
+        <select id="province-sel" style="margin-right: 10px;" class="chosen-select tag-input-style col-sm-2" data-placeholder="请选择省份">
+            <option>安徽</option>
+        </select>
+        @*<button id="plusBtn" type="button" class="btn btn-default"><span class="glyphicon glyphicon-plus"></span></button>
+        <button id="minusBtn" type="button" class="btn btn-default"><span class="glyphicon glyphicon-minus"></span></button>*@
+        <button id="save-btn" type="button" class="btn btn-default" >保存</button>
+    </div>
+
+    <div id="boxList" class="clearfix" style="width:100%;">
+        <div id="box1" class="whiteBox">
+            <div style="padding: 10px;">
+                <label>部门名称：</label>
+                <input type="text" name="name" value="市场部" placeholder="部门名称" disabled/>
+                <label style="margin-left: 20px;">部门总数：</label>
+                <input type="number" style="width:90px;" name="allnum" value="" placeholder="部门总数"/>
+                <label style="margin-left: 20px;display:none;">排序号：<span name="sortnum">1</span></label>
+            </div>
+            <div style="margin-left: 72px; padding: 10px;">
+                <textarea rows="3" cols="58" name="departments" value="" placeholder="详细子部门信息，不同部门之间用逗号间隔"></textarea>
+            </div>
+        </div>
+        <div id="box2" class="whiteBox">
+            <div style="padding: 10px;">
+                <label>部门名称：</label>
+                <input type="text" name="name" value="研发部" placeholder="部门名称" disabled/>
+                <label style="margin-left: 20px;">部门总数：</label>
+                <input type="number" style="width:90px;" name="allnum" value="" placeholder="部门总数" />
+                <label style="margin-left: 20px;display:none;">排序号：<span name="sortnum">2</span></label>
+            </div>
+            <div style="margin-left: 72px; padding: 10px;">
+                <textarea rows="3" cols="58" name="departments" value="" placeholder="详细子部门信息，不同部门之间用逗号间隔"></textarea>
+            </div>
+        </div>
+        <div id="box3" class="whiteBox">
+            <div style="padding: 10px;">
+                <label>部门名称：</label>
+                <input type="text" name="name" value="后勤部" placeholder="部门名称" disabled/>
+                <label style="margin-left: 20px;">部门总数：</label>
+                <input type="number" style="width:90px;" name="allnum" value="" placeholder="部门总数" />
+                <label style="margin-left: 20px;display:none;">排序号：<span name="sortnum">3</span></label>
+            </div>
+            <div style="margin-left: 72px; padding: 10px;">
+                <textarea rows="3" cols="58" name="departments" value="" placeholder="详细子部门信息，不同部门之间用逗号间隔"></textarea>
+            </div>
+        </div>
+        <div id="box4" class="whiteBox">
+            <div style="padding: 10px;">
+                <label>部门名称：</label>
+                <input type="text" name="name" value="产品部" placeholder="部门名称" disabled/>
+                <label style="margin-left: 20px;">部门总数：</label>
+                <input type="number" style="width:90px;" name="allnum" value="" placeholder="部门总数" />
+                <label style="margin-left: 20px;display:none;">排序号：<span name="sortnum">4</span></label>
+            </div>
+            <div style="margin-left: 72px; padding: 10px;">
+                <textarea rows="3" cols="58" name="departments" value="" placeholder="详细子部门信息，不同部门之间用逗号间隔"></textarea>
+            </div>
+        </div>
+    </div>
+   @* <div class="row" style="margin-top: 10px; text-align: center;width:100%;">
+        <button id="save-btn" class="btn btn-primary">保&nbsp;存</button>
+    </div>*@
+</div>
+<script>
+    var $date = $("#date-sel");
+    var $province = $("#province-sel");
+
+    organization.init($date, $province);
+
+</script>

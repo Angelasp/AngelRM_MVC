@@ -10,3 +10,11 @@ E:\2016-12-26\AngelSystem\AngelWeb\Angel.Utils\bin\Debug\Angel.Model.pdb
 E:\2016-12-26\AngelSystem\AngelWeb\Angel.Utils\obj\Debug\Angel.Utils.csprojResolveAssemblyReference.cache
 E:\2016-12-26\AngelSystem\AngelWeb\Angel.Utils\obj\Debug\Angel.Utils.dll
 E:\2016-12-26\AngelSystem\AngelWeb\Angel.Utils\obj\Debug\Angel.Utils.pdb
+F:\AngelProGramCode\AngelRM_MVC\AngelRM_MVC\Angel.Utils\bin\Debug\Angel.Utils.dll
+F:\AngelProGramCode\AngelRM_MVC\AngelRM_MVC\Angel.Utils\bin\Debug\Angel.Utils.pdb
+F:\AngelProGramCode\AngelRM_MVC\AngelRM_MVC\Angel.Utils\bin\Debug\Angel.Model.dll
+F:\AngelProGramCode\AngelRM_MVC\AngelRM_MVC\Angel.Utils\bin\Debug\Newtonsoft.Json.dll
+F:\AngelProGramCode\AngelRM_MVC\AngelRM_MVC\Angel.Utils\bin\Debug\Angel.Model.pdb
+F:\AngelProGramCode\AngelRM_MVC\AngelRM_MVC\Angel.Utils\obj\Debug\Angel.Utils.csprojResolveAssemblyReference.cache
+F:\AngelProGramCode\AngelRM_MVC\AngelRM_MVC\Angel.Utils\obj\Debug\Angel.Utils.dll
+F:\AngelProGramCode\AngelRM_MVC\AngelRM_MVC\Angel.Utils\obj\Debug\Angel.Utils.pdb

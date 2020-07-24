@@ -1,0 +1,67 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<config key="1" value="SqlQuerysecond" name="sys" dialect="mysql_dialect">
+  <!--下载列表管理-->
+  <option key="alluserdownload">
+    <parameters>
+    </parameters>
+    <values>
+      <value identify="0">
+        SELECT DISTINCT userid,username FROM angel_downloadlist;
+      </value>
+    </values>
+  </option>
+
+  <option key="oneuserdownload">
+    <parameters>
+      <parameter paramename="userid" contidion="%(condition0)d" columnname="userid" index="1" />
+    </parameters>
+    <values>
+      <value identify="0">
+        SELECT DISTINCT userid,username FROM angel_downloadlist where userid = %(condition0)d;
+      </value>
+    </values>
+  </option>
+
+  <option key="downloadList">
+    <parameters>
+      <parameter paramename="userid" contidion="%(condition0)d" columnname="userid" index="1" />
+    </parameters>
+    <values>
+      <value identify="0">
+        SELECT userid,username,filename,createuser,createtime,downloadhref FROM angel_downloadlist where userid = %(condition0)d ORDER BY createtime desc;
+      </value>
+    </values>
+  </option>
+
+  <option key="delete7daysBefore">
+    <parameters>
+      <parameter paramename="datediff" contidion="%(condition0)d" columnname="datediff" index="0" />
+      <parameter paramename="curdate" contidion="%(condition1)s" columnname="curdate" index="1" />
+      <parameter paramename="username" contidion="%(condition2)s" columnname="username" index="2" />
+    </parameters>
+    <values>
+      <value identify="0">
+        delete FROM angel_downloadlist where datediff('%(condition1)s', createtime)>=%(condition0)d and username = '%(condition2)s';
+      </value>
+    </values>
+  </option>
+
+
+  <option key="insertDownloadList">
+    <parameters>
+      <parameter paramename="userid" contidion="%(condition0)d" columnname="userid" index="0" />
+      <parameter paramename="username" contidion="%(condition1)s" columnname="username" index="1" />
+      <parameter paramename="filename" contidion="%(condition2)s" columnname="filename" index="2" />
+      <parameter paramename="createuser" contidion="%(condition3)s" columnname="createuser" index="3" />
+      <parameter paramename="createtime" contidion="%(condition4)s" columnname="createtime" index="4" />
+      <parameter paramename="downloadhref" contidion="%(condition5)s" columnname="downloadhref" index="5" />
+    </parameters>
+    <values>
+      <value identify="0">
+        INSERT INTO angel_downloadlist VALUES(%(condition0)d,'%(condition1)s','%(condition2)s',1,'%(condition3)s','%(condition4)s','%(condition5)s');
+      </value>
+    </values>
+  </option>
+  
+  
+</config>

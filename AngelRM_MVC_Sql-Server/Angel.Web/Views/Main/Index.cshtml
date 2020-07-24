@@ -1,0 +1,298 @@
+﻿@using Angel.Utils;
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta charset="utf-8" />
+    <title>Angel工作室通用权限管理系统</title>
+    <meta name="description" content="overview &amp; stats" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
+    <!-- bootstrap & fontawesome -->
+    <!--<link rel="stylesheet" href="/Content/themes/css/bootstrap.min.css" />-->
+    <link rel="stylesheet" href="/Scripts/dist/bootstrap-3.3.7/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="/Content/themes/font-awesome/4.5.0/css/font-awesome.min.css" />
+    <!-- page specific plugin styles -->
+    <!-- text fonts -->
+    <link rel="stylesheet" href="/Content/themes/css/fonts.googleapis.com.css" />
+    <!-- ace styles -->
+     @Styles.Render("~/Content/stylecss")
+    <!--[if lte IE 9]>
+    <link rel="stylesheet" href="/Content/themes/css/ace-part2.min.css" class="ace-main-stylesheet" />
+    <![endif]-->
+    <!--[if lte IE 9]>
+    <link rel="stylesheet" href="/Content/themes/css/ace-ie.min.css" />
+    <![endif]-->
+    <!-- inline styles related to this page -->
+    <!-- ace settings handler -->
+    <script src="/Content/themes/js/ace-extra.min.js"></script>
+
+    <!-- HTML5shiv and Respond.js for IE8 to support HTML5 elements and media queries -->
+    <!--[if lte IE 8]>
+    <script src="/Content/themes/js/html5shiv.min.js"></script>
+    <script src="/Content/themes/js/respond.min.js"></script>
+    <![endif]-->
+
+    <!--[if !IE]> -->
+    <script src="/Content/themes/js/jquery-2.1.4.min.js"></script>
+    <!-- <![endif]-->
+
+    <script src="~/Scripts/dist/lodash/index.js"></script>
+
+    <!--[if IE]>
+    <script src="/Content/themes/js/jquery-1.11.3.min.js"></script>
+    <![endif]-->
+
+    <script type="text/javascript">
+        if ('ontouchstart' in document.documentElement) document.write("<script src='/Content/themes/js/jquery.mobile.custom.min.js'>" + "<" + "/script>");
+    </script>
+    <script src="/Content/themes/js/bootstrap.min.js"></script>
+    <!-- page specific plugin scripts -->
+    <!--[if lte IE 8]>
+    <script src="/Content/themes/js/excanvas.min.js"></script>
+    <![endif]-->
+    @Scripts.Render("~/bundles/jquerytool")
+    <script src="/Content/laydate/laydate.js"></script>
+</head>
+
+<body class="no-skin" style="background: #f5f7fa;">
+    <div id="navbar" class="navbar navbar-default  ace-save-state" style="background: #1991d5;">
+        <div class="navbar-container ace-save-state" id="navbar-container">
+            <button type="button" class="navbar-toggle menu-toggler pull-left" id="menu-toggler" data-target="#sidebar">
+                <span class="sr-only">Toggle sidebar</span>
+
+                <span class="icon-bar"></span>
+
+                <span class="icon-bar"></span>
+
+                <span class="icon-bar"></span>
+            </button>
+
+            <div class="navbar-header pull-left">
+                <a href="#" class="navbar-brand">
+                    <small>
+                        <img src="~/Content/images/logos.png" />
+                        &nbsp; 通用权限管理系统
+                    </small>
+                </a>
+            </div>
+
+            <div class="navbar-buttons navbar-header pull-right" role="navigation">
+                <ul class="nav ace-nav">
+                    <li class="grey dropdown-modal">
+                        <a data-toggle="dropdown" class="dropdown-toggle" href="#">
+                            <i class="ace-icon fa fa-tasks"></i>
+                            <span class="badge badge-grey"></span>
+                        </a>
+                        <ul class="dropdown-menu-right dropdown-navbar dropdown-menu dropdown-caret dropdown-close">
+                            <li class="dropdown-header">
+                                <i class="ace-icon fa fa-check"></i>
+                                下载列表
+                            </li>
+                            <li class="dropdown-content">
+                                <ul class="dropdown-menu dropdown-navbar" id="downfilelist">
+                                    <li>
+                                        <a href="#">文件名称测试.rar
+                                        </a>
+                                    </li>
+
+                                    <li>
+                                        <a href="#">文件名称测试.zip
+                                        </a>
+                                    </li>
+
+                                    <li>
+                                        <a href="#">文件名称测试.xls
+                                        </a>
+                                    </li>
+
+                                    <li>
+                                        <a href="#">文件名称测试.jpg
+                                        </a>
+                                    </li>
+                                </ul>
+                            </li>
+
+                            <li class="dropdown-footer">
+                                <a href="#" id="moreList" >
+                                    更多文件列表
+                                    <i class="ace-icon fa fa-arrow-right"></i>
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+
+
+                    <li class="light-blue dropdown-modal">
+                        <a data-toggle="dropdown" href="#" class="dropdown-toggle">
+                            <img class="nav-user-photo" src="/Content/themes/images/avatars/man4.png" alt="Jason's Photo" />
+                            <span class="user-info">
+                                <small>欢迎,</small>@UtilFunction.GetCookie("uname")
+                            </span>
+                            <i class="ace-icon fa fa-caret-down"></i>
+                        </a>
+
+
+                        <ul class="user-menu dropdown-menu-right dropdown-menu dropdown-yellow dropdown-caret dropdown-close">
+                            <li>
+                                <a href="#" id="index_uppassword">
+                                    <i class="ace-icon fa fa-cog"></i>
+                                    密码修改
+                                </a>
+                            </li>
+                            <!--
+                            <li>
+                                <a href="profile.html">
+                                    <i class="ace-icon fa fa-user"></i>
+                                    用户信息
+                                </a>
+                            </li>-->
+                            <li class="divider"></li>
+                            <li>
+                                <a href="@Url.Content("~/")">
+                                    <i class="ace-icon fa fa-power-off"></i>
+                                    退 出
+                                </a>
+                            </li>
+
+
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <!-- /.navbar-container -->
+    </div>
+
+    <div class="main-container ace-save-state container" id="main-container" style="background: #f5f7fa;">
+
+        <div id="sidebar" class="sidebar responsive ace-save-state">
+            <!--菜单列表-->
+
+            <!-- /.nav-list -->
+
+
+
+        </div>
+
+        <div class="main-content">
+            <div class="main-content-inner" style="background: #f5f7fa;">
+                <div id="page-content-width" class="page-content" style="height:100%;">
+
+                    @*            <iframe id="mainframe" name="mainframe" frameborder="0" src="/SysManager/MenuManager"></iframe>*@
+
+                </div>
+            </div>
+        </div>
+        <!-- /.main-content -->
+
+        <a href="#" id="btn-scroll-up" class="btn-scroll-up btn btn-sm btn-inverse">
+            <i class="ace-icon fa fa-angle-double-up icon-only bigger-110"></i>
+        </a>
+    </div>
+    <!-- /.main-container -->
+    <!-- basic scripts -->
+    <!-- 后台系统代码 scripts -->
+    <script src="/Content/themes/js/ace-elements.min.js"></script>
+    <script src="/Content/themes/js/ace.min.js"></script>
+
+
+<!-- 用户修改密码模态框（Modal） -->
+<div class="modal fade" id="UppwdDialog" tabindex="-1" role="dialog" aria-labelledby="UppwdModalLabel" aria-hidden="true" data-backdrop="static">
+    <div class="modal-dialog" style="width:420px;">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="roleTitle">密码修改</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                </button>
+            </div>
+            <div class="modal-body" style="height: 260px; overflow-y: auto;">
+                <div class="form-group">
+                    <label for="input1">旧密码</label>
+                    <input id="input1" type="password" class="form-control">
+                </div>
+                <div class="form-group">
+                    <label for="input2">新密码</label>
+                    <input id="input2" type="password" class="form-control">
+                </div>
+                <div class="form-group">
+                    <label for="input3" name="input3">再次确认密码</label>
+                    <input id="input3" type="password" class="form-control">
+                    
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-primary" name="add" id="save_userpwd">保存</button>
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">关闭</button>
+            </div>
+        </div>
+        <!-- /.modal-content -->
+    </div><!-- /.modal -->
+</div> 
+
+
+
+
+
+
+    <!-- inline scripts related to this page -->
+    <script type="text/javascript">
+        jQuery(function ($) {
+            ace.settingFunction.navbar_fixed(null, true);
+            ace.settingFunction.sidebar_fixed(null, true);
+            ace.settingFunction.main_container_fixed(null, false);
+
+
+            //   ace - settings - breadcrumbs
+
+            /////////////////////////////////////
+            $(document).one('ajaxloadstart.page', function (e) {
+                $tooltip.remove();
+            });
+
+            var d1 = [];
+            for (var i = 0; i < Math.PI * 2; i += 0.5) {
+                d1.push([i, Math.sin(i)]);
+            }
+
+            var d2 = [];
+            for (var i = 0; i < Math.PI * 2; i += 0.5) {
+                d2.push([i, Math.cos(i)]);
+            }
+
+            var d3 = [];
+            for (var i = 0; i < Math.PI * 2; i += 0.2) {
+                d3.push([i, Math.tan(i)]);
+            }
+            $('#recent-box [data-rel="tooltip"]').tooltip({ placement: tooltip_placement });
+            function tooltip_placement(context, source) {
+                var $source = $(source);
+                var $parent = $source.closest('.tab-content')
+                var off1 = $parent.offset();
+                var w1 = $parent.width();
+
+                var off2 = $source.offset();
+                //var w2 = $source.width();
+
+                if (parseInt(off2.left) < parseInt(off1.left) + parseInt(w1 / 2)) return 'right';
+                return 'left';
+            }
+
+
+            $('.dialogs,.comments').ace_scroll({
+                size: 300
+            });
+
+
+            //$(".dropdown-modal").mouseover(function () {
+            //    $(this).addClass("open");
+            //    $(this).find(".scroll-track").addClass("scroll-active");
+            //    $(this).find(".dropdown-toggle").attr("aria-expanded", "true");
+            //}).mouseout(function () {
+            //    $(this).removeClass("open");
+            //});
+            //onclick="UpPwd()" 
+            })
+    </script>
+    
+</body>
+</html>

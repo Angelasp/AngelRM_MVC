@@ -1,0 +1,67 @@
+﻿@{
+    ViewBag.Title = "MenuManager";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<!--<link rel="stylesheet" href="/Scripts/dist/bootstrap-3.3.7/css/bootstrap.min.css" />-->
+<link rel="stylesheet" href="/Content/themes/css/ace.min.css" class="ace-main-stylesheet" id="main-ace-style" />
+<link rel="stylesheet" href="~/Scripts/dist/bootstrap-table-1.11.1/bootstrap-table.min.css" />
+<link rel="stylesheet" href="~/Scripts/dist/bootstrap3-editable/css/bootstrap-editable.css" />
+<link rel="stylesheet" href="~/ViewScripts/bootstrap-fileinput-master/css/fileinput.min.css" />
+<link rel="stylesheet" href="~/ViewScripts/bootstrap-fileinput-master/themes/explorer/theme.css" />
+<style>
+    .fixed-table-pagination {
+        margin: 5px;
+    }
+    .fixed-table-pagination {
+        margin: 5px;
+    }
+
+    .form-group {
+        margin-bottom: 0px;
+    }
+    .row {
+        margin-right: 0px;
+        margin-left: 0px;
+    }
+    .header {
+        margin-bottom: 0px;
+        margin-top: 0px;
+        padding-bottom: 0px;
+    }
+    .nav-search {
+        position: absolute;
+        top: 15px;
+        right: 50px;
+        line-height: 24px;
+        width:155px;
+    }
+    .danger {
+        background: #f00;
+    }
+    .widget-toolbar:before {
+        border: 0px;
+        border-width: 0px;
+    }
+</style>
+<script src="~/Scripts/wizard.min.js"></script>
+<script src="~/ViewScripts/bootstrap-fileinput-master/js/fileinput.min.js"></script>
+<script src="~/ViewScripts/bootstrap-fileinput-master/themes/explorer/theme.js"></script>
+<script src="~/ViewScripts/bootstrap-fileinput-master/js/locales/zh.js"></script>
+<script src="~/Scripts/bootbox.min.js"></script>
+<script src="/Scripts/js/common.js"></script>
+<script src="~/ViewScripts/datacollection/ReportComplaint.js"></script>
+<div class="widget-box" style="border:0px;">
+    <div class="widget-header widget-header-blue widget-header-flat" style="background-color:transparent;border:0px;padding-left:0px;line-height:70px;">
+        <h4 class="widget-title" style="color:#333333; left:0px;">业务投诉详表填报</h4><!--lighter-->        
+    </div>
+    <div class="widget-body" style="border: 0px solid #CCC;">
+        <div class="widget-main" style="padding:0px;">
+            <input id="input-ke-import" name="inputKEImport[]" type="file" multiple class="file-loading">
+        </div><!-- /.widget-main -->
+    </div><!-- /.widget-body -->
+</div>
+<script>
+    var $f = $("#input-ke-import");
+    ReportComplaint.init($f);
+</script>

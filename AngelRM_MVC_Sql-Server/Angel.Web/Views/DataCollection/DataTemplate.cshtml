@@ -1,0 +1,86 @@
+﻿@{
+    ViewBag.Title = "MenuManager";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<link rel="stylesheet" href="/Scripts/dist/bootstrap-3.3.7/css/bootstrap.min.css" />
+<link rel="stylesheet" href="/Content/themes/css/ace.min.css" class="ace-main-stylesheet" id="main-ace-style" />
+<link rel="stylesheet" href="~/Scripts/dist/bootstrap-table-1.11.1/bootstrap-table.min.css" />
+<link rel="stylesheet" href="~/ViewScripts/bootstrap-fileinput-master/css/fileinput.min.css" />
+<link rel="stylesheet" href="~/ViewScripts/bootstrap-fileinput-master/themes/explorer/theme.css" />
+<style>
+    .fixed-table-pagination {
+        margin: 2px;
+        background:#f9f9f9;
+    }
+    .form-group {
+        margin-bottom: 0px;
+    }
+    .widget-toolbar:before {
+        border: 0px;
+        border-width: 0px;
+    }
+</style>
+<script src="~/Scripts/wizard.min.js"></script>
+<script src="~/Scripts/dist/bootstrap-table-1.11.1/bootstrap-table.min.js"></script>
+<script src="~/Scripts/dist/bootstrap-table-1.11.1/locale/bootstrap-table-zh-CN.min.js"></script>
+<script src="~/ViewScripts/bootstrap-fileinput-master/js/fileinput.min.js"></script>
+<script src="~/ViewScripts/bootstrap-fileinput-master/themes/explorer/theme.js"></script>
+<script src="~/ViewScripts/bootstrap-fileinput-master/js/locales/zh.js"></script>
+<script src="~/Scripts/bootbox.min.js"></script>
+<script src="~/ViewScripts/datacollection/DataTemplate.js"></script>
+<!-- 模态框（Modal） -->
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                <h4 class="modal-title" id="myModalLabel">请选择Excel文件</h4>
+            </div>
+            <div class="modal-body">
+                <input id="input-ke-template" name="inputKETemplate[]" type="file" multiple class="file-loading">
+            </div>
+        </div><!-- /.modal-content -->
+    </div><!-- /.modal -->
+</div>    
+<div class="widget-box" style="border:0px;">
+    <div class="widget-header widget-header-blue widget-header-flat" style="background-color:transparent;border:0px;padding-left:0px;line-height:70px;">
+        <h4 class="widget-title" style="color:#333333; left:0px;">数据模板管理</h4><!--lighter-->
+        <div class="widget-toolbar" style="padding:0px;line-height:70px;">
+                <div class="form-inline form-group " style="line-height:70px;">
+                    <div class="input-group input-group-sm">
+                        <input type="text" class="form-control" id="search-input" placeholder="检索 ..." style="height:30.5px;margin-top: 19px;" size="40"/>
+                        <div class="input-group-btn">
+                            <button class="btn btn-xs btn-white btn-info" id="btnSearch">
+                                <i class="ace-icon fa fa-search bigger-110 blue"></i>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="input-group input-group-sm">
+                        <div class="input-group-btn">
+                            <button class="btn btn-xs btn-white btn-info" id="btnRemove" disabled>
+                                <i class="ace-icon glyphicon glyphicon-trash bigger-110 blue"></i>
+                            </button>
+                            <button class="btn btn-xs btn-white btn-info" id="btnUpload" data-toggle="modal" data-target="#myModal">
+                                <i class="ace-icon glyphicon glyphicon-upload bigger-110 blue"></i>
+                                上传模板
+                            </button>
+                        </div>
+                    </div>
+                </div>
+        </div>
+    </div>
+    <div class="widget-body" style="border: 1px solid #cfdbe2;">
+        <div class="widget-main" style="padding:0px;">
+            <table id="tbl_template" style="margin:-1px 0px;"></table>
+        </div>
+    </div>
+</div>
+<script type="text/javascript">
+    var $f = $("#input-ke-template");
+    var $t = $("#tbl_template");
+    var $m = $("#myModal");
+    var $br = $("#btnRemove")
+    var $bs = $("#btnSearch");
+    DataTemplate.init($t, $f, $m, $br, $bs);
+</script>
