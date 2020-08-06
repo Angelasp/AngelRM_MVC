@@ -1074,6 +1074,7 @@
     <Content Include="Views\BarCode\Index.cshtml" />
     <Content Include="Views\Print\Index.cshtml" />
     <Content Include="Views\Electronicchapter\Index.cshtml" />
+    <Content Include="template\用户登录日志表.xls" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="ViewScripts\Acquisition\" />

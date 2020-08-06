@@ -91,7 +91,16 @@ $(function () {
                 var postlist1 = '{ "insert_log": [{ "logposition":"系统管理-日志管理-登录日志","operationtype": "导出报表"}]}';
                 oper_log(postlist1);
                 RefreshDownFile();
-                alert('导出成功，请在下载中心进行下载。');
+                bootbox.alert({
+                message: "导出成功，请到右上角下载", title: "提示", ok: { label: '确定', className: 'btn-myStyle' }
+        });
+
+
+                //var downloadhref = "/Down/Index?filename=";
+                //var postlist = '{"insert":[{"userid":{1},"username":"{admin}","filename":"' + data.filename + '","createuser":"{admin}","createtime":"' + data.createtime + '","downloadhref":"' + downloadhref + data.filename + '"}]}';
+                //insertDownloadList(postlist);
+
+
             },
             error: function (data) {
                 alert('导出错误');

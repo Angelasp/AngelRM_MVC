@@ -80,7 +80,7 @@ namespace Angel.Web.ControllersApi
             string city = HttpUtility.UrlDecode(UtilFunction.GetCookie("cityid"));      // (集团用户OR省公司用户)
             string filename = null;                              // 文件名
             string sysFileName = userid + "_" + batch + "_" + date.Millisecond + "_";  // 备份文件名
-            string path = _directory + "UploadFiles/";           // 文件备份路径
+            string path = _directory + "UploadFiles/" + username+"/";           // 文件备份路径
             int count = 0;
             if (hfc.Count > 0)
             {

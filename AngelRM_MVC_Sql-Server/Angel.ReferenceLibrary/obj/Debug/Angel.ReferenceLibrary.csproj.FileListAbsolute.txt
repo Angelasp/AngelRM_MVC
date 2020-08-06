@@ -14,6 +14,5 @@ F:\AngelProGramCode\AngelRM_MVC\angelmvc-sql\Angel.ReferenceLibrary\obj\Debug\An
 F:\AngelProGramCode\AngelRM_MVC\angelmvc-sql\Angel.ReferenceLibrary\obj\Debug\Angel.ReferenceLibrary.pdb
 F:\AngelProGramCode\AngelRM_MVC\AngelRM_MVC\AngelRM_MVC_Sql-Server\Angel.ReferenceLibrary\bin\Debug\Angel.ReferenceLibrary.dll
 F:\AngelProGramCode\AngelRM_MVC\AngelRM_MVC\AngelRM_MVC_Sql-Server\Angel.ReferenceLibrary\bin\Debug\Angel.ReferenceLibrary.pdb
-F:\AngelProGramCode\AngelRM_MVC\AngelRM_MVC\AngelRM_MVC_Sql-Server\Angel.ReferenceLibrary\obj\Debug\Angel.ReferenceLibrary.csprojResolveAssemblyReference.cache
 F:\AngelProGramCode\AngelRM_MVC\AngelRM_MVC\AngelRM_MVC_Sql-Server\Angel.ReferenceLibrary\obj\Debug\Angel.ReferenceLibrary.dll
 F:\AngelProGramCode\AngelRM_MVC\AngelRM_MVC\AngelRM_MVC_Sql-Server\Angel.ReferenceLibrary\obj\Debug\Angel.ReferenceLibrary.pdb

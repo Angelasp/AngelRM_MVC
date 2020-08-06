@@ -16,7 +16,7 @@ namespace Angel.Web.Controllers
         /// <param name="FileName"></param>
         public ActionResult DownFile(string username, string filename)
         {
-            string path = HttpContext.Server.MapPath("~/UploadFiles/template/" + username + "/" + filename);
+            string path = HttpContext.Server.MapPath("~/UploadFiles/" + username + "/" + filename);
             if (System.IO.File.Exists(path))
             {
                 System.IO.FileStream fs = new System.IO.FileStream(@path, FileMode.Open);
@@ -47,7 +47,8 @@ namespace Angel.Web.Controllers
         public ActionResult DownBackupFile(string filename, string sysfilename, string type)
         {
             string path = "";
-            path = HttpContext.Server.MapPath("~/UploadFiles/" + sysfilename);
+            string username = UtilFunction.GetCookie("uname");   // 当前登录用户Name
+            path = HttpContext.Server.MapPath("~/UploadFiles/" + username + "/" + sysfilename);
 
             if (System.IO.File.Exists(path))
             {

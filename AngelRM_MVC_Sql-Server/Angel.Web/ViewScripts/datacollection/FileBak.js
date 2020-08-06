@@ -164,6 +164,9 @@
             'click .downloadA': function (e, value, row, index) {
                 // 存档文件下载
                 window.location.href = "/InPut/DownBackupFile?filename=" + row.fileName + "&sysfilename=" + row.sysName + "";
+                var downloadhref = "/InPut/DownBackupFile?filename=" + row.fileName + "&sysfilename=" + row.sysName + "";
+                var postlist = '{"insert":[{"userid":{1},"username":"{admin}","filename":"' + row.fileName + '","createuser":"{admin}","createtime":"data.createtime","downloadhref":"' + downloadhref + '"}]}';
+                insertDownloadList(postlist);
             }
         };
 

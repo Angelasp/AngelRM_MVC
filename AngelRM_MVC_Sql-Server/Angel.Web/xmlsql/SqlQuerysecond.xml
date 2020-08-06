@@ -58,7 +58,7 @@
     </parameters>
     <values>
       <value identify="0">
-        INSERT INTO angel_downloadlist VALUES(%(condition0)d,'%(condition1)s','%(condition2)s',1,'%(condition3)s','%(condition4)s','%(condition5)s');
+        INSERT INTO angel_downloadlist VALUES(%(condition0)d,'%(condition1)s','%(condition2)s',1,'%(condition3)s',getdate(),'%(condition5)s');
       </value>
     </values>
   </option>

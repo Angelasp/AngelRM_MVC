@@ -18,6 +18,6 @@ F:\AngelProGramCode\AngelRM_MVC\angelmvc-sql\Angel.Model\obj\Debug\Angel.Model.p
 F:\AngelProGramCode\AngelRM_MVC\angelmvc-sql\Angel.Model\obj\Debug\Angel.Model.csprojResolveAssemblyReference.cache
 F:\AngelProGramCode\AngelRM_MVC\AngelRM_MVC\AngelRM_MVC_Sql-Server\Angel.Model\bin\Debug\Angel.Model.dll
 F:\AngelProGramCode\AngelRM_MVC\AngelRM_MVC\AngelRM_MVC_Sql-Server\Angel.Model\bin\Debug\Angel.Model.pdb
-F:\AngelProGramCode\AngelRM_MVC\AngelRM_MVC\AngelRM_MVC_Sql-Server\Angel.Model\obj\Debug\Angel.Model.csprojResolveAssemblyReference.cache
 F:\AngelProGramCode\AngelRM_MVC\AngelRM_MVC\AngelRM_MVC_Sql-Server\Angel.Model\obj\Debug\Angel.Model.dll
 F:\AngelProGramCode\AngelRM_MVC\AngelRM_MVC\AngelRM_MVC_Sql-Server\Angel.Model\obj\Debug\Angel.Model.pdb
+F:\AngelProGramCode\AngelRM_MVC\AngelRM_MVC\AngelRM_MVC_Sql-Server\Angel.Model\obj\Debug\Angel.Model.csprojResolveAssemblyReference.cache
