@@ -1,4 +1,34 @@
-﻿@RenderSection("featured", required: false)
- <section class="content-wrapper main-content clear-fix">
-     @RenderBody()
-</section>
+﻿@RenderSection("featured", required: false)<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta charset="utf-8" />
+    <title>@ViewBag.Title</title>
+    <meta name="description" content="by alcedo" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
+    <link rel="stylesheet" href="/Scripts/dist/bootstrap-3.3.7/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="/Content/themes/font-awesome/4.5.0/css/font-awesome.min.css" />
+    <!-- ace styles -->
+    @Styles.Render("~/Content/stylecss")
+    <link href="/Scripts/dist/material-design-iconic-font-2.2.0/css/material-design-iconic-font.min.css" rel="stylesheet" />
+    <link href="/Scripts/dist/bootstrap-table-1.11.1/bootstrap-table.min.css" rel="stylesheet" />
+    <link href="/Scripts/dist/jquery-confirm/dist/jquery-confirm.min.css" rel="stylesheet" />
+
+    <link href="/Content/styles/apage.css" rel="stylesheet" />
+    <script src="/Content/themes/js/jquery-2.1.4.min.js"></script>
+    <!--[if lte IE 8]>
+    <script src="/Content/themes/js/html5shiv.min.js"></script>
+    <script src="/Content/themes/js/respond.min.js"></script>
+    <![endif]-->
+    <script type="text/javascript">
+        if ('ontouchstart' in document.documentElement) document.write("<script src='/Content/themes/js/jquery.mobile.custom.min.js'>" + "<" + "/script>");
+    </script>
+    <script src="/Content/themes/js/bootstrap.min.js"></script>
+    <!--[if lte IE 8]>
+    <script src="/Content/themes/js/excanvas.min.js"></script>
+    <![endif]-->
+</head>
+<body class="no-skin" style="background: #f5f7fa;margin-bottom:30px;height:auto;">
+@RenderBody()
+</body>
+</html>

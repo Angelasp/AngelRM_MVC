@@ -52,6 +52,7 @@
     <Compile Include="Treedata.cs" />
     <Compile Include="UserInfos.cs" />
     <Compile Include="Tree_t.cs" />
+    <Compile Include="Menu.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="bin\Debug\Angel.Model.dll" />

@@ -18,7 +18,8 @@ namespace Angel.Web
                   "~/Content/themes/js/jquery.easypiechart*",
                   "~/Content/themes/js/jquery.sparkline.index*",
                   "~/Scripts/dist/waves/waves-0.7.5/waves.s.js",
-                  "~/Scripts/js/com.js");
+                  "~/Scripts/js/com.js",
+                  "~/Scripts/js/index.js");
 
             var bundlecss = new StyleBundle("~/Content/stylecss");
             bundlecss.Include("~/Content/themes/css/ace.style.css", "~/Content/themes/css/ace-skins*", "~/Content/themes/css/ace-rtl.min.css");

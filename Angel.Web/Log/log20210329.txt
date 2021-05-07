@@ -1,0 +1,60 @@
+InfoApiTime：2021-03-29 18:08:06,调用：Angel.ControllersApi/ControllerAPI/LoginApiController/Get()方法
+MySql.Data.MySqlClient.MySqlException (0x80004005): Unable to connect to any of the specified MySQL hosts.
+   在 MySql.Data.MySqlClient.NativeDriver.Open()
+   在 MySql.Data.MySqlClient.Driver.Open()
+   在 MySql.Data.MySqlClient.Driver.Create(MySqlConnectionStringBuilder settings)
+   在 MySql.Data.MySqlClient.MySqlPool.CreateNewPooledConnection()
+   在 MySql.Data.MySqlClient.MySqlPool.GetPooledConnection()
+   在 MySql.Data.MySqlClient.MySqlPool.TryToGetDriver()
+   在 MySql.Data.MySqlClient.MySqlPool.GetConnection()
+   在 MySql.Data.MySqlClient.MySqlConnection.Open()
+   在 Angel.DBHelper.MySqlHelpers.PrepareCommand(MySqlCommand cmd, MySqlConnection conn, MySqlTransaction trans, CommandType cmdType, String cmdText, MySqlParameter[] cmdParms) 位置 g:\AngelProGramCode\AngelRM_MVC\AngelRM_MVC\Angel.DBHelper\MySqlHelpers.cs:行号 801
+   在 Angel.DBHelper.MySqlHelpers.ExecuteScalar(String cmdText) 位置 g:\AngelProGramCode\AngelRM_MVC\AngelRM_MVC\Angel.DBHelper\MySqlHelpers.cs:行号 376
+MySql.Data.MySqlClient.MySqlException (0x80004005): Unable to connect to any of the specified MySQL hosts.
+   在 MySql.Data.MySqlClient.NativeDriver.Open()
+   在 MySql.Data.MySqlClient.Driver.Open()
+   在 MySql.Data.MySqlClient.Driver.Create(MySqlConnectionStringBuilder settings)
+   在 MySql.Data.MySqlClient.MySqlPool.CreateNewPooledConnection()
+   在 MySql.Data.MySqlClient.MySqlPool.GetPooledConnection()
+   在 MySql.Data.MySqlClient.MySqlPool.TryToGetDriver()
+   在 MySql.Data.MySqlClient.MySqlPool.GetConnection()
+   在 MySql.Data.MySqlClient.MySqlConnection.Open()
+   在 Angel.DBHelper.MySqlHelpers.PrepareCommand(MySqlCommand cmd, MySqlConnection conn, MySqlTransaction trans, CommandType cmdType, String cmdText, MySqlParameter[] cmdParms) 位置 g:\AngelProGramCode\AngelRM_MVC\AngelRM_MVC\Angel.DBHelper\MySqlHelpers.cs:行号 801
+   在 Angel.DBHelper.MySqlHelpers.ExecuteScalar(String cmdText) 位置 g:\AngelProGramCode\AngelRM_MVC\AngelRM_MVC\Angel.DBHelper\MySqlHelpers.cs:行号 390
+   在 Angel.Service.MysqlService.ExecuteScalar(String sql) 位置 g:\AngelProGramCode\AngelRM_MVC\AngelRM_MVC\Angel.Service\MysqlService.cs:行号 76
+   在 Angel.Service.BLLService.GetDataBefor(JObject param, String serverName) 位置 g:\AngelProGramCode\AngelRM_MVC\AngelRM_MVC\Angel.Service\BLLService.cs:行号 429
+InfoApiTime：2021-03-29 18:09:22,调用：Angel.ControllersApi/ControllerAPI/LoginApiController/Get()方法
+MySql.Data.MySqlClient.MySqlException (0x80004005): Unable to connect to any of the specified MySQL hosts.
+   在 MySql.Data.MySqlClient.NativeDriver.Open()
+   在 MySql.Data.MySqlClient.Driver.Open()
+   在 MySql.Data.MySqlClient.Driver.Create(MySqlConnectionStringBuilder settings)
+   在 MySql.Data.MySqlClient.MySqlPool.CreateNewPooledConnection()
+   在 MySql.Data.MySqlClient.MySqlPool.GetPooledConnection()
+   在 MySql.Data.MySqlClient.MySqlPool.TryToGetDriver()
+   在 MySql.Data.MySqlClient.MySqlPool.GetConnection()
+   在 MySql.Data.MySqlClient.MySqlConnection.Open()
+   在 Angel.DBHelper.MySqlHelpers.PrepareCommand(MySqlCommand cmd, MySqlConnection conn, MySqlTransaction trans, CommandType cmdType, String cmdText, MySqlParameter[] cmdParms) 位置 g:\AngelProGramCode\AngelRM_MVC\AngelRM_MVC\Angel.DBHelper\MySqlHelpers.cs:行号 801
+   在 Angel.DBHelper.MySqlHelpers.ExecuteScalar(String cmdText) 位置 g:\AngelProGramCode\AngelRM_MVC\AngelRM_MVC\Angel.DBHelper\MySqlHelpers.cs:行号 376
+MySql.Data.MySqlClient.MySqlException (0x80004005): Unable to connect to any of the specified MySQL hosts.
+   在 MySql.Data.MySqlClient.NativeDriver.Open()
+   在 MySql.Data.MySqlClient.Driver.Open()
+   在 MySql.Data.MySqlClient.Driver.Create(MySqlConnectionStringBuilder settings)
+   在 MySql.Data.MySqlClient.MySqlPool.CreateNewPooledConnection()
+   在 MySql.Data.MySqlClient.MySqlPool.GetPooledConnection()
+   在 MySql.Data.MySqlClient.MySqlPool.TryToGetDriver()
+   在 MySql.Data.MySqlClient.MySqlPool.GetConnection()
+   在 MySql.Data.MySqlClient.MySqlConnection.Open()
+   在 Angel.DBHelper.MySqlHelpers.PrepareCommand(MySqlCommand cmd, MySqlConnection conn, MySqlTransaction trans, CommandType cmdType, String cmdText, MySqlParameter[] cmdParms) 位置 g:\AngelProGramCode\AngelRM_MVC\AngelRM_MVC\Angel.DBHelper\MySqlHelpers.cs:行号 801
+   在 Angel.DBHelper.MySqlHelpers.ExecuteScalar(String cmdText) 位置 g:\AngelProGramCode\AngelRM_MVC\AngelRM_MVC\Angel.DBHelper\MySqlHelpers.cs:行号 390
+   在 Angel.Service.MysqlService.ExecuteScalar(String sql) 位置 g:\AngelProGramCode\AngelRM_MVC\AngelRM_MVC\Angel.Service\MysqlService.cs:行号 76
+   在 Angel.Service.BLLService.GetDataBefor(JObject param, String serverName) 位置 g:\AngelProGramCode\AngelRM_MVC\AngelRM_MVC\Angel.Service\BLLService.cs:行号 429
+InfoApiTime：2021-03-29 18:10:16,调用：Angel.ControllersApi/ControllerAPI/LoginApiController/Get()方法
+InfoApiTime：2021-03-29 18:10:21,调用：Angel.ControllersApi/ControllerApi/RoleApiController/GetRolemeul()方法
+InfoApiTime：2021-03-29 18:10:31,调用：Angel.ControllersApi/ControllerApi/MenuApiController/Get()方法
+InfoApiTime：2021-03-29 18:10:34,调用：Angel.ControllersApi/ControllerApi/RoleApiController/Get()方法
+InfoApiTime：2021-03-29 18:10:34,调用：Angel.ControllersApi/ControllerApi/UserApiController/Get()方法
+InfoApiTime：2021-03-29 18:10:36,调用：Angel.ControllersApi/ControllerApi/RoomApiController/Get()方法
+InfoApiTime：2021-03-29 18:10:36,调用：Angel.ControllersApi/ControllerApi/RoomApiController/GetD()方法
+InfoApiTime：2021-03-29 18:10:47,调用：Angel.ControllersApi/ControllerApi/RoleApiController/Get()方法
+InfoApiTime：2021-03-29 18:10:51,调用：Angel.ControllersApi/ControllerApi/LoginlogApiController/PostList()方法
+InfoApiTime：2021-03-29 18:25:08,调用：Angel.ControllersApi/ControllerApi/LoginlogApiController/PostList()方法

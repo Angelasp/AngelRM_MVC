@@ -1,0 +1,554 @@
+InfoApiTime：2021-05-03 08:54:58,调用：Angel.ControllersApi/ControllerAPI/LoginApiController/Get()方法
+InfoApiTime：2021-05-03 08:55:00,调用：Angel.ControllersApi/ControllerApi/RoleApiController/GetRolemeul()方法
+InfoApiTime：2021-05-03 08:55:43,调用：Angel.ControllersApi/ControllerApi/RoleApiController/GetRolemeul()方法
+InfoApiTime：2021-05-03 08:56:16,调用：Angel.ControllersApi/ControllerApi/DictionaryApiController/Post([FromBody]string value)方法
+InfoApiTime：2021-05-03 08:59:30,调用：Angel.ControllersApi/ControllerApi/RoleApiController/GetRolemeul()方法
+InfoApiTime：2021-05-03 09:00:03,调用：Angel.ControllersApi/ControllerAPI/LoginApiController/Get()方法
+InfoApiTime：2021-05-03 09:00:03,调用：Angel.ControllersApi/ControllerApi/RoleApiController/GetRolemeul()方法
+InfoApiTime：2021-05-03 09:01:32,调用：Angel.ControllersApi/ControllerApi/RoleApiController/GetRolemeul()方法
+InfoApiTime：2021-05-03 09:03:50,调用：Angel.ControllersApi/ControllerAPI/LoginApiController/Get()方法
+InfoApiTime：2021-05-03 09:03:52,调用：Angel.ControllersApi/ControllerApi/RoleApiController/GetRolemeul()方法
+InfoApiTime：2021-05-03 09:05:30,调用：Angel.ControllersApi/ControllerApi/RoleApiController/GetRolemeul()方法
+InfoApiTime：2021-05-03 09:05:30,调用：Angel.ControllersApi/ControllerApi/RoleApiController/GetRolemeul()方法
+InfoApiTime：2021-05-03 09:06:38,调用：Angel.ControllersApi/ControllerApi/RoleApiController/GetRolemeul()方法
+InfoApiTime：2021-05-03 09:23:58,调用：Angel.ControllersApi/ControllerAPI/LoginApiController/Get()方法
+InfoApiTime：2021-05-03 09:24:00,调用：Angel.ControllersApi/ControllerApi/RoleApiController/GetRolemeul()方法
+InfoApiTime：2021-05-03 09:24:26,调用：Angel.ControllersApi/ControllerApi/RoleApiController/GetRolemeul()方法
+InfoApiTime：2021-05-03 09:25:57,调用：Angel.ControllersApi/ControllerApi/RoleApiController/GetRolemeul()方法
+InfoApiTime：2021-05-03 09:38:50,调用：Angel.ControllersApi/ControllerAPI/LoginApiController/Get()方法
+InfoApiTime：2021-05-03 09:38:52,调用：Angel.ControllersApi/ControllerApi/RoleApiController/GetRolemeul()方法
+InfoApiTime：2021-05-03 09:49:21,调用：Angel.ControllersApi/ControllerApi/MenuApiController/Get()方法
+InfoApiTime：2021-05-03 09:49:28,调用：Angel.ControllersApi/ControllerApi/MenuApiController/Get()方法
+InfoApiTime：2021-05-03 09:50:47,调用：Angel.ControllersApi/ControllerAPI/LoginApiController/Get()方法
+InfoApiTime：2021-05-03 09:50:49,调用：Angel.ControllersApi/ControllerApi/RoleApiController/GetRolemeul()方法
+InfoApiTime：2021-05-03 09:52:55,调用：Angel.ControllersApi/ControllerAPI/LoginApiController/Get()方法
+InfoApiTime：2021-05-03 10:39:51,调用：Angel.ControllersApi/ControllerAPI/LoginApiController/Get()方法
+InfoApiTime：2021-05-03 10:42:21,调用：Angel.ControllersApi/ControllerAPI/LoginApiController/Get()方法
+InfoApiTime：2021-05-03 10:43:11,调用：Angel.ControllersApi/ControllerAPI/LoginApiController/Get()方法
+InfoApiTime：2021-05-03 10:52:10,调用：Angel.ControllersApi/ControllerAPI/LoginApiController/Get()方法
+InfoApiTime：2021-05-03 11:16:51,调用：Angel.ControllersApi/ControllerAPI/LoginApiController/Get()方法
+InfoApiTime：2021-05-03 11:21:24,调用：Angel.ControllersApi/ControllerAPI/LoginApiController/Get()方法
+InfoApiTime：2021-05-03 11:21:26,调用：Angel.ControllersApi/ControllerApi/RoleApiController/GetRolemeul()方法
+InfoApiTime：2021-05-03 11:25:46,调用：Angel.ControllersApi/ControllerAPI/LoginApiController/Get()方法
+InfoApiTime：2021-05-03 11:25:48,调用：Angel.ControllersApi/ControllerApi/RoleApiController/GetRolemeul()方法
+InfoApiTime：2021-05-03 11:31:08,调用：Angel.ControllersApi/ControllerApi/RoleApiController/GetRolemeul()方法
+InfoApiTime：2021-05-03 11:32:05,调用：Angel.ControllersApi/ControllerAPI/LoginApiController/Get()方法
+InfoApiTime：2021-05-03 11:32:07,调用：Angel.ControllersApi/ControllerApi/RoleApiController/GetRolemeul()方法
+InfoApiTime：2021-05-03 11:37:29,调用：Angel.ControllersApi/ControllerApi/MenuApiController/Get()方法
+InfoApiTime：2021-05-03 11:37:32,调用：Angel.ControllersApi/ControllerApi/RoleApiController/Get()方法
+InfoApiTime：2021-05-03 11:37:32,调用：Angel.ControllersApi/ControllerApi/UserApiController/Get()方法
+InfoApiTime：2021-05-03 11:37:33,调用：Angel.ControllersApi/ControllerApi/RoomApiController/Get()方法
+InfoApiTime：2021-05-03 11:37:33,调用：Angel.ControllersApi/ControllerApi/RoomApiController/GetD()方法
+InfoApiTime：2021-05-03 11:37:34,调用：Angel.ControllersApi/ControllerApi/RoleApiController/Get()方法
+InfoApiTime：2021-05-03 11:37:36,调用：Angel.ControllersApi/ControllerApi/LoginlogApiController/PostList()方法
+InfoApiTime：2021-05-03 11:37:38,调用：Angel.ControllersApi/ControllerApi/DownloadListManagerApiController/Get()方法
+InfoApiTime：2021-05-03 13:53:23,调用：Angel.ControllersApi/ControllerAPI/LoginApiController/Get()方法
+InfoApiTime：2021-05-03 13:53:28,调用：Angel.ControllersApi/ControllerApi/RoleApiController/GetRolemeul()方法
+InfoApiTime：2021-05-03 14:00:39,调用：Angel.ControllersApi/ControllerAPI/LoginApiController/Get()方法
+InfoApiTime：2021-05-03 14:00:44,调用：Angel.ControllersApi/ControllerApi/RoleApiController/GetRolemeul()方法
+InfoApiTime：2021-05-03 14:17:34,调用：Angel.ControllersApi/ControllerApi/RoleApiController/GetRolemeul()方法
+MySql.Data.MySqlClient.MySqlException (0x80004005): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ') and 1=1' at line 1
+   在 MySql.Data.MySqlClient.MySqlStream.ReadPacket()
+   在 MySql.Data.MySqlClient.NativeDriver.GetResult(Int32& affectedRow, Int64& insertedId)
+   在 MySql.Data.MySqlClient.Driver.GetResult(Int32 statementId, Int32& affectedRows, Int64& insertedId)
+   在 MySql.Data.MySqlClient.Driver.NextResult(Int32 statementId, Boolean force)
+   在 MySql.Data.MySqlClient.MySqlDataReader.NextResult()
+   在 MySql.Data.MySqlClient.MySqlCommand.ExecuteReader(CommandBehavior behavior)
+   在 MySql.Data.MySqlClient.MySqlCommand.ExecuteDbDataReader(CommandBehavior behavior)
+   在 System.Data.Common.DbCommand.System.Data.IDbCommand.ExecuteReader(CommandBehavior behavior)
+   在 System.Data.Common.DbDataAdapter.FillInternal(DataSet dataset, DataTable[] datatables, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   在 System.Data.Common.DbDataAdapter.Fill(DataTable[] dataTables, Int32 startRecord, Int32 maxRecords, IDbCommand command, CommandBehavior behavior)
+   在 System.Data.Common.DbDataAdapter.Fill(DataTable dataTable)
+   在 Angel.DBHelper.MySqlHelpers.GetDataTable(String cmdText) 位置 f:\AngelProGramCode\AngelRM_MVC\AngelRM_MVC\Angel.DBHelper\MySqlHelpers.cs:行号 940
+异常捕捉：Angel.Service.BLLServiceMySql.Data.MySqlClient.MySqlException (0x80004005): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ') and 1=1' at line 1
+   在 MySql.Data.MySqlClient.MySqlStream.ReadPacket()
+   在 MySql.Data.MySqlClient.NativeDriver.GetResult(Int32& affectedRow, Int64& insertedId)
+   在 MySql.Data.MySqlClient.Driver.GetResult(Int32 statementId, Int32& affectedRows, Int64& insertedId)
+   在 MySql.Data.MySqlClient.Driver.NextResult(Int32 statementId, Boolean force)
+   在 MySql.Data.MySqlClient.MySqlDataReader.NextResult()
+   在 MySql.Data.MySqlClient.MySqlCommand.ExecuteReader(CommandBehavior behavior)
+   在 MySql.Data.MySqlClient.MySqlCommand.ExecuteDbDataReader(CommandBehavior behavior)
+   在 System.Data.Common.DbCommand.System.Data.IDbCommand.ExecuteReader(CommandBehavior behavior)
+   在 System.Data.Common.DbDataAdapter.FillInternal(DataSet dataset, DataTable[] datatables, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   在 System.Data.Common.DbDataAdapter.Fill(DataTable[] dataTables, Int32 startRecord, Int32 maxRecords, IDbCommand command, CommandBehavior behavior)
+   在 System.Data.Common.DbDataAdapter.Fill(DataTable dataTable)
+   在 Angel.DBHelper.MySqlHelpers.GetDataTable(String cmdText) 位置 f:\AngelProGramCode\AngelRM_MVC\AngelRM_MVC\Angel.DBHelper\MySqlHelpers.cs:行号 948
+   在 Angel.Service.BLLService.GetWhereDataTable(String key, String wheresql) 位置 f:\AngelProGramCode\AngelRM_MVC\AngelRM_MVC\Angel.Service\BLLService.cs:行号 1015
+MySql.Data.MySqlClient.MySqlException (0x80004005): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ') and 1=1  ORDER BY id desc limit 0,10' at line 1
+   在 MySql.Data.MySqlClient.MySqlStream.ReadPacket()
+   在 MySql.Data.MySqlClient.NativeDriver.GetResult(Int32& affectedRow, Int64& insertedId)
+   在 MySql.Data.MySqlClient.Driver.GetResult(Int32 statementId, Int32& affectedRows, Int64& insertedId)
+   在 MySql.Data.MySqlClient.Driver.NextResult(Int32 statementId, Boolean force)
+   在 MySql.Data.MySqlClient.MySqlDataReader.NextResult()
+   在 MySql.Data.MySqlClient.MySqlCommand.ExecuteReader(CommandBehavior behavior)
+   在 MySql.Data.MySqlClient.MySqlCommand.ExecuteDbDataReader(CommandBehavior behavior)
+   在 System.Data.Common.DbCommand.System.Data.IDbCommand.ExecuteReader(CommandBehavior behavior)
+   在 System.Data.Common.DbDataAdapter.FillInternal(DataSet dataset, DataTable[] datatables, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   在 System.Data.Common.DbDataAdapter.Fill(DataTable[] dataTables, Int32 startRecord, Int32 maxRecords, IDbCommand command, CommandBehavior behavior)
+   在 System.Data.Common.DbDataAdapter.Fill(DataTable dataTable)
+   在 Angel.DBHelper.MySqlHelpers.GetDataTable(String cmdText) 位置 f:\AngelProGramCode\AngelRM_MVC\AngelRM_MVC\Angel.DBHelper\MySqlHelpers.cs:行号 940
+异常捕捉：Angel.Service.BLLServiceMySql.Data.MySqlClient.MySqlException (0x80004005): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ') and 1=1  ORDER BY id desc limit 0,10' at line 1
+   在 MySql.Data.MySqlClient.MySqlStream.ReadPacket()
+   在 MySql.Data.MySqlClient.NativeDriver.GetResult(Int32& affectedRow, Int64& insertedId)
+   在 MySql.Data.MySqlClient.Driver.GetResult(Int32 statementId, Int32& affectedRows, Int64& insertedId)
+   在 MySql.Data.MySqlClient.Driver.NextResult(Int32 statementId, Boolean force)
+   在 MySql.Data.MySqlClient.MySqlDataReader.NextResult()
+   在 MySql.Data.MySqlClient.MySqlCommand.ExecuteReader(CommandBehavior behavior)
+   在 MySql.Data.MySqlClient.MySqlCommand.ExecuteDbDataReader(CommandBehavior behavior)
+   在 System.Data.Common.DbCommand.System.Data.IDbCommand.ExecuteReader(CommandBehavior behavior)
+   在 System.Data.Common.DbDataAdapter.FillInternal(DataSet dataset, DataTable[] datatables, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   在 System.Data.Common.DbDataAdapter.Fill(DataTable[] dataTables, Int32 startRecord, Int32 maxRecords, IDbCommand command, CommandBehavior behavior)
+   在 System.Data.Common.DbDataAdapter.Fill(DataTable dataTable)
+   在 Angel.DBHelper.MySqlHelpers.GetDataTable(String cmdText) 位置 f:\AngelProGramCode\AngelRM_MVC\AngelRM_MVC\Angel.DBHelper\MySqlHelpers.cs:行号 948
+   在 Angel.Service.BLLService.GetWhereDataTable(String key, String wheresql) 位置 f:\AngelProGramCode\AngelRM_MVC\AngelRM_MVC\Angel.Service\BLLService.cs:行号 1015
+InfoApiTime：2021-05-03 14:18:27,调用：Angel.ControllersApi/ControllerAPI/LoginApiController/Get()方法
+InfoApiTime：2021-05-03 14:18:29,调用：Angel.ControllersApi/ControllerApi/RoleApiController/GetRolemeul()方法
+MySql.Data.MySqlClient.MySqlException (0x80004005): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ') and 1=1' at line 1
+   在 MySql.Data.MySqlClient.MySqlStream.ReadPacket()
+   在 MySql.Data.MySqlClient.NativeDriver.GetResult(Int32& affectedRow, Int64& insertedId)
+   在 MySql.Data.MySqlClient.Driver.GetResult(Int32 statementId, Int32& affectedRows, Int64& insertedId)
+   在 MySql.Data.MySqlClient.Driver.NextResult(Int32 statementId, Boolean force)
+   在 MySql.Data.MySqlClient.MySqlDataReader.NextResult()
+   在 MySql.Data.MySqlClient.MySqlCommand.ExecuteReader(CommandBehavior behavior)
+   在 MySql.Data.MySqlClient.MySqlCommand.ExecuteDbDataReader(CommandBehavior behavior)
+   在 System.Data.Common.DbCommand.System.Data.IDbCommand.ExecuteReader(CommandBehavior behavior)
+   在 System.Data.Common.DbDataAdapter.FillInternal(DataSet dataset, DataTable[] datatables, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   在 System.Data.Common.DbDataAdapter.Fill(DataTable[] dataTables, Int32 startRecord, Int32 maxRecords, IDbCommand command, CommandBehavior behavior)
+   在 System.Data.Common.DbDataAdapter.Fill(DataTable dataTable)
+   在 Angel.DBHelper.MySqlHelpers.GetDataTable(String cmdText) 位置 f:\AngelProGramCode\AngelRM_MVC\AngelRM_MVC\Angel.DBHelper\MySqlHelpers.cs:行号 940
+异常捕捉：Angel.Service.BLLServiceMySql.Data.MySqlClient.MySqlException (0x80004005): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ') and 1=1' at line 1
+   在 MySql.Data.MySqlClient.MySqlStream.ReadPacket()
+   在 MySql.Data.MySqlClient.NativeDriver.GetResult(Int32& affectedRow, Int64& insertedId)
+   在 MySql.Data.MySqlClient.Driver.GetResult(Int32 statementId, Int32& affectedRows, Int64& insertedId)
+   在 MySql.Data.MySqlClient.Driver.NextResult(Int32 statementId, Boolean force)
+   在 MySql.Data.MySqlClient.MySqlDataReader.NextResult()
+   在 MySql.Data.MySqlClient.MySqlCommand.ExecuteReader(CommandBehavior behavior)
+   在 MySql.Data.MySqlClient.MySqlCommand.ExecuteDbDataReader(CommandBehavior behavior)
+   在 System.Data.Common.DbCommand.System.Data.IDbCommand.ExecuteReader(CommandBehavior behavior)
+   在 System.Data.Common.DbDataAdapter.FillInternal(DataSet dataset, DataTable[] datatables, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   在 System.Data.Common.DbDataAdapter.Fill(DataTable[] dataTables, Int32 startRecord, Int32 maxRecords, IDbCommand command, CommandBehavior behavior)
+   在 System.Data.Common.DbDataAdapter.Fill(DataTable dataTable)
+   在 Angel.DBHelper.MySqlHelpers.GetDataTable(String cmdText) 位置 f:\AngelProGramCode\AngelRM_MVC\AngelRM_MVC\Angel.DBHelper\MySqlHelpers.cs:行号 948
+   在 Angel.Service.BLLService.GetWhereDataTable(String key, String wheresql) 位置 f:\AngelProGramCode\AngelRM_MVC\AngelRM_MVC\Angel.Service\BLLService.cs:行号 1015
+MySql.Data.MySqlClient.MySqlException (0x80004005): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ') and 1=1  ORDER BY id desc limit 0,10' at line 1
+   在 MySql.Data.MySqlClient.MySqlStream.ReadPacket()
+   在 MySql.Data.MySqlClient.NativeDriver.GetResult(Int32& affectedRow, Int64& insertedId)
+   在 MySql.Data.MySqlClient.Driver.GetResult(Int32 statementId, Int32& affectedRows, Int64& insertedId)
+   在 MySql.Data.MySqlClient.Driver.NextResult(Int32 statementId, Boolean force)
+   在 MySql.Data.MySqlClient.MySqlDataReader.NextResult()
+   在 MySql.Data.MySqlClient.MySqlCommand.ExecuteReader(CommandBehavior behavior)
+   在 MySql.Data.MySqlClient.MySqlCommand.ExecuteDbDataReader(CommandBehavior behavior)
+   在 System.Data.Common.DbCommand.System.Data.IDbCommand.ExecuteReader(CommandBehavior behavior)
+   在 System.Data.Common.DbDataAdapter.FillInternal(DataSet dataset, DataTable[] datatables, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   在 System.Data.Common.DbDataAdapter.Fill(DataTable[] dataTables, Int32 startRecord, Int32 maxRecords, IDbCommand command, CommandBehavior behavior)
+   在 System.Data.Common.DbDataAdapter.Fill(DataTable dataTable)
+   在 Angel.DBHelper.MySqlHelpers.GetDataTable(String cmdText) 位置 f:\AngelProGramCode\AngelRM_MVC\AngelRM_MVC\Angel.DBHelper\MySqlHelpers.cs:行号 940
+异常捕捉：Angel.Service.BLLServiceMySql.Data.MySqlClient.MySqlException (0x80004005): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ') and 1=1  ORDER BY id desc limit 0,10' at line 1
+   在 MySql.Data.MySqlClient.MySqlStream.ReadPacket()
+   在 MySql.Data.MySqlClient.NativeDriver.GetResult(Int32& affectedRow, Int64& insertedId)
+   在 MySql.Data.MySqlClient.Driver.GetResult(Int32 statementId, Int32& affectedRows, Int64& insertedId)
+   在 MySql.Data.MySqlClient.Driver.NextResult(Int32 statementId, Boolean force)
+   在 MySql.Data.MySqlClient.MySqlDataReader.NextResult()
+   在 MySql.Data.MySqlClient.MySqlCommand.ExecuteReader(CommandBehavior behavior)
+   在 MySql.Data.MySqlClient.MySqlCommand.ExecuteDbDataReader(CommandBehavior behavior)
+   在 System.Data.Common.DbCommand.System.Data.IDbCommand.ExecuteReader(CommandBehavior behavior)
+   在 System.Data.Common.DbDataAdapter.FillInternal(DataSet dataset, DataTable[] datatables, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   在 System.Data.Common.DbDataAdapter.Fill(DataTable[] dataTables, Int32 startRecord, Int32 maxRecords, IDbCommand command, CommandBehavior behavior)
+   在 System.Data.Common.DbDataAdapter.Fill(DataTable dataTable)
+   在 Angel.DBHelper.MySqlHelpers.GetDataTable(String cmdText) 位置 f:\AngelProGramCode\AngelRM_MVC\AngelRM_MVC\Angel.DBHelper\MySqlHelpers.cs:行号 948
+   在 Angel.Service.BLLService.GetWhereDataTable(String key, String wheresql) 位置 f:\AngelProGramCode\AngelRM_MVC\AngelRM_MVC\Angel.Service\BLLService.cs:行号 1015
+MySql.Data.MySqlClient.MySqlException (0x80004005): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ') and 1=1' at line 1
+   在 MySql.Data.MySqlClient.MySqlStream.ReadPacket()
+   在 MySql.Data.MySqlClient.NativeDriver.GetResult(Int32& affectedRow, Int64& insertedId)
+   在 MySql.Data.MySqlClient.Driver.GetResult(Int32 statementId, Int32& affectedRows, Int64& insertedId)
+   在 MySql.Data.MySqlClient.Driver.NextResult(Int32 statementId, Boolean force)
+   在 MySql.Data.MySqlClient.MySqlDataReader.NextResult()
+   在 MySql.Data.MySqlClient.MySqlCommand.ExecuteReader(CommandBehavior behavior)
+   在 MySql.Data.MySqlClient.MySqlCommand.ExecuteDbDataReader(CommandBehavior behavior)
+   在 System.Data.Common.DbCommand.System.Data.IDbCommand.ExecuteReader(CommandBehavior behavior)
+   在 System.Data.Common.DbDataAdapter.FillInternal(DataSet dataset, DataTable[] datatables, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   在 System.Data.Common.DbDataAdapter.Fill(DataTable[] dataTables, Int32 startRecord, Int32 maxRecords, IDbCommand command, CommandBehavior behavior)
+   在 System.Data.Common.DbDataAdapter.Fill(DataTable dataTable)
+   在 Angel.DBHelper.MySqlHelpers.GetDataTable(String cmdText) 位置 f:\AngelProGramCode\AngelRM_MVC\AngelRM_MVC\Angel.DBHelper\MySqlHelpers.cs:行号 940
+异常捕捉：Angel.Service.BLLServiceMySql.Data.MySqlClient.MySqlException (0x80004005): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ') and 1=1' at line 1
+   在 MySql.Data.MySqlClient.MySqlStream.ReadPacket()
+   在 MySql.Data.MySqlClient.NativeDriver.GetResult(Int32& affectedRow, Int64& insertedId)
+   在 MySql.Data.MySqlClient.Driver.GetResult(Int32 statementId, Int32& affectedRows, Int64& insertedId)
+   在 MySql.Data.MySqlClient.Driver.NextResult(Int32 statementId, Boolean force)
+   在 MySql.Data.MySqlClient.MySqlDataReader.NextResult()
+   在 MySql.Data.MySqlClient.MySqlCommand.ExecuteReader(CommandBehavior behavior)
+   在 MySql.Data.MySqlClient.MySqlCommand.ExecuteDbDataReader(CommandBehavior behavior)
+   在 System.Data.Common.DbCommand.System.Data.IDbCommand.ExecuteReader(CommandBehavior behavior)
+   在 System.Data.Common.DbDataAdapter.FillInternal(DataSet dataset, DataTable[] datatables, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   在 System.Data.Common.DbDataAdapter.Fill(DataTable[] dataTables, Int32 startRecord, Int32 maxRecords, IDbCommand command, CommandBehavior behavior)
+   在 System.Data.Common.DbDataAdapter.Fill(DataTable dataTable)
+   在 Angel.DBHelper.MySqlHelpers.GetDataTable(String cmdText) 位置 f:\AngelProGramCode\AngelRM_MVC\AngelRM_MVC\Angel.DBHelper\MySqlHelpers.cs:行号 948
+   在 Angel.Service.BLLService.GetWhereDataTable(String key, String wheresql) 位置 f:\AngelProGramCode\AngelRM_MVC\AngelRM_MVC\Angel.Service\BLLService.cs:行号 1015
+MySql.Data.MySqlClient.MySqlException (0x80004005): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ') and 1=1  ORDER BY id desc limit 0,10' at line 1
+   在 MySql.Data.MySqlClient.MySqlStream.ReadPacket()
+   在 MySql.Data.MySqlClient.NativeDriver.GetResult(Int32& affectedRow, Int64& insertedId)
+   在 MySql.Data.MySqlClient.Driver.GetResult(Int32 statementId, Int32& affectedRows, Int64& insertedId)
+   在 MySql.Data.MySqlClient.Driver.NextResult(Int32 statementId, Boolean force)
+   在 MySql.Data.MySqlClient.MySqlDataReader.NextResult()
+   在 MySql.Data.MySqlClient.MySqlCommand.ExecuteReader(CommandBehavior behavior)
+   在 MySql.Data.MySqlClient.MySqlCommand.ExecuteDbDataReader(CommandBehavior behavior)
+   在 System.Data.Common.DbCommand.System.Data.IDbCommand.ExecuteReader(CommandBehavior behavior)
+   在 System.Data.Common.DbDataAdapter.FillInternal(DataSet dataset, DataTable[] datatables, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   在 System.Data.Common.DbDataAdapter.Fill(DataTable[] dataTables, Int32 startRecord, Int32 maxRecords, IDbCommand command, CommandBehavior behavior)
+   在 System.Data.Common.DbDataAdapter.Fill(DataTable dataTable)
+   在 Angel.DBHelper.MySqlHelpers.GetDataTable(String cmdText) 位置 f:\AngelProGramCode\AngelRM_MVC\AngelRM_MVC\Angel.DBHelper\MySqlHelpers.cs:行号 940
+异常捕捉：Angel.Service.BLLServiceMySql.Data.MySqlClient.MySqlException (0x80004005): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ') and 1=1  ORDER BY id desc limit 0,10' at line 1
+   在 MySql.Data.MySqlClient.MySqlStream.ReadPacket()
+   在 MySql.Data.MySqlClient.NativeDriver.GetResult(Int32& affectedRow, Int64& insertedId)
+   在 MySql.Data.MySqlClient.Driver.GetResult(Int32 statementId, Int32& affectedRows, Int64& insertedId)
+   在 MySql.Data.MySqlClient.Driver.NextResult(Int32 statementId, Boolean force)
+   在 MySql.Data.MySqlClient.MySqlDataReader.NextResult()
+   在 MySql.Data.MySqlClient.MySqlCommand.ExecuteReader(CommandBehavior behavior)
+   在 MySql.Data.MySqlClient.MySqlCommand.ExecuteDbDataReader(CommandBehavior behavior)
+   在 System.Data.Common.DbCommand.System.Data.IDbCommand.ExecuteReader(CommandBehavior behavior)
+   在 System.Data.Common.DbDataAdapter.FillInternal(DataSet dataset, DataTable[] datatables, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   在 System.Data.Common.DbDataAdapter.Fill(DataTable[] dataTables, Int32 startRecord, Int32 maxRecords, IDbCommand command, CommandBehavior behavior)
+   在 System.Data.Common.DbDataAdapter.Fill(DataTable dataTable)
+   在 Angel.DBHelper.MySqlHelpers.GetDataTable(String cmdText) 位置 f:\AngelProGramCode\AngelRM_MVC\AngelRM_MVC\Angel.DBHelper\MySqlHelpers.cs:行号 948
+   在 Angel.Service.BLLService.GetWhereDataTable(String key, String wheresql) 位置 f:\AngelProGramCode\AngelRM_MVC\AngelRM_MVC\Angel.Service\BLLService.cs:行号 1015
+MySql.Data.MySqlClient.MySqlException (0x80004005): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ') and 1=1' at line 1
+   在 MySql.Data.MySqlClient.MySqlStream.ReadPacket()
+   在 MySql.Data.MySqlClient.NativeDriver.GetResult(Int32& affectedRow, Int64& insertedId)
+   在 MySql.Data.MySqlClient.Driver.GetResult(Int32 statementId, Int32& affectedRows, Int64& insertedId)
+   在 MySql.Data.MySqlClient.Driver.NextResult(Int32 statementId, Boolean force)
+   在 MySql.Data.MySqlClient.MySqlDataReader.NextResult()
+   在 MySql.Data.MySqlClient.MySqlCommand.ExecuteReader(CommandBehavior behavior)
+   在 MySql.Data.MySqlClient.MySqlCommand.ExecuteDbDataReader(CommandBehavior behavior)
+   在 System.Data.Common.DbCommand.System.Data.IDbCommand.ExecuteReader(CommandBehavior behavior)
+   在 System.Data.Common.DbDataAdapter.FillInternal(DataSet dataset, DataTable[] datatables, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   在 System.Data.Common.DbDataAdapter.Fill(DataTable[] dataTables, Int32 startRecord, Int32 maxRecords, IDbCommand command, CommandBehavior behavior)
+   在 System.Data.Common.DbDataAdapter.Fill(DataTable dataTable)
+   在 Angel.DBHelper.MySqlHelpers.GetDataTable(String cmdText) 位置 f:\AngelProGramCode\AngelRM_MVC\AngelRM_MVC\Angel.DBHelper\MySqlHelpers.cs:行号 940
+异常捕捉：Angel.Service.BLLServiceMySql.Data.MySqlClient.MySqlException (0x80004005): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ') and 1=1' at line 1
+   在 MySql.Data.MySqlClient.MySqlStream.ReadPacket()
+   在 MySql.Data.MySqlClient.NativeDriver.GetResult(Int32& affectedRow, Int64& insertedId)
+   在 MySql.Data.MySqlClient.Driver.GetResult(Int32 statementId, Int32& affectedRows, Int64& insertedId)
+   在 MySql.Data.MySqlClient.Driver.NextResult(Int32 statementId, Boolean force)
+   在 MySql.Data.MySqlClient.MySqlDataReader.NextResult()
+   在 MySql.Data.MySqlClient.MySqlCommand.ExecuteReader(CommandBehavior behavior)
+   在 MySql.Data.MySqlClient.MySqlCommand.ExecuteDbDataReader(CommandBehavior behavior)
+   在 System.Data.Common.DbCommand.System.Data.IDbCommand.ExecuteReader(CommandBehavior behavior)
+   在 System.Data.Common.DbDataAdapter.FillInternal(DataSet dataset, DataTable[] datatables, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   在 System.Data.Common.DbDataAdapter.Fill(DataTable[] dataTables, Int32 startRecord, Int32 maxRecords, IDbCommand command, CommandBehavior behavior)
+   在 System.Data.Common.DbDataAdapter.Fill(DataTable dataTable)
+   在 Angel.DBHelper.MySqlHelpers.GetDataTable(String cmdText) 位置 f:\AngelProGramCode\AngelRM_MVC\AngelRM_MVC\Angel.DBHelper\MySqlHelpers.cs:行号 948
+   在 Angel.Service.BLLService.GetWhereDataTable(String key, String wheresql) 位置 f:\AngelProGramCode\AngelRM_MVC\AngelRM_MVC\Angel.Service\BLLService.cs:行号 1015
+MySql.Data.MySqlClient.MySqlException (0x80004005): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ') and 1=1  ORDER BY id desc limit 0,10' at line 1
+   在 MySql.Data.MySqlClient.MySqlStream.ReadPacket()
+   在 MySql.Data.MySqlClient.NativeDriver.GetResult(Int32& affectedRow, Int64& insertedId)
+   在 MySql.Data.MySqlClient.Driver.GetResult(Int32 statementId, Int32& affectedRows, Int64& insertedId)
+   在 MySql.Data.MySqlClient.Driver.NextResult(Int32 statementId, Boolean force)
+   在 MySql.Data.MySqlClient.MySqlDataReader.NextResult()
+   在 MySql.Data.MySqlClient.MySqlCommand.ExecuteReader(CommandBehavior behavior)
+   在 MySql.Data.MySqlClient.MySqlCommand.ExecuteDbDataReader(CommandBehavior behavior)
+   在 System.Data.Common.DbCommand.System.Data.IDbCommand.ExecuteReader(CommandBehavior behavior)
+   在 System.Data.Common.DbDataAdapter.FillInternal(DataSet dataset, DataTable[] datatables, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   在 System.Data.Common.DbDataAdapter.Fill(DataTable[] dataTables, Int32 startRecord, Int32 maxRecords, IDbCommand command, CommandBehavior behavior)
+   在 System.Data.Common.DbDataAdapter.Fill(DataTable dataTable)
+   在 Angel.DBHelper.MySqlHelpers.GetDataTable(String cmdText) 位置 f:\AngelProGramCode\AngelRM_MVC\AngelRM_MVC\Angel.DBHelper\MySqlHelpers.cs:行号 940
+异常捕捉：Angel.Service.BLLServiceMySql.Data.MySqlClient.MySqlException (0x80004005): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ') and 1=1  ORDER BY id desc limit 0,10' at line 1
+   在 MySql.Data.MySqlClient.MySqlStream.ReadPacket()
+   在 MySql.Data.MySqlClient.NativeDriver.GetResult(Int32& affectedRow, Int64& insertedId)
+   在 MySql.Data.MySqlClient.Driver.GetResult(Int32 statementId, Int32& affectedRows, Int64& insertedId)
+   在 MySql.Data.MySqlClient.Driver.NextResult(Int32 statementId, Boolean force)
+   在 MySql.Data.MySqlClient.MySqlDataReader.NextResult()
+   在 MySql.Data.MySqlClient.MySqlCommand.ExecuteReader(CommandBehavior behavior)
+   在 MySql.Data.MySqlClient.MySqlCommand.ExecuteDbDataReader(CommandBehavior behavior)
+   在 System.Data.Common.DbCommand.System.Data.IDbCommand.ExecuteReader(CommandBehavior behavior)
+   在 System.Data.Common.DbDataAdapter.FillInternal(DataSet dataset, DataTable[] datatables, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   在 System.Data.Common.DbDataAdapter.Fill(DataTable[] dataTables, Int32 startRecord, Int32 maxRecords, IDbCommand command, CommandBehavior behavior)
+   在 System.Data.Common.DbDataAdapter.Fill(DataTable dataTable)
+   在 Angel.DBHelper.MySqlHelpers.GetDataTable(String cmdText) 位置 f:\AngelProGramCode\AngelRM_MVC\AngelRM_MVC\Angel.DBHelper\MySqlHelpers.cs:行号 948
+   在 Angel.Service.BLLService.GetWhereDataTable(String key, String wheresql) 位置 f:\AngelProGramCode\AngelRM_MVC\AngelRM_MVC\Angel.Service\BLLService.cs:行号 1015
+MySql.Data.MySqlClient.MySqlException (0x80004005): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ') and 1=1' at line 1
+   在 MySql.Data.MySqlClient.MySqlStream.ReadPacket()
+   在 MySql.Data.MySqlClient.NativeDriver.GetResult(Int32& affectedRow, Int64& insertedId)
+   在 MySql.Data.MySqlClient.Driver.GetResult(Int32 statementId, Int32& affectedRows, Int64& insertedId)
+   在 MySql.Data.MySqlClient.Driver.NextResult(Int32 statementId, Boolean force)
+   在 MySql.Data.MySqlClient.MySqlDataReader.NextResult()
+   在 MySql.Data.MySqlClient.MySqlCommand.ExecuteReader(CommandBehavior behavior)
+   在 MySql.Data.MySqlClient.MySqlCommand.ExecuteDbDataReader(CommandBehavior behavior)
+   在 System.Data.Common.DbCommand.System.Data.IDbCommand.ExecuteReader(CommandBehavior behavior)
+   在 System.Data.Common.DbDataAdapter.FillInternal(DataSet dataset, DataTable[] datatables, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   在 System.Data.Common.DbDataAdapter.Fill(DataTable[] dataTables, Int32 startRecord, Int32 maxRecords, IDbCommand command, CommandBehavior behavior)
+   在 System.Data.Common.DbDataAdapter.Fill(DataTable dataTable)
+   在 Angel.DBHelper.MySqlHelpers.GetDataTable(String cmdText) 位置 f:\AngelProGramCode\AngelRM_MVC\AngelRM_MVC\Angel.DBHelper\MySqlHelpers.cs:行号 940
+异常捕捉：Angel.Service.BLLServiceMySql.Data.MySqlClient.MySqlException (0x80004005): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ') and 1=1' at line 1
+   在 MySql.Data.MySqlClient.MySqlStream.ReadPacket()
+   在 MySql.Data.MySqlClient.NativeDriver.GetResult(Int32& affectedRow, Int64& insertedId)
+   在 MySql.Data.MySqlClient.Driver.GetResult(Int32 statementId, Int32& affectedRows, Int64& insertedId)
+   在 MySql.Data.MySqlClient.Driver.NextResult(Int32 statementId, Boolean force)
+   在 MySql.Data.MySqlClient.MySqlDataReader.NextResult()
+   在 MySql.Data.MySqlClient.MySqlCommand.ExecuteReader(CommandBehavior behavior)
+   在 MySql.Data.MySqlClient.MySqlCommand.ExecuteDbDataReader(CommandBehavior behavior)
+   在 System.Data.Common.DbCommand.System.Data.IDbCommand.ExecuteReader(CommandBehavior behavior)
+   在 System.Data.Common.DbDataAdapter.FillInternal(DataSet dataset, DataTable[] datatables, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   在 System.Data.Common.DbDataAdapter.Fill(DataTable[] dataTables, Int32 startRecord, Int32 maxRecords, IDbCommand command, CommandBehavior behavior)
+   在 System.Data.Common.DbDataAdapter.Fill(DataTable dataTable)
+   在 Angel.DBHelper.MySqlHelpers.GetDataTable(String cmdText) 位置 f:\AngelProGramCode\AngelRM_MVC\AngelRM_MVC\Angel.DBHelper\MySqlHelpers.cs:行号 948
+   在 Angel.Service.BLLService.GetWhereDataTable(String key, String wheresql) 位置 f:\AngelProGramCode\AngelRM_MVC\AngelRM_MVC\Angel.Service\BLLService.cs:行号 1015
+MySql.Data.MySqlClient.MySqlException (0x80004005): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ') and 1=1  ORDER BY id desc limit 0,10' at line 1
+   在 MySql.Data.MySqlClient.MySqlStream.ReadPacket()
+   在 MySql.Data.MySqlClient.NativeDriver.GetResult(Int32& affectedRow, Int64& insertedId)
+   在 MySql.Data.MySqlClient.Driver.GetResult(Int32 statementId, Int32& affectedRows, Int64& insertedId)
+   在 MySql.Data.MySqlClient.Driver.NextResult(Int32 statementId, Boolean force)
+   在 MySql.Data.MySqlClient.MySqlDataReader.NextResult()
+   在 MySql.Data.MySqlClient.MySqlCommand.ExecuteReader(CommandBehavior behavior)
+   在 MySql.Data.MySqlClient.MySqlCommand.ExecuteDbDataReader(CommandBehavior behavior)
+   在 System.Data.Common.DbCommand.System.Data.IDbCommand.ExecuteReader(CommandBehavior behavior)
+   在 System.Data.Common.DbDataAdapter.FillInternal(DataSet dataset, DataTable[] datatables, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   在 System.Data.Common.DbDataAdapter.Fill(DataTable[] dataTables, Int32 startRecord, Int32 maxRecords, IDbCommand command, CommandBehavior behavior)
+   在 System.Data.Common.DbDataAdapter.Fill(DataTable dataTable)
+   在 Angel.DBHelper.MySqlHelpers.GetDataTable(String cmdText) 位置 f:\AngelProGramCode\AngelRM_MVC\AngelRM_MVC\Angel.DBHelper\MySqlHelpers.cs:行号 940
+异常捕捉：Angel.Service.BLLServiceMySql.Data.MySqlClient.MySqlException (0x80004005): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ') and 1=1  ORDER BY id desc limit 0,10' at line 1
+   在 MySql.Data.MySqlClient.MySqlStream.ReadPacket()
+   在 MySql.Data.MySqlClient.NativeDriver.GetResult(Int32& affectedRow, Int64& insertedId)
+   在 MySql.Data.MySqlClient.Driver.GetResult(Int32 statementId, Int32& affectedRows, Int64& insertedId)
+   在 MySql.Data.MySqlClient.Driver.NextResult(Int32 statementId, Boolean force)
+   在 MySql.Data.MySqlClient.MySqlDataReader.NextResult()
+   在 MySql.Data.MySqlClient.MySqlCommand.ExecuteReader(CommandBehavior behavior)
+   在 MySql.Data.MySqlClient.MySqlCommand.ExecuteDbDataReader(CommandBehavior behavior)
+   在 System.Data.Common.DbCommand.System.Data.IDbCommand.ExecuteReader(CommandBehavior behavior)
+   在 System.Data.Common.DbDataAdapter.FillInternal(DataSet dataset, DataTable[] datatables, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   在 System.Data.Common.DbDataAdapter.Fill(DataTable[] dataTables, Int32 startRecord, Int32 maxRecords, IDbCommand command, CommandBehavior behavior)
+   在 System.Data.Common.DbDataAdapter.Fill(DataTable dataTable)
+   在 Angel.DBHelper.MySqlHelpers.GetDataTable(String cmdText) 位置 f:\AngelProGramCode\AngelRM_MVC\AngelRM_MVC\Angel.DBHelper\MySqlHelpers.cs:行号 948
+   在 Angel.Service.BLLService.GetWhereDataTable(String key, String wheresql) 位置 f:\AngelProGramCode\AngelRM_MVC\AngelRM_MVC\Angel.Service\BLLService.cs:行号 1015
+InfoApiTime：2021-05-03 14:21:20,调用：Angel.ControllersApi/ControllerApi/RoleApiController/GetRolemeul()方法
+InfoApiTime：2021-05-03 14:21:21,调用：Angel.ControllersApi/ControllerApi/RoleApiController/GetRolemeul()方法
+InfoApiTime：2021-05-03 14:21:21,调用：Angel.ControllersApi/ControllerApi/RoleApiController/GetRolemeul()方法
+InfoApiTime：2021-05-03 14:21:21,调用：Angel.ControllersApi/ControllerApi/RoleApiController/GetRolemeul()方法
+InfoApiTime：2021-05-03 15:34:10,调用：Angel.ControllersApi/ControllerAPI/LoginApiController/Get()方法
+InfoApiTime：2021-05-03 15:34:16,调用：Angel.ControllersApi/ControllerApi/RoleApiController/GetRolemeul()方法
+InfoApiTime：2021-05-03 15:35:19,调用：Angel.ControllersApi/ControllerApi/DictionaryApiController/Post([FromBody]string value)方法
+InfoApiTime：2021-05-03 15:35:40,调用：Angel.ControllersApi/ControllerApi/DictionaryApiController/Post([FromBody]string value)方法
+InfoApiTime：2021-05-03 15:52:19,调用：Angel.ControllersApi/ControllerAPI/LoginApiController/Get()方法
+InfoApiTime：2021-05-03 15:52:25,调用：Angel.ControllersApi/ControllerApi/RoleApiController/GetRolemeul()方法
+InfoApiTime：2021-05-03 15:58:38,调用：Angel.ControllersApi/ControllerAPI/LoginApiController/Get()方法
+InfoApiTime：2021-05-03 15:58:44,调用：Angel.ControllersApi/ControllerApi/RoleApiController/GetRolemeul()方法
+InfoApiTime：2021-05-03 16:05:02,调用：Angel.ControllersApi/ControllerAPI/LoginApiController/Get()方法
+InfoApiTime：2021-05-03 16:05:08,调用：Angel.ControllersApi/ControllerAPI/LoginApiController/Get()方法
+InfoApiTime：2021-05-03 16:05:13,调用：Angel.ControllersApi/ControllerApi/RoleApiController/GetRolemeul()方法
+InfoApiTime：2021-05-03 16:07:38,调用：Angel.ControllersApi/ControllerAPI/LoginApiController/Get()方法
+InfoApiTime：2021-05-03 16:07:43,调用：Angel.ControllersApi/ControllerApi/RoleApiController/GetRolemeul()方法
+InfoApiTime：2021-05-03 16:08:04,调用：Angel.ControllersApi/ControllerApi/DictionaryApiController/Post([FromBody]string value)方法
+InfoApiTime：2021-05-03 16:08:14,调用：Angel.ControllersApi/ControllerApi/DictionaryApiController/Post([FromBody]string value)方法
+InfoApiTime：2021-05-03 16:09:05,调用：Angel.ControllersApi/ControllerApi/DictionaryApiController/Post([FromBody]string value)方法
+InfoApiTime：2021-05-03 16:09:20,调用：Angel.ControllersApi/ControllerApi/DictionaryApiController/Post([FromBody]string value)方法
+InfoApiTime：2021-05-03 16:09:52,调用：Angel.ControllersApi/ControllerApi/DictionaryApiController/Post([FromBody]string value)方法
+InfoApiTime：2021-05-03 16:10:07,调用：Angel.ControllersApi/ControllerApi/DictionaryApiController/Post([FromBody]string value)方法
+InfoApiTime：2021-05-03 16:10:25,调用：Angel.ControllersApi/ControllerApi/DictionaryApiController/Post([FromBody]string value)方法
+InfoApiTime：2021-05-03 16:10:36,调用：Angel.ControllersApi/ControllerApi/MenuApiController/Get()方法
+InfoApiTime：2021-05-03 16:10:54,调用：Angel.ControllersApi/ControllerApi/MenuApiController/Post([FromBody]string value)方法
+InfoApiTime：2021-05-03 16:10:54,调用：Angel.ControllersApi/ControllerApi/MenuApiController/Get()方法
+InfoApiTime：2021-05-03 16:11:27,调用：Angel.ControllersApi/ControllerApi/MenuApiController/Post([FromBody]string value)方法
+InfoApiTime：2021-05-03 16:11:28,调用：Angel.ControllersApi/ControllerApi/MenuApiController/Get()方法
+InfoApiTime：2021-05-03 16:11:33,调用：Angel.ControllersApi/ControllerApi/RoleApiController/GetRolemeul()方法
+InfoApiTime：2021-05-03 16:22:19,调用：Angel.ControllersApi/ControllerApi/DictionaryApiController/Post([FromBody]string value)方法
+InfoApiTime：2021-05-03 16:22:19,调用：Angel.ControllersApi/ControllerApi/DictionaryApiController/Post([FromBody]string value)方法
+InfoApiTime：2021-05-03 16:22:19,调用：Angel.ControllersApi/ControllerApi/DictionaryApiController/Post([FromBody]string value)方法
+InfoApiTime：2021-05-03 16:22:29,调用：Angel.ControllersApi/ControllerApi/DictionaryApiController/Post([FromBody]string value)方法
+InfoApiTime：2021-05-03 16:22:36,调用：Angel.ControllersApi/ControllerApi/DictionaryApiController/Post([FromBody]string value)方法
+InfoApiTime：2021-05-03 16:22:38,调用：Angel.ControllersApi/ControllerApi/DictionaryApiController/Post([FromBody]string value)方法
+InfoApiTime：2021-05-03 16:22:40,调用：Angel.ControllersApi/ControllerApi/DictionaryApiController/Post([FromBody]string value)方法
+InfoApiTime：2021-05-03 16:22:41,调用：Angel.ControllersApi/ControllerApi/DictionaryApiController/Post([FromBody]string value)方法
+InfoApiTime：2021-05-03 18:56:34,调用：Angel.ControllersApi/ControllerApi/RoleApiController/GetRolemeul()方法
+InfoApiTime：2021-05-03 18:57:30,调用：Angel.ControllersApi/ControllerApi/DictionaryApiController/Post([FromBody]string value)方法
+InfoApiTime：2021-05-03 18:57:30,调用：Angel.ControllersApi/ControllerApi/DictionaryApiController/Post([FromBody]string value)方法
+InfoApiTime：2021-05-03 18:57:35,调用：Angel.ControllersApi/ControllerApi/DictionaryApiController/Post([FromBody]string value)方法
+InfoApiTime：2021-05-03 18:57:51,调用：Angel.ControllersApi/ControllerApi/DictionaryApiController/Post([FromBody]string value)方法
+InfoApiTime：2021-05-03 18:57:51,调用：Angel.ControllersApi/ControllerApi/DictionaryApiController/Post([FromBody]string value)方法
+InfoApiTime：2021-05-03 18:57:51,调用：Angel.ControllersApi/ControllerApi/DictionaryApiController/Post([FromBody]string value)方法
+InfoApiTime：2021-05-03 18:57:51,调用：Angel.ControllersApi/ControllerApi/DictionaryApiController/Post([FromBody]string value)方法
+InfoApiTime：2021-05-03 18:57:51,调用：Angel.ControllersApi/ControllerApi/DictionaryApiController/Post([FromBody]string value)方法
+InfoApiTime：2021-05-03 18:57:51,调用：Angel.ControllersApi/ControllerApi/DictionaryApiController/Post([FromBody]string value)方法
+InfoApiTime：2021-05-03 18:58:01,调用：Angel.ControllersApi/ControllerApi/DictionaryApiController/Post([FromBody]string value)方法
+InfoApiTime：2021-05-03 18:58:15,调用：Angel.ControllersApi/ControllerApi/DictionaryApiController/Post([FromBody]string value)方法
+InfoApiTime：2021-05-03 18:58:15,调用：Angel.ControllersApi/ControllerApi/DictionaryApiController/Post([FromBody]string value)方法
+InfoApiTime：2021-05-03 18:58:15,调用：Angel.ControllersApi/ControllerApi/DictionaryApiController/Post([FromBody]string value)方法
+InfoApiTime：2021-05-03 18:58:15,调用：Angel.ControllersApi/ControllerApi/DictionaryApiController/Post([FromBody]string value)方法
+InfoApiTime：2021-05-03 18:58:24,调用：Angel.ControllersApi/ControllerApi/DictionaryApiController/Post([FromBody]string value)方法
+InfoApiTime：2021-05-03 19:00:44,调用：Angel.ControllersApi/ControllerApi/DictionaryApiController/Post([FromBody]string value)方法
+InfoApiTime：2021-05-03 19:00:54,调用：Angel.ControllersApi/ControllerApi/RoleApiController/Get()方法
+InfoApiTime：2021-05-03 19:00:57,调用：Angel.ControllersApi/ControllerApi/RoomApiController/Get()方法
+InfoApiTime：2021-05-03 19:00:58,调用：Angel.ControllersApi/ControllerApi/RoomApiController/GetD()方法
+InfoApiTime：2021-05-03 19:01:02,调用：Angel.ControllersApi/ControllerApi/MenuApiController/Get()方法
+InfoApiTime：2021-05-03 19:01:12,调用：Angel.ControllersApi/ControllerApi/DownloadListManagerApiController/Get()方法
+InfoApiTime：2021-05-03 19:01:18,调用：Angel.ControllersApi/ControllerApi/RoleApiController/Get()方法
+InfoApiTime：2021-05-03 19:01:18,调用：Angel.ControllersApi/ControllerApi/UserApiController/Get()方法
+InfoApiTime：2021-05-03 19:01:31,调用：Angel.ControllersApi/ControllerApi/LoginlogApiController/PostList()方法
+InfoApiTime：2021-05-03 19:04:52,调用：Angel.ControllersApi/ControllerApi/MenuApiController/Get()方法
+InfoApiTime：2021-05-03 19:29:25,调用：Angel.ControllersApi/ControllerApi/MenuApiController/Getroleid()方法
+InfoApiTime：2021-05-03 19:29:25,调用：Angel.ControllersApi/ControllerApi/MenuApiController/Get()方法
+InfoApiTime：2021-05-03 19:29:34,调用：Angel.ControllersApi/ControllerApi/RoleApiController/Post([FromBody]string value)方法
+InfoApiTime：2021-05-03 19:29:34,调用：Angel.ControllersApi/ControllerApi/RoleApiController/Post([FromBody]string value)方法
+InfoApiTime：2021-05-03 19:29:34,调用：Angel.ControllersApi/ControllerApi/RoleApiController/Post([FromBody]string value)方法
+InfoApiTime：2021-05-03 19:29:36,调用：Angel.ControllersApi/ControllerApi/RoleApiController/Get()方法
+InfoApiTime：2021-05-03 19:29:37,调用：Angel.ControllersApi/ControllerApi/RoleApiController/GetRolemeul()方法
+InfoApiTime：2021-05-03 19:29:41,调用：Angel.ControllersApi/ControllerApi/RoleApiController/GetRolemeul()方法
+InfoApiTime：2021-05-03 19:29:50,调用：Angel.ControllersApi/ControllerApi/RoleApiController/GetRolemeul()方法
+InfoApiTime：2021-05-03 19:35:47,调用：Angel.ControllersApi/ControllerApi/RoleApiController/GetRolemeul()方法
+InfoApiTime：2021-05-03 19:35:52,调用：Angel.ControllersApi/ControllerApi/RoleApiController/Get()方法
+InfoApiTime：2021-05-03 19:35:53,调用：Angel.ControllersApi/ControllerApi/RoomApiController/Get()方法
+InfoApiTime：2021-05-03 19:35:53,调用：Angel.ControllersApi/ControllerApi/RoomApiController/GetD()方法
+InfoApiTime：2021-05-03 19:35:53,调用：Angel.ControllersApi/ControllerApi/RoleApiController/Get()方法
+InfoApiTime：2021-05-03 19:35:53,调用：Angel.ControllersApi/ControllerApi/UserApiController/Get()方法
+InfoApiTime：2021-05-03 19:35:55,调用：Angel.ControllersApi/ControllerApi/DownloadListManagerApiController/Get()方法
+InfoApiTime：2021-05-03 19:35:56,调用：Angel.ControllersApi/ControllerApi/LoginlogApiController/PostList()方法
+InfoApiTime：2021-05-03 19:57:37,调用：Angel.ControllersApi/ControllerAPI/LoginApiController/Get()方法
+InfoApiTime：2021-05-03 19:57:43,调用：Angel.ControllersApi/ControllerApi/RoleApiController/GetRolemeul()方法
+InfoApiTime：2021-05-03 20:07:09,调用：Angel.ControllersApi/ControllerApi/LoginlogApiController/PostList()方法
+InfoApiTime：2021-05-03 20:09:57,调用：Angel.ControllersApi/ControllerApi/LoginlogApiController/PostList()方法
+InfoApiTime：2021-05-03 20:10:07,调用：Angel.ControllersApi/ControllerApi/MenuApiController/Get()方法
+InfoApiTime：2021-05-03 20:10:43,调用：Angel.ControllersApi/ControllerApi/MenuApiController/Post([FromBody]string value)方法
+InfoApiTime：2021-05-03 20:10:45,调用：Angel.ControllersApi/ControllerApi/MenuApiController/Get()方法
+InfoApiTime：2021-05-03 20:43:00,调用：Angel.ControllersApi/ControllerApi/RoleApiController/GetRolemeul()方法
+InfoApiTime：2021-05-03 21:51:01,调用：Angel.ControllersApi/ControllerApi/MenuApiController/Get()方法
+InfoApiTime：2021-05-03 21:52:32,调用：Angel.ControllersApi/ControllerApi/MenuApiController/Post([FromBody]string value)方法
+InfoApiTime：2021-05-03 21:52:34,调用：Angel.ControllersApi/ControllerApi/MenuApiController/Get()方法
+InfoApiTime：2021-05-03 21:53:29,调用：Angel.ControllersApi/ControllerApi/MenuApiController/Post([FromBody]string value)方法
+InfoApiTime：2021-05-03 21:53:31,调用：Angel.ControllersApi/ControllerApi/MenuApiController/Get()方法
+InfoApiTime：2021-05-03 21:57:03,调用：Angel.ControllersApi/ControllerApi/MenuApiController/Post([FromBody]string value)方法
+InfoApiTime：2021-05-03 21:57:05,调用：Angel.ControllersApi/ControllerApi/MenuApiController/Get()方法
+InfoApiTime：2021-05-03 21:58:19,调用：Angel.ControllersApi/ControllerApi/MenuApiController/Post([FromBody]string value)方法
+InfoApiTime：2021-05-03 21:58:20,调用：Angel.ControllersApi/ControllerApi/MenuApiController/Get()方法
+InfoApiTime：2021-05-03 21:58:35,调用：Angel.ControllersApi/ControllerApi/RoleApiController/Get()方法
+InfoApiTime：2021-05-03 21:58:36,调用：Angel.ControllersApi/ControllerApi/UserApiController/Get()方法
+InfoApiTime：2021-05-03 21:59:56,调用：Angel.ControllersApi/ControllerApi/MenuApiController/Post([FromBody]string value)方法
+InfoApiTime：2021-05-03 21:59:58,调用：Angel.ControllersApi/ControllerApi/MenuApiController/Get()方法
+InfoApiTime：2021-05-03 22:01:07,调用：Angel.ControllersApi/ControllerApi/MenuApiController/Post([FromBody]string value)方法
+InfoApiTime：2021-05-03 22:01:10,调用：Angel.ControllersApi/ControllerApi/MenuApiController/Get()方法
+InfoApiTime：2021-05-03 22:02:24,调用：Angel.ControllersApi/ControllerApi/MenuApiController/Post([FromBody]string value)方法
+InfoApiTime：2021-05-03 22:02:26,调用：Angel.ControllersApi/ControllerApi/MenuApiController/Get()方法
+InfoApiTime：2021-05-03 22:02:59,调用：Angel.ControllersApi/ControllerApi/MenuApiController/Post([FromBody]string value)方法
+InfoApiTime：2021-05-03 22:03:00,调用：Angel.ControllersApi/ControllerApi/MenuApiController/Get()方法
+InfoApiTime：2021-05-03 22:04:46,调用：Angel.ControllersApi/ControllerApi/MenuApiController/Post([FromBody]string value)方法
+InfoApiTime：2021-05-03 22:04:47,调用：Angel.ControllersApi/ControllerApi/MenuApiController/Get()方法
+InfoApiTime：2021-05-03 22:05:24,调用：Angel.ControllersApi/ControllerApi/MenuApiController/Post([FromBody]string value)方法
+InfoApiTime：2021-05-03 22:05:25,调用：Angel.ControllersApi/ControllerApi/MenuApiController/Get()方法
+InfoApiTime：2021-05-03 22:05:59,调用：Angel.ControllersApi/ControllerApi/MenuApiController/Post([FromBody]string value)方法
+InfoApiTime：2021-05-03 22:06:01,调用：Angel.ControllersApi/ControllerApi/MenuApiController/Get()方法
+InfoApiTime：2021-05-03 22:06:57,调用：Angel.ControllersApi/ControllerApi/MenuApiController/Post([FromBody]string value)方法
+InfoApiTime：2021-05-03 22:06:59,调用：Angel.ControllersApi/ControllerApi/MenuApiController/Get()方法
+InfoApiTime：2021-05-03 22:14:50,调用：Angel.ControllersApi/ControllerApi/RoleApiController/GetRolemeul()方法
+InfoApiTime：2021-05-03 22:14:53,调用：Angel.ControllersApi/ControllerApi/MenuApiController/Get()方法
+InfoApiTime：2021-05-03 22:15:27,调用：Angel.ControllersApi/ControllerApi/MenuApiController/Post([FromBody]string value)方法
+InfoApiTime：2021-05-03 22:15:28,调用：Angel.ControllersApi/ControllerApi/MenuApiController/Get()方法
+InfoApiTime：2021-05-03 22:16:08,调用：Angel.ControllersApi/ControllerApi/MenuApiController/Post([FromBody]string value)方法
+InfoApiTime：2021-05-03 22:16:10,调用：Angel.ControllersApi/ControllerApi/MenuApiController/Get()方法
+InfoApiTime：2021-05-03 22:16:47,调用：Angel.ControllersApi/ControllerApi/RoleApiController/GetRolemeul()方法
+InfoApiTime：2021-05-03 22:16:50,调用：Angel.ControllersApi/ControllerApi/MenuApiController/Get()方法
+InfoApiTime：2021-05-03 22:18:21,调用：Angel.ControllersApi/ControllerAPI/LoginApiController/Get()方法
+InfoApiTime：2021-05-03 22:18:26,调用：Angel.ControllersApi/ControllerApi/RoleApiController/GetRolemeul()方法
+InfoApiTime：2021-05-03 22:18:41,调用：Angel.ControllersApi/ControllerApi/MenuApiController/Get()方法
+InfoApiTime：2021-05-03 22:19:05,调用：Angel.ControllersApi/ControllerApi/MenuApiController/Post([FromBody]string value)方法
+InfoApiTime：2021-05-03 22:19:07,调用：Angel.ControllersApi/ControllerApi/MenuApiController/Get()方法
+InfoApiTime：2021-05-03 22:19:20,调用：Angel.ControllersApi/ControllerApi/MenuApiController/Post([FromBody]string value)方法
+InfoApiTime：2021-05-03 22:19:22,调用：Angel.ControllersApi/ControllerApi/MenuApiController/Get()方法
+InfoApiTime：2021-05-03 22:19:35,调用：Angel.ControllersApi/ControllerApi/MenuApiController/Post([FromBody]string value)方法
+InfoApiTime：2021-05-03 22:19:37,调用：Angel.ControllersApi/ControllerApi/MenuApiController/Get()方法
+InfoApiTime：2021-05-03 22:19:38,调用：Angel.ControllersApi/ControllerApi/RoleApiController/GetRolemeul()方法
+InfoApiTime：2021-05-03 22:19:40,调用：Angel.ControllersApi/ControllerApi/RoleApiController/GetRolemeul()方法
+InfoApiTime：2021-05-03 22:19:56,调用：Angel.ControllersApi/ControllerApi/RoleApiController/Get()方法
+InfoApiTime：2021-05-03 22:19:56,调用：Angel.ControllersApi/ControllerApi/UserApiController/Get()方法
+InfoApiTime：2021-05-03 22:19:57,调用：Angel.ControllersApi/ControllerApi/RoleApiController/Get()方法
+InfoApiTime：2021-05-03 22:19:58,调用：Angel.ControllersApi/ControllerApi/MenuApiController/Get()方法
+InfoApiTime：2021-05-03 22:20:12,调用：Angel.ControllersApi/ControllerApi/MenuApiController/Post([FromBody]string value)方法
+InfoApiTime：2021-05-03 22:20:14,调用：Angel.ControllersApi/ControllerApi/MenuApiController/Get()方法
+InfoApiTime：2021-05-03 22:20:18,调用：Angel.ControllersApi/ControllerApi/RoleApiController/GetRolemeul()方法
+InfoApiTime：2021-05-03 22:20:29,调用：Angel.ControllersApi/ControllerApi/DownloadListManagerApiController/Get()方法
+InfoApiTime：2021-05-03 22:20:33,调用：Angel.ControllersApi/ControllerApi/LoginlogApiController/PostList()方法
+InfoApiTime：2021-05-03 22:20:42,调用：Angel.ControllersApi/ControllerApi/RoomApiController/Get()方法
+InfoApiTime：2021-05-03 22:20:42,调用：Angel.ControllersApi/ControllerApi/RoomApiController/GetD()方法
+InfoApiTime：2021-05-03 22:20:52,调用：Angel.ControllersApi/ControllerApi/RoleApiController/Get()方法
+InfoApiTime：2021-05-03 22:20:52,调用：Angel.ControllersApi/ControllerApi/UserApiController/Get()方法
+InfoApiTime：2021-05-03 22:20:58,调用：Angel.ControllersApi/ControllerApi/RoleApiController/Get()方法
+InfoApiTime：2021-05-03 22:20:59,调用：Angel.ControllersApi/ControllerApi/MenuApiController/Get()方法
+InfoApiTime：2021-05-03 22:21:43,调用：Angel.ControllersApi/ControllerApi/MenuApiController/Post([FromBody]string value)方法
+InfoApiTime：2021-05-03 22:21:44,调用：Angel.ControllersApi/ControllerApi/MenuApiController/Get()方法
+InfoApiTime：2021-05-03 22:23:29,调用：Angel.ControllersApi/ControllerApi/MenuApiController/Post([FromBody]string value)方法
+InfoApiTime：2021-05-03 22:23:31,调用：Angel.ControllersApi/ControllerApi/MenuApiController/Get()方法
+InfoApiTime：2021-05-03 22:24:05,调用：Angel.ControllersApi/ControllerApi/RoleApiController/GetRolemeul()方法
+InfoApiTime：2021-05-03 22:24:10,调用：Angel.ControllersApi/ControllerApi/MenuApiController/Get()方法
+InfoApiTime：2021-05-03 22:25:42,调用：Angel.ControllersApi/ControllerApi/RoleApiController/GetRolemeul()方法
+InfoApiTime：2021-05-03 22:25:43,调用：Angel.ControllersApi/ControllerApi/RoleApiController/GetRolemeul()方法
+InfoApiTime：2021-05-03 22:25:47,调用：Angel.ControllersApi/ControllerApi/RoomApiController/Get()方法
+InfoApiTime：2021-05-03 22:25:47,调用：Angel.ControllersApi/ControllerApi/RoomApiController/GetD()方法
+InfoApiTime：2021-05-03 22:25:52,调用：Angel.ControllersApi/ControllerApi/MenuApiController/Get()方法
+InfoApiTime：2021-05-03 22:26:20,调用：Angel.ControllersApi/ControllerApi/RoleApiController/GetRolemeul()方法
+InfoApiTime：2021-05-03 22:26:25,调用：Angel.ControllersApi/ControllerApi/RoomApiController/Get()方法
+InfoApiTime：2021-05-03 22:26:26,调用：Angel.ControllersApi/ControllerApi/RoomApiController/GetD()方法
+InfoApiTime：2021-05-03 22:26:29,调用：Angel.ControllersApi/ControllerApi/MenuApiController/Get()方法
+InfoApiTime：2021-05-03 22:26:59,调用：Angel.ControllersApi/ControllerApi/MenuApiController/Post([FromBody]string value)方法
+InfoApiTime：2021-05-03 22:27:00,调用：Angel.ControllersApi/ControllerApi/MenuApiController/Get()方法
+InfoApiTime：2021-05-03 22:27:55,调用：Angel.ControllersApi/ControllerApi/RoleApiController/Get()方法
+InfoApiTime：2021-05-03 22:28:00,调用：Angel.ControllersApi/ControllerApi/MenuApiController/Get()方法
+InfoApiTime：2021-05-03 22:28:54,调用：Angel.ControllersApi/ControllerApi/MenuApiController/Post([FromBody]string value)方法
+InfoApiTime：2021-05-03 22:28:55,调用：Angel.ControllersApi/ControllerApi/MenuApiController/Get()方法
+InfoApiTime：2021-05-03 22:29:46,调用：Angel.ControllersApi/ControllerApi/MenuApiController/Post([FromBody]string value)方法
+InfoApiTime：2021-05-03 22:29:48,调用：Angel.ControllersApi/ControllerApi/MenuApiController/Get()方法
+InfoApiTime：2021-05-03 22:30:15,调用：Angel.ControllersApi/ControllerApi/MenuApiController/Get()方法
+InfoApiTime：2021-05-03 22:30:51,调用：Angel.ControllersApi/ControllerApi/MenuApiController/Post([FromBody]string value)方法
+InfoApiTime：2021-05-03 22:30:53,调用：Angel.ControllersApi/ControllerApi/MenuApiController/Get()方法
+InfoApiTime：2021-05-03 22:31:31,调用：Angel.ControllersApi/ControllerApi/MenuApiController/Post([FromBody]string value)方法
+InfoApiTime：2021-05-03 22:31:32,调用：Angel.ControllersApi/ControllerApi/MenuApiController/Get()方法
+InfoApiTime：2021-05-03 22:31:58,调用：Angel.ControllersApi/ControllerApi/MenuApiController/Post([FromBody]string value)方法
+InfoApiTime：2021-05-03 22:31:59,调用：Angel.ControllersApi/ControllerApi/MenuApiController/Get()方法
+InfoApiTime：2021-05-03 22:32:35,调用：Angel.ControllersApi/ControllerApi/MenuApiController/Post([FromBody]string value)方法
+InfoApiTime：2021-05-03 22:32:37,调用：Angel.ControllersApi/ControllerApi/MenuApiController/Get()方法
+InfoApiTime：2021-05-03 22:33:41,调用：Angel.ControllersApi/ControllerApi/MenuApiController/Get()方法
+InfoApiTime：2021-05-03 22:34:15,调用：Angel.ControllersApi/ControllerApi/MenuApiController/Post([FromBody]string value)方法
+InfoApiTime：2021-05-03 22:34:16,调用：Angel.ControllersApi/ControllerApi/MenuApiController/Get()方法
+InfoApiTime：2021-05-03 22:35:06,调用：Angel.ControllersApi/ControllerApi/MenuApiController/Get()方法
+InfoApiTime：2021-05-03 22:35:52,调用：Angel.ControllersApi/ControllerApi/MenuApiController/Post([FromBody]string value)方法
+InfoApiTime：2021-05-03 22:35:54,调用：Angel.ControllersApi/ControllerApi/MenuApiController/Get()方法
+InfoApiTime：2021-05-03 22:36:54,调用：Angel.ControllersApi/ControllerApi/MenuApiController/Get()方法
+InfoApiTime：2021-05-03 22:37:20,调用：Angel.ControllersApi/ControllerApi/MenuApiController/Post([FromBody]string value)方法
+InfoApiTime：2021-05-03 22:37:22,调用：Angel.ControllersApi/ControllerApi/MenuApiController/Get()方法
+InfoApiTime：2021-05-03 22:37:33,调用：Angel.ControllersApi/ControllerApi/MenuApiController/Get()方法
+InfoApiTime：2021-05-03 22:38:06,调用：Angel.ControllersApi/ControllerApi/MenuApiController/Post([FromBody]string value)方法
+InfoApiTime：2021-05-03 22:38:08,调用：Angel.ControllersApi/ControllerApi/MenuApiController/Get()方法
+InfoApiTime：2021-05-03 22:39:23,调用：Angel.ControllersApi/ControllerApi/LoginlogApiController/PostList()方法
+InfoApiTime：2021-05-03 22:39:26,调用：Angel.ControllersApi/ControllerApi/DownloadListManagerApiController/Get()方法
+InfoApiTime：2021-05-03 22:40:00,调用：Angel.ControllersApi/ControllerApi/RoleApiController/Get()方法
+InfoApiTime：2021-05-03 22:40:00,调用：Angel.ControllersApi/ControllerApi/UserApiController/Get()方法
+InfoApiTime：2021-05-03 22:40:01,调用：Angel.ControllersApi/ControllerApi/RoleApiController/Get()方法
+InfoApiTime：2021-05-03 22:40:07,调用：Angel.ControllersApi/ControllerApi/MenuApiController/Get()方法
+InfoApiTime：2021-05-03 22:41:14,调用：Angel.ControllersApi/ControllerApi/RoleApiController/GetRolemeul()方法
+InfoApiTime：2021-05-03 22:41:43,调用：Angel.ControllersApi/ControllerApi/RoleApiController/GetRolemeul()方法
+InfoApiTime：2021-05-03 22:42:33,调用：Angel.ControllersApi/ControllerApi/RoleApiController/GetRolemeul()方法
+InfoApiTime：2021-05-03 22:42:54,调用：Angel.ControllersApi/ControllerApi/RoleApiController/GetRolemeul()方法
+InfoApiTime：2021-05-03 22:43:00,调用：Angel.ControllersApi/ControllerApi/RoleApiController/GetRolemeul()方法
+InfoApiTime：2021-05-03 22:43:02,调用：Angel.ControllersApi/ControllerApi/RoleApiController/GetRolemeul()方法
+InfoApiTime：2021-05-03 22:43:07,调用：Angel.ControllersApi/ControllerApi/RoleApiController/GetRolemeul()方法
+InfoApiTime：2021-05-03 22:43:10,调用：Angel.ControllersApi/ControllerApi/RoleApiController/Get()方法
+InfoApiTime：2021-05-03 22:43:10,调用：Angel.ControllersApi/ControllerApi/UserApiController/Get()方法
+InfoApiTime：2021-05-03 22:43:12,调用：Angel.ControllersApi/ControllerApi/MenuApiController/Get()方法
+InfoApiTime：2021-05-03 22:43:13,调用：Angel.ControllersApi/ControllerApi/RoleApiController/Get()方法
+InfoApiTime：2021-05-03 22:43:16,调用：Angel.ControllersApi/ControllerApi/DownloadListManagerApiController/Get()方法
+InfoApiTime：2021-05-03 22:43:17,调用：Angel.ControllersApi/ControllerApi/LoginlogApiController/PostList()方法
+InfoApiTime：2021-05-03 22:44:43,调用：Angel.ControllersApi/ControllerApi/RoleApiController/GetRolemeul()方法
+InfoApiTime：2021-05-03 22:45:09,调用：Angel.ControllersApi/ControllerApi/RoleApiController/GetRolemeul()方法
+InfoApiTime：2021-05-03 22:45:11,调用：Angel.ControllersApi/ControllerApi/RoleApiController/GetRolemeul()方法
+InfoApiTime：2021-05-03 22:45:15,调用：Angel.ControllersApi/ControllerApi/RoleApiController/GetRolemeul()方法
+InfoApiTime：2021-05-03 22:45:17,调用：Angel.ControllersApi/ControllerApi/RoleApiController/GetRolemeul()方法
+InfoApiTime：2021-05-03 22:45:27,调用：Angel.ControllersApi/ControllerApi/RoleApiController/Get()方法
+InfoApiTime：2021-05-03 22:45:27,调用：Angel.ControllersApi/ControllerApi/UserApiController/Get()方法
+InfoApiTime：2021-05-03 22:46:25,调用：Angel.ControllersApi/ControllerApi/RoleApiController/GetRolemeul()方法
+InfoApiTime：2021-05-03 22:48:55,调用：Angel.ControllersApi/ControllerApi/MenuApiController/Get()方法
+InfoApiTime：2021-05-03 22:49:05,调用：Angel.ControllersApi/ControllerApi/RoleApiController/Get()方法
+InfoApiTime：2021-05-03 22:49:10,调用：Angel.ControllersApi/ControllerApi/MenuApiController/Getroleid()方法
+InfoApiTime：2021-05-03 22:49:10,调用：Angel.ControllersApi/ControllerApi/MenuApiController/Get()方法
+InfoApiTime：2021-05-03 22:49:18,调用：Angel.ControllersApi/ControllerApi/RoleApiController/Post([FromBody]string value)方法
+InfoApiTime：2021-05-03 22:49:18,调用：Angel.ControllersApi/ControllerApi/RoleApiController/Post([FromBody]string value)方法
+InfoApiTime：2021-05-03 22:49:18,调用：Angel.ControllersApi/ControllerApi/RoleApiController/Post([FromBody]string value)方法
+InfoApiTime：2021-05-03 22:49:20,调用：Angel.ControllersApi/ControllerApi/RoleApiController/Get()方法
+InfoApiTime：2021-05-03 22:49:22,调用：Angel.ControllersApi/ControllerApi/RoleApiController/GetRolemeul()方法
+InfoApiTime：2021-05-03 22:51:10,调用：Angel.ControllersApi/ControllerApi/MenuApiController/Get()方法
+InfoApiTime：2021-05-03 22:52:10,调用：Angel.ControllersApi/ControllerApi/RoleApiController/GetRolemeul()方法
+InfoApiTime：2021-05-03 22:52:54,调用：Angel.ControllersApi/ControllerApi/MenuApiController/Get()方法

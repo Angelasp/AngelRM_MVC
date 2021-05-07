@@ -1,10 +1,16 @@
 ﻿using System;
+using System.IO;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
+using System.Data;
 using Angel.Utils;
-using System.IO;
+using Angel.Service;
+using Angel.DataAccess;
+using Angel.Model;
+
+
 
 namespace Angel.Web.Controllers
 {
@@ -17,9 +23,10 @@ namespace Angel.Web.Controllers
      * 
      * 版权信息 : Copyright (c) 2009 Angel工作室 www.angelasp.com
      **************************************************************************/
-    public class SysManagerController :BaseController
+    public class SysManagerController : BaseController
     {
 
+        List<Menu> menulist = (List<Menu>)DataCache.GetCache("roledatabtn");
         /// <summary>
         /// 其他数据下载
         /// </summary>
@@ -51,48 +58,68 @@ namespace Angel.Web.Controllers
         }
         //数据下载
         //get: /sysmanager/downloaddatamanager
-        public ActionResult downloaddatamanager() {
+        public ActionResult downloaddatamanager()
+        {
 
             return View();
         }
-        
+
         //
         // GET: /SysManager/MenuManager
-
         public ActionResult MenuManager()
         {
+            ViewBag.Title = "菜单管理";
+            var query = from a in menulist
+                        where (a.menuo.StartsWith("sys:menu"))
+                        select a;
+            List<Menu> menulists = (List<Menu>)query.ToList();
+            ViewBag.Menulist = menulists;
             return View();
         }
-
         // 用户管理
         // GET: /SysManager/UserManager
         public ActionResult UserManager()
         {
+            ViewBag.Title = "用户管理";
+            var query = from a in menulist
+                        where (a.menuo.StartsWith("sys:user"))
+                        select a;
+            List<Menu> menulists = (List<Menu>)query.ToList();
+            ViewBag.Menulist = menulists;
             return View();
         }
-
-
         // 角色管理
         // GET: /SysManager/RoleManager
         public ActionResult RoleManager()
         {
+            ViewBag.Title = "角色管理";
+            var query = from a in menulist
+                        where (a.menuo.StartsWith("sys:role"))
+                        select a;
+            List<Menu> menulists = (List<Menu>)query.ToList();
+            ViewBag.Menulist = menulists;
             return View();
         }
-
-        // 处室管理
-        // GET: /SysManager/RoomManager
-        public ActionResult RoomManager()
-        {
-            return View();
-        }
-
-
-
-
         // 部门管理
         // GET: /SysManager/DepartmentManager
         public ActionResult DepartmentManager()
         {
+            ViewBag.Title = "部门管理";
+            var query = from a in menulist
+                        where (a.menuo.StartsWith("sys:department"))
+                        select a;
+            List<Menu> menulists = (List<Menu>)query.ToList();
+            ViewBag.Menulist = menulists;
+            return View();
+        }
+
+
+        //下载列表管理
+        //GET:/SysManager/DownloadListManager
+        public ActionResult DownloadListManager()
+        {
+            ViewBag.Title = "下载列表管理";
+            ViewBag.userid = UtilFunction.GetCookie("uid");
             return View();
         }
 
@@ -100,30 +127,48 @@ namespace Angel.Web.Controllers
         // GET: /SysManager/LoginLogManager
         public ActionResult LoginLogManager()
         {
+            ViewBag.Title = "登录日志管理";
             return View();
         }
-
-        //下载列表管理
-        //GET:/SysManager/DownloadListManager
-        public ActionResult DownloadListManager()
-        {
-            ViewBag.userid = UtilFunction.GetCookie("uid");
-
-            return View();
-        }
-
         // 操作日志管理
         // GET: /SysManager/OperLogManager
         public ActionResult OperLogManager()
         {
+            ViewBag.Title = "操作日志管理";
             return View();
         }
 
-
-        // 版本管理
-        // GET: /SysManager/VersionManager
-        public ActionResult VersionManager()
+        // 字典管理
+        // GET: /SysManager/DictionaryManager
+        public ActionResult DictionaryManager()
         {
+            ViewBag.Title = "字典管理";
+            var query = from a in menulist
+                        where (a.menuo.StartsWith("sys:dictionary"))
+                        select a;
+            List<Menu> menulists = (List<Menu>)query.ToList();
+            ViewBag.Menulist = menulists;
+            return View();
+        }
+        // 字典数据管理
+        // GET: /SysManager/DictionaryDataManager
+        public ActionResult DictionaryDataManager(int id)
+        {
+
+            ViewBag.Title = "字典数据管理";
+            ViewBag.tpyeid = id;
+            string where = " where id=" + id + "";
+            //按条件查询
+            BLLService QueryService = new BLLService();
+            DataTable tablelist = QueryService.GetWhereDataTable("query_dicttypelist", where);
+            if (tablelist != null && tablelist.Rows.Count > 0)
+            {
+                ViewBag.dicttype = tablelist.Rows[0]["dicttype"].ToString();
+            }
+            else {
+                ViewBag.dicttype = "";
+            }
+
             return View();
         }
 

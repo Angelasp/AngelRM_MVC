@@ -1,123 +1,7 @@
-﻿@{
-    ViewBag.Title = "RoleManager";
-    Layout = "~/Views/Shared/_Layout.cshtml";
-}
-
-@*	<link href="/Scripts/dist/bootstrap-3.3.7/css/bootstrap.min.css" rel="stylesheet"/>*@
-<link href="/Scripts/dist/material-design-iconic-font-2.2.0/css/material-design-iconic-font.min.css" rel="stylesheet" />
-<link href="/Scripts/dist/bootstrap-table-1.11.1/bootstrap-table.min.css" rel="stylesheet" />
-<link href="/Scripts/dist/jquery-confirm/dist/jquery-confirm.min.css" rel="stylesheet" />
-<style type="text/css">
-    .modal-dialog, .modal-tree {
-        width: 400px;
-        margin: 30px auto;
-    }
-
-    .fixed-table-pagination {
-        margin: 0px;
-    }
-
-    .form-group {
-        margin-bottom: 0px;
-    }
-
-    .widget-toolbar:before {
-        border: 0px;
-        border-width: 0px;
-    }
-
-    .widget-body {
-        border: 1px solid #B9D7D7;
-    }
-
-        .widget-body .table {
-            border-top: 0px;
-        }
-
-    .fixed-table-pagination {
-        background: #f9f9f9;
-    }
-
-    .change {
-        margin: 0px;
-        padding: 0px;
-        width: 40px;
-        height: 30px;
-        background: #fff;
-        position: relative;
-        padding: 0px;
-        border-top: 1px solid #bbbbbb;
-        border-right: 1px solid #bbbbbb;
-        border-bottom: 1px solid #bbbbbb;
-        border-left: 1px solid #bbbbbb;
-    }
-
-    .change-i {
-        background: #fff;
-        width: 11px;
-        height: 11px;
-        position: absolute;
-        top: 0px;
-        left: 0px;
-        margin: auto;
-        padding: 0px;
-        z-index: 999;
-        color: #666666;
-    }
-
-
-    #btnSearch {
-        margin: 0px;
-        padding: 0px;
-        width: 40px;
-        height: 30px;
-        background: #a4cbff;
-        border-color: #a4cbff;
-        position: relative;
-        border: 5px solid #a4cbff;
-        margin-right: 10px;
-    }
-
-         #btnSearch:hover {
-            border-color: #52acdf;
-            background: #52acdf;
-            border: 5px solid #52acdf;
-        }
-
-    .onclickbtni {
-        font-size: 18px;
-        background: #5bb9ee;
-        width: 40px;
-        height: 32px;
-        position: absolute;
-        top: 0px;
-        left: 0px;
-        z-index: 999;
-        margin-top:-6px;
-        margin-left:-5px;
-        padding-top: 7px;
-        text-shadow: none;
-        -webkit-text-stroke: 0.7px #5bb9ee;
-
-    }
-
-    .onclickbtni:hover {
-            border-color: #36aaeb;
-            background: #36aaeb;
-             -webkit-text-stroke: 0.7px #36aaeb;
-        }
-
-      .orange {
-        color:  #6cb7e2!important;
-    }
-
-        .orange:hover {
-            color:  #6cb7e2!important;
-        }
-</style>
-<div id="main">
-
-    <div class="widget-header widget-header-blue widget-header-flat" style="background-color: transparent; border: 0px; padding-left: 0px; line-height: 70px;">
+﻿@using Angel.Model;
+<link href="/Scripts/dist/bootstrap-select/css/bootstrap-select.css" rel="stylesheet" />
+<link href="/Content/JQuery.zTree.v3.1/css/zTreeStyle/zTreeStyle.css" rel="stylesheet" />
+<div class="widget-header widget-header-blue widget-header-flat" style="background-color: transparent; border: 0px; padding-left: 0px; line-height: 70px;">
         <h4 class="widget-title" style="color: #333333; left: 0px;">角色管理</h4>
         <div class="widget-toolbar" style="padding: 0px; line-height: 70px;">
             <div class="form-inline form-group " style="line-height: 70px;">
@@ -130,21 +14,30 @@
                           <button title="查询" id="btnSearch" type="button" style="" class="btn btn-success  onclickbtn">
                             <i class="fa fa-search onclickbtni" style=""></i>
                             </button>
-
-
+                         @{
+                          List<Menu> lists= ViewBag.Menulist;
+                          foreach(Menu me in lists){    
+                          if(me.menuo.IndexOf("add") != -1 )
+                          {
                         <button title="新增" style="width: 40px;height:32px; border-color:  #8fbcd9" class="btn btn-xs btn-white btn-info" id="btnAdd" onclick="showRole(this)" name="add">
                             <i class="ace-icon fa fa-plus bigger-120 orange " style="-webkit-text-stroke: 0.6px #fff"></i>
-
                         </button>
+                          }
+                          if (me.menuo.IndexOf("edit") != -1)
+                          {
                         <button title="修改" style="width: 40px;height:32px; border-color:  #8fbcd9" class="btn btn-xs btn-white btn-info" id="btnEdit" onclick="showRole(this)" name="edit">
                             <i class="ace-icon fa fa-pencil bigger-120 orange"></i>
-
                         </button>
-
+                          }
+                          if (me.menuo.IndexOf("remove") != -1)
+                          {
                         <button title="删除" style="width: 40px;height:32px; border-color:  #8fbcd9" class="btn btn-xs btn-white btn-info" data-toggle="modal" id="btnRemove" onclick="deleteAction()">
                             <i class="ace-icon  fa fa-trash-o bigger-120 orange "></i>
-
                         </button>
+                          }               
+                              
+                         }                        
+                     }
                     </div>
                 </div>
 
@@ -152,14 +45,11 @@
         </div>
     </div>
 
-
-
-    <div class="widget-body" style="border: 1px solid #CCC;">
+<div class="widget-body" style="border: 1px solid #CCC;">
         <div class="widget-main" style="padding: 0px;">
             <table id="table"></table>
         </div>
     </div>
-</div>
 
 <!-- 树状菜单显示 -->
 <div class="modal fade" id="menuTree" tabindex="9999" style="z-index: 99999;" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
@@ -240,14 +130,15 @@
         </div>
     </div>
 </div>
+
+<script src="~/Scripts/js/com.js"></script>
+<script src="~/Scripts/dist/waves/waves-0.7.5/waves.s.js"></script>
 <script src="/Scripts/dist/bootstrap-table-1.11.1/bootstrap-table.min.js"></script>
 <script src="/Scripts/dist/bootstrap-table-1.11.1/locale/bootstrap-table-zh-CN.min.js"></script>
 <script src="/Scripts/dist/jquery-confirm/dist/jquery-confirm.min.js"></script>
 <script src="/Scripts/js/common.js"></script>
 <script src="/Scripts/dist/treeview/bootstrap-treeview.js"></script>
-
 <script src="~/ViewScripts/sysmanager/rolemanager.js"></script>
-
 <script>
     //toggle display format buttons
     $('#toggle-result-format .btn').tooltip({ container: 'body' }).on('click', function (e) {
@@ -256,6 +147,4 @@
         });
         $(this).removeClass('btn-grey').addClass($(this).attr('data-class'));
     });
-
-
 </script>

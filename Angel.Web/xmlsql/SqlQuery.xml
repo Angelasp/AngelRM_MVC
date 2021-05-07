@@ -44,17 +44,18 @@
       <parameter paramename="orderid" contidion="%(condition4)d" columnname="orderid" index="5"/>
       <parameter paramename="menuicon" contidion="%(condition5)s" columnname="menuicon" index="6"/>
       <parameter paramename="menuurl" contidion="%(condition6)s" columnname="menuurl" index="7"/>
-      <parameter paramename="isvisible" contidion="%(condition7)c" columnname="isvisible" index="8"/>
-      <parameter paramename="isenabled" contidion="%(condition8)c" columnname="isenabled" index="9"/>
-      <parameter paramename="updateuser" contidion="%(condition9)s" columnname="updateuser" index="10"/>
+      <parameter paramename="menutype" contidion="%(condition7)s" columnname="menutype" index="8"/>
+      <parameter paramename="menuo" contidion="%(condition8)s" columnname="menuo" index="9"/>
+      <parameter paramename="isvisible" contidion="%(condition9)c" columnname="isvisible" index="10"/>
+      <parameter paramename="isenabled" contidion="%(condition10)c" columnname="isenabled" index="11"/>
+      <parameter paramename="updateuser" contidion="%(condition11)s" columnname="updateuser" index="12"/>
     </parameters>
     <values>
       <value identify="0">
-        UPDATE angel_sys_menu SET MenuName='%(condition1)s',ParentID=%(condition2)d,Remark='%(condition3)s',OrderID=%(condition4)d,MenuIcon='%(condition5)s',MenuUrl='%(condition6)s',IsVisible='%(condition7)c',IsEnabled='%(condition8)c',UpdateUser='%(condition9)s',UpdateTime=now() WHERE ID=%(condition0)d
+        UPDATE angel_sys_menu SET MenuName='%(condition1)s',ParentID=%(condition2)d,Remark='%(condition3)s',OrderID=%(condition4)d,MenuIcon='%(condition5)s',MenuUrl='%(condition6)s',menutype='%(condition7)s',menuo='%(condition8)s',IsVisible='%(condition9)c',IsEnabled='%(condition10)c',UpdateUser='%(condition11)s',UpdateTime=now() WHERE ID=%(condition0)d
       </value>
     </values>
   </option> 
-  
   
     <!-- 0_5 添加菜单，并且同级名称不能重复-->
   <option key="0_5">
@@ -65,13 +66,15 @@
       <parameter paramename="OrderID" contidion="%(condition3)d" columnname="OrderID" index="4"/>
       <parameter paramename="MenuIcon" contidion="%(condition4)s" columnname="MenuIcon" index="5"/>
       <parameter paramename="MenuUrl" contidion="%(condition5)s" columnname="MenuUrl" index="6"/>
-      <parameter paramename="IsVisible" contidion="%(condition6)c" columnname="IsVisible" index="7"/>
-      <parameter paramename="IsEnabled" contidion="%(condition7)c" columnname="IsEnabled" index="8"/>
-      <parameter paramename="CreateUser" contidion="%(condition8)s" columnname="CreateUser" index="9"/>
+      <parameter paramename="menutype" contidion="%(condition6)s" columnname="menutype" index="7"/>
+      <parameter paramename="menuo" contidion="%(condition7)s" columnname="menuo" index="8"/>   
+      <parameter paramename="IsVisible" contidion="%(condition8)c" columnname="IsVisible" index="9"/>
+      <parameter paramename="IsEnabled" contidion="%(condition9)c" columnname="IsEnabled" index="10"/>
+      <parameter paramename="CreateUser" contidion="%(condition10)s" columnname="CreateUser" index="11"/>
     </parameters>
     <values>
       <value identify="1">
-        INSERT INTO angel_sys_menu  VALUES(null,'%(condition0)s',%(condition1)d,'%(condition2)s',%(condition3)d,'%(condition4)s','%(condition5)s','%(condition6)c','%(condition7)c','%(condition8)s',now(),'',now(),'')
+        INSERT INTO angel_sys_menu  VALUES(null,'%(condition0)s',%(condition1)d,'%(condition2)s',%(condition3)d,'%(condition4)s','%(condition5)s','%(condition6)s','%(condition7)s','%(condition8)c','%(condition9)c','%(condition10)s',now(),'',now(),'')
       </value>
     </values>
   </option>
@@ -114,11 +117,7 @@
       </value>
     </values>
   </option> 
-  
-  
-  
-  
-  
+ 
   <!-- 1_1 添加用户，并且用户名不能重复-->
   <option key="1_1">
     <parameters>
@@ -369,16 +368,9 @@
     </values>
   </option>
 
-  <option key="1_1331">
-    <values>
-      <value identify="0">
-        select id,roomname from angel_sys_room
-      </value>
-    </values>
-  </option>
+
   
-  
-  
+ 
   <!--1_14 获取某用户所属指标编号-->
   <option key="1_14">
     <parameters>
@@ -387,18 +379,6 @@
     <values>
       <value identify="0">
         select indicator_content from angel_sys_userOFINDICATOR where userid=%(condition0)d
-      </value>
-    </values>
-  </option>
-  
-    <!--1_15 获取某用户所属指标信息-->
-  <option key="1_15">
-    <parameters>
-      <parameter paramename="Indicatorids" contidion="%(condition0)s" columnname="Indicatorids" index="1" />
-    </parameters>
-    <values>
-      <value identify="0">
-       select * from Angel_Indicator where Indicatorid in (%(condition0)s)
       </value>
     </values>
   </option>
@@ -538,11 +518,18 @@
     </parameters>
     <values>
       <value identify="0">
-        SELECT a.id,a.menuname,a.parentid,a.orderid,a.menuicon,a.menuurl,a.isenabled as isenabled FROM angel_sys_menu a RIGHT JOIN (SELECT * FROM angel_sys_menusofroles WHERE RoleID in (%(condition0)d)) b ON a.ID=b.MenuID WHERE  a.isvisible='Y'  ORDER BY a.orderid ASC
-      </value>
+        SELECT a.id,a.menuname,a.parentid,a.orderid,a.menuicon,a.menuurl,a.isenabled as isenabled FROM angel_sys_menu a RIGHT JOIN (SELECT * FROM angel_sys_menusofroles WHERE RoleID in (%(condition0)d)) b ON a.ID=b.MenuID WHERE  a.menutype &lt;>'B' and  a.isvisible='Y'  ORDER BY a.orderid ASC
+        </value>
     </values>
   </option>
-
+  <!--2-5-1 按角色查询按钮权限-->
+  <option key="query_rolebtnlist">
+    <values>
+      <value>
+        SELECT a.id,a.menuname,a.parentid,a.remark,a.orderid,a.menuicon,a.menuurl,a.menutype,a.menuo FROM angel_sys_menu a RIGHT JOIN (SELECT * FROM angel_sys_menusofroles WHERE RoleID in ({0}) ) b ON a.ID=b.MenuID WHERE  a.menutype = 'B' and  a.isvisible='Y'  ORDER BY a.orderid ASC
+      </value>
+    </values>
+  </option> 
   <!--2_6 添加角色菜单-->
   <option key="2_6">
     <parameters>
@@ -567,15 +554,6 @@
       </value>
       <value identify="2">
         INSERT INTO angel_sys_menusofroles VALUES(null,{0},{1})
-      </value>
-    </values>
-  </option>
-
-  <!--2_9 查询客户反映维度下指标数据期数-->
-  <option key="2_9">
-    <values>
-      <value identify="1">
-        select ID,MODE FROM GRADEMODE
       </value>
     </values>
   </option>
@@ -777,13 +755,141 @@
     </values>
   </option>
 
+  <!--8按条件查询字典总记录-->
+  <option key="query_dicttypetotal">
+    <values>
+      <value>
+        SELECT count(*) FROM angel_sys_dict_type {0}
+      </value>
+    </values>
+  </option>
+  <!--8按添加查询字典记录-->
+  <option key="query_dicttypelist">
+    <values>
+      <value>
+        SELECT * FROM angel_sys_dict_type {0}
+      </value>
+    </values>
+  </option>
+  
+  <!--8 根据字典类型编号 更新字典类型记录-->
+  <option key="update_dictionary_type">
+    <parameters>
+      <parameter paramename="id" contidion="%(condition0)d" columnname="id" index="1" />
+      <parameter paramename="dictname" contidion="%(condition1)s" columnname="dictname" index="2" />
+      <parameter paramename="dicttype" contidion="%(condition2)s" columnname="dicttype" index="3"/>
+      <parameter paramename="isvisible" contidion="%(condition3)s" columnname="isvisible" index="4"/>
+      <parameter paramename="createuser" contidion="%(condition4)s" columnname="createuser" index="5"/>
+      <parameter paramename="remark" contidion="%(condition5)s" columnname="remark" index="6"/>
+    </parameters>
+    <values>
+      <value identify="0">
+        UPDATE angel_sys_dict_type SET dictname='%(condition1)s',dicttype='%(condition2)s',isvisible='%(condition3)s',updateuser='%(condition4)s',remark='%(condition5)s',updatetime=now() WHERE id=%(condition0)d
+      </value>
+    </values>
+  </option>
 
+  <!-- 8 添加字典类型-->
+  <option key="insert_dictionary_type">
+    <parameters>
+      <parameter paramename="dictname" contidion="%(condition0)s" columnname="dictname" index="1" />
+      <parameter paramename="dicttype" contidion="%(condition1)s" columnname="dicttype" index="2"/>
+      <parameter paramename="isvisible" contidion="%(condition2)s" columnname="isvisible" index="3"/>
+      <parameter paramename="createuser" contidion="%(condition3)s" columnname="createuser" index="4"/>
+      <parameter paramename="remark" contidion="%(condition4)s" columnname="remark" index="5"/>
+    </parameters>
+    <values>
+      <value identify="1">
+        INSERT INTO angel_sys_dict_type  VALUES(null,'%(condition0)s','%(condition1)s','%(condition2)s','%(condition3)s',now(),'',now(),'%(condition4)s')
+      </value>
+    </values>
+  </option>
+
+  <!--8 删除字典类型-->
+  <option key="dele_dicttype">
+    <parameters>
+      <parameter paramename="id" contidion="%(condition0)d" columnname="id" index="1"/>
+    </parameters>
+    <values>
+      <value identify="0">
+        DELETE from angel_sys_dict_type WHERE id=%(condition0)d
+      </value>
+    </values>
+  </option>
+  
+  <!--9按条件查询字典数据总记录-->
+  <option key="query_dictdatatotal">
+    <values>
+      <value>
+        SELECT count(*) FROM angel_sys_dict_data {0}
+      </value>
+    </values>
+  </option>
+  <!--9按添加查询字典数据记录-->
+  <option key="query_dictdatalist">
+    <values>
+      <value>
+        SELECT * FROM angel_sys_dict_data {0}
+      </value>
+    </values>
+  </option>
+
+  <!--9 根据字典数据编号 更新字典数据记录-->
+  <option key="update_dictionary_data">
+    <parameters>
+      <parameter paramename="id" contidion="%(condition0)d" columnname="id" index="1" />
+      <parameter paramename="orderid" contidion="%(condition1)d" columnname="orderid" index="2" />
+      <parameter paramename="dictlabel" contidion="%(condition2)s" columnname="dictlabel" index="3"/>
+      <parameter paramename="dictvalue" contidion="%(condition3)s" columnname="dictvalue" index="4"/>
+      <parameter paramename="dicttype" contidion="%(condition4)s" columnname="dicttype" index="5"/>
+      <parameter paramename="isdefault" contidion="%(condition5)s" columnname="isdefault" index="7"/>
+      <parameter paramename="isvisible" contidion="%(condition6)s" columnname="isvisible" index="8"/>
+      <parameter paramename="createuser" contidion="%(condition7)s" columnname="createuser" index="9"/>
+      <parameter paramename="remark" contidion="%(condition8)s" columnname="remark" index="10"/>
+    </parameters>
+    <values>
+      <value identify="0">
+        UPDATE angel_sys_dict_data SET orderid=%(condition1)d,dictlabel='%(condition2)s',dictvalue='%(condition3)s',dicttype='%(condition4)s',isdefault='%(condition5)s',isvisible='%(condition6)s',updateuser='%(condition7)s',remark='%(condition8)s',updatetime=now() WHERE id=%(condition0)d
+      </value>
+    </values>
+  </option>
+
+  <!-- 9 添加字典数据-->
+  <option key="insert_dictionary_data">
+    <parameters>
+      <parameter paramename="orderid" contidion="%(condition0)d" columnname="orderid" index="1" />
+      <parameter paramename="dictlabel" contidion="%(condition1)s" columnname="dictlabel" index="2" />
+      <parameter paramename="dictvalue" contidion="%(condition2)s" columnname="dictvalue" index="3" />
+      <parameter paramename="dicttype" contidion="%(condition3)s" columnname="dicttype" index="4"/>
+      <parameter paramename="isdefault" contidion="%(condition4)s" columnname="isdefault" index="5"/>
+      <parameter paramename="isvisible" contidion="%(condition5)s" columnname="isvisible" index="6"/>
+      <parameter paramename="createuser" contidion="%(condition6)s" columnname="createuser" index="7"/>
+      <parameter paramename="remark" contidion="%(condition7)s" columnname="remark" index="8"/>
+    </parameters>
+    <values>
+      <value identify="1">
+        INSERT INTO angel_sys_dict_data  VALUES(null,'%(condition0)d','%(condition1)s','%(condition2)s','%(condition3)s','%(condition4)s','%(condition5)s','%(condition6)s',now(),'',now(),'%(condition7)s')
+      </value>
+    </values>
+  </option>
+
+  <!--9 删除字典数据-->
+  <option key="dele_dictdata">
+    <parameters>
+      <parameter paramename="id" contidion="%(condition0)d" columnname="id" index="1"/>
+    </parameters> 
+    <values>
+      <value identify="0">
+        DELETE from angel_sys_dict_data WHERE id=%(condition0)d
+      </value>
+    </values>
+  </option>
+  
   <!--登录日志列表-->
   <option key="selectloginloglist">
     <values>
       <value>
-        select * from angel_sys_loginlog order by logintime desc limit {0},{1}
-        
+        select * from angel_sys_loginlog order by logintime desc limit {0},{1}   
       </value>
     </values>
   </option>

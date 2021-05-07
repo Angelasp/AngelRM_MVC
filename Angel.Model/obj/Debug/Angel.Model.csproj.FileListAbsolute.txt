@@ -11,3 +11,14 @@ F:\AngelProGramCode\AngelRM_MVC\AngelRM_MVC\Angel.Model\bin\Debug\Angel.Model.dl
 F:\AngelProGramCode\AngelRM_MVC\AngelRM_MVC\Angel.Model\bin\Debug\Angel.Model.pdb
 F:\AngelProGramCode\AngelRM_MVC\AngelRM_MVC\Angel.Model\obj\Debug\Angel.Model.dll
 F:\AngelProGramCode\AngelRM_MVC\AngelRM_MVC\Angel.Model\obj\Debug\Angel.Model.pdb
+G:\AngelProGramCode\AngelRM_MVC\AngelRM_MVC\Angel.Model\bin\Debug\Angel.Model.dll
+G:\AngelProGramCode\AngelRM_MVC\AngelRM_MVC\Angel.Model\bin\Debug\Angel.Model.pdb
+G:\AngelProGramCode\AngelRM_MVC\AngelRM_MVC\Angel.Model\obj\Debug\Angel.Model.csprojResolveAssemblyReference.cache
+G:\AngelProGramCode\AngelRM_MVC\AngelRM_MVC\Angel.Model\obj\Debug\Angel.Model.dll
+G:\AngelProGramCode\AngelRM_MVC\AngelRM_MVC\Angel.Model\obj\Debug\Angel.Model.pdb
+F:\AngelProGramCode\新建文件夹\AngelRM_MVC\Angel.Model\bin\Debug\Angel.Model.dll
+F:\AngelProGramCode\新建文件夹\AngelRM_MVC\Angel.Model\bin\Debug\Angel.Model.pdb
+F:\AngelProGramCode\新建文件夹\AngelRM_MVC\Angel.Model\obj\Debug\Angel.Model.csprojResolveAssemblyReference.cache
+F:\AngelProGramCode\新建文件夹\AngelRM_MVC\Angel.Model\obj\Debug\Angel.Model.dll
+F:\AngelProGramCode\新建文件夹\AngelRM_MVC\Angel.Model\obj\Debug\Angel.Model.pdb
+F:\AngelProGramCode\AngelRM_MVC\AngelRM_MVC\Angel.Model\obj\Debug\Angel.Model.csprojResolveAssemblyReference.cache

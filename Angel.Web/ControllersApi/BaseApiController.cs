@@ -29,9 +29,6 @@ namespace Angel.Web.ControllersApi
         [Inject]
         public IDataService QueryService { get; set; }
 
-
-        //public IDataService QueryService = new BLL.BLLService();
-
         public HttpResponseMessage GetJSONMessage(string msg) 
         {
             return new HttpResponseMessage() { Content = new StringContent(msg, Encoding.UTF8, "application/json") };

@@ -1,0 +1,493 @@
+InfoApiTime：2021-04-04 19:01:20,调用：Angel.ControllersApi/ControllerAPI/LoginApiController/Get()方法
+InfoApiTime：2021-04-04 19:01:23,调用：Angel.ControllersApi/ControllerApi/RoleApiController/GetRolemeul()方法
+InfoApiTime：2021-04-04 19:54:50,调用：Angel.ControllersApi/ControllerApi/RoleApiController/GetRolemeul()方法
+InfoApiTime：2021-04-04 19:55:41,调用：Angel.ControllersApi/ControllerApi/RoleApiController/GetRolemeul()方法
+InfoApiTime：2021-04-04 19:58:37,调用：Angel.ControllersApi/ControllerApi/RoleApiController/Get()方法
+InfoApiTime：2021-04-04 19:58:37,调用：Angel.ControllersApi/ControllerApi/UserApiController/Get()方法
+InfoApiTime：2021-04-04 21:38:52,调用：Angel.ControllersApi/ControllerApi/DictionaryApiController/Post([FromBody]string value)方法
+MySql.Data.MySqlClient.MySqlException (0x80004005): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '%(condition1)d,'%(condition2)s',%(condition3)d,now(),'',now(),%(condition4)s)' at line 1
+   在 MySql.Data.MySqlClient.MySqlStream.ReadPacket()
+   在 MySql.Data.MySqlClient.NativeDriver.GetResult(Int32& affectedRow, Int64& insertedId)
+   在 MySql.Data.MySqlClient.Driver.GetResult(Int32 statementId, Int32& affectedRows, Int64& insertedId)
+   在 MySql.Data.MySqlClient.Driver.NextResult(Int32 statementId, Boolean force)
+   在 MySql.Data.MySqlClient.MySqlDataReader.NextResult()
+   在 MySql.Data.MySqlClient.MySqlCommand.ExecuteReader(CommandBehavior behavior)
+   在 MySql.Data.MySqlClient.MySqlCommand.ExecuteReader()
+   在 MySql.Data.MySqlClient.MySqlCommand.ExecuteNonQuery()
+   在 Angel.DBHelper.MySqlHelpers.ExecuteNonQuery(List`1 sqlArray) 位置 f:\AngelProGramCode\新建文件夹\AngelRM_MVC\Angel.DBHelper\MySqlHelpers.cs:行号 773
+错误SQL:INSERT INTO angel_sys_dict_type  VALUES(null,'ttt',%(condition1)d,'%(condition2)s',%(condition3)d,now(),'',now(),%(condition4)s)
+System.Exception: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '%(condition1)d,'%(condition2)s',%(condition3)d,now(),'',now(),%(condition4)s)' at line 1
+   在 Angel.DBHelper.MySqlHelpers.ExecuteNonQuery(List`1 sqlArray) 位置 f:\AngelProGramCode\新建文件夹\AngelRM_MVC\Angel.DBHelper\MySqlHelpers.cs:行号 784
+   在 Angel.Service.MysqlService.InsertBatch(List`1 sqlArray) 位置 f:\AngelProGramCode\新建文件夹\AngelRM_MVC\Angel.Service\MysqlService.cs:行号 81
+   在 Angel.Service.BLLService.InsertBatch(JArray param, String serverName) 位置 f:\AngelProGramCode\新建文件夹\AngelRM_MVC\Angel.Service\BLLService.cs:行号 558
+InfoApiTime：2021-04-04 21:56:18,调用：Angel.ControllersApi/ControllerApi/DictionaryApiController/Post([FromBody]string value)方法
+System.ArgumentException: Object serialized to String. JObject instance expected.
+   在 Newtonsoft.Json.Linq.JObject.FromObject(Object o, JsonSerializer jsonSerializer)
+   在 Newtonsoft.Json.Linq.JObject.FromObject(Object o)
+   在 Angel.Service.BLLService.InsertBatch(JArray param, String serverName) 位置 f:\AngelProGramCode\新建文件夹\AngelRM_MVC\Angel.Service\BLLService.cs:行号 509
+InfoApiTime：2021-04-04 22:18:38,调用：Angel.ControllersApi/ControllerApi/DictionaryApiController/Post([FromBody]string value)方法
+Error：调用 Angel.ControllersApi/ControllerApi/DictionaryApiController/Post([FromBody]string value)方法,System.ArgumentException: Object serialized to Array. JObject instance expected.
+   在 Newtonsoft.Json.Linq.JObject.FromObject(Object o, JsonSerializer jsonSerializer)
+   在 Newtonsoft.Json.Linq.JObject.FromObject(Object o)
+   在 Angel.Web.ControllersApi.DictionaryApiController.Post(String value) 位置 f:\AngelProGramCode\新建文件夹\AngelRM_MVC\Angel.Web\ControllersApi\DictionaryApiController.cs:行号 118
+InfoApiTime：2021-04-04 22:20:15,调用：Angel.ControllersApi/ControllerApi/DictionaryApiController/Post([FromBody]string value)方法
+Error：调用 Angel.ControllersApi/ControllerApi/DictionaryApiController/Post([FromBody]string value)方法,System.ArgumentException: Object serialized to Array. JObject instance expected.
+   在 Newtonsoft.Json.Linq.JObject.FromObject(Object o, JsonSerializer jsonSerializer)
+   在 Newtonsoft.Json.Linq.JObject.FromObject(Object o)
+   在 Angel.Web.ControllersApi.DictionaryApiController.Post(String value) 位置 f:\AngelProGramCode\新建文件夹\AngelRM_MVC\Angel.Web\ControllersApi\DictionaryApiController.cs:行号 118
+InfoApiTime：2021-04-04 22:30:48,调用：Angel.ControllersApi/ControllerApi/DictionaryApiController/Post([FromBody]string value)方法
+Error：调用 Angel.ControllersApi/ControllerApi/DictionaryApiController/Post([FromBody]string value)方法,Newtonsoft.Json.JsonException: Newtonsoft.Json.Linq.JProperty cannot have multiple values.
+   在 Newtonsoft.Json.Linq.JProperty.InsertItem(Int32 index, JToken item, Boolean skipParentCheck)
+   在 Newtonsoft.Json.Linq.JContainer.AddInternal(Int32 index, Object content, Boolean skipParentCheck)
+   在 Newtonsoft.Json.Linq.JToken.AddAfterSelf(Object content)
+   在 Angel.Web.ControllersApi.DictionaryApiController.Post(String value) 位置 f:\AngelProGramCode\新建文件夹\AngelRM_MVC\Angel.Web\ControllersApi\DictionaryApiController.cs:行号 115
+InfoApiTime：2021-04-04 22:31:24,调用：Angel.ControllersApi/ControllerApi/DictionaryApiController/Post([FromBody]string value)方法
+Error：调用 Angel.ControllersApi/ControllerApi/DictionaryApiController/Post([FromBody]string value)方法,Newtonsoft.Json.JsonException: Newtonsoft.Json.Linq.JProperty cannot have multiple values.
+   在 Newtonsoft.Json.Linq.JProperty.InsertItem(Int32 index, JToken item, Boolean skipParentCheck)
+   在 Newtonsoft.Json.Linq.JContainer.AddInternal(Int32 index, Object content, Boolean skipParentCheck)
+   在 Newtonsoft.Json.Linq.JToken.AddAfterSelf(Object content)
+   在 Angel.Web.ControllersApi.DictionaryApiController.Post(String value) 位置 f:\AngelProGramCode\新建文件夹\AngelRM_MVC\Angel.Web\ControllersApi\DictionaryApiController.cs:行号 115
+InfoApiTime：2021-04-04 22:32:31,调用：Angel.ControllersApi/ControllerApi/DictionaryApiController/Post([FromBody]string value)方法
+Error：调用 Angel.ControllersApi/ControllerApi/DictionaryApiController/Post([FromBody]string value)方法,Newtonsoft.Json.JsonException: Newtonsoft.Json.Linq.JProperty cannot have multiple values.
+   在 Newtonsoft.Json.Linq.JProperty.InsertItem(Int32 index, JToken item, Boolean skipParentCheck)
+   在 Newtonsoft.Json.Linq.JContainer.AddInternal(Int32 index, Object content, Boolean skipParentCheck)
+   在 Newtonsoft.Json.Linq.JToken.AddAfterSelf(Object content)
+   在 Angel.Web.ControllersApi.DictionaryApiController.Post(String value) 位置 f:\AngelProGramCode\新建文件夹\AngelRM_MVC\Angel.Web\ControllersApi\DictionaryApiController.cs:行号 115
+InfoApiTime：2021-04-04 22:32:38,调用：Angel.ControllersApi/ControllerApi/DictionaryApiController/Post([FromBody]string value)方法
+Error：调用 Angel.ControllersApi/ControllerApi/DictionaryApiController/Post([FromBody]string value)方法,Newtonsoft.Json.JsonException: Newtonsoft.Json.Linq.JProperty cannot have multiple values.
+   在 Newtonsoft.Json.Linq.JProperty.InsertItem(Int32 index, JToken item, Boolean skipParentCheck)
+   在 Newtonsoft.Json.Linq.JContainer.AddInternal(Int32 index, Object content, Boolean skipParentCheck)
+   在 Newtonsoft.Json.Linq.JToken.AddAfterSelf(Object content)
+   在 Angel.Web.ControllersApi.DictionaryApiController.Post(String value) 位置 f:\AngelProGramCode\新建文件夹\AngelRM_MVC\Angel.Web\ControllersApi\DictionaryApiController.cs:行号 115
+InfoApiTime：2021-04-04 22:32:39,调用：Angel.ControllersApi/ControllerApi/DictionaryApiController/Post([FromBody]string value)方法
+Error：调用 Angel.ControllersApi/ControllerApi/DictionaryApiController/Post([FromBody]string value)方法,Newtonsoft.Json.JsonException: Newtonsoft.Json.Linq.JProperty cannot have multiple values.
+   在 Newtonsoft.Json.Linq.JProperty.InsertItem(Int32 index, JToken item, Boolean skipParentCheck)
+   在 Newtonsoft.Json.Linq.JContainer.AddInternal(Int32 index, Object content, Boolean skipParentCheck)
+   在 Newtonsoft.Json.Linq.JToken.AddAfterSelf(Object content)
+   在 Angel.Web.ControllersApi.DictionaryApiController.Post(String value) 位置 f:\AngelProGramCode\新建文件夹\AngelRM_MVC\Angel.Web\ControllersApi\DictionaryApiController.cs:行号 115
+InfoApiTime：2021-04-04 22:32:39,调用：Angel.ControllersApi/ControllerApi/DictionaryApiController/Post([FromBody]string value)方法
+Error：调用 Angel.ControllersApi/ControllerApi/DictionaryApiController/Post([FromBody]string value)方法,Newtonsoft.Json.JsonException: Newtonsoft.Json.Linq.JProperty cannot have multiple values.
+   在 Newtonsoft.Json.Linq.JProperty.InsertItem(Int32 index, JToken item, Boolean skipParentCheck)
+   在 Newtonsoft.Json.Linq.JContainer.AddInternal(Int32 index, Object content, Boolean skipParentCheck)
+   在 Newtonsoft.Json.Linq.JToken.AddAfterSelf(Object content)
+   在 Angel.Web.ControllersApi.DictionaryApiController.Post(String value) 位置 f:\AngelProGramCode\新建文件夹\AngelRM_MVC\Angel.Web\ControllersApi\DictionaryApiController.cs:行号 115
+InfoApiTime：2021-04-04 22:32:39,调用：Angel.ControllersApi/ControllerApi/DictionaryApiController/Post([FromBody]string value)方法
+Error：调用 Angel.ControllersApi/ControllerApi/DictionaryApiController/Post([FromBody]string value)方法,Newtonsoft.Json.JsonException: Newtonsoft.Json.Linq.JProperty cannot have multiple values.
+   在 Newtonsoft.Json.Linq.JProperty.InsertItem(Int32 index, JToken item, Boolean skipParentCheck)
+   在 Newtonsoft.Json.Linq.JContainer.AddInternal(Int32 index, Object content, Boolean skipParentCheck)
+   在 Newtonsoft.Json.Linq.JToken.AddAfterSelf(Object content)
+   在 Angel.Web.ControllersApi.DictionaryApiController.Post(String value) 位置 f:\AngelProGramCode\新建文件夹\AngelRM_MVC\Angel.Web\ControllersApi\DictionaryApiController.cs:行号 115
+InfoApiTime：2021-04-04 22:33:03,调用：Angel.ControllersApi/ControllerApi/DictionaryApiController/Post([FromBody]string value)方法
+Error：调用 Angel.ControllersApi/ControllerApi/DictionaryApiController/Post([FromBody]string value)方法,Newtonsoft.Json.JsonException: Newtonsoft.Json.Linq.JProperty cannot have multiple values.
+   在 Newtonsoft.Json.Linq.JProperty.InsertItem(Int32 index, JToken item, Boolean skipParentCheck)
+   在 Newtonsoft.Json.Linq.JContainer.AddInternal(Int32 index, Object content, Boolean skipParentCheck)
+   在 Newtonsoft.Json.Linq.JToken.AddAfterSelf(Object content)
+   在 Angel.Web.ControllersApi.DictionaryApiController.Post(String value) 位置 f:\AngelProGramCode\新建文件夹\AngelRM_MVC\Angel.Web\ControllersApi\DictionaryApiController.cs:行号 115
+InfoApiTime：2021-04-04 22:36:06,调用：Angel.ControllersApi/ControllerApi/DictionaryApiController/Post([FromBody]string value)方法
+Error：调用 Angel.ControllersApi/ControllerApi/DictionaryApiController/Post([FromBody]string value)方法,Newtonsoft.Json.JsonException: Newtonsoft.Json.Linq.JProperty cannot have multiple values.
+   在 Newtonsoft.Json.Linq.JProperty.InsertItem(Int32 index, JToken item, Boolean skipParentCheck)
+   在 Newtonsoft.Json.Linq.JContainer.AddInternal(Int32 index, Object content, Boolean skipParentCheck)
+   在 Newtonsoft.Json.Linq.JToken.AddAfterSelf(Object content)
+   在 Angel.Web.ControllersApi.DictionaryApiController.Post(String value) 位置 f:\AngelProGramCode\新建文件夹\AngelRM_MVC\Angel.Web\ControllersApi\DictionaryApiController.cs:行号 115
+InfoApiTime：2021-04-04 22:36:32,调用：Angel.ControllersApi/ControllerApi/DictionaryApiController/Post([FromBody]string value)方法
+Error：调用 Angel.ControllersApi/ControllerApi/DictionaryApiController/Post([FromBody]string value)方法,Newtonsoft.Json.JsonException: Newtonsoft.Json.Linq.JProperty cannot have multiple values.
+   在 Newtonsoft.Json.Linq.JProperty.InsertItem(Int32 index, JToken item, Boolean skipParentCheck)
+   在 Newtonsoft.Json.Linq.JContainer.AddInternal(Int32 index, Object content, Boolean skipParentCheck)
+   在 Newtonsoft.Json.Linq.JToken.AddAfterSelf(Object content)
+   在 Angel.Web.ControllersApi.DictionaryApiController.Post(String value) 位置 f:\AngelProGramCode\新建文件夹\AngelRM_MVC\Angel.Web\ControllersApi\DictionaryApiController.cs:行号 115
+InfoApiTime：2021-04-04 22:36:43,调用：Angel.ControllersApi/ControllerApi/DictionaryApiController/Post([FromBody]string value)方法
+Error：调用 Angel.ControllersApi/ControllerApi/DictionaryApiController/Post([FromBody]string value)方法,Newtonsoft.Json.JsonException: Newtonsoft.Json.Linq.JProperty cannot have multiple values.
+   在 Newtonsoft.Json.Linq.JProperty.InsertItem(Int32 index, JToken item, Boolean skipParentCheck)
+   在 Newtonsoft.Json.Linq.JContainer.AddInternal(Int32 index, Object content, Boolean skipParentCheck)
+   在 Newtonsoft.Json.Linq.JToken.AddAfterSelf(Object content)
+   在 Angel.Web.ControllersApi.DictionaryApiController.Post(String value) 位置 f:\AngelProGramCode\新建文件夹\AngelRM_MVC\Angel.Web\ControllersApi\DictionaryApiController.cs:行号 115
+InfoApiTime：2021-04-04 22:37:33,调用：Angel.ControllersApi/ControllerApi/DictionaryApiController/Post([FromBody]string value)方法
+Error：调用 Angel.ControllersApi/ControllerApi/DictionaryApiController/Post([FromBody]string value)方法,Newtonsoft.Json.JsonException: Newtonsoft.Json.Linq.JProperty cannot have multiple values.
+   在 Newtonsoft.Json.Linq.JProperty.InsertItem(Int32 index, JToken item, Boolean skipParentCheck)
+   在 Newtonsoft.Json.Linq.JContainer.AddInternal(Int32 index, Object content, Boolean skipParentCheck)
+   在 Newtonsoft.Json.Linq.JToken.AddAfterSelf(Object content)
+   在 Angel.Web.ControllersApi.DictionaryApiController.Post(String value) 位置 f:\AngelProGramCode\新建文件夹\AngelRM_MVC\Angel.Web\ControllersApi\DictionaryApiController.cs:行号 115
+InfoApiTime：2021-04-04 22:37:45,调用：Angel.ControllersApi/ControllerApi/DictionaryApiController/Post([FromBody]string value)方法
+Error：调用 Angel.ControllersApi/ControllerApi/DictionaryApiController/Post([FromBody]string value)方法,Newtonsoft.Json.JsonException: Newtonsoft.Json.Linq.JProperty cannot have multiple values.
+   在 Newtonsoft.Json.Linq.JProperty.InsertItem(Int32 index, JToken item, Boolean skipParentCheck)
+   在 Newtonsoft.Json.Linq.JContainer.AddInternal(Int32 index, Object content, Boolean skipParentCheck)
+   在 Newtonsoft.Json.Linq.JToken.AddAfterSelf(Object content)
+   在 Angel.Web.ControllersApi.DictionaryApiController.Post(String value) 位置 f:\AngelProGramCode\新建文件夹\AngelRM_MVC\Angel.Web\ControllersApi\DictionaryApiController.cs:行号 115
+InfoApiTime：2021-04-04 22:44:10,调用：Angel.ControllersApi/ControllerApi/DictionaryApiController/Post([FromBody]string value)方法
+MySql.Data.MySqlClient.MySqlException (0x80004005): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '%(condition1)d,'%(condition2)s',%(condition3)d,now(),'',now(),tttt)' at line 1
+   在 MySql.Data.MySqlClient.MySqlStream.ReadPacket()
+   在 MySql.Data.MySqlClient.NativeDriver.GetResult(Int32& affectedRow, Int64& insertedId)
+   在 MySql.Data.MySqlClient.Driver.GetResult(Int32 statementId, Int32& affectedRows, Int64& insertedId)
+   在 MySql.Data.MySqlClient.Driver.NextResult(Int32 statementId, Boolean force)
+   在 MySql.Data.MySqlClient.MySqlDataReader.NextResult()
+   在 MySql.Data.MySqlClient.MySqlCommand.ExecuteReader(CommandBehavior behavior)
+   在 MySql.Data.MySqlClient.MySqlCommand.ExecuteReader()
+   在 MySql.Data.MySqlClient.MySqlCommand.ExecuteNonQuery()
+   在 Angel.DBHelper.MySqlHelpers.ExecuteNonQuery(List`1 sqlArray) 位置 f:\AngelProGramCode\新建文件夹\AngelRM_MVC\Angel.DBHelper\MySqlHelpers.cs:行号 773
+错误SQL:INSERT INTO angel_sys_dict_type  VALUES(null,'tttt',%(condition1)d,'%(condition2)s',%(condition3)d,now(),'',now(),tttt)
+System.Exception: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '%(condition1)d,'%(condition2)s',%(condition3)d,now(),'',now(),tttt)' at line 1
+   在 Angel.DBHelper.MySqlHelpers.ExecuteNonQuery(List`1 sqlArray) 位置 f:\AngelProGramCode\新建文件夹\AngelRM_MVC\Angel.DBHelper\MySqlHelpers.cs:行号 784
+   在 Angel.Service.MysqlService.InsertBatch(List`1 sqlArray) 位置 f:\AngelProGramCode\新建文件夹\AngelRM_MVC\Angel.Service\MysqlService.cs:行号 81
+   在 Angel.Service.BLLService.InsertBatch(JArray param, String serverName) 位置 f:\AngelProGramCode\新建文件夹\AngelRM_MVC\Angel.Service\BLLService.cs:行号 558
+InfoApiTime：2021-04-04 22:49:32,调用：Angel.ControllersApi/ControllerApi/DictionaryApiController/Post([FromBody]string value)方法
+MySql.Data.MySqlClient.MySqlException (0x80004005): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '%(condition1)d,'%(condition2)s',%(condition3)d,now(),'',now(),tttt)' at line 1
+   在 MySql.Data.MySqlClient.MySqlStream.ReadPacket()
+   在 MySql.Data.MySqlClient.NativeDriver.GetResult(Int32& affectedRow, Int64& insertedId)
+   在 MySql.Data.MySqlClient.Driver.GetResult(Int32 statementId, Int32& affectedRows, Int64& insertedId)
+   在 MySql.Data.MySqlClient.Driver.NextResult(Int32 statementId, Boolean force)
+   在 MySql.Data.MySqlClient.MySqlDataReader.NextResult()
+   在 MySql.Data.MySqlClient.MySqlCommand.ExecuteReader(CommandBehavior behavior)
+   在 MySql.Data.MySqlClient.MySqlCommand.ExecuteReader()
+   在 MySql.Data.MySqlClient.MySqlCommand.ExecuteNonQuery()
+   在 Angel.DBHelper.MySqlHelpers.ExecuteNonQuery(List`1 sqlArray) 位置 f:\AngelProGramCode\新建文件夹\AngelRM_MVC\Angel.DBHelper\MySqlHelpers.cs:行号 773
+错误SQL:INSERT INTO angel_sys_dict_type  VALUES(null,'tttt',%(condition1)d,'%(condition2)s',%(condition3)d,now(),'',now(),tttt)
+System.Exception: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '%(condition1)d,'%(condition2)s',%(condition3)d,now(),'',now(),tttt)' at line 1
+   在 Angel.DBHelper.MySqlHelpers.ExecuteNonQuery(List`1 sqlArray) 位置 f:\AngelProGramCode\新建文件夹\AngelRM_MVC\Angel.DBHelper\MySqlHelpers.cs:行号 784
+   在 Angel.Service.MysqlService.InsertBatch(List`1 sqlArray) 位置 f:\AngelProGramCode\新建文件夹\AngelRM_MVC\Angel.Service\MysqlService.cs:行号 81
+   在 Angel.Service.BLLService.InsertBatch(JArray param, String serverName) 位置 f:\AngelProGramCode\新建文件夹\AngelRM_MVC\Angel.Service\BLLService.cs:行号 558
+InfoApiTime：2021-04-04 23:10:36,调用：Angel.ControllersApi/ControllerApi/DictionaryApiController/Post([FromBody]string value)方法
+System.ArgumentException: Object serialized to String. JObject instance expected.
+   在 Newtonsoft.Json.Linq.JObject.FromObject(Object o, JsonSerializer jsonSerializer)
+   在 Newtonsoft.Json.Linq.JObject.FromObject(Object o)
+   在 Angel.Service.BLLService.InsertBatch(JArray param, String serverName) 位置 f:\AngelProGramCode\新建文件夹\AngelRM_MVC\Angel.Service\BLLService.cs:行号 509
+InfoApiTime：2021-04-04 23:17:42,调用：Angel.ControllersApi/ControllerApi/DictionaryApiController/Post([FromBody]string value)方法
+MySql.Data.MySqlClient.MySqlException (0x80004005): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '%(condition1)d,'%(condition2)s',%(condition3)d,now(),'',now(),tttt)' at line 1
+   在 MySql.Data.MySqlClient.MySqlStream.ReadPacket()
+   在 MySql.Data.MySqlClient.NativeDriver.GetResult(Int32& affectedRow, Int64& insertedId)
+   在 MySql.Data.MySqlClient.Driver.GetResult(Int32 statementId, Int32& affectedRows, Int64& insertedId)
+   在 MySql.Data.MySqlClient.Driver.NextResult(Int32 statementId, Boolean force)
+   在 MySql.Data.MySqlClient.MySqlDataReader.NextResult()
+   在 MySql.Data.MySqlClient.MySqlCommand.ExecuteReader(CommandBehavior behavior)
+   在 MySql.Data.MySqlClient.MySqlCommand.ExecuteReader()
+   在 MySql.Data.MySqlClient.MySqlCommand.ExecuteNonQuery()
+   在 Angel.DBHelper.MySqlHelpers.ExecuteNonQuery(List`1 sqlArray) 位置 f:\AngelProGramCode\新建文件夹\AngelRM_MVC\Angel.DBHelper\MySqlHelpers.cs:行号 773
+错误SQL:INSERT INTO angel_sys_dict_type  VALUES(null,'tttt',%(condition1)d,'%(condition2)s',%(condition3)d,now(),'',now(),tttt)
+System.Exception: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '%(condition1)d,'%(condition2)s',%(condition3)d,now(),'',now(),tttt)' at line 1
+   在 Angel.DBHelper.MySqlHelpers.ExecuteNonQuery(List`1 sqlArray) 位置 f:\AngelProGramCode\新建文件夹\AngelRM_MVC\Angel.DBHelper\MySqlHelpers.cs:行号 784
+   在 Angel.Service.MysqlService.InsertBatch(List`1 sqlArray) 位置 f:\AngelProGramCode\新建文件夹\AngelRM_MVC\Angel.Service\MysqlService.cs:行号 81
+   在 Angel.Service.BLLService.InsertBatch(JArray param, String serverName) 位置 f:\AngelProGramCode\新建文件夹\AngelRM_MVC\Angel.Service\BLLService.cs:行号 558
+InfoApiTime：2021-04-04 23:19:34,调用：Angel.ControllersApi/ControllerApi/DictionaryApiController/Post([FromBody]string value)方法
+MySql.Data.MySqlClient.MySqlException (0x80004005): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '%(condition1)d,'%(condition2)s',%(condition3)d,now(),'',now(),tttt)' at line 1
+   在 MySql.Data.MySqlClient.MySqlStream.ReadPacket()
+   在 MySql.Data.MySqlClient.NativeDriver.GetResult(Int32& affectedRow, Int64& insertedId)
+   在 MySql.Data.MySqlClient.Driver.GetResult(Int32 statementId, Int32& affectedRows, Int64& insertedId)
+   在 MySql.Data.MySqlClient.Driver.NextResult(Int32 statementId, Boolean force)
+   在 MySql.Data.MySqlClient.MySqlDataReader.NextResult()
+   在 MySql.Data.MySqlClient.MySqlCommand.ExecuteReader(CommandBehavior behavior)
+   在 MySql.Data.MySqlClient.MySqlCommand.ExecuteReader()
+   在 MySql.Data.MySqlClient.MySqlCommand.ExecuteNonQuery()
+   在 Angel.DBHelper.MySqlHelpers.ExecuteNonQuery(List`1 sqlArray) 位置 f:\AngelProGramCode\新建文件夹\AngelRM_MVC\Angel.DBHelper\MySqlHelpers.cs:行号 773
+错误SQL:INSERT INTO angel_sys_dict_type  VALUES(null,'tttt',%(condition1)d,'%(condition2)s',%(condition3)d,now(),'',now(),tttt)
+System.Exception: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '%(condition1)d,'%(condition2)s',%(condition3)d,now(),'',now(),tttt)' at line 1
+   在 Angel.DBHelper.MySqlHelpers.ExecuteNonQuery(List`1 sqlArray) 位置 f:\AngelProGramCode\新建文件夹\AngelRM_MVC\Angel.DBHelper\MySqlHelpers.cs:行号 784
+   在 Angel.Service.MysqlService.InsertBatch(List`1 sqlArray) 位置 f:\AngelProGramCode\新建文件夹\AngelRM_MVC\Angel.Service\MysqlService.cs:行号 81
+   在 Angel.Service.BLLService.InsertBatch(JArray param, String serverName) 位置 f:\AngelProGramCode\新建文件夹\AngelRM_MVC\Angel.Service\BLLService.cs:行号 558
+InfoApiTime：2021-04-04 23:20:19,调用：Angel.ControllersApi/ControllerApi/DictionaryApiController/Post([FromBody]string value)方法
+MySql.Data.MySqlClient.MySqlException (0x80004005): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '%(condition1)d,'%(condition2)s',%(condition3)d,now(),'',now(),tttt)' at line 1
+   在 MySql.Data.MySqlClient.MySqlStream.ReadPacket()
+   在 MySql.Data.MySqlClient.NativeDriver.GetResult(Int32& affectedRow, Int64& insertedId)
+   在 MySql.Data.MySqlClient.Driver.GetResult(Int32 statementId, Int32& affectedRows, Int64& insertedId)
+   在 MySql.Data.MySqlClient.Driver.NextResult(Int32 statementId, Boolean force)
+   在 MySql.Data.MySqlClient.MySqlDataReader.NextResult()
+   在 MySql.Data.MySqlClient.MySqlCommand.ExecuteReader(CommandBehavior behavior)
+   在 MySql.Data.MySqlClient.MySqlCommand.ExecuteReader()
+   在 MySql.Data.MySqlClient.MySqlCommand.ExecuteNonQuery()
+   在 Angel.DBHelper.MySqlHelpers.ExecuteNonQuery(List`1 sqlArray) 位置 f:\AngelProGramCode\新建文件夹\AngelRM_MVC\Angel.DBHelper\MySqlHelpers.cs:行号 773
+错误SQL:INSERT INTO angel_sys_dict_type  VALUES(null,'tttt',%(condition1)d,'%(condition2)s',%(condition3)d,now(),'',now(),tttt)
+System.Exception: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '%(condition1)d,'%(condition2)s',%(condition3)d,now(),'',now(),tttt)' at line 1
+   在 Angel.DBHelper.MySqlHelpers.ExecuteNonQuery(List`1 sqlArray) 位置 f:\AngelProGramCode\新建文件夹\AngelRM_MVC\Angel.DBHelper\MySqlHelpers.cs:行号 784
+   在 Angel.Service.MysqlService.InsertBatch(List`1 sqlArray) 位置 f:\AngelProGramCode\新建文件夹\AngelRM_MVC\Angel.Service\MysqlService.cs:行号 81
+   在 Angel.Service.BLLService.InsertBatch(JArray param, String serverName) 位置 f:\AngelProGramCode\新建文件夹\AngelRM_MVC\Angel.Service\BLLService.cs:行号 558
+InfoApiTime：2021-04-04 23:23:16,调用：Angel.ControllersApi/ControllerApi/DictionaryApiController/Post([FromBody]string value)方法
+MySql.Data.MySqlClient.MySqlException (0x80004005): Unknown column 'tttt' in 'field list'
+   在 MySql.Data.MySqlClient.MySqlStream.ReadPacket()
+   在 MySql.Data.MySqlClient.NativeDriver.GetResult(Int32& affectedRow, Int64& insertedId)
+   在 MySql.Data.MySqlClient.Driver.GetResult(Int32 statementId, Int32& affectedRows, Int64& insertedId)
+   在 MySql.Data.MySqlClient.Driver.NextResult(Int32 statementId, Boolean force)
+   在 MySql.Data.MySqlClient.MySqlDataReader.NextResult()
+   在 MySql.Data.MySqlClient.MySqlCommand.ExecuteReader(CommandBehavior behavior)
+   在 MySql.Data.MySqlClient.MySqlCommand.ExecuteReader()
+   在 MySql.Data.MySqlClient.MySqlCommand.ExecuteNonQuery()
+   在 Angel.DBHelper.MySqlHelpers.ExecuteNonQuery(List`1 sqlArray) 位置 f:\AngelProGramCode\新建文件夹\AngelRM_MVC\Angel.DBHelper\MySqlHelpers.cs:行号 773
+错误SQL:INSERT INTO angel_sys_dict_type  VALUES(null,'tttt',tttt,'Y',admin,now(),'',now(),tttt)
+System.Exception: Unknown column 'tttt' in 'field list'
+   在 Angel.DBHelper.MySqlHelpers.ExecuteNonQuery(List`1 sqlArray) 位置 f:\AngelProGramCode\新建文件夹\AngelRM_MVC\Angel.DBHelper\MySqlHelpers.cs:行号 784
+   在 Angel.Service.MysqlService.InsertBatch(List`1 sqlArray) 位置 f:\AngelProGramCode\新建文件夹\AngelRM_MVC\Angel.Service\MysqlService.cs:行号 81
+   在 Angel.Service.BLLService.InsertBatch(JArray param, String serverName) 位置 f:\AngelProGramCode\新建文件夹\AngelRM_MVC\Angel.Service\BLLService.cs:行号 558
+InfoApiTime：2021-04-04 23:24:51,调用：Angel.ControllersApi/ControllerApi/DictionaryApiController/Post([FromBody]string value)方法
+MySql.Data.MySqlClient.MySqlException (0x80004005): Unknown column 'tttt' in 'field list'
+   在 MySql.Data.MySqlClient.MySqlStream.ReadPacket()
+   在 MySql.Data.MySqlClient.NativeDriver.GetResult(Int32& affectedRow, Int64& insertedId)
+   在 MySql.Data.MySqlClient.Driver.GetResult(Int32 statementId, Int32& affectedRows, Int64& insertedId)
+   在 MySql.Data.MySqlClient.Driver.NextResult(Int32 statementId, Boolean force)
+   在 MySql.Data.MySqlClient.MySqlDataReader.NextResult()
+   在 MySql.Data.MySqlClient.MySqlCommand.ExecuteReader(CommandBehavior behavior)
+   在 MySql.Data.MySqlClient.MySqlCommand.ExecuteReader()
+   在 MySql.Data.MySqlClient.MySqlCommand.ExecuteNonQuery()
+   在 Angel.DBHelper.MySqlHelpers.ExecuteNonQuery(List`1 sqlArray) 位置 f:\AngelProGramCode\新建文件夹\AngelRM_MVC\Angel.DBHelper\MySqlHelpers.cs:行号 773
+错误SQL:INSERT INTO angel_sys_dict_type  VALUES(null,'tttt',tttt,'Y',admin,now(),'',now(),tttt)
+System.Exception: Unknown column 'tttt' in 'field list'
+   在 Angel.DBHelper.MySqlHelpers.ExecuteNonQuery(List`1 sqlArray) 位置 f:\AngelProGramCode\新建文件夹\AngelRM_MVC\Angel.DBHelper\MySqlHelpers.cs:行号 784
+   在 Angel.Service.MysqlService.InsertBatch(List`1 sqlArray) 位置 f:\AngelProGramCode\新建文件夹\AngelRM_MVC\Angel.Service\MysqlService.cs:行号 81
+   在 Angel.Service.BLLService.InsertBatch(JArray param, String serverName) 位置 f:\AngelProGramCode\新建文件夹\AngelRM_MVC\Angel.Service\BLLService.cs:行号 558
+InfoApiTime：2021-04-04 23:27:23,调用：Angel.ControllersApi/ControllerApi/DictionaryApiController/Post([FromBody]string value)方法
+MySql.Data.MySqlClient.MySqlException (0x80004005): Unknown column 'tttt' in 'field list'
+   在 MySql.Data.MySqlClient.MySqlStream.ReadPacket()
+   在 MySql.Data.MySqlClient.NativeDriver.GetResult(Int32& affectedRow, Int64& insertedId)
+   在 MySql.Data.MySqlClient.Driver.GetResult(Int32 statementId, Int32& affectedRows, Int64& insertedId)
+   在 MySql.Data.MySqlClient.Driver.NextResult(Int32 statementId, Boolean force)
+   在 MySql.Data.MySqlClient.MySqlDataReader.NextResult()
+   在 MySql.Data.MySqlClient.MySqlCommand.ExecuteReader(CommandBehavior behavior)
+   在 MySql.Data.MySqlClient.MySqlCommand.ExecuteNonQuery()
+   在 Angel.DBHelper.MySqlHelpers.ExecuteNonQuery(List`1 sqlArray) 位置 f:\AngelProGramCode\新建文件夹\AngelRM_MVC\Angel.DBHelper\MySqlHelpers.cs:行号 773
+错误SQL:INSERT INTO angel_sys_dict_type  VALUES(null,'tttt',tttt,'Y','admin',now(),'',now(),'tttt')
+System.Exception: Unknown column 'tttt' in 'field list'
+   在 Angel.DBHelper.MySqlHelpers.ExecuteNonQuery(List`1 sqlArray) 位置 f:\AngelProGramCode\新建文件夹\AngelRM_MVC\Angel.DBHelper\MySqlHelpers.cs:行号 784
+   在 Angel.Service.MysqlService.InsertBatch(List`1 sqlArray) 位置 f:\AngelProGramCode\新建文件夹\AngelRM_MVC\Angel.Service\MysqlService.cs:行号 81
+   在 Angel.Service.BLLService.InsertBatch(JArray param, String serverName) 位置 f:\AngelProGramCode\新建文件夹\AngelRM_MVC\Angel.Service\BLLService.cs:行号 558
+InfoApiTime：2021-04-04 23:28:22,调用：Angel.ControllersApi/ControllerApi/DictionaryApiController/Post([FromBody]string value)方法
+MySql.Data.MySqlClient.MySqlException (0x80004005): Unknown column 'tttt' in 'field list'
+   在 MySql.Data.MySqlClient.MySqlStream.ReadPacket()
+   在 MySql.Data.MySqlClient.NativeDriver.GetResult(Int32& affectedRow, Int64& insertedId)
+   在 MySql.Data.MySqlClient.Driver.GetResult(Int32 statementId, Int32& affectedRows, Int64& insertedId)
+   在 MySql.Data.MySqlClient.Driver.NextResult(Int32 statementId, Boolean force)
+   在 MySql.Data.MySqlClient.MySqlDataReader.NextResult()
+   在 MySql.Data.MySqlClient.MySqlCommand.ExecuteReader(CommandBehavior behavior)
+   在 MySql.Data.MySqlClient.MySqlCommand.ExecuteReader()
+   在 MySql.Data.MySqlClient.MySqlCommand.ExecuteNonQuery()
+   在 Angel.DBHelper.MySqlHelpers.ExecuteNonQuery(List`1 sqlArray) 位置 f:\AngelProGramCode\新建文件夹\AngelRM_MVC\Angel.DBHelper\MySqlHelpers.cs:行号 773
+错误SQL:INSERT INTO angel_sys_dict_type  VALUES(null,'tttt',tttt,'Y','admin',now(),'',now(),'tttt')
+System.Exception: Unknown column 'tttt' in 'field list'
+   在 Angel.DBHelper.MySqlHelpers.ExecuteNonQuery(List`1 sqlArray) 位置 f:\AngelProGramCode\新建文件夹\AngelRM_MVC\Angel.DBHelper\MySqlHelpers.cs:行号 784
+   在 Angel.Service.MysqlService.InsertBatch(List`1 sqlArray) 位置 f:\AngelProGramCode\新建文件夹\AngelRM_MVC\Angel.Service\MysqlService.cs:行号 81
+   在 Angel.Service.BLLService.InsertBatch(JArray param, String serverName) 位置 f:\AngelProGramCode\新建文件夹\AngelRM_MVC\Angel.Service\BLLService.cs:行号 558
+InfoApiTime：2021-04-04 23:28:52,调用：Angel.ControllersApi/ControllerApi/DictionaryApiController/Post([FromBody]string value)方法
+MySql.Data.MySqlClient.MySqlException (0x80004005): Unknown column 'tttt' in 'field list'
+   在 MySql.Data.MySqlClient.MySqlStream.ReadPacket()
+   在 MySql.Data.MySqlClient.NativeDriver.GetResult(Int32& affectedRow, Int64& insertedId)
+   在 MySql.Data.MySqlClient.Driver.GetResult(Int32 statementId, Int32& affectedRows, Int64& insertedId)
+   在 MySql.Data.MySqlClient.Driver.NextResult(Int32 statementId, Boolean force)
+   在 MySql.Data.MySqlClient.MySqlDataReader.NextResult()
+   在 MySql.Data.MySqlClient.MySqlCommand.ExecuteReader(CommandBehavior behavior)
+   在 MySql.Data.MySqlClient.MySqlCommand.ExecuteReader()
+   在 MySql.Data.MySqlClient.MySqlCommand.ExecuteNonQuery()
+   在 Angel.DBHelper.MySqlHelpers.ExecuteNonQuery(List`1 sqlArray) 位置 f:\AngelProGramCode\新建文件夹\AngelRM_MVC\Angel.DBHelper\MySqlHelpers.cs:行号 773
+错误SQL:INSERT INTO angel_sys_dict_type  VALUES(null,'tttt',tttt,'Y','admin',now(),'',now(),'tttt')
+System.Exception: Unknown column 'tttt' in 'field list'
+   在 Angel.DBHelper.MySqlHelpers.ExecuteNonQuery(List`1 sqlArray) 位置 f:\AngelProGramCode\新建文件夹\AngelRM_MVC\Angel.DBHelper\MySqlHelpers.cs:行号 784
+   在 Angel.Service.MysqlService.InsertBatch(List`1 sqlArray) 位置 f:\AngelProGramCode\新建文件夹\AngelRM_MVC\Angel.Service\MysqlService.cs:行号 81
+   在 Angel.Service.BLLService.InsertBatch(JArray param, String serverName) 位置 f:\AngelProGramCode\新建文件夹\AngelRM_MVC\Angel.Service\BLLService.cs:行号 558
+InfoApiTime：2021-04-04 23:30:12,调用：Angel.ControllersApi/ControllerApi/DictionaryApiController/Post([FromBody]string value)方法
+MySql.Data.MySqlClient.MySqlException (0x80004005): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'ORDER BY id desc' at line 1
+   在 MySql.Data.MySqlClient.MySqlStream.ReadPacket()
+   在 MySql.Data.MySqlClient.NativeDriver.GetResult(Int32& affectedRow, Int64& insertedId)
+   在 MySql.Data.MySqlClient.Driver.GetResult(Int32 statementId, Int32& affectedRows, Int64& insertedId)
+   在 MySql.Data.MySqlClient.Driver.NextResult(Int32 statementId, Boolean force)
+   在 MySql.Data.MySqlClient.MySqlDataReader.NextResult()
+   在 MySql.Data.MySqlClient.MySqlCommand.ExecuteReader(CommandBehavior behavior)
+   在 MySql.Data.MySqlClient.MySqlCommand.ExecuteDbDataReader(CommandBehavior behavior)
+   在 System.Data.Common.DbCommand.System.Data.IDbCommand.ExecuteReader(CommandBehavior behavior)
+   在 System.Data.Common.DbDataAdapter.FillInternal(DataSet dataset, DataTable[] datatables, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   在 System.Data.Common.DbDataAdapter.Fill(DataTable[] dataTables, Int32 startRecord, Int32 maxRecords, IDbCommand command, CommandBehavior behavior)
+   在 System.Data.Common.DbDataAdapter.Fill(DataTable dataTable)
+   在 Angel.DBHelper.MySqlHelpers.GetDataTable(String cmdText) 位置 f:\AngelProGramCode\新建文件夹\AngelRM_MVC\Angel.DBHelper\MySqlHelpers.cs:行号 940
+异常捕捉：Angel.Service.BLLServiceMySql.Data.MySqlClient.MySqlException (0x80004005): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'ORDER BY id desc' at line 1
+   在 MySql.Data.MySqlClient.MySqlStream.ReadPacket()
+   在 MySql.Data.MySqlClient.NativeDriver.GetResult(Int32& affectedRow, Int64& insertedId)
+   在 MySql.Data.MySqlClient.Driver.GetResult(Int32 statementId, Int32& affectedRows, Int64& insertedId)
+   在 MySql.Data.MySqlClient.Driver.NextResult(Int32 statementId, Boolean force)
+   在 MySql.Data.MySqlClient.MySqlDataReader.NextResult()
+   在 MySql.Data.MySqlClient.MySqlCommand.ExecuteReader(CommandBehavior behavior)
+   在 MySql.Data.MySqlClient.MySqlCommand.ExecuteDbDataReader(CommandBehavior behavior)
+   在 System.Data.Common.DbCommand.System.Data.IDbCommand.ExecuteReader(CommandBehavior behavior)
+   在 System.Data.Common.DbDataAdapter.FillInternal(DataSet dataset, DataTable[] datatables, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   在 System.Data.Common.DbDataAdapter.Fill(DataTable[] dataTables, Int32 startRecord, Int32 maxRecords, IDbCommand command, CommandBehavior behavior)
+   在 System.Data.Common.DbDataAdapter.Fill(DataTable dataTable)
+   在 Angel.DBHelper.MySqlHelpers.GetDataTable(String cmdText) 位置 f:\AngelProGramCode\新建文件夹\AngelRM_MVC\Angel.DBHelper\MySqlHelpers.cs:行号 948
+   在 Angel.Service.BLLService.GetWhereDataTable(String key, String wheresql) 位置 f:\AngelProGramCode\新建文件夹\AngelRM_MVC\Angel.Service\BLLService.cs:行号 1015
+MySql.Data.MySqlClient.MySqlException (0x80004005): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'ORDER BY id desc' at line 1
+   在 MySql.Data.MySqlClient.MySqlStream.ReadPacket()
+   在 MySql.Data.MySqlClient.NativeDriver.GetResult(Int32& affectedRow, Int64& insertedId)
+   在 MySql.Data.MySqlClient.Driver.GetResult(Int32 statementId, Int32& affectedRows, Int64& insertedId)
+   在 MySql.Data.MySqlClient.Driver.NextResult(Int32 statementId, Boolean force)
+   在 MySql.Data.MySqlClient.MySqlDataReader.NextResult()
+   在 MySql.Data.MySqlClient.MySqlCommand.ExecuteReader(CommandBehavior behavior)
+   在 MySql.Data.MySqlClient.MySqlCommand.ExecuteDbDataReader(CommandBehavior behavior)
+   在 System.Data.Common.DbCommand.System.Data.IDbCommand.ExecuteReader(CommandBehavior behavior)
+   在 System.Data.Common.DbDataAdapter.FillInternal(DataSet dataset, DataTable[] datatables, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   在 System.Data.Common.DbDataAdapter.Fill(DataTable[] dataTables, Int32 startRecord, Int32 maxRecords, IDbCommand command, CommandBehavior behavior)
+   在 System.Data.Common.DbDataAdapter.Fill(DataTable dataTable)
+   在 Angel.DBHelper.MySqlHelpers.GetDataTable(String cmdText) 位置 f:\AngelProGramCode\新建文件夹\AngelRM_MVC\Angel.DBHelper\MySqlHelpers.cs:行号 940
+异常捕捉：Angel.Service.BLLServiceMySql.Data.MySqlClient.MySqlException (0x80004005): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'ORDER BY id desc' at line 1
+   在 MySql.Data.MySqlClient.MySqlStream.ReadPacket()
+   在 MySql.Data.MySqlClient.NativeDriver.GetResult(Int32& affectedRow, Int64& insertedId)
+   在 MySql.Data.MySqlClient.Driver.GetResult(Int32 statementId, Int32& affectedRows, Int64& insertedId)
+   在 MySql.Data.MySqlClient.Driver.NextResult(Int32 statementId, Boolean force)
+   在 MySql.Data.MySqlClient.MySqlDataReader.NextResult()
+   在 MySql.Data.MySqlClient.MySqlCommand.ExecuteReader(CommandBehavior behavior)
+   在 MySql.Data.MySqlClient.MySqlCommand.ExecuteDbDataReader(CommandBehavior behavior)
+   在 System.Data.Common.DbCommand.System.Data.IDbCommand.ExecuteReader(CommandBehavior behavior)
+   在 System.Data.Common.DbDataAdapter.FillInternal(DataSet dataset, DataTable[] datatables, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   在 System.Data.Common.DbDataAdapter.Fill(DataTable[] dataTables, Int32 startRecord, Int32 maxRecords, IDbCommand command, CommandBehavior behavior)
+   在 System.Data.Common.DbDataAdapter.Fill(DataTable dataTable)
+   在 Angel.DBHelper.MySqlHelpers.GetDataTable(String cmdText) 位置 f:\AngelProGramCode\新建文件夹\AngelRM_MVC\Angel.DBHelper\MySqlHelpers.cs:行号 948
+   在 Angel.Service.BLLService.GetWhereDataTable(String key, String wheresql) 位置 f:\AngelProGramCode\新建文件夹\AngelRM_MVC\Angel.Service\BLLService.cs:行号 1015
+MySql.Data.MySqlClient.MySqlException (0x80004005): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'ORDER BY id desc' at line 1
+   在 MySql.Data.MySqlClient.MySqlStream.ReadPacket()
+   在 MySql.Data.MySqlClient.NativeDriver.GetResult(Int32& affectedRow, Int64& insertedId)
+   在 MySql.Data.MySqlClient.Driver.GetResult(Int32 statementId, Int32& affectedRows, Int64& insertedId)
+   在 MySql.Data.MySqlClient.Driver.NextResult(Int32 statementId, Boolean force)
+   在 MySql.Data.MySqlClient.MySqlDataReader.NextResult()
+   在 MySql.Data.MySqlClient.MySqlCommand.ExecuteReader(CommandBehavior behavior)
+   在 MySql.Data.MySqlClient.MySqlCommand.ExecuteDbDataReader(CommandBehavior behavior)
+   在 System.Data.Common.DbCommand.System.Data.IDbCommand.ExecuteReader(CommandBehavior behavior)
+   在 System.Data.Common.DbDataAdapter.FillInternal(DataSet dataset, DataTable[] datatables, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   在 System.Data.Common.DbDataAdapter.Fill(DataTable[] dataTables, Int32 startRecord, Int32 maxRecords, IDbCommand command, CommandBehavior behavior)
+   在 System.Data.Common.DbDataAdapter.Fill(DataTable dataTable)
+   在 Angel.DBHelper.MySqlHelpers.GetDataTable(String cmdText) 位置 f:\AngelProGramCode\新建文件夹\AngelRM_MVC\Angel.DBHelper\MySqlHelpers.cs:行号 940
+异常捕捉：Angel.Service.BLLServiceMySql.Data.MySqlClient.MySqlException (0x80004005): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'ORDER BY id desc' at line 1
+   在 MySql.Data.MySqlClient.MySqlStream.ReadPacket()
+   在 MySql.Data.MySqlClient.NativeDriver.GetResult(Int32& affectedRow, Int64& insertedId)
+   在 MySql.Data.MySqlClient.Driver.GetResult(Int32 statementId, Int32& affectedRows, Int64& insertedId)
+   在 MySql.Data.MySqlClient.Driver.NextResult(Int32 statementId, Boolean force)
+   在 MySql.Data.MySqlClient.MySqlDataReader.NextResult()
+   在 MySql.Data.MySqlClient.MySqlCommand.ExecuteReader(CommandBehavior behavior)
+   在 MySql.Data.MySqlClient.MySqlCommand.ExecuteDbDataReader(CommandBehavior behavior)
+   在 System.Data.Common.DbCommand.System.Data.IDbCommand.ExecuteReader(CommandBehavior behavior)
+   在 System.Data.Common.DbDataAdapter.FillInternal(DataSet dataset, DataTable[] datatables, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   在 System.Data.Common.DbDataAdapter.Fill(DataTable[] dataTables, Int32 startRecord, Int32 maxRecords, IDbCommand command, CommandBehavior behavior)
+   在 System.Data.Common.DbDataAdapter.Fill(DataTable dataTable)
+   在 Angel.DBHelper.MySqlHelpers.GetDataTable(String cmdText) 位置 f:\AngelProGramCode\新建文件夹\AngelRM_MVC\Angel.DBHelper\MySqlHelpers.cs:行号 948
+   在 Angel.Service.BLLService.GetWhereDataTable(String key, String wheresql) 位置 f:\AngelProGramCode\新建文件夹\AngelRM_MVC\Angel.Service\BLLService.cs:行号 1015
+MySql.Data.MySqlClient.MySqlException (0x80004005): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'ORDER BY id desc' at line 1
+   在 MySql.Data.MySqlClient.MySqlStream.ReadPacket()
+   在 MySql.Data.MySqlClient.NativeDriver.GetResult(Int32& affectedRow, Int64& insertedId)
+   在 MySql.Data.MySqlClient.Driver.GetResult(Int32 statementId, Int32& affectedRows, Int64& insertedId)
+   在 MySql.Data.MySqlClient.Driver.NextResult(Int32 statementId, Boolean force)
+   在 MySql.Data.MySqlClient.MySqlDataReader.NextResult()
+   在 MySql.Data.MySqlClient.MySqlCommand.ExecuteReader(CommandBehavior behavior)
+   在 MySql.Data.MySqlClient.MySqlCommand.ExecuteDbDataReader(CommandBehavior behavior)
+   在 System.Data.Common.DbCommand.System.Data.IDbCommand.ExecuteReader(CommandBehavior behavior)
+   在 System.Data.Common.DbDataAdapter.FillInternal(DataSet dataset, DataTable[] datatables, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   在 System.Data.Common.DbDataAdapter.Fill(DataTable[] dataTables, Int32 startRecord, Int32 maxRecords, IDbCommand command, CommandBehavior behavior)
+   在 System.Data.Common.DbDataAdapter.Fill(DataTable dataTable)
+   在 Angel.DBHelper.MySqlHelpers.GetDataTable(String cmdText) 位置 f:\AngelProGramCode\新建文件夹\AngelRM_MVC\Angel.DBHelper\MySqlHelpers.cs:行号 940
+异常捕捉：Angel.Service.BLLServiceMySql.Data.MySqlClient.MySqlException (0x80004005): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'ORDER BY id desc' at line 1
+   在 MySql.Data.MySqlClient.MySqlStream.ReadPacket()
+   在 MySql.Data.MySqlClient.NativeDriver.GetResult(Int32& affectedRow, Int64& insertedId)
+   在 MySql.Data.MySqlClient.Driver.GetResult(Int32 statementId, Int32& affectedRows, Int64& insertedId)
+   在 MySql.Data.MySqlClient.Driver.NextResult(Int32 statementId, Boolean force)
+   在 MySql.Data.MySqlClient.MySqlDataReader.NextResult()
+   在 MySql.Data.MySqlClient.MySqlCommand.ExecuteReader(CommandBehavior behavior)
+   在 MySql.Data.MySqlClient.MySqlCommand.ExecuteDbDataReader(CommandBehavior behavior)
+   在 System.Data.Common.DbCommand.System.Data.IDbCommand.ExecuteReader(CommandBehavior behavior)
+   在 System.Data.Common.DbDataAdapter.FillInternal(DataSet dataset, DataTable[] datatables, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   在 System.Data.Common.DbDataAdapter.Fill(DataTable[] dataTables, Int32 startRecord, Int32 maxRecords, IDbCommand command, CommandBehavior behavior)
+   在 System.Data.Common.DbDataAdapter.Fill(DataTable dataTable)
+   在 Angel.DBHelper.MySqlHelpers.GetDataTable(String cmdText) 位置 f:\AngelProGramCode\新建文件夹\AngelRM_MVC\Angel.DBHelper\MySqlHelpers.cs:行号 948
+   在 Angel.Service.BLLService.GetWhereDataTable(String key, String wheresql) 位置 f:\AngelProGramCode\新建文件夹\AngelRM_MVC\Angel.Service\BLLService.cs:行号 1015
+MySql.Data.MySqlClient.MySqlException (0x80004005): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'ORDER BY id desc' at line 1
+   在 MySql.Data.MySqlClient.MySqlStream.ReadPacket()
+   在 MySql.Data.MySqlClient.NativeDriver.GetResult(Int32& affectedRow, Int64& insertedId)
+   在 MySql.Data.MySqlClient.Driver.GetResult(Int32 statementId, Int32& affectedRows, Int64& insertedId)
+   在 MySql.Data.MySqlClient.Driver.NextResult(Int32 statementId, Boolean force)
+   在 MySql.Data.MySqlClient.MySqlDataReader.NextResult()
+   在 MySql.Data.MySqlClient.MySqlCommand.ExecuteReader(CommandBehavior behavior)
+   在 MySql.Data.MySqlClient.MySqlCommand.ExecuteDbDataReader(CommandBehavior behavior)
+   在 System.Data.Common.DbCommand.System.Data.IDbCommand.ExecuteReader(CommandBehavior behavior)
+   在 System.Data.Common.DbDataAdapter.FillInternal(DataSet dataset, DataTable[] datatables, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   在 System.Data.Common.DbDataAdapter.Fill(DataTable[] dataTables, Int32 startRecord, Int32 maxRecords, IDbCommand command, CommandBehavior behavior)
+   在 System.Data.Common.DbDataAdapter.Fill(DataTable dataTable)
+   在 Angel.DBHelper.MySqlHelpers.GetDataTable(String cmdText) 位置 f:\AngelProGramCode\新建文件夹\AngelRM_MVC\Angel.DBHelper\MySqlHelpers.cs:行号 940
+异常捕捉：Angel.Service.BLLServiceMySql.Data.MySqlClient.MySqlException (0x80004005): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'ORDER BY id desc' at line 1
+   在 MySql.Data.MySqlClient.MySqlStream.ReadPacket()
+   在 MySql.Data.MySqlClient.NativeDriver.GetResult(Int32& affectedRow, Int64& insertedId)
+   在 MySql.Data.MySqlClient.Driver.GetResult(Int32 statementId, Int32& affectedRows, Int64& insertedId)
+   在 MySql.Data.MySqlClient.Driver.NextResult(Int32 statementId, Boolean force)
+   在 MySql.Data.MySqlClient.MySqlDataReader.NextResult()
+   在 MySql.Data.MySqlClient.MySqlCommand.ExecuteReader(CommandBehavior behavior)
+   在 MySql.Data.MySqlClient.MySqlCommand.ExecuteDbDataReader(CommandBehavior behavior)
+   在 System.Data.Common.DbCommand.System.Data.IDbCommand.ExecuteReader(CommandBehavior behavior)
+   在 System.Data.Common.DbDataAdapter.FillInternal(DataSet dataset, DataTable[] datatables, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   在 System.Data.Common.DbDataAdapter.Fill(DataTable[] dataTables, Int32 startRecord, Int32 maxRecords, IDbCommand command, CommandBehavior behavior)
+   在 System.Data.Common.DbDataAdapter.Fill(DataTable dataTable)
+   在 Angel.DBHelper.MySqlHelpers.GetDataTable(String cmdText) 位置 f:\AngelProGramCode\新建文件夹\AngelRM_MVC\Angel.DBHelper\MySqlHelpers.cs:行号 948
+   在 Angel.Service.BLLService.GetWhereDataTable(String key, String wheresql) 位置 f:\AngelProGramCode\新建文件夹\AngelRM_MVC\Angel.Service\BLLService.cs:行号 1015
+InfoApiTime：2021-04-04 23:36:18,调用：Angel.ControllersApi/ControllerApi/DictionaryApiController/Post([FromBody]string value)方法
+InfoApiTime：2021-04-04 23:36:29,调用：Angel.ControllersApi/ControllerApi/DictionaryApiController/Post([FromBody]string value)方法
+InfoApiTime：2021-04-04 23:45:15,调用：Angel.ControllersApi/ControllerApi/DictionaryApiController/Post([FromBody]string value)方法
+InfoApiTime：2021-04-04 23:45:44,调用：Angel.ControllersApi/ControllerApi/DictionaryApiController/Post([FromBody]string value)方法
+MySql.Data.MySqlClient.MySqlException (0x80004005): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '%(condition2)d,isvisible='%(condition3)s',updateuser='%(condition4)d',remark='qq' at line 1
+   在 MySql.Data.MySqlClient.MySqlStream.ReadPacket()
+   在 MySql.Data.MySqlClient.NativeDriver.GetResult(Int32& affectedRow, Int64& insertedId)
+   在 MySql.Data.MySqlClient.Driver.GetResult(Int32 statementId, Int32& affectedRows, Int64& insertedId)
+   在 MySql.Data.MySqlClient.Driver.NextResult(Int32 statementId, Boolean force)
+   在 MySql.Data.MySqlClient.MySqlDataReader.NextResult()
+   在 MySql.Data.MySqlClient.MySqlCommand.ExecuteReader(CommandBehavior behavior)
+   在 MySql.Data.MySqlClient.MySqlCommand.ExecuteReader()
+   在 MySql.Data.MySqlClient.MySqlCommand.ExecuteNonQuery()
+   在 Angel.DBHelper.MySqlHelpers.ExecuteNonQuery(List`1 sqlArray) 位置 f:\AngelProGramCode\新建文件夹\AngelRM_MVC\Angel.DBHelper\MySqlHelpers.cs:行号 773
+错误SQL:UPDATE angel_sys_dict_type SET dictname='qqq1',dicttype=%(condition2)d,isvisible='%(condition3)s',updateuser='%(condition4)d',remark='qqqq1',updatetime=now() WHERE id=16
+System.Exception: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '%(condition2)d,isvisible='%(condition3)s',updateuser='%(condition4)d',remark='qq' at line 1
+   在 Angel.DBHelper.MySqlHelpers.ExecuteNonQuery(List`1 sqlArray) 位置 f:\AngelProGramCode\新建文件夹\AngelRM_MVC\Angel.DBHelper\MySqlHelpers.cs:行号 784
+   在 Angel.Service.MysqlService.InsertBatch(List`1 sqlArray) 位置 f:\AngelProGramCode\新建文件夹\AngelRM_MVC\Angel.Service\MysqlService.cs:行号 81
+   在 Angel.Service.BLLService.InsertBatch(JArray param, String serverName) 位置 f:\AngelProGramCode\新建文件夹\AngelRM_MVC\Angel.Service\BLLService.cs:行号 558
+InfoApiTime：2021-04-04 23:45:52,调用：Angel.ControllersApi/ControllerApi/DictionaryApiController/Post([FromBody]string value)方法
+InfoApiTime：2021-04-04 23:52:20,调用：Angel.ControllersApi/ControllerApi/DictionaryApiController/Post([FromBody]string value)方法
+InfoApiTime：2021-04-04 23:52:38,调用：Angel.ControllersApi/ControllerApi/DictionaryApiController/Post([FromBody]string value)方法
+InfoApiTime：2021-04-04 23:52:46,调用：Angel.ControllersApi/ControllerApi/DictionaryApiController/Post([FromBody]string value)方法
+InfoApiTime：2021-04-04 23:52:57,调用：Angel.ControllersApi/ControllerApi/DictionaryApiController/Post([FromBody]string value)方法
+InfoApiTime：2021-04-04 23:53:15,调用：Angel.ControllersApi/ControllerApi/DictionaryApiController/Post([FromBody]string value)方法
+InfoApiTime：2021-04-04 23:53:21,调用：Angel.ControllersApi/ControllerApi/DictionaryApiController/Post([FromBody]string value)方法
+InfoApiTime：2021-04-04 23:53:21,调用：Angel.ControllersApi/ControllerApi/DictionaryApiController/Post([FromBody]string value)方法
+InfoApiTime：2021-04-04 23:53:40,调用：Angel.ControllersApi/ControllerApi/RoleApiController/GetRolemeul()方法
+InfoApiTime：2021-04-04 23:54:01,调用：Angel.ControllersApi/ControllerApi/LoginlogApiController/PostList()方法
+InfoApiTime：2021-04-04 23:54:32,调用：Angel.ControllersApi/ControllerApi/DictionaryApiController/Post([FromBody]string value)方法
+InfoApiTime：2021-04-04 23:54:54,调用：Angel.ControllersApi/ControllerApi/MenuApiController/Get()方法
+InfoApiTime：2021-04-04 23:55:39,调用：Angel.ControllersApi/ControllerApi/DictionaryApiController/Post([FromBody]string value)方法
+MySql.Data.MySqlClient.MySqlException (0x80004005): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '%(condition2)d,isvisible='%(condition3)s',updateuser='%(condition4)d',remark='tt' at line 1
+   在 MySql.Data.MySqlClient.MySqlStream.ReadPacket()
+   在 MySql.Data.MySqlClient.NativeDriver.GetResult(Int32& affectedRow, Int64& insertedId)
+   在 MySql.Data.MySqlClient.Driver.GetResult(Int32 statementId, Int32& affectedRows, Int64& insertedId)
+   在 MySql.Data.MySqlClient.Driver.NextResult(Int32 statementId, Boolean force)
+   在 MySql.Data.MySqlClient.MySqlDataReader.NextResult()
+   在 MySql.Data.MySqlClient.MySqlCommand.ExecuteReader(CommandBehavior behavior)
+   在 MySql.Data.MySqlClient.MySqlCommand.ExecuteReader()
+   在 MySql.Data.MySqlClient.MySqlCommand.ExecuteNonQuery()
+   在 Angel.DBHelper.MySqlHelpers.ExecuteNonQuery(List`1 sqlArray) 位置 f:\AngelProGramCode\新建文件夹\AngelRM_MVC\Angel.DBHelper\MySqlHelpers.cs:行号 773
+错误SQL:UPDATE angel_sys_dict_type SET dictname='ttt',dicttype=%(condition2)d,isvisible='%(condition3)s',updateuser='%(condition4)d',remark='tttt',updatetime=now() WHERE id=19
+System.Exception: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '%(condition2)d,isvisible='%(condition3)s',updateuser='%(condition4)d',remark='tt' at line 1
+   在 Angel.DBHelper.MySqlHelpers.ExecuteNonQuery(List`1 sqlArray) 位置 f:\AngelProGramCode\新建文件夹\AngelRM_MVC\Angel.DBHelper\MySqlHelpers.cs:行号 784
+   在 Angel.Service.MysqlService.InsertBatch(List`1 sqlArray) 位置 f:\AngelProGramCode\新建文件夹\AngelRM_MVC\Angel.Service\MysqlService.cs:行号 81
+   在 Angel.Service.BLLService.InsertBatch(JArray param, String serverName) 位置 f:\AngelProGramCode\新建文件夹\AngelRM_MVC\Angel.Service\BLLService.cs:行号 558
+InfoApiTime：2021-04-04 23:55:50,调用：Angel.ControllersApi/ControllerApi/DictionaryApiController/Post([FromBody]string value)方法
+MySql.Data.MySqlClient.MySqlException (0x80004005): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '%(condition2)d,isvisible='%(condition3)s',updateuser='%(condition4)d',remark='tt' at line 1
+   在 MySql.Data.MySqlClient.MySqlStream.ReadPacket()
+   在 MySql.Data.MySqlClient.NativeDriver.GetResult(Int32& affectedRow, Int64& insertedId)
+   在 MySql.Data.MySqlClient.Driver.GetResult(Int32 statementId, Int32& affectedRows, Int64& insertedId)
+   在 MySql.Data.MySqlClient.Driver.NextResult(Int32 statementId, Boolean force)
+   在 MySql.Data.MySqlClient.MySqlDataReader.NextResult()
+   在 MySql.Data.MySqlClient.MySqlCommand.ExecuteReader(CommandBehavior behavior)
+   在 MySql.Data.MySqlClient.MySqlCommand.ExecuteReader()
+   在 MySql.Data.MySqlClient.MySqlCommand.ExecuteNonQuery()
+   在 Angel.DBHelper.MySqlHelpers.ExecuteNonQuery(List`1 sqlArray) 位置 f:\AngelProGramCode\新建文件夹\AngelRM_MVC\Angel.DBHelper\MySqlHelpers.cs:行号 773
+错误SQL:UPDATE angel_sys_dict_type SET dictname='ttt',dicttype=%(condition2)d,isvisible='%(condition3)s',updateuser='%(condition4)d',remark='tttt',updatetime=now() WHERE id=19
+System.Exception: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '%(condition2)d,isvisible='%(condition3)s',updateuser='%(condition4)d',remark='tt' at line 1
+   在 Angel.DBHelper.MySqlHelpers.ExecuteNonQuery(List`1 sqlArray) 位置 f:\AngelProGramCode\新建文件夹\AngelRM_MVC\Angel.DBHelper\MySqlHelpers.cs:行号 784
+   在 Angel.Service.MysqlService.InsertBatch(List`1 sqlArray) 位置 f:\AngelProGramCode\新建文件夹\AngelRM_MVC\Angel.Service\MysqlService.cs:行号 81
+   在 Angel.Service.BLLService.InsertBatch(JArray param, String serverName) 位置 f:\AngelProGramCode\新建文件夹\AngelRM_MVC\Angel.Service\BLLService.cs:行号 558
+InfoApiTime：2021-04-04 23:58:12,调用：Angel.ControllersApi/ControllerApi/DictionaryApiController/Post([FromBody]string value)方法
+MySql.Data.MySqlClient.MySqlException (0x80004005): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '%(condition2)d,isvisible='%(condition3)s',updateuser='%(condition4)d',remark='tt' at line 1
+   在 MySql.Data.MySqlClient.MySqlStream.ReadPacket()
+   在 MySql.Data.MySqlClient.NativeDriver.GetResult(Int32& affectedRow, Int64& insertedId)
+   在 MySql.Data.MySqlClient.Driver.GetResult(Int32 statementId, Int32& affectedRows, Int64& insertedId)
+   在 MySql.Data.MySqlClient.Driver.NextResult(Int32 statementId, Boolean force)
+   在 MySql.Data.MySqlClient.MySqlDataReader.NextResult()
+   在 MySql.Data.MySqlClient.MySqlCommand.ExecuteReader(CommandBehavior behavior)
+   在 MySql.Data.MySqlClient.MySqlCommand.ExecuteNonQuery()
+   在 Angel.DBHelper.MySqlHelpers.ExecuteNonQuery(List`1 sqlArray) 位置 f:\AngelProGramCode\新建文件夹\AngelRM_MVC\Angel.DBHelper\MySqlHelpers.cs:行号 773
+错误SQL:UPDATE angel_sys_dict_type SET dictname='ttt',dicttype=%(condition2)d,isvisible='%(condition3)s',updateuser='%(condition4)d',remark='tttt',updatetime=now() WHERE id=19
+System.Exception: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '%(condition2)d,isvisible='%(condition3)s',updateuser='%(condition4)d',remark='tt' at line 1
+   在 Angel.DBHelper.MySqlHelpers.ExecuteNonQuery(List`1 sqlArray) 位置 f:\AngelProGramCode\新建文件夹\AngelRM_MVC\Angel.DBHelper\MySqlHelpers.cs:行号 784
+   在 Angel.Service.MysqlService.InsertBatch(List`1 sqlArray) 位置 f:\AngelProGramCode\新建文件夹\AngelRM_MVC\Angel.Service\MysqlService.cs:行号 81
+   在 Angel.Service.BLLService.InsertBatch(JArray param, String serverName) 位置 f:\AngelProGramCode\新建文件夹\AngelRM_MVC\Angel.Service\BLLService.cs:行号 558

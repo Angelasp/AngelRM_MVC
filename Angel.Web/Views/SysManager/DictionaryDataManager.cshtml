@@ -1,0 +1,139 @@
+﻿<link href="/Scripts/dist/bootstrap-select/css/bootstrap-select.css" rel="stylesheet" />
+<div class="widget-header widget-header-blue widget-header-flat">
+    <h4 class="widget-title" style="color: #333333; left: 0px;">字典数据管理</h4>
+
+    <div class="widget-toolbar" style="padding: 0px; line-height: 70px;">
+        <div class="form-inline form-group " style="line-height: 70px;">
+
+            <div class="input-group input-group-sm">
+
+                <div class="input-group input-group-sm">
+                    <input type="text" class="form-control" id="search-input" placeholder="检索 ..." style="height: 32px; margin-top: 18.5px; margin-left: 1px; width: 46%; float: right;" size="40" />
+                    <select class="form-control" id="select_field" style="height: 32px; margin-top: 18.5px; width: 46%; float: right; border: 1px solid #a4cbff;">
+                        <option value="dictlabel">标签名</option>
+                        <option value="dictlabel">键值</option>
+                        <option value="createUserName">创建者</option>
+                    </select>
+                    <div id="toggle-result-format" class="input-group-btn">
+
+
+                        <button title="查询" id="btnSearch" type="button" style="" class="btn btn-success  onclickbtn">
+                            <i class="fa fa-search onclickbtni" style=""></i>
+                        </button>
+
+                        <button title="新增" style="width: 40px; height: 32px; border-color: #8fbcd9" class="btn btn-xs btn-white btn-info" id="btnAdd" onclick="modifyInfo(this)" name="add">
+                            <i class="ace-icon fa fa-plus bigger-120 orange " style="-webkit-text-stroke: 0.6px #fff"></i>
+
+                        </button>
+                        <button title="修改" style="width: 40px; height: 32px; border-color: #8fbcd9" class="btn btn-xs btn-white btn-info" id="btnEdit" onclick="modifyInfo(this)" name="edit">
+                            <i class="ace-icon fa fa-pencil bigger-120 orange"></i>
+
+                        </button>
+
+                        <button title="删除" style="width: 40px; height: 32px; border-color: #8fbcd9" class="btn btn-xs btn-white btn-info" data-toggle="modal" id="btnRemove" onclick="deleteAction()">
+                            <i class="ace-icon  fa fa-trash-o bigger-120 orange "></i>
+
+                        </button>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>
+<div class="widget-body">
+     <input type="hidden" id="tpyeId" value="@ViewBag.tpyeid">
+    <div class="widget-main" style="padding: 0px;">
+        <table id="table"></table>
+    </div>
+</div>
+<!-- 新增/修改-->
+<div class="modal fade" id="myDialog" tabindex="10" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-tree" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="dataTitle">数据管理</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                </button>
+            </div>
+            <div class="tab-pane fade in active" id="userinfo">
+                <div class="modal-body">
+                    <div class="form-group">
+                        <label for="dictlabel" class="active">字典标签</label>
+                        <input id="dictlabel" type="text" class="form-control">
+                    </div>
+                    <div class="form-group">
+                        <label for="dictvalue" class="active">字典键值</label>
+                        <input id="dictvalue" type="text" class="form-control">
+                    </div>
+                    <div class="form-group">
+                        <label for="dicttype" class="active">字典类型</label>
+                        <input id="dicttype" type="text" class="form-control" value="@ViewBag.dicttype" readonly="readonly">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="orderid" class="active">字典排序</label>
+                        <input id="orderid" type="text" class="form-control">
+                    </div>
+
+                    <div class="form-group" style="border-top: 2px solid #eee; padding-top: 6px;">
+                        <label for="isvisible" class="active">系统默认: &nbsp;&nbsp;&nbsp;</label>
+                        <label>
+                            <input name="isdefault" type="radio" value="Y" class="ace" checked />
+                            <span class="lbl">是 </span>
+                        </label>
+                        <label>
+                            <input name="isdefault" type="radio" value="N" class="ace" />
+                            <span class="lbl">否</span>
+                        </label>
+                        <div style="height: 5px;"></div>
+                    </div>
+                    <div class="form-group" style="border-top: 2px solid #eee; padding-top: 6px;">
+                        <label for="isvisible" class="active">是否可用: &nbsp;&nbsp;&nbsp;</label>
+                        <label>
+                            <input name="isvisible" type="radio" value="0" class="ace" checked />
+                            <span class="lbl">是 </span>
+                        </label>
+                        <label>
+                            <input name="isvisible" type="radio" value="1" class="ace" />
+                            <span class="lbl">否</span>
+                        </label>
+                        <div style="height: 5px;"></div>
+                    </div>
+
+                    <div class="form-group" id="input8">
+                        <label for="remark" class="active">备注</label>
+                        <input id="remark" type="text" class="form-control" autocomplete="off">
+                    </div>
+
+
+
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-primary" id="save" name="add">保存</button>
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">关闭</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="~/Scripts/js/com.js"></script>
+<script src="~/Scripts/dist/waves/waves-0.7.5/waves.s.js"></script>
+<script src="/Scripts/dist/bootstrap-table-1.11.1/bootstrap-table.min.js"></script>
+<script src="/Scripts/dist/bootstrap-table-1.11.1/locale/bootstrap-table-zh-CN.min.js"></script>
+<script src="/Scripts/dist/bootstrap-select/js/bootstrap-select.js"></script>
+<script src="/Scripts/dist/jquery-confirm/dist/jquery-confirm.min.js"></script>
+<script src="/Scripts/js/common.js"></script>
+<script src="/Scripts/dist/treeview/bootstrap-treeview.js"></script>
+<script src="~/ViewScripts/sysmanager/dictionarydatamanager.js"></script>
+<script>
+    //toggle display format buttons
+    $('#toggle-result-format .btn').tooltip({ container: 'body' }).on('click', function (e) {
+        $(this).siblings().each(function () {
+            $(this).removeClass($(this).attr('data-class')).addClass('btn-grey');
+        });
+        $(this).removeClass('btn-grey').addClass($(this).attr('data-class'));
+    });
+
+</script>

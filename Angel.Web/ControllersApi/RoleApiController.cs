@@ -8,7 +8,10 @@ using Angel.DBHelper;
 using Angel.BLL;
 using Angel.Utils;
 using Angel.Service;
+using Angel.Model;
+using Angel.DataAccess;
 using Newtonsoft.Json.Linq;
+using System.Data;
 
 namespace Angel.Web.ControllersApi
 {
@@ -55,11 +58,25 @@ namespace Angel.Web.ControllersApi
         {
             try
             {
-                string roleid = UtilFunction.GetCookie("roleid"); ;
-                //string roleid = "46";
+                string roleid = UtilFunction.GetCookie("roleid");
                 string value = "{ \"RoleID\": " + roleid + "}";
                 var list = Newtonsoft.Json.Linq.JObject.Parse(value);
                 FileLog.WriteLog("InfoApiTime：" + DateTime.Now.ToString() + ",调用：Angel.ControllersApi/ControllerApi/RoleApiController/GetRolemeul()方法");
+                //缓存当前角色按钮权限
+                DataTable btdt = QueryService.GetWhereDataTable("query_rolebtnlist", roleid);
+                List<Menu> menulist = new List<Menu>();
+                foreach(DataRow row in btdt.Rows){
+                    Menu menu = new Menu();
+                    menu.id = row["id"].ToString();
+                    menu.menuname = row["menuname"].ToString();
+                    menu.parentid = row["parentid"].ToString();
+                    menu.orderid = row["orderid"].ToString();
+                    menu.menutype = row["menutype"].ToString();
+                    menu.menuo = row["menuo"].ToString();
+                    menulist.Add(menu);
+                }
+                DataCache.SetCache("roledatabtn",menulist);
+                //结束按钮权限操作
                 return GetJSONMessage(QueryService.GetData(list, "2_5"));
             }
             catch (Exception er)

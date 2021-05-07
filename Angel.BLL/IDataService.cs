@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using Newtonsoft.Json.Linq;
+using System.Data;
 
 namespace Angel.BLL
 {
@@ -32,5 +33,7 @@ namespace Angel.BLL
        string MulteBatch(Dictionary<string, Newtonsoft.Json.Linq.JArray> param);
        //返回插入对象
        string ExecuteScalar(Dictionary<string, Newtonsoft.Json.Linq.JArray> param);
+       //直接返回datatable
+       DataTable GetWhereDataTable(string key, string wheresql);
     }
 }

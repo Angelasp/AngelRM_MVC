@@ -23,6 +23,7 @@ namespace Angel.Web.Controllers
 
         public ActionResult Index()
         {
+            ViewBag.Title = "ÏµÍ³»¶Ó­";
             return View("Welcome");
         }
 

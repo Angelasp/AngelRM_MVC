@@ -69,9 +69,6 @@ namespace Angel.Web.ControllersApi
                 case 3:
                     myjson = "{name:'3号'}";
                     break;
-                case 4:
-                    myjson = QueryService.GetData(null, "1_1331");
-                    break;
                 default:
                     myjson = "{name:'0号'}";
                     break;

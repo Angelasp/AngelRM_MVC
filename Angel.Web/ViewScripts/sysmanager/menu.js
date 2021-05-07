@@ -2,6 +2,7 @@ var menuData = null;
 var url = '/api/menuapi/get';
 var $table = $('#table');
 $(function () {
+
     $(document).on('focus', 'input[type="text"]', function () {
         $(this).parent().find('label').addClass('active');
     }).on('blur', 'input[type="text"]', function () {
@@ -9,6 +10,38 @@ $(function () {
             $(this).parent().find('label').removeClass('active');
         }
     });
+
+
+    $("#menuo").parents(".form-group").hide();
+
+    //菜单类型控制
+    $("input:radio[name='menutype']").change(function () {
+        var menuType = $('input:radio[name="menutype"]:checked').val();
+        if (menuType == "D") {
+            $("#menuo").parents(".form-group").hide();
+            $("#input4").parents(".form-group").show();
+            $("#input5").parents(".form-group").show();
+            $("input[name='isvisible']").parents(".form-group").show();
+        }
+        else if (menuType == "M")
+        {
+            $("input[name='isvisible']").parents(".form-group").show();
+            $("#menuo").parents(".form-group").show();
+            $("#input4").parents(".form-group").show();
+            $("#input5").parents(".form-group").show();
+
+        }
+        else if (menuType == "B") {
+            $("#input4").parents(".form-group").hide();
+            $("#input5").parents(".form-group").hide();
+            $("input[name='isvisible']").parents(".form-group").hide();
+            $("#menuo").parents(".form-group").show();
+        }
+    });
+
+
+
+
 
 
     // 请求服务数据时所传参数
@@ -31,63 +64,84 @@ $(function () {
         $table.bootstrapTable("loadAddSearch", keyvalue);
     });
 
-    // bootstrap table初始化
+    //// bootstrap table初始化
     $table.bootstrapTable({
         url: url,
         striped: true,
         search: false,
-        searchOnEnterKey: false,
         showRefresh: false,
         showToggle: false,
         showColumns: false,
-        minimumCountColumns: 2,
         showPaginationSwitch: false,
-        clickToSelect: false,
-        detailView: false,
-        // detailFormatter: 'detailFormatter',
-        pagination: true,
         paginationLoop: false,
-        classes: 'table table-hover table-no-bordered table-striped',
-        //sidePagination: 'server',
-        //silentSort: false,
         smartDisplay: false,
         idField: 'id',
-        sortName: 'id',
-        sortOrder: 'desc',
-        escape: true,
-        
-        //pageNumber: 1,
-        //pageSize: 5,
-        idField: 'systemId',
-        maintainSelected: false,
-        // toolbar: '#toolbar',
         columns: [
-            { field: 'state', checkbox: true },
-            { field: 'id', title: '编号', sortable: true, halign: 'center'},
-            { field: 'menuname', title: '菜单名称', sortable: true, halign: 'center' },
-            { field: 'parentid', title: '父类ID', sortable: true, halign: 'center' },
-            { field: 'orderid', title: '排序号', sortable: true, halign: 'center' },
-            { field: 'menuicon', title: '图标', sortable: true, halign: 'center' },
-            { field: 'menuurl', title: '菜单路径', sortable: true, halign: 'center' },
-            { field: 'isvisible', title: '是否显示', sortable: true, halign: 'center', formatter: function (value) { if (value == 'y') { return "<span class='badge bg-red' style='padding:2px 8px;'>显示</span>"; } else { return "<span class='badge bg-green' style='padding:2px 8px;'>隐藏</span>"; } } },
-       //     { field: 'isenabled', title: '是否可用', sortable: true, halign: 'center', formatter: function (value) { if (value == 'y') { return "<span class='badge bg-red' style='padding:2px 8px;'>可用</span>"; } else { return "<span class='badge bg-green' style='padding:2px 8px;'>禁用</span>"; } } },
-            { field: 'createuser', title: '创建者', sortable: true, halign: 'center' },
-            { field: 'remark', title: '菜单备注', sortable: true, halign: 'center' }
-            //,
-            //{field: 'action', title: '操作', halign: 'center', align: 'center', formatter: 'actionFormatter', events: 'actionEvents', clickToSelect: false}
-        ]
-    }).on('all.bs.table', function (e, name, args) {
-        $('[data-toggle="tooltip"]').tooltip();
-        //$('[data-toggle="popover"]').popover(); 
-        if (args[0] != undefined) {
-            var treeObj = { id: "", text: "", pid: "", nodes: [] };
-            if (menuData == null)
-                menuData = getNewTreeData(args[0], treeObj, 0).nodes;
-            //  console.log("menuData:" + menuData);
-            // console.log(JSON.stringify(menuData));
-        }
+            {
+                field: 'ck',
+                checkbox: true
+            },
+            {
+                field: 'menuname',
+                title: '名称'
+            },
+            {
+                field: 'parentid',
+                title: '父级部门ID'
+            },
+            {
+                field: 'isvisible',
+                title: '是否显示',
+                align: 'center',
+                formatter: function (value) {
+                    if (value == 'y') { return "<span class='badge bg-red' style='padding:2px 8px;'>显示</span>"; } else { return "<span class='badge bg-green' style='padding:2px 8px;'>禁用</span>"; }
+                }
+            },
+            { field: 'menuurl', title: '菜单路径', halign: 'center' },
+            { field: 'menutype', title: '菜单类型', halign: 'center' },
+            { field: 'menuo', title: '权限标识', halign: 'center' },
+            {
+                field: 'remark',
+                title: '备注'
+            },
+            {
+                field: 'createtime',
+                title: '创建时间',
+                halign: 'center'
+            },
+            {
+                field: 'updateuser',
+                title: '更新者',
+                halign: 'center'
+            }
 
-    });
+        ],
+        treeShowField: 'menuname',
+        parentIdField: 'parentid',
+        onLoadSuccess: function (data) {
+            $table.treegrid({
+                initialState: 'collapsed',//收缩
+                treeColumn: 1,//指明第几列数据改为树形
+                expanderExpandedClass: 'glyphicon glyphicon-triangle-bottom',
+                expanderCollapsedClass: 'glyphicon glyphicon-triangle-right',
+                onChange: function () {
+                    $table.bootstrapTable('resetWidth');
+                }
+            });
+        }
+    }).on('all.bs.table', function (e, name, args) {
+            $('[data-toggle="tooltip"]').tooltip();
+            //$('[data-toggle="popover"]').popover(); 
+            if (args[0] != undefined) {
+                var treeObj = { id: "", text: "", pid: "", nodes: [] };
+                if (menuData == null)
+                    menuData = getNewTreeData(args[0], treeObj, 0).nodes;
+                //  console.log("menuData:" + menuData);
+                // console.log(JSON.stringify(menuData));
+            }
+
+        });
+
 
 });
 function showIcon() {
@@ -144,6 +198,10 @@ function createAction() {
                     input7 = this.$content.find('input:radio[name="isenabled"]:checked').val();
                     var input8 = this.$content.find('#input8>input').val();
 
+                    var menutype = this.$content.find('input:radio[name="menutype"]:checked').val();
+                    var menuo = this.$content.find('#menuo').val();
+
+
                     if (input1.trim() == "") {
                         $.alert('请输入菜单名称！');
                         return false;
@@ -168,17 +226,19 @@ function createAction() {
                         $.alert('请选择是否显示！');
                         return false;
                     }
-                    if (input7.trim() == "") {
-                        $.alert('请选择是否禁用！');
+                    if (menutype.trim() == "") {
+                        $.alert('请选择菜单类型！');
                         return false;
                     }
+
+
                     if (input6 != "Y") {
                         input6 = "N";
                     }
                     if (input7 != "Y") {
                         input6 = "N";
                     }
-                    var postlist = '{ "insert": [{ "menuname": "' + input1 + '", "parentid": ' + input2 + ', "remark": "' + input8 + '", "menuicon": "' + nopic + '", "menuurl": "' + input5 + '", "orderid": "' + input3 + '", "isvisible": "' + input6 + '", "isenabled":" ' + input7 + '", "createuser": "admin" }]}';
+                    var postlist = '{ "insert": [{ "menuname": "' + input1 + '", "parentid": ' + input2 + ', "remark": "' + input8 + '", "menuicon": "' + nopic + '","menutype":"' + menutype + '","menuo":"'+menuo+'","menuurl": "' + input5 + '", "orderid": "' + input3 + '", "isvisible": "' + input6 + '", "isenabled":" ' + input7 + '", "createuser": "admin" }]}';
                     com.server.post(actionurl, JSON.stringify(postlist), function (data) {
                         if (data != null) {
                             if (data.code.id == "1") {
@@ -413,11 +473,15 @@ function showMenu(obj) {
             return false;
         } else {
             $("#menuDialog").find('label').addClass('active');
+
             $('#input1').attr("value", rows[0].menuname);
+
             $('#input2').attr("value", rows[0].parentid);
             $('#input3').attr("value", rows[0].orderid);
             $('#input4').attr("value", rows[0].menuicon);
             $('#input5').attr("value", rows[0].menuurl);
+            $('#menuo').attr("value", rows[0].menuo);
+
             $('#input8>input').val(rows[0].remark);
             if (rows[0].isvisible == "y") {
                 $("input[name='isvisible']:eq(0)").attr("checked", 'checked');
@@ -426,12 +490,36 @@ function showMenu(obj) {
                 $("input[name='isvisible']:eq(1)").attr("checked", 'checked');
             }
 
+
             if (rows[0].isenabled == "y") {
                 $("input[name='isenabled']:eq(0)").attr("checked", 'checked');
             }
             else {
                 $("input[name='isenabled']:eq(1)").attr("checked", 'checked');
             }
+
+            if (rows[0].menutype == "d") {
+                $("input[name='menutype']").get(0).checked = true;
+                $("#menuo").parents(".form-group").hide();
+                $("#input4").parents(".form-group").show();
+                $("#input5").parents(".form-group").show();
+                $("input[name='isvisible']").parents(".form-group").show();
+            }
+            else if (rows[0].menutype == "m") {
+                $("input[name='menutype']").get(1).checked = true;
+                $("input[name='isvisible']").parents(".form-group").show();
+                $("#menuo").parents(".form-group").show();
+                $("#input4").parents(".form-group").show();
+                $("#input5").parents(".form-group").show();
+            }
+            else if (rows[0].menutype == "b") {
+                $("input[name='menutype']").get(2).checked = true;
+                $("#input4").parents(".form-group").hide();
+                $("#input5").parents(".form-group").hide();
+                $("input[name='isvisible']").parents(".form-group").hide();
+                $("#menuo").parents(".form-group").show();
+            }
+
         }
         $("#menuTitle").text("编辑菜单");
         $("#save_menu").attr("name", "edit");
@@ -440,7 +528,7 @@ function showMenu(obj) {
 }
 
 $('#save_menu').on('click', function () {
-    var input1, input2, input3, input4, input5, input6, input7, input8, nopic;
+    var input1, input2, input3, input4, input5, input6, input7, input8, nopic, menutype, menuo;
     var actionurl = '/api/MenuApi/Post';
 
     input1 = $('#input1').val();
@@ -457,6 +545,11 @@ $('#save_menu').on('click', function () {
     input6 = $('input:radio[name="isvisible"]:checked').val();
     input7 = $('input:radio[name="isenabled"]:checked').val();
     input8 = $('#input8>input').val();
+
+    menutype = $('input:radio[name="menutype"]:checked').val();
+    menuo = $('#menuo').val();
+
+
     if (input1.trim() == "") {
         alert('请输入菜单名称！');
         return false;
@@ -469,14 +562,14 @@ $('#save_menu').on('click', function () {
         alert('请输入排序号！');
         return false;
     }
-    if (input4.trim() == "") {
-        alert('请输入菜单图标！');
-        return false;
-    }
-    if (input5.trim() == "") {
-        alert('请输入菜单路径！');
-        return false;
-    }
+    //if (input4.trim() == "") {
+    //    alert('请输入菜单图标！');
+    //    return false;
+    //}
+    //if (input5.trim() == "") {
+    //    alert('请输入菜单路径！');
+    //    return false;
+    //}
     if (input6.trim() == "") {
         alert('请选择是否显示！');
         return false;
@@ -496,11 +589,11 @@ $('#save_menu').on('click', function () {
     var operationtype;
     if ($(this).attr("name") === "add") {
         operationtype = "新增菜单名称:" + input1;
-        postlist = '{ "insert": [{ "menuname": "' + input1 + '", "parentid": ' + input2 + ', "remark": "' + input8 + '", "menuicon": "' + nopic + '", "menuurl": "' + input5 + '", "orderid": "' + input3 + '", "isvisible": "' + input6 + '", "isenabled":" ' + input7 + '", "createuser": "admin" }]}';
+        postlist = '{ "insert": [{ "menuname": "' + input1 + '", "parentid": ' + input2 + ', "remark": "' + input8 + '", "menuicon": "' + nopic + '", "menuurl": "' + input5 + '", "menutype": "' + menutype + '", "menuo": "' + menuo + '", "orderid": "' + input3 + '", "isvisible": "' + input6 + '", "isenabled":" ' + input7 + '", "createuser": "admin" }]}';
     } else {
         var rows = $table.bootstrapTable('getSelections');
         operationtype = "修改菜单名称:" + input1+" 菜单编号:"+rows[0].id;
-        postlist = '{ "update": [{ id:' + rows[0].id + ',"menuname": "' + input1 + '", "parentid": ' + input2 + ', "remark": "' + input8 + '", "menuicon": "' + nopic + '", "menuurl": "' + input5 + '", "orderid": "' + input3 + '", "isvisible": "' + input6 + '", "isenabled":" ' + input7 + '", "createuser": "admin","updateuser": "admin" }]}';
+        postlist = '{ "update": [{ id:' + rows[0].id + ',"menuname": "' + input1 + '", "parentid": ' + input2 + ', "remark": "' + input8 + '", "menuicon": "' + nopic + '", "menuurl": "' + input5 + '", "menutype": "' + menutype + '", "menuo": "' + menuo + '", "orderid": "' + input3 + '", "isvisible": "' + input6 + '", "isenabled":" ' + input7 + '", "createuser": "admin","updateuser": "admin" }]}';
     }
     com.server.post(actionurl, JSON.stringify(postlist), function (data) {
         if (data != null) {

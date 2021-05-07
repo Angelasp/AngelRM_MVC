@@ -77,7 +77,7 @@ namespace Angel.Web.ControllersApi
             DateTime date = DateTime.Now;                        // 当前时间毫秒数Millisecond
             string userid = UtilFunction.GetCookie("uid");       // 当前登录用户ID
             string username = UtilFunction.GetCookie("uname");   // 当前登录用户Name
-            string city = HttpUtility.UrlDecode(UtilFunction.GetCookie("cityid"));      // (集团用户OR省公司用户)
+            string city = HttpUtility.UrlDecode(UtilFunction.GetCookie("cityid"));     
             string filename = null;                              // 文件名
             string sysFileName = userid + "_" + batch + "_" + date.Millisecond + "_";  // 备份文件名
             string path = _directory + "UploadFiles/";           // 文件备份路径
@@ -115,18 +115,7 @@ namespace Angel.Web.ControllersApi
             }
             //注意要写好后面的第二第三个参数
             string strmsg = null, strerr = null;
-            //if (count == -1)
-            //{
-            //    // 如果文件中的数据已存在，则删除备份文件
-            //    if (File.Exists(path))
-            //    {
-            //        File.Delete(path);
-            //    }
-            //    strmsg = "";
-            //    strerr = "读取《" + filename + "》文件异常！(不包含\"填写模板\"sheet)"; // 指标编号重复
-            //}
-            //else
-            if (count == -2)
+            if (count == -1)
             {
                 // 如果文件中的数据已存在，则删除备份文件
                 if (File.Exists(path))
@@ -134,66 +123,11 @@ namespace Angel.Web.ControllersApi
                     File.Delete(path);
                 }
                 strmsg = "";
-                strerr = "《" + filename + "》不支持的文件！(只允许上传.xlsx文件)";
+                strerr = "读取《" + filename + "》文件异常！(不包含\"填写模板\"sheet)"; // 指标编号重复
             }
-            else if (count == -3)
+            else if(count == 0)
             {
-                // 如果文件中的数据已存在，则删除备份文件
-                if (File.Exists(path))
-                {
-                    File.Delete(path);
-                }
-                strmsg = "";
-                strerr = "数据库表TB_Indicator没有记录！";
-            }
-            else if (count == -4)
-            {
-                // 如果文件中的数据已存在，则删除备份文件
-                if (File.Exists(path))
-                {
-                    File.Delete(path);
-                }
-                strmsg = "";
-                strerr = error_msg;
-                //strerr = "《" + filename + "》文件名不符合命名规范！(参考：《省公司_安徽_201703_201704131450_王某某_13900000000.xlsx》、《专业处室_质量管理处_201704_201705131450_采集组_13900000000.xlsx》)";
-            }
-            else if (count == -5)
-            {
-                // 如果文件中的数据已存在，则删除备份文件
-                if (File.Exists(path))
-                {
-                    File.Delete(path);
-                }
-                strmsg = "";
-                strerr = "您只能上传[" + city + "]的数据。";
-            }
-            else if (count == -6)
-            {
-                // 如果文件中的数据已存在，则删除备份文件
-                if (File.Exists(path))
-                {
-                    File.Delete(path);
-                }
-                strmsg = "";
-                strerr = "《" + filename + "》读取文件错误！" + error_msg;
-            }
-            else if (count == -7)
-            {
-                // 如果文件中的数据已存在，则删除备份文件
-                if (File.Exists(path))
-                {
-                    File.Delete(path);
-                }
-                strmsg = "";
-                strerr = "读取《" + filename + "》文件异常！(指标编号重复)：" + error_msg; // 指标编号重复
-            }
-            else if (count == 0)
-            {
-                //// 如果文件中的数据已存在，则删除备份文件
-                //if (File.Exists(path))
-                //{
-                //    File.Delete(path);
-                //}
+
                 strmsg = "";
                 strerr = "《" + filename + "》文件中的数据已存在，请勿重复上传文件！";
             }

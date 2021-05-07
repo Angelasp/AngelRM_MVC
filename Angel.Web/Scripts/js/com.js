@@ -5,6 +5,7 @@
 var com = com || {};
 com.server = com.server || {};
 
+//ajax-get公共方法一
 com.server.get = function (url, params, callback, errcallback) {
     //console.log(params);
     if (typeof params === 'function') {
@@ -21,6 +22,7 @@ com.server.get = function (url, params, callback, errcallback) {
     params = _parseParam(url, params);
     $.ajax({ url: url, data: params, type: 'GET', async: false, timeout: 300000 }).done(callback).fail(errcallback);
 };
+//ajax-get公共方法二
 com.server.get1 = function (url, params, callback, errcallback) {
 
     if (typeof params === 'function') {
@@ -37,6 +39,7 @@ com.server.get1 = function (url, params, callback, errcallback) {
     params = _parseParam(url, params);
     $.ajax({ url: url, data: params, type: 'GET', async: true, timeout: 900000 }).done(callback).fail(errcallback);
 };
+//ajax-post公告方法
 com.server.post = function (url, params, callback, errcallback) {
     if (typeof params === 'function') {
         errcallback = callback;
@@ -52,7 +55,7 @@ com.server.post = function (url, params, callback, errcallback) {
     //params = _parseParam(url, params);
     $.ajax({ url: url, type: 'POST', async: false, dataType: 'json', contentType: 'application/json;charset=utf-8', data: params, timeout: 180000 }).done(callback).fail(errcallback);
 };
-
+//ajax-delete公告方法
 com.server.delete = function (url, params, callback, errcallback) {
     if (typeof params === 'function') {
         errcallback = callback;
@@ -69,31 +72,45 @@ com.server.delete = function (url, params, callback, errcallback) {
     $.ajax({ url: this._url + '/del', data: params, type: 'DELETE', timeout: 180000 }).done(callback).fail(errcallback);
 };
 
-/**
- * @param title   弹框消息的标题
- * @param text    弹框消息的内容
- * @param type     弹框消息的类型 success,info,warning,error
- * @param positionClass 进度条是否显示
- *///弹出窗的位置 toast-top-right,toast-botton-right,toash-bottom-left,toast-top-left,toast-top-full-width,
-com.showBox = function (title, text, type, positionClass, position) {
-    toastr.clear();
-    //参数设置，若用默认值可以省略以下面代
-    toastr.options = {
-        "closeButton": true, //是否显示关闭按钮
-        "debug": false, //是否使用debug模式
-        "progressBar": positionClass,//是否显示进度条
-        "positionClass": position ? position : "toast-bottom-right",//弹出窗的位置 toast-top-right,toast-botton-right,toash-bottom-left,
-        "showDuration": "600",//显示动作（从无到有这个动作）持续的时间
-        "hideDuration": "2000",//消失的动画时间
-        "timeOut": "10000", //展现时间
-        "extendedTimeOut": "2000",//加长展示时间
-        "showEasing": "swing",//显示时的动画缓冲方式
-        "hideEasing": "linear",//消失时的动画缓冲方式
-        "showMethod": "show",//显示时的动画方式  fadeIn+jQuery的展示效果
-        "hideMethod": "hide" //消失时的动画方式fadeout+jQuery的消失效果
-    };
-    toastr[type ? type : 'error'](text, title);
-}
+// 通用方法封装处理
+(function ($) {
+    $.extend({
+    
+        com: {
+            // 判断字符串是否为空
+            isEmpty: function (value) {
+                if (value == null || this.trim(value) == "") {
+                    return true;
+                }
+                return false;
+            },
+            // 判断一个字符串是否为非空串
+            isNotEmpty: function (value) {
+                return !$.com.isEmpty(value);
+            },
+            // 指定随机数返回
+            random: function (min, max) {
+                return Math.floor((Math.random() * max) + min);
+            }
+        },
+        angelmodal: {
+            // 选卡页方式打开
+            openTab: function (title, url) {
+                createMenuItem(url, title);
+            },
+            // 打开遮罩层
+            loading: function (message) {
+                $.blockUI({ message: '<div class="loaderbox"><div class="loading-activity"></div> ' + message + '</div>' });
+            },
+            // 关闭遮罩层
+            closeLoading: function () {
+                setTimeout(function () {
+                    $.unblockUI();
+                }, 50);
+            }
+        }
+    });
+})(jQuery);
 
 function _parseParam(url, params) {
     var selfp = params;
@@ -111,50 +128,6 @@ function _parseParam(url, params) {
         selfp.url = url;
         return selfp;
     }
-}
-
-
-function toTreeDataOrder(data, id, parentid) {
-    var mnum = $('<ul class=\"nav nav-list\"></ul>');
-    var groupValues = _.groupBy(_.sortBy(data, 'orderid'), parentid);//object
-    var defaultIcon = "fa fa-list-alt";
-    _.forEach(groupValues[0], function (obj) {
-        var menuicon_1 = obj.menuicon.indexOf("fa-") < 0 ? defaultIcon : obj.menuicon;
-        //判断是否有二级菜单,如果有则添加,如果没有直接编写
-        if (_.has(groupValues, obj[id])) {
-            var mnum1 = $("<li><a href=\"#\" class=\"dropdown-toggle\"> <i class=\"menu-icon " + menuicon_1 + "\"></i><span class=\"menu-text\">" + obj.menuname.toUpperCase() + "</span><b class=\"arrow fa fa-angle-right\"></b></a><b class=\"arrow\"></b><ul class=\"submenu\"></ul></li>");
-            _.forEach(groupValues[obj[id]], function (menu2) {
-                //三级菜单,判断groupvalue中的key是否在menus2中
-                if (_.has(groupValues, menu2[id])) {
-                    //添加二级菜单
-                    var mnum_2 = $("<li><a href=\"#\" class=\"dropdown-toggle\"> <i class=\"menu-icon fa fa-list-alt\"></i><span class=\"menu-text\">" + menu2.menuname.toUpperCase() + "</span><b class=\"arrow fa fa-angle-right\"></b></a><b class=\"arrow\"></b><ul class=\"submenu\"></ul></li>");
-                    //获取三级菜单对象
-                    _.forEach(groupValues[menu2[id]], function (menu3) {
-                        if (_.has(groupValues, menu3[id])) {
-                            var mnum_3 = $("<li><a href=\"#\" class=\"dropdown-toggle\"> <i class=\"menu-icon fa fa-list-alt\"></i><span class=\"menu-text\">" + menu3.menuname.toUpperCase() + "</span><b class=\"arrow fa fa-angle-right\"></b></a><b class=\"arrow\"></b><ul class=\"submenu\"></ul></li>");
-                            //获取四级菜单对象
-                            _.forEach(groupValues[menu3[id]], function (menu4) {
-                                $('<li><a href=\"' + menu4.menuurl + '\"><i class=\"icon-double-angle-right\"></i>' + menu4.menuname.toUpperCase() + '</a></li>').appendTo(mnum_3.find('ul.submenu'));
-                            })
-                            mnum_3.appendTo(mnum_2.find('ul.submenu').first());
-                        }
-                        else {
-                            $('<li><a href=\"' + menu3.menuurl + '\"><i class=\"icon-double-angle-right\"></i>' + menu3.menuname.toUpperCase() + '</a></li>').appendTo(mnum_2.find('ul.submenu'));
-                        }
-                        mnum_2.appendTo(mnum1.find('ul.submenu').first());
-                    })
-                }
-                else {
-                    $('<li><a href=\"' + menu2.menuurl + '\"><i class=\"icon-double-angle-right\"></i>' + menu2.menuname.toUpperCase() + '</a></li>').appendTo(mnum1.find('ul').first());
-                }
-                mnum1.appendTo(mnum);
-            });
-        } else {
-            $("<li><a href=\"" + obj.menuurl + "\" class=\"dropdown-toggle\"> <i class=\"menu-icon fa fa-list-alt\"></i><span class=\"menu-text\">" + obj.menuname.toUpperCase() + "</span><b class=\"arrow fa fa-angle-right\"></b></a><b class=\"arrow\"></b></li>").appendTo(mnum);
-        }
-    });
-    mnum.appendTo($("#sidebar"));
-    $('<div class="sidebar-toggle sidebar-collapse" id="sidebar-collapse"><i id="sidebar-toggle-icon" class="ace-icon fa fa-angle-double-left ace-save-state" data-icon1="ace-icon fa fa-angle-double-left" data-icon2="ace-icon fa fa-angle-double-right"></i></div>').appendTo($("#sidebar"));
 }
 
 
@@ -201,131 +174,86 @@ Date.prototype.Format = function (fmt) {
     return fmt;
 };
 
-$(function () {
 
-
-
-
-    var contest = $(".page-content");
-    //系统菜单绑定
-    com.server.get("/api/roleapi/GetRolemeul", '', function (data) {
-        if (data != null) {
-            toTreeDataOrder(data, 'id', 'parentid');
+/** 创建选项卡 */
+function createMenuItem(dataUrl, menuName) {
+    var panelUrl = window.frameElement.getAttribute('data-id');
+    dataIndex = $.com.random(1, 100),
+        flag = true;
+    if (dataUrl == undefined || $.trim(dataUrl).length == 0) return false;
+    var topWindow = $(window.parent.document);
+    // 选项卡菜单已存在
+    $('.menuTab', topWindow).each(function () {
+        if ($(this).data('id') == dataUrl) {
+            if (!$(this).hasClass('active')) {
+                $(this).addClass('active').siblings('.menuTab').removeClass('active');
+                $('.page-tabs-content').animate({ marginLeft: "" }, "fast");
+                // 显示tab对应的内容区
+                $('.mainContent .AngelRM_iframe', topWindow).each(function () {
+                    if ($(this).data('id') == dataUrl) {
+                        $(this).show().siblings('.AngelRM_iframe').hide();
+                        return false;
+                    }
+                });
+            }
+            flag = false;
+            return false;
         }
     });
+    // 选项卡菜单不存在
+    if (flag) {
+        var str = '<a href="javascript:;" class="active menuTab" data-id="' + dataUrl + '" data-panel="' + panelUrl + '">' + menuName + ' <i class="fa fa-times-circle"></i></a>';
+        $('.menuTab', topWindow).removeClass('active');
 
-    $(".nav-list a").each(function (da, element) {
-        var target = $(this).attr("href");
+        // 添加选项卡对应的iframe
+        var str1 = '<iframe class="AngelRM_iframe" name="iframe' + dataIndex + '" width="100%" height="100%" src="' + dataUrl + '" frameborder="0" data-id="' + dataUrl + '" data-panel="' + panelUrl + '" seamless></iframe>';
+        $('.mainContent', topWindow).find('iframe.AngelRM_iframe').hide().parents('.mainContent').append(str1);
 
-        if (target == '#' || target == '') {
-            contest.html('<div style=\"padding-top:50%;padding-left:50%\">页面正在加载中请稍等......</div>');
-        } else {
-            $(this).bind("click", function (e) {
-                e.preventDefault();
-                //定位选中菜单功能的样式
-                //    $(".nav-show").hide();
-                $(".active").removeClass("active");
-                //  $(".open").removeClass("active");
-                // $(".nav-list").find("li").removeClass("open");
-                // $(this).parents("li").addClass("open");
-                $(this).parents("li").siblings().removeClass("open");
-
-
-                $(this).parentsUntil("li>.open").addClass("active");
-                $(this).parent("li").addClass("active");
-                //      $(this).parents(".nav-show").show();
-                //contest.html('<div class=\"loading\">页面正在加载中请稍等......</div>');
-                contest.html('<div id=\"loading\"><div class=\"loading-shade\"></div><div class=\"loading-content\" onclick=\"$.loading(false)\">数据加载中，请稍后…</div> </div>');
-                var $loadingpage = top.$("#loading");
-                var $loadingtext = $loadingpage.find('.loading-content');
-                $loadingtext.css("left", (top.$('body').width() - $loadingtext.width()) / 2 - 50);
-                $loadingtext.css("top", (top.$('body').height() - $loadingtext.height()) / 2);
-                $.get(target).done(function (data, textStatus) {
-                    contest.html(data);
-                }
-                    ).fail(function (jqxhr, settings, exception) {
-                        contest.html(jqxhr.status + '<br />' + jqxhr.statusText + '<br />' + jqxhr.responseText);
-                    });
-            });
-        }
-    });
-
-    //点击更多文件列表
-    $('#moreList').bind('click', function (e) {
-        e.preventDefault();
-        var target = "/sysmanager/downloadlistmanager";
-        contest.html('<div class=\"loading\">页面正在加载中请稍等......</div>');
-        $.get(target).done(function (data, textStatus) {
-            contest.html(data);
-        }
-            ).fail(function (jqxhr, settings, exception) {
-                contest.html(jqxhr.status + '<br />' + jqxhr.statusText + '<br />' + jqxhr.responseText);
-            });
-    })
-
-
-    //弹出层绑定鼠标拖动
-    $(document).on("show.bs.modal", ".modal", function () {
-        $(this).draggable({
-            //  handle: ".modal-header"   // 只能点击头部拖动
+        window.parent.$.angelmodal.loading("数据加载中，请稍后...");
+        $('.mainContent iframe:visible', topWindow).load(function () {
+            window.parent.$.angelmodal.closeLoading();
         });
-        $(this).css("overflow", "hidden"); // 防止出现滚动条，出现的话，你会把滚动条一起拖着走的
-    });
 
-    $.get("/Welcome").done(function (data, textStatus) {
-        contest.html(data);
+        // 添加选项卡
+        $('.menuTabs .page-tabs-content', topWindow).append(str);
     }
-                    ).fail(function (jqxhr, settings, exception) {
-                        contest.html(jqxhr.status + '<br />' + jqxhr.statusText + '<br />' + jqxhr.responseText);
-                    });
+    return false;
+}
 
-    RefreshDownFile();
+/** 刷新选项卡 */
+var refreshItem = function () {
+    var topWindow = $(window.parent.document);
+    var currentId = $('.page-tabs-content', topWindow).find('.active').attr('data-id');
+    var target = $('.AngelRM_iframe[data-id="' + currentId + '"]', topWindow);
+    var url = target.attr('src');
+    target.attr('src', url).ready();
+}
 
-    $('#index_uppassword').on('click', function () {
-        $("#UppwdDialog").modal("show");
-    });
-
-    $('#save_userpwd').on('click', function () {
-        var input1, input2, input3
-        var actionurl = '/api/userapi/postuppwd';
-
-        input1 = $('#input1').val();
-        input2 = $('#input2').val();;
-        input3 = $('#input3').val();
-
-        if (input1.trim() == "") {
-            alert('请输入旧密码！');
-            return false;
-        }
-        if (input2.trim() == "") {
-            alert('请输入新密码！');
-            return false;
-        }
-
-        if (input2.length < 6) {
-            alert('请输入大于六位的密码！');
-            return false;
-        }
-
-        if (input3.trim() != input2.trim()) {
-            alert('再次输入密码和新密码不相等！');
-            return false;
-        }
-        var postlist;
-        postlist = '{ "updatepwd": [{"userid":{$userid},"oldPwd":"' + input1 + '","newPwd": "' + input2 + '",UpdateUser:"{admin}"}]}';
-        com.server.post(actionurl, JSON.stringify(postlist), function (data) {
-            if (data != null) {
-                if (data.code.id == "1") {
-                    $("#UppwdDialog").modal("hide");
-                    alert('修改密码成功！');
-                }
-                else if (data.code.id == "2") {
-                    alert('旧密码输入错误');
-                }
-                else {
-                    alert(data.code.msg);
-                }
+/** 关闭选项卡 */
+var closeItem = function (dataId) {
+    var topWindow = $(window.parent.document);
+    if ($.com.isNotEmpty(dataId)) {
+        window.parent.$.modal.closeLoading();
+        // 根据dataId关闭指定选项卡
+        $('.menuTab[data-id="' + dataId + '"]', topWindow).remove();
+        // 移除相应tab对应的内容区
+        $('.mainContent .AngelRM_iframe[data-id="' + dataId + '"]', topWindow).remove();
+        return;
+    }
+    var panelUrl = window.frameElement.getAttribute('data-panel');
+    $('.page-tabs-content .active i', topWindow).click();
+    if ($.com.isNotEmpty(panelUrl)) {
+        $('.menuTab[data-id="' + panelUrl + '"]', topWindow).addClass('active').siblings('.menuTab').removeClass('active');
+        $('.mainContent .AngelRM_iframe', topWindow).each(function () {
+            if ($(this).data('id') == panelUrl) {
+                $(this).show().siblings('.AngelRM_iframe').hide();
+                return false;
             }
         });
-    });
-});
+    }
+}
+
+
+
+
+

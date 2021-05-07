@@ -49,12 +49,14 @@
     <!-- page specific plugin scripts -->
     <!--[if lte IE 8]>
     <script src="/Content/themes/js/excanvas.min.js"></script>
-    <![endif]-->
-    @Scripts.Render("~/bundles/jquerytool")
+    <![endif]--> 
     <script src="/Content/laydate/laydate.js"></script>
+    <script src="~/Content/js/jquery.blockUI.js"></script>
+    @Scripts.Render("~/bundles/jquerytool")
+
 </head>
 
-<body class="no-skin" style="background: #f5f7fa;">
+<body class="no-skin" style="background: #f5f7fa;overflow:hidden;">
     <div id="navbar" class="navbar navbar-default  ace-save-state" style="background: #1991d5;">
         <div class="navbar-container ace-save-state" id="navbar-container">
             <button type="button" class="navbar-toggle menu-toggler pull-left" id="menu-toggler" data-target="#sidebar">
@@ -71,7 +73,7 @@
                 <a href="#" class="navbar-brand">
                     <small>
                         <img src="~/Content/images/logos.png" />
-                        &nbsp; 通用权限管理系统
+                        &nbsp;  通用权限管理系统
                     </small>
                 </a>
             </div>
@@ -164,24 +166,44 @@
     </div>
 
     <div class="main-container ace-save-state container" id="main-container" style="background: #f5f7fa;">
-
+         <!-- /.nav-list -->
         <div id="sidebar" class="sidebar responsive ace-save-state">
             <!--菜单列表-->
-
-            <!-- /.nav-list -->
-
-
-
         </div>
 
+
         <div class="main-content">
-            <div class="main-content-inner" style="background: #f5f7fa;">
-                <div id="page-content-width" class="page-content" style="height:100%;">
-
-                    @*            <iframe id="mainframe" name="mainframe" frameborder="0" src="/SysManager/MenuManager"></iframe>*@
-
+            <div class="row content-tabs" style="">
+            <button class="roll-nav roll-left tabLeft">
+                <i class="fa fa-backward"></i>
+            </button>
+            <nav class="page-tabs menuTabs">
+                <div class="page-tabs-content">
+                    <a href="javascript:;" class="active menuTab" data-id="/Welcome/Index">首页</a>
                 </div>
+            </nav>
+            <button class="roll-nav roll-right tabRight">
+                <i class="fa fa-forward"></i>
+            </button>
+            <div class="btn-group roll-nav roll-right">
+                <button class="dropdown J_tabClose" data-toggle="dropdown">
+                                                                          页签操作<span class="caret"></span>
+                </button>
+                <ul role="menu" class="dropdown-menu dropdown-menu-right">
+                     <li><a class="tabCloseCurrent" href="javascript:void();">关闭当前</a></li>
+                     <li><a class="tabCloseOther" href="javascript:void();">关闭其他</a></li>
+					 <li><a class="tabCloseAll" href="javascript:void();">全部关闭</a></li>
+                </ul>
             </div>
+            <a href="#" class="roll-nav roll-right tabReload"><i class="fa fa-refresh"></i> 刷新</a>
+        </div>
+
+        <div class="row mainContent" id="content-main" style="height:100%;">
+            <iframe class="AngelRM_iframe" name="iframe0" width="100%" height="100%" data-id="/Welcome/Index"
+                    src="/Welcome/Index" frameborder="0" seamless></iframe>
+        </div>
+
+
         </div>
         <!-- /.main-content -->
 

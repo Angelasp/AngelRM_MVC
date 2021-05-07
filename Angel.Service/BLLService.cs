@@ -101,7 +101,7 @@ namespace Angel.Service
             return result;//.ToString();
         }
 
-        //指标管理模块用
+        //管理模块用
         public string GetDataOriginal(Newtonsoft.Json.Linq.JObject param, string serverName)
         {
             string result = "";
@@ -993,15 +993,45 @@ namespace Angel.Service
             result.Append("}");
             return result.ToString();
         }
+
+        /// <summary>
+        /// 直接获取key添加查询条件
+        /// </summary>
+        /// <param name="key"></param>
+        /// <param name="wheresql"></param>
+        /// <returns></returns>
+        public DataTable GetWhereDataTable(string key, string wheresql)
+        {
+            try
+            {
+                Dictionary<string, string> values = new Dictionary<string, string>();
+                string sql = "";
+
+                if (wheresql != null)
+                {
+                    values = XmlHelper.ReadXml("SqlQuery", key);
+                    sql = string.Format(values.First().Value, wheresql);
+                }
+                DataTable dt = MySqlHelpers.GetDataTable(sql);
+                return dt;
+
+            }
+            catch (Exception er)
+            {
+                FileLog.WriteLog("异常捕捉：Angel.Service.BLLService" + er.ToString());
+                return null;
+            }
+        }
+
     }
- /*************************************************************************
- * 文件名称 ：BLLService.cs                          
- * 描述说明 ：执行语句操作
- * 
- * 创建信息 : create by QQ：815657032、709047174  E-mail:Angel_asp@126.com on 2016-06-10
- * 修订信息 : modify by (person) on (date) for (reason)
- * 
- * 版权信息 : Copyright (c) 2009 Angel工作室 www.angelasp.com
- **************************************************************************
- */
+    /*************************************************************************
+    * 文件名称 ：BLLService.cs                          
+    * 描述说明 ：执行语句操作
+    * 
+    * 创建信息 : create by QQ：815657032、709047174  E-mail:Angel_asp@126.com on 2016-06-10
+    * 修订信息 : modify by (person) on (date) for (reason)
+    * 
+    * 版权信息 : Copyright (c) 2009 Angel工作室 www.angelasp.com
+    **************************************************************************
+    */
 }

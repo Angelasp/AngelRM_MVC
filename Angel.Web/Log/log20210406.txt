@@ -1,0 +1,165 @@
+InfoApiTime：2021-04-06 21:24:48,调用：Angel.ControllersApi/ControllerAPI/LoginApiController/Get()方法
+InfoApiTime：2021-04-06 21:24:53,调用：Angel.ControllersApi/ControllerApi/RoleApiController/GetRolemeul()方法
+InfoApiTime：2021-04-06 21:25:51,调用：Angel.ControllersApi/ControllerApi/RoleApiController/Get()方法
+InfoApiTime：2021-04-06 21:25:51,调用：Angel.ControllersApi/ControllerApi/UserApiController/Get()方法
+InfoApiTime：2021-04-06 21:30:23,调用：Angel.ControllersApi/ControllerApi/RoleApiController/Get()方法
+InfoApiTime：2021-04-06 21:30:23,调用：Angel.ControllersApi/ControllerApi/UserApiController/Get()方法
+InfoApiTime：2021-04-06 21:30:57,调用：Angel.ControllersApi/ControllerApi/RoleApiController/Get()方法
+InfoApiTime：2021-04-06 21:30:57,调用：Angel.ControllersApi/ControllerApi/UserApiController/Get()方法
+InfoApiTime：2021-04-06 21:31:24,调用：Angel.ControllersApi/ControllerApi/RoleApiController/Get()方法
+InfoApiTime：2021-04-06 21:31:24,调用：Angel.ControllersApi/ControllerApi/UserApiController/Get()方法
+InfoApiTime：2021-04-06 21:31:25,调用：Angel.ControllersApi/ControllerApi/RoleApiController/Get()方法
+InfoApiTime：2021-04-06 21:31:25,调用：Angel.ControllersApi/ControllerApi/UserApiController/Get()方法
+InfoApiTime：2021-04-06 21:31:25,调用：Angel.ControllersApi/ControllerApi/RoleApiController/Get()方法
+InfoApiTime：2021-04-06 21:31:25,调用：Angel.ControllersApi/ControllerApi/UserApiController/Get()方法
+InfoApiTime：2021-04-06 21:31:25,调用：Angel.ControllersApi/ControllerApi/RoleApiController/Get()方法
+InfoApiTime：2021-04-06 21:31:25,调用：Angel.ControllersApi/ControllerApi/UserApiController/Get()方法
+InfoApiTime：2021-04-06 21:31:25,调用：Angel.ControllersApi/ControllerApi/RoleApiController/Get()方法
+InfoApiTime：2021-04-06 21:31:25,调用：Angel.ControllersApi/ControllerApi/UserApiController/Get()方法
+InfoApiTime：2021-04-06 21:32:08,调用：Angel.ControllersApi/ControllerApi/RoleApiController/Get()方法
+InfoApiTime：2021-04-06 21:32:08,调用：Angel.ControllersApi/ControllerApi/UserApiController/Get()方法
+InfoApiTime：2021-04-06 21:32:09,调用：Angel.ControllersApi/ControllerApi/RoleApiController/Get()方法
+InfoApiTime：2021-04-06 21:32:09,调用：Angel.ControllersApi/ControllerApi/UserApiController/Get()方法
+InfoApiTime：2021-04-06 21:32:09,调用：Angel.ControllersApi/ControllerApi/RoleApiController/Get()方法
+InfoApiTime：2021-04-06 21:32:09,调用：Angel.ControllersApi/ControllerApi/UserApiController/Get()方法
+InfoApiTime：2021-04-06 21:32:09,调用：Angel.ControllersApi/ControllerApi/RoleApiController/Get()方法
+InfoApiTime：2021-04-06 21:32:09,调用：Angel.ControllersApi/ControllerApi/UserApiController/Get()方法
+InfoApiTime：2021-04-06 21:37:52,调用：Angel.ControllersApi/ControllerApi/RoleApiController/Get()方法
+InfoApiTime：2021-04-06 21:37:52,调用：Angel.ControllersApi/ControllerApi/UserApiController/Get()方法
+InfoApiTime：2021-04-06 21:37:53,调用：Angel.ControllersApi/ControllerApi/RoleApiController/Get()方法
+InfoApiTime：2021-04-06 21:37:53,调用：Angel.ControllersApi/ControllerApi/UserApiController/Get()方法
+InfoApiTime：2021-04-06 21:37:54,调用：Angel.ControllersApi/ControllerApi/RoleApiController/Get()方法
+InfoApiTime：2021-04-06 21:37:54,调用：Angel.ControllersApi/ControllerApi/UserApiController/Get()方法
+InfoApiTime：2021-04-06 21:37:54,调用：Angel.ControllersApi/ControllerApi/RoleApiController/Get()方法
+InfoApiTime：2021-04-06 21:37:54,调用：Angel.ControllersApi/ControllerApi/UserApiController/Get()方法
+InfoApiTime：2021-04-06 21:37:56,调用：Angel.ControllersApi/ControllerApi/RoleApiController/Get()方法
+InfoApiTime：2021-04-06 21:37:56,调用：Angel.ControllersApi/ControllerApi/UserApiController/Get()方法
+InfoApiTime：2021-04-06 21:37:58,调用：Angel.ControllersApi/ControllerApi/RoleApiController/Get()方法
+InfoApiTime：2021-04-06 21:37:58,调用：Angel.ControllersApi/ControllerApi/UserApiController/Get()方法
+InfoApiTime：2021-04-06 21:38:07,调用：Angel.ControllersApi/ControllerApi/RoleApiController/Get()方法
+InfoApiTime：2021-04-06 21:38:07,调用：Angel.ControllersApi/ControllerApi/UserApiController/Get()方法
+InfoApiTime：2021-04-06 21:38:08,调用：Angel.ControllersApi/ControllerApi/RoleApiController/Get()方法
+InfoApiTime：2021-04-06 21:38:08,调用：Angel.ControllersApi/ControllerApi/UserApiController/Get()方法
+InfoApiTime：2021-04-06 21:39:54,调用：Angel.ControllersApi/ControllerApi/RoleApiController/Get()方法
+InfoApiTime：2021-04-06 21:39:54,调用：Angel.ControllersApi/ControllerApi/UserApiController/Get()方法
+InfoApiTime：2021-04-06 21:40:03,调用：Angel.ControllersApi/ControllerApi/RoleApiController/GetRolemeul()方法
+InfoApiTime：2021-04-06 21:40:06,调用：Angel.ControllersApi/ControllerApi/RoleApiController/Get()方法
+InfoApiTime：2021-04-06 21:40:06,调用：Angel.ControllersApi/ControllerApi/UserApiController/Get()方法
+InfoApiTime：2021-04-06 21:45:43,调用：Angel.ControllersApi/ControllerApi/RoleApiController/GetRolemeul()方法
+InfoApiTime：2021-04-06 21:45:44,调用：Angel.ControllersApi/ControllerApi/RoleApiController/GetRolemeul()方法
+InfoApiTime：2021-04-06 21:45:44,调用：Angel.ControllersApi/ControllerApi/RoleApiController/GetRolemeul()方法
+InfoApiTime：2021-04-06 21:45:46,调用：Angel.ControllersApi/ControllerApi/RoleApiController/Get()方法
+InfoApiTime：2021-04-06 21:45:46,调用：Angel.ControllersApi/ControllerApi/UserApiController/Get()方法
+InfoApiTime：2021-04-06 21:45:47,调用：Angel.ControllersApi/ControllerApi/RoleApiController/Get()方法
+InfoApiTime：2021-04-06 21:45:47,调用：Angel.ControllersApi/ControllerApi/UserApiController/Get()方法
+InfoApiTime：2021-04-06 21:45:47,调用：Angel.ControllersApi/ControllerApi/RoleApiController/Get()方法
+InfoApiTime：2021-04-06 21:45:47,调用：Angel.ControllersApi/ControllerApi/UserApiController/Get()方法
+InfoApiTime：2021-04-06 21:45:56,调用：Angel.ControllersApi/ControllerApi/RoleApiController/GetRolemeul()方法
+InfoApiTime：2021-04-06 21:45:56,调用：Angel.ControllersApi/ControllerApi/RoleApiController/GetRolemeul()方法
+InfoApiTime：2021-04-06 21:46:00,调用：Angel.ControllersApi/ControllerApi/RoleApiController/Get()方法
+InfoApiTime：2021-04-06 21:46:00,调用：Angel.ControllersApi/ControllerApi/UserApiController/Get()方法
+InfoApiTime：2021-04-06 21:46:49,调用：Angel.ControllersApi/ControllerApi/RoleApiController/GetRolemeul()方法
+InfoApiTime：2021-04-06 21:46:56,调用：Angel.ControllersApi/ControllerApi/RoleApiController/Get()方法
+InfoApiTime：2021-04-06 21:46:56,调用：Angel.ControllersApi/ControllerApi/UserApiController/Get()方法
+InfoApiTime：2021-04-06 21:47:21,调用：Angel.ControllersApi/ControllerAPI/LoginApiController/Get()方法
+InfoApiTime：2021-04-06 21:47:21,调用：Angel.ControllersApi/ControllerApi/RoleApiController/GetRolemeul()方法
+InfoApiTime：2021-04-06 21:47:24,调用：Angel.ControllersApi/ControllerApi/RoleApiController/Get()方法
+InfoApiTime：2021-04-06 21:47:24,调用：Angel.ControllersApi/ControllerApi/UserApiController/Get()方法
+InfoApiTime：2021-04-06 21:48:26,调用：Angel.ControllersApi/ControllerApi/RoleApiController/Get()方法
+InfoApiTime：2021-04-06 21:48:26,调用：Angel.ControllersApi/ControllerApi/UserApiController/Get()方法
+InfoApiTime：2021-04-06 21:49:16,调用：Angel.ControllersApi/ControllerApi/RoleApiController/Get()方法
+InfoApiTime：2021-04-06 21:49:16,调用：Angel.ControllersApi/ControllerApi/UserApiController/Get()方法
+InfoApiTime：2021-04-06 21:49:17,调用：Angel.ControllersApi/ControllerApi/RoleApiController/Get()方法
+InfoApiTime：2021-04-06 21:49:17,调用：Angel.ControllersApi/ControllerApi/UserApiController/Get()方法
+InfoApiTime：2021-04-06 21:49:17,调用：Angel.ControllersApi/ControllerApi/RoleApiController/Get()方法
+InfoApiTime：2021-04-06 21:49:17,调用：Angel.ControllersApi/ControllerApi/UserApiController/Get()方法
+InfoApiTime：2021-04-06 21:50:25,调用：Angel.ControllersApi/ControllerApi/RoleApiController/Get()方法
+InfoApiTime：2021-04-06 21:50:25,调用：Angel.ControllersApi/ControllerApi/UserApiController/Get()方法
+InfoApiTime：2021-04-06 21:50:26,调用：Angel.ControllersApi/ControllerApi/RoleApiController/Get()方法
+InfoApiTime：2021-04-06 21:50:26,调用：Angel.ControllersApi/ControllerApi/UserApiController/Get()方法
+InfoApiTime：2021-04-06 21:50:26,调用：Angel.ControllersApi/ControllerApi/RoleApiController/Get()方法
+InfoApiTime：2021-04-06 21:50:26,调用：Angel.ControllersApi/ControllerApi/UserApiController/Get()方法
+InfoApiTime：2021-04-06 21:50:51,调用：Angel.ControllersApi/ControllerApi/UserApiController/Post([FromBody]string value)方法
+InfoApiTime：2021-04-06 21:50:51,调用：Angel.ControllersApi/ControllerApi/UserApiController/Get()方法
+InfoApiTime：2021-04-06 21:51:10,调用：Angel.ControllersApi/ControllerApi/UserApiController/Post([FromBody]string value)方法
+InfoApiTime：2021-04-06 21:51:10,调用：Angel.ControllersApi/ControllerApi/UserApiController/Post([FromBody]string value)方法
+InfoApiTime：2021-04-06 21:51:10,调用：Angel.ControllersApi/ControllerApi/UserApiController/Post([FromBody]string value)方法
+InfoApiTime：2021-04-06 21:51:10,调用：Angel.ControllersApi/ControllerApi/UserApiController/Post([FromBody]string value)方法
+InfoApiTime：2021-04-06 21:51:10,调用：Angel.ControllersApi/ControllerApi/UserApiController/Get()方法
+InfoApiTime：2021-04-06 21:51:22,调用：Angel.ControllersApi/ControllerApi/RoleApiController/GetRolemeul()方法
+InfoApiTime：2021-04-06 21:51:26,调用：Angel.ControllersApi/ControllerApi/RoleApiController/Get()方法
+InfoApiTime：2021-04-06 21:51:26,调用：Angel.ControllersApi/ControllerApi/UserApiController/Get()方法
+InfoApiTime：2021-04-06 21:51:48,调用：Angel.ControllersApi/ControllerApi/UserApiController/Post([FromBody]string value)方法
+InfoApiTime：2021-04-06 21:51:48,调用：Angel.ControllersApi/ControllerApi/UserApiController/Post([FromBody]string value)方法
+InfoApiTime：2021-04-06 21:51:48,调用：Angel.ControllersApi/ControllerApi/UserApiController/Post([FromBody]string value)方法
+InfoApiTime：2021-04-06 21:51:48,调用：Angel.ControllersApi/ControllerApi/UserApiController/Post([FromBody]string value)方法
+InfoApiTime：2021-04-06 21:51:48,调用：Angel.ControllersApi/ControllerApi/UserApiController/Get()方法
+InfoApiTime：2021-04-06 22:07:06,调用：Angel.ControllersApi/ControllerApi/RoleApiController/Get()方法
+InfoApiTime：2021-04-06 22:07:06,调用：Angel.ControllersApi/ControllerApi/UserApiController/Get()方法
+InfoApiTime：2021-04-06 22:12:30,调用：Angel.ControllersApi/ControllerApi/RoleApiController/Get()方法
+InfoApiTime：2021-04-06 22:12:30,调用：Angel.ControllersApi/ControllerApi/UserApiController/Get()方法
+InfoApiTime：2021-04-06 22:12:31,调用：Angel.ControllersApi/ControllerApi/RoleApiController/Get()方法
+InfoApiTime：2021-04-06 22:12:31,调用：Angel.ControllersApi/ControllerApi/UserApiController/Get()方法
+InfoApiTime：2021-04-06 22:12:31,调用：Angel.ControllersApi/ControllerApi/RoleApiController/Get()方法
+InfoApiTime：2021-04-06 22:12:31,调用：Angel.ControllersApi/ControllerApi/UserApiController/Get()方法
+InfoApiTime：2021-04-06 22:12:31,调用：Angel.ControllersApi/ControllerApi/RoleApiController/Get()方法
+InfoApiTime：2021-04-06 22:12:31,调用：Angel.ControllersApi/ControllerApi/UserApiController/Get()方法
+InfoApiTime：2021-04-06 22:12:34,调用：Angel.ControllersApi/ControllerApi/UserApiController/Post([FromBody]string value)方法
+InfoApiTime：2021-04-06 22:12:34,调用：Angel.ControllersApi/ControllerApi/UserApiController/Post([FromBody]string value)方法
+InfoApiTime：2021-04-06 22:12:38,调用：Angel.ControllersApi/ControllerApi/UserApiController/Post([FromBody]string value)方法
+InfoApiTime：2021-04-06 22:12:38,调用：Angel.ControllersApi/ControllerApi/UserApiController/Post([FromBody]string value)方法
+InfoApiTime：2021-04-06 22:12:48,调用：Angel.ControllersApi/ControllerApi/UserApiController/Post([FromBody]string value)方法
+InfoApiTime：2021-04-06 22:12:48,调用：Angel.ControllersApi/ControllerApi/UserApiController/Post([FromBody]string value)方法
+InfoApiTime：2021-04-06 22:12:53,调用：Angel.ControllersApi/ControllerApi/UserApiController/Post([FromBody]string value)方法
+InfoApiTime：2021-04-06 22:12:53,调用：Angel.ControllersApi/ControllerApi/UserApiController/Post([FromBody]string value)方法
+InfoApiTime：2021-04-06 22:12:58,调用：Angel.ControllersApi/ControllerApi/UserApiController/Post([FromBody]string value)方法
+InfoApiTime：2021-04-06 22:12:58,调用：Angel.ControllersApi/ControllerApi/UserApiController/Post([FromBody]string value)方法
+InfoApiTime：2021-04-06 22:13:11,调用：Angel.ControllersApi/ControllerApi/UserApiController/Post([FromBody]string value)方法
+InfoApiTime：2021-04-06 22:13:11,调用：Angel.ControllersApi/ControllerApi/UserApiController/Post([FromBody]string value)方法
+InfoApiTime：2021-04-06 22:19:13,调用：Angel.ControllersApi/ControllerApi/RoleApiController/Get()方法
+InfoApiTime：2021-04-06 22:19:14,调用：Angel.ControllersApi/ControllerApi/UserApiController/Get()方法
+InfoApiTime：2021-04-06 22:19:14,调用：Angel.ControllersApi/ControllerApi/RoleApiController/Get()方法
+InfoApiTime：2021-04-06 22:19:14,调用：Angel.ControllersApi/ControllerApi/UserApiController/Get()方法
+InfoApiTime：2021-04-06 22:19:32,调用：Angel.ControllersApi/ControllerApi/RoleApiController/Get()方法
+InfoApiTime：2021-04-06 22:19:32,调用：Angel.ControllersApi/ControllerApi/UserApiController/Get()方法
+InfoApiTime：2021-04-06 22:19:35,调用：Angel.ControllersApi/ControllerApi/UserApiController/Post([FromBody]string value)方法
+InfoApiTime：2021-04-06 22:19:35,调用：Angel.ControllersApi/ControllerApi/UserApiController/Post([FromBody]string value)方法
+InfoApiTime：2021-04-06 22:19:35,调用：Angel.ControllersApi/ControllerApi/UserApiController/Post([FromBody]string value)方法
+InfoApiTime：2021-04-06 22:19:35,调用：Angel.ControllersApi/ControllerApi/UserApiController/Get()方法
+InfoApiTime：2021-04-06 22:19:44,调用：Angel.ControllersApi/ControllerApi/UserApiController/Post([FromBody]string value)方法
+InfoApiTime：2021-04-06 22:19:44,调用：Angel.ControllersApi/ControllerApi/UserApiController/Post([FromBody]string value)方法
+InfoApiTime：2021-04-06 22:19:44,调用：Angel.ControllersApi/ControllerApi/UserApiController/Post([FromBody]string value)方法
+InfoApiTime：2021-04-06 22:19:44,调用：Angel.ControllersApi/ControllerApi/UserApiController/Get()方法
+InfoApiTime：2021-04-06 22:19:49,调用：Angel.ControllersApi/ControllerApi/UserApiController/Post([FromBody]string value)方法
+InfoApiTime：2021-04-06 22:19:49,调用：Angel.ControllersApi/ControllerApi/UserApiController/Post([FromBody]string value)方法
+InfoApiTime：2021-04-06 22:19:49,调用：Angel.ControllersApi/ControllerApi/UserApiController/Post([FromBody]string value)方法
+InfoApiTime：2021-04-06 22:19:49,调用：Angel.ControllersApi/ControllerApi/UserApiController/Get()方法
+InfoApiTime：2021-04-06 22:20:02,调用：Angel.ControllersApi/ControllerApi/UserApiController/Post([FromBody]string value)方法
+InfoApiTime：2021-04-06 22:20:02,调用：Angel.ControllersApi/ControllerApi/UserApiController/Post([FromBody]string value)方法
+InfoApiTime：2021-04-06 22:20:02,调用：Angel.ControllersApi/ControllerApi/UserApiController/Post([FromBody]string value)方法
+InfoApiTime：2021-04-06 22:20:02,调用：Angel.ControllersApi/ControllerApi/UserApiController/Get()方法
+InfoApiTime：2021-04-06 22:20:11,调用：Angel.ControllersApi/ControllerApi/UserApiController/Post([FromBody]string value)方法
+InfoApiTime：2021-04-06 22:20:11,调用：Angel.ControllersApi/ControllerApi/UserApiController/Post([FromBody]string value)方法
+InfoApiTime：2021-04-06 22:20:11,调用：Angel.ControllersApi/ControllerApi/UserApiController/Post([FromBody]string value)方法
+InfoApiTime：2021-04-06 22:20:11,调用：Angel.ControllersApi/ControllerApi/UserApiController/Get()方法
+InfoApiTime：2021-04-06 22:20:23,调用：Angel.ControllersApi/ControllerApi/UserApiController/Post([FromBody]string value)方法
+InfoApiTime：2021-04-06 22:20:23,调用：Angel.ControllersApi/ControllerApi/UserApiController/Post([FromBody]string value)方法
+InfoApiTime：2021-04-06 22:20:23,调用：Angel.ControllersApi/ControllerApi/UserApiController/Post([FromBody]string value)方法
+InfoApiTime：2021-04-06 22:20:23,调用：Angel.ControllersApi/ControllerApi/UserApiController/Get()方法
+InfoApiTime：2021-04-06 22:21:02,调用：Angel.ControllersApi/ControllerApi/RoleApiController/Get()方法
+InfoApiTime：2021-04-06 22:21:02,调用：Angel.ControllersApi/ControllerApi/UserApiController/Get()方法
+InfoApiTime：2021-04-06 22:21:03,调用：Angel.ControllersApi/ControllerApi/RoleApiController/Get()方法
+InfoApiTime：2021-04-06 22:21:03,调用：Angel.ControllersApi/ControllerApi/UserApiController/Get()方法
+InfoApiTime：2021-04-06 22:21:06,调用：Angel.ControllersApi/ControllerApi/RoleApiController/Get()方法
+InfoApiTime：2021-04-06 22:21:06,调用：Angel.ControllersApi/ControllerApi/UserApiController/Get()方法
+InfoApiTime：2021-04-06 22:21:06,调用：Angel.ControllersApi/ControllerApi/RoleApiController/Get()方法
+InfoApiTime：2021-04-06 22:21:06,调用：Angel.ControllersApi/ControllerApi/UserApiController/Get()方法
+InfoApiTime：2021-04-06 22:21:45,调用：Angel.ControllersApi/ControllerApi/RoleApiController/GetRolemeul()方法
+InfoApiTime：2021-04-06 22:21:52,调用：Angel.ControllersApi/ControllerApi/RoleApiController/Get()方法
+InfoApiTime：2021-04-06 22:21:52,调用：Angel.ControllersApi/ControllerApi/UserApiController/Get()方法
+InfoApiTime：2021-04-06 22:22:04,调用：Angel.ControllersApi/ControllerApi/MenuApiController/Get()方法
+InfoApiTime：2021-04-06 22:22:15,调用：Angel.ControllersApi/ControllerApi/LoginlogApiController/PostList()方法
+InfoApiTime：2021-04-06 22:22:15,调用：Angel.ControllersApi/ControllerApi/RoleApiController/Get()方法
+InfoApiTime：2021-04-06 22:22:16,调用：Angel.ControllersApi/ControllerApi/RoomApiController/Get()方法
+InfoApiTime：2021-04-06 22:22:17,调用：Angel.ControllersApi/ControllerApi/RoomApiController/GetD()方法
+InfoApiTime：2021-04-06 22:22:21,调用：Angel.ControllersApi/ControllerApi/DownloadListManagerApiController/Get()方法

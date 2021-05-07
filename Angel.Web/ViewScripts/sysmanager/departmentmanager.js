@@ -83,18 +83,6 @@ $(function () {
         $table.bootstrapTable("loadAddSearch", keyvalue);
     });
 
-    ////查询所有角色列表
-    //com.server.get('/api/roomapi/get', function (data) {
-    //    if (data != null) {
-    //        var dhtml = '';
-    //        $.each(data, function (i) {
-    //            dhtml += '<option value="' + data[i].id + '">' + data[i].roomname + '</option>';
-    //        });
-    //        $('#rolelist').html(dhtml);
-    //    }
-    //    $('#rolelist').selectpicker({});
-
-    //});
 
 
     // bootstrap table初始化
@@ -175,9 +163,6 @@ $(function () {
 });
  
  
-
-
-
 
     var modelname = "部门";
     var actionurl = "/api/DepartmentApi/post";

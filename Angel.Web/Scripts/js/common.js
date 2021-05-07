@@ -7,6 +7,7 @@ $(function () {
 			height: getHeight()
 		});
 	});
+    
 });
 
 // 动态高度

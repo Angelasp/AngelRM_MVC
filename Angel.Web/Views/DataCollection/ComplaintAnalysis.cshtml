@@ -1,23 +1,5 @@
-﻿@{
-    ViewBag.Title = "MenuManager";
-    Layout = "~/Views/Shared/_Layout.cshtml";
-}
-
-<link rel="stylesheet" href="/Content/themes/css/chosen.min.css" />
+﻿<link rel="stylesheet" href="/Content/themes/css/chosen.min.css" />
 <link rel="stylesheet" href="/Scripts/dist/datetimepicker/css/bootstrap-datetimepicker.min.css" />
-
-<style>
-    .modal-dialog, .modal-tree
-    {
-        /*width: 500px;
-        margin: 30px auto;*/
-    }
-    .widget-toolbar:before {
-        border: 0px;
-        border-width: 0px;
-    }
-</style>
-
 <script src="/Content/themes/js/chosen.jquery.min.js"></script>
 <script src="~/Scripts/bootbox.min.js"></script>
 <script src="/Scripts/dist/datetimepicker/js/bootstrap-datetimepicker.min.js"></script>
@@ -33,10 +15,8 @@
         <div class="widget-main">
             <form class="form-horizontal" role="form">
                 <div class="form-group">
-                    <label class="col-sm-1 control-label left" for="start_date">时间范围：</label>
-                    <div class="col-sm-11">
-                        <!--<select multiple="" class="chosen-select tag-input-style col-xs-10 col-sm-5" id="sel_date" data-placeholder="请选择年月（支持多选）..."></select>
-                        </select>-->
+                    <label class="col-sm-2 control-label left" for="start_date">时间范围：</label>
+                    <div class="col-sm-10">
                         <div class="input-group" style="width: 100%">
                             <input class="form_datetime" id="start_date" type="text" data-date-format="yyyy年mm月" />
                             <label class="control-label right">&nbsp;至&nbsp;</label>
@@ -52,7 +32,7 @@
             </form>
         </div>
     </div>
-</div>
+ </div>
 <script type="text/javascript">
     var $sd = $("#start_date");
     var $ed = $("#end_date");

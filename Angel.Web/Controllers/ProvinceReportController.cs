@@ -7,17 +7,19 @@ namespace Angel.Web.Controllers
 {
     public class ProvinceReportController : Controller
     {
-        // xx采集
+        // 报表采集
         // GET: /ProvinceReport/reportCollect
         public ActionResult reportCollect()
         {
+            ViewBag.Title = "报表采集";
             return View();
         }
 
-        // xx采集
+        // 编辑器测试
         // GET: /ProvinceReport/jdCollect
         public ActionResult jdCollect()
         {
+            ViewBag.Title = "编辑器测试";
             return View();
         }
 
@@ -25,6 +27,7 @@ namespace Angel.Web.Controllers
         // GET: /ProvinceReport/organization
         public ActionResult organization()
         {
+            ViewBag.Title = "组织结构";
             return View();
         }
     }

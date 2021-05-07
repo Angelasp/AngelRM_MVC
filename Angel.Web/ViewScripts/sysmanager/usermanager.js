@@ -119,9 +119,10 @@ $(function () {
           //{ field: 'createtime', title: '创建时间', sortable: true, halign: 'center' },
             { field: 'roleid', title: '角色ID', hideColumn: true, sortable: true, halign: 'center' },
             { field: 'rolename', title: '角色', hideColumn: true, sortable: true, halign: 'center' },
-            { field: 'roomid', title: '处室ID', hideColumn: true, sortable: true, halign: 'center' },
-            { field: 'roomname', title: '处室名称', hideColumn: true, sortable: true, halign: 'center' },
-            { field: 'updateuser', title: '更新者', sortable: true, halign: 'center' }
+            { field: 'roomid', title: '部门ID', hideColumn: true, sortable: true, halign: 'center' },
+            { field: 'roomname', title: '部门名称', hideColumn: true, sortable: true, halign: 'center' },
+          //  { field: 'updateuser', title: '更新者', sortable: true, halign: 'center' }
+             { field: 'action', title: '操作', halign: 'center', align: 'center', events: 'operateEvents', formatter: actionFormatters, clickToSelect: true }
             //,
             //{ field: 'action', title: '操作', halign: 'center', align: 'center', formatter: actionFormatters, events: 'actionEvents', clickToSelect: false }
         ]
@@ -131,21 +132,105 @@ $(function () {
     });
 
 
-    function actionFormatters(value, row, index) {
-        if (row.id == 1) {
-        } else {
-            return '<a class="like" href="javascript:void(0)" data-toggle="tooltip" title="所属模板列表">指标查看</a>';
+    window.changeState = {
+        'click .changeState': function (e, value, row, index) {
+            var str = value == "y" ? "确定停用此用户？" : "确定启用此用户？";
+            var state = value == "y" ? "N" : "Y";
+            var userid = row.id;
+            if (confirm(str)) {
+                $.post("/api/userapi/PostChangeState", { "userid": userid, "isenabled": state }, function (res) {
+                    $table.bootstrapTable("refresh")
+                    alert(res.message);
+                });
+            }
         }
     }
+    window.operateEvents = {
+        'click .edit': function (e, value, row, index) {
+            rows = [row];
+            if (rows.length < 1 || rows.length > 1) {
+                $.alert('修改错误,请选择一行数据进行修改?', '提示');
+                return false;
+            } else {
 
-    window.actionEvents = {
-        'click .like': function (e, value, row, index) {
-            UserIndicatorList(row.id);
-            $("#userModalLabel").text("账号：" + row.username + " 的用户指标");
-            $("#userIndicatorDialog").modal("show");
+                $("#password1").html("新密码");
+                $("#password2").html("重复密码");
+                $("#userDialog").find('label').addClass('active');
+                $('#input1').val(rows[0].username);
+                $('#input1').attr("disabled", true);
+                $('#input2').attr("value", "");
+                $('#input3 >input').attr("value", "");
+                $('#input2').val('');
+                $('#input3 >input').val('');
+                $("#userid").val('');
+                $("#userid").val(rows[0].id);
+                $('#rolelist').selectpicker('val', rows[0].roleid);//默认选中
+                $('#rolelist').selectpicker('refresh');
+                $('#roomlist').selectpicker('val', rows[0].roomid);//默认选中
+                $('#roomlist').selectpicker('refresh');
 
+
+                if (rows[0].isenabled == "y") {
+                    $("input[name='isenabled']").get(0).checked = true;
+                }
+                else {
+                    $("input[name='isenabled']").get(1).checked = true;
+                }
+
+
+                if (rows[0].roomname != '' && rows[0].roomname != null) {
+                    $("input[name='form-field-radio']").get(0).checked = true;
+                    $("#roomname").show();
+                    $("#cityname").hide();
+                    $('#roomlist').selectpicker('val', rows[0].roomid);//默认选中
+                    $('#roomlist').selectpicker('refresh');
+                }
+                else {
+                    $("input[name='form-field-radio']").get(1).checked = true;
+                    $("#cityname").hide();
+                    $("#roomname").hide();
+                    $('#citylist').selectpicker('refresh');
+                    $('#citylist').selectpicker('refresh');
+                }
+
+            }
+            $("#userTitle").text("编辑用户");
+            $("#save_user").attr("name", "edit");
+            $("#userDialog").modal("show");
+        },
+        'click .delete': function (e, value, row, index) {
+            var rows = [row]
+            $.confirm({
+                type: 'red',
+                animationSpeed: 300,
+                title: false,
+                content: '确认删除该' + modelname + '吗？',
+                buttons: {
+                    confirm: {
+                        text: '确认',
+                        btnClass: 'waves-effect waves-button',
+                        action: function () {
+                            var ids = new Array();
+                            for (var i in rows) {
+                                var postlist = '{ "delete": [{ ID:' + rows[i].id + ',"UserName": "' + rows[i].username + '"}]}';
+                                com.server.post(actionurl, JSON.stringify(postlist), function (data) { });
+
+                                ids.push(rows[i].id);
+                            }
+                            ReloadTable($table, url);
+                            var postlist1 = '{ "insert_log": [{ "logposition":"系统管理-用户管理","operationtype": "删除用户信息编号为:(' + ids.join("-") + ')"}]}';
+                            oper_log(postlist1);
+                        }
+                    },
+                    cancel: {
+                        text: '取消',
+                        btnClass: 'waves-effect waves-button'
+                    }
+                }
+            });
         }
     };
+
 
     $table.bootstrapTable('hideColumn', 'roleid');
     $table.bootstrapTable('hideColumn', 'roomid');
@@ -220,7 +305,7 @@ function showUser(obj) {
         $('#citylist').selectpicker('val', "北京");//默认选中
         $('#citylist').selectpicker('refresh');
 
-        $('#roomlist').selectpicker('val', "无线优化处");//默认选中
+        $('#roomlist').selectpicker('val', "研发部门");//默认选中
         $('#roomlist').selectpicker('refresh');
         $("input[name='form-field-radio']").get(0).checked = true;
         $("#roomname").show();
@@ -242,7 +327,7 @@ function showUser(obj) {
             $('#input3 >input').attr("value", "");
             $('#input2').val('');
             $('#input3 >input').val('');
-
+            $("#userid").val(rows[0].id);
 
             $('#rolelist').selectpicker('val', rows[0].roleid);//默认选中
             $('#rolelist').selectpicker('refresh');
@@ -378,12 +463,13 @@ $('#save_user').on('click', function () {
         var rows = $table.bootstrapTable('getSelections');
         //修改
         ptype = "update";
+        var userid = $("#userid").val();
         if (input2 == "" && input3 == "") {
-            postlist = '{ "updateinfo": [{ ID:' + rows[0].id + ',"UserName": "' + rows[0].username + '", "IsEnabled": "' + input4 + '", "LoginCount": 1,UpdateUser:"{admin}","CreateUser": "admin","cityid":"' + cityname + '"}]}';
+            postlist = '{ "updateinfo": [{ ID:' + userid + ',"UserName": "' + input1 + '", "IsEnabled": "' + input4 + '", "LoginCount": 1,UpdateUser:"{admin}","CreateUser": "admin","cityid":"' + cityname + '"}]}';
         } else {
-            postlist = '{ "update": [{ ID:' + rows[0].id + ',"UserName": "' + rows[0].username + '",oldpwd:"' + input2 + '","Password": "' + input3 + '", "IsEnabled": "' + input4 + '", "LoginCount": 1,UpdateUser:"{admin}","CreateUser": "admin","cityid":"' + cityname + '"}]}';
+            postlist = '{ "update": [{ ID:' + userid + ',"UserName": "' + input1 + '",oldpwd:"' + input2 + '","Password": "' + input3 + '", "IsEnabled": "' + input4 + '", "LoginCount": 1,UpdateUser:"{admin}","CreateUser": "admin","cityid":"' + cityname + '"}]}';
         }
-        operationtype = rows[0].username + " 用户 编号为:" + rows[0].id;
+        operationtype = input1 + " 用户 编号为:" + userid;
     }
 
     com.server.post(actionurl, JSON.stringify(postlist), function (data) {
@@ -426,18 +512,18 @@ $('#save_user').on('click', function () {
                     $("#userDialog").modal("hide");
 
                     com.server.post(actionurl, JSON.stringify(postlist), function (data) {
-                        postlist = '{ "insertroleindicator": [{ "userid": "' + rows[0].id + '", "roleid": "' + roleid + '",indicatorcontent:"' + ids + '"}]}';
-                        com.server.post(actionurl, JSON.stringify(postlist), function (data) { });
+                        //postlist = '{ "insertroleindicator": [{ "userid": "' + rows[0].id + '", "roleid": "' + roleid + '",indicatorcontent:"' + ids + '"}]}';
+                        //com.server.post(actionurl, JSON.stringify(postlist), function (data) { });
 
                         //追加处室中间表
                         if ($('input:radio[name="form-field-radio"]:checked').val() == "1") {
-                            postlist1 = '{ "insertroomindicator": [{ "userid": "' + rows[0].id + '", "roomid": "' + roomid + '"}]}';
+                            postlist1 = '{ "insertroomindicator": [{ "userid": "' + $("#userid").val() + '", "roomid": "' + roomid + '"}]}';
                             com.server.post(actionurl, JSON.stringify(postlist1), function (data) {
                             });
                         }
                         //删除处室
                         if ($('input:radio[name="form-field-radio"]:checked').val() == "3" || $('input:radio[name="form-field-radio"]:checked').val() == "2") {
-                            postlist1 = '{ "deleteroomindicator": [{ "userid": "' + rows[0].id + '"}]}';
+                            postlist1 = '{ "deleteroomindicator": [{ "userid": "' + $("#userid").val() + '"}]}';
                             com.server.post(actionurl, JSON.stringify(postlist1), function (data) { });
                         }
 
